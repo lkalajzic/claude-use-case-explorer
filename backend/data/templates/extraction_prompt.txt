@@ -1,0 +1,125 @@
+# Enhanced Case Study Extraction Prompt
+
+You are an expert analyst extracting structured data from Claude case studies. Extract the following information with high accuracy and comprehensive detail:
+
+## Required Information
+1. Company Information:
+   - Company name
+   - Industry (be specific)
+   - Company size (if mentioned)
+   - Region/location
+
+2. Implementation Details:
+   - Use case description (detailed)
+   - Problem being solved
+   - Claude model used (if specified)
+   - Integration method (if mentioned)
+   - Implementation time (if mentioned)
+
+3. Business Outcomes:
+   - Quantitative metrics (MUST include full context and source text)
+   - Qualitative benefits (with specific examples)
+   - ROI indicators (if available)
+   - Time to value
+
+4. Technical Details:
+   - Architecture information (if available)
+   - Prompt engineering insights
+   - Integration challenges and solutions
+   - Volume/scale information
+
+## Format Requirements
+
+Return a JSON object with the following structure:
+
+```json
+{{
+  "companyInfo": {{
+    "name": "Company name",
+    "industry": "Specific industry",
+    "size": "Size category (Enterprise/Mid-market/SMB) or specific employee count",
+    "region": "Geographic location"
+  }},
+  "implementation": {{
+    "useCase": "Detailed description of how Claude was implemented",
+    "problem": "Specific business problem being addressed",
+    "model": "Claude model used (if specified)",
+    "integrationMethod": "How Claude was integrated (if mentioned)",
+    "implementationTime": "Time taken to implement the solution (if mentioned)"
+  }},
+  "outcomes": {{
+    "metrics": [
+      {{
+        "value": "Specific numeric or percentage value",
+        "metric": "What was measured (INCLUDE FULL CONTEXT)",
+        "sourceText": "Exact quote from the case study containing this metric"
+      }}
+    ],
+    "qualitativeBenefits": [
+      {{
+        "benefit": "Description of benefit",
+        "detail": "Specific example or evidence",
+        "sourceText": "Exact quote from the case study"
+      }}
+    ],
+    "timeToValue": "How quickly value was realized (if mentioned)",
+    "roi": "Return on investment information (if available)"
+  }},
+  "technicalDetails": {{
+    "architecture": "System architecture details (if provided)",
+    "promptEngineering": "Insights into prompt design (if mentioned)",
+    "challenges": "Implementation challenges faced",
+    "solutions": "How challenges were overcome",
+    "scale": "Volume or scale information (if mentioned)"
+  }},
+  "confidenceScore": {{
+    "overall": "1-5 rating of your overall extraction confidence",
+    "metrics": "1-5 rating of confidence in metric extraction",
+    "companyInfo": "1-5 rating of confidence in company information",
+    "implementation": "1-5 rating of confidence in implementation details"
+  }},
+  "metadata": {{
+    "source": "URL or title of the case study",
+    "extractionDate": "Current date",
+    "version": "1.0"
+  }}
+}}
+```
+
+## Important Rules:
+1. NEVER return metrics without both value and full context
+2. ALWAYS include source text for any metrics or qualitative benefits
+3. Set NULL or "Not mentioned" for fields without information
+4. Be specific and detailed in all fields
+5. Do not hallucinate or infer information not in the source
+6. Include confidence scores (1=low, 5=high) for key extraction categories
+7. For metrics, capture BOTH the numeric value AND what was being measured
+8. Extract ALL metrics mentioned in the case study, not just a selection
+
+For each metric, ensure you capture three components:
+1. The precise value (25%, 2x increase, etc.)
+2. What exactly was measured (response time, customer satisfaction, etc.)
+3. The exact quote from the source text containing this information
+
+Example of good metric extraction:
+```
+{{
+  "value": "40%",
+  "metric": "reduction in response time to customer inquiries",
+  "sourceText": "We saw a 40% reduction in response time to customer inquiries after implementing Claude."
+}}
+```
+
+Example of poor metric extraction (missing context):
+```
+{{
+  "value": "40%",
+  "metric": "reduction",
+  "sourceText": "We saw a 40% reduction."
+}}
+```
+
+Case Study URL: {url}
+
+Content:
+{content}
