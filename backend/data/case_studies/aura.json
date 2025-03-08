@@ -1,0 +1,102 @@
+{
+  "url": "https://www.anthropic.com/customers/aura",
+  "data": {
+    "companyInfo": {
+      "name": "Aura Intelligence",
+      "industry": "AI-driven Organizational Decision Intelligence (ODI) platform",
+      "size": "Startup",
+      "region": "Not mentioned"
+    },
+    "implementation": {
+      "useCase": "Aura uses Claude in Amazon Bedrock to transform billions of workforce data points into insights for management consulting, private equity firms, and hedge funds. Specifically, Claude helps analyze job titles and roles across different industries and languages, providing context-aware classification that captures industry-specific nuances.",
+      "problem": "Aura's initial system struggled to make sense of job titles and roles across different industries and languages. Their manual approach using basic lookups and fuzzy matching couldn't capture crucial industry context (e.g., a Vice President at a bank is mid-level, while in tech it indicates senior leadership). With 200 million titles and industry pairings to analyze in multiple languages, they needed a more sophisticated solution.",
+      "model": "Claude (specific version not specified)",
+      "integrationMethod": "Amazon Bedrock integration with existing AWS infrastructure, particularly SageMaker",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "94%",
+          "metric": "overall classification accuracy",
+          "sourceText": "We ran four different models across competitors, and with Claude we had close to 94% accuracy"
+        },
+        {
+          "value": "100%",
+          "metric": "accuracy in tech, finance, and medical sectors",
+          "sourceText": "The accuracy was impressive in key industries, with Claude achieving 100% accuracy in tech, finance, and medical sectors."
+        },
+        {
+          "value": "under 8%",
+          "metric": "unclassified data rates across industries",
+          "sourceText": "This enabled Aura to lower their unclassified data rates to under 8% across industries, a crucial metric for customers making significant financial decisions based on their insights."
+        },
+        {
+          "value": "from 2-3 months to a 30-minute",
+          "metric": "reduction in title classification time",
+          "sourceText": "Reduced title classification time from 2-3 months to a 30-minute automated process"
+        },
+        {
+          "value": "over 200 million",
+          "metric": "titles and industry pairings processed and analyzed across multiple languages",
+          "sourceText": "Processes and analyzes over 200 million titles and industry pairings across multiple languages"
+        },
+        {
+          "value": "four to five engineering sprints",
+          "metric": "elimination of engineering sprints previously required for fine-tuning",
+          "sourceText": "For Aura's engineering team, Claude eliminated the need for four to five engineering sprints previously required for fine-tuning."
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Improved contextual understanding of job titles",
+          "detail": "Claude can understand industry-specific context for job titles, such as distinguishing between a Vice President at a bank (mid-level) versus in tech (senior leadership)",
+          "sourceText": "Without AI capabilities, they relied on basic manual lookups and fuzzy matching to categorize roles. This manual approach couldn't capture crucial industry context. For example, a Vice President at a bank typically holds a mid-level position, while the same title in tech indicates senior leadership."
+        },
+        {
+          "benefit": "Reduced engineering resources needed",
+          "detail": "Claude delivers high performance without extensive fine-tuning, important for a startup with limited engineering resources",
+          "sourceText": "As a startup with limited engineering resources, they valued Claude's ability to deliver high performance without extensive fine-tuning. 'We don't have as much engineering power these days. Something out of the box that solves the problem and doesn't need too many contexts and fine-tuning\u2014that was the biggest evaluation gap,' said Lotfi."
+        },
+        {
+          "benefit": "Streamlined ML pipeline",
+          "detail": "Transformed from a traditional structure requiring multiple specialists to an efficient system where a single engineer can manage the entire process",
+          "sourceText": "Aura has transformed their ML pipeline from a traditional structure requiring multiple specialists to an efficient system where a single engineer can manage the entire process."
+        },
+        {
+          "benefit": "Automated QA processes",
+          "detail": "AI-powered pipelines ensuring consistent accuracy at scale",
+          "sourceText": "The solution has also enabled automated QA processes, with AI-powered pipelines ensuring consistent accuracy at scale."
+        },
+        {
+          "benefit": "Personalized reporting capabilities",
+          "detail": "Clients can create personalized data sets and receive them on a schedule, helping analyze portfolio companies and industry trends",
+          "sourceText": "With Aura's Reports, clients can create a personalized data set and receive it on a personalized schedule, helping clients analyze portfolio companies and industry trends with unprecedented speed and accuracy."
+        }
+      ],
+      "timeToValue": "Not explicitly mentioned, but reduced title classification from 2-3 months to 30 minutes",
+      "roi": "Not explicitly mentioned"
+    },
+    "technicalDetails": {
+      "architecture": "Integration with AWS infrastructure, particularly SageMaker for their data science stack. Uses Amazon Bedrock for model customization and prompt management.",
+      "promptEngineering": "Uses prompt caching and vector search capabilities. Customizes foundation models on proprietary datasets without managing additional ML infrastructure.",
+      "challenges": "Processing 200 million titles and industry pairings across multiple languages. Capturing industry-specific context for job titles. Limited engineering resources as a startup.",
+      "solutions": "Leveraged Claude's contextual understanding capabilities. Used Amazon Bedrock's model customization and prompt management. Implemented automated scaling and pay-per-use pricing to efficiently expand multilingual content classification.",
+      "scale": "Processes and analyzes over 200 million titles and industry pairings across multiple languages. Handles title classification across industries, automated report generation, anomaly detection in workforce trends, sentiment analysis of company reviews, multilingual data processing, and real-time analysis of hiring and exit patterns."
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "5",
+      "companyInfo": "3",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/aura",
+      "extractionDate": "2023-11-09",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.030147,
+  "success": true,
+  "processed_at": "2025-03-06 18:57:28"
+}

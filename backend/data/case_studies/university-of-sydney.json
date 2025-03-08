@@ -1,0 +1,102 @@
+{
+  "url": "https://www.anthropic.com/customers/university-of-sydney",
+  "data": {
+    "companyInfo": {
+      "name": "University of Sydney",
+      "industry": "Higher Education/Marine Conservation Research",
+      "size": "Not mentioned",
+      "region": "Australia"
+    },
+    "implementation": {
+      "useCase": "Using Claude to analyze acoustic datasets from underwater microphones (hydrophones) to detect and monitor whale populations in real-time, specifically focusing on minke whale detection and conservation.",
+      "problem": "Processing overwhelming amounts of acoustic data from hydrophones that was previously analyzed manually, which was time-consuming and labor-intensive, resulting in significant unused data. Traditional analysis methods couldn't keep pace with data volume, especially given increased urgency due to commercial whaling activities.",
+      "model": "Claude Opus",
+      "integrationMethod": "Dual AI system combining Claude's visual recognition capabilities with a specialized CNN (Convolutional Neural Network) to analyze spectrograms created from raw underwater sound recordings",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "89.4%",
+          "metric": "accuracy in detecting minke whales, compared to 76.5% with traditional methods",
+          "sourceText": "By leveraging CNN models and AI AWS models, we can detect minke whales within a five-kilometer radius of a hydrophone with up to 89.4% accuracy."
+        },
+        {
+          "value": "76.5%",
+          "metric": "accuracy rate of traditional detection tools like the band limited energy detector",
+          "sourceText": "Traditional analysis methods and basic detection tools like the band limited energy detector, with its 76.5% accuracy rate, cannot keep pace with the volume of data being collected."
+        },
+        {
+          "value": "Real-time",
+          "metric": "analysis of data that previously took two weeks to process manually",
+          "sourceText": "Real-time analysis of data that previously took two weeks to process manually"
+        },
+        {
+          "value": "Thousands",
+          "metric": "of kilometers of North American coastline covered",
+          "sourceText": "Coverage of thousands of kilometers of North American coastline"
+        },
+        {
+          "value": "Hundreds of thousands",
+          "metric": "of acoustic recordings analyzed annually",
+          "sourceText": "Analysis of hundreds of thousands of acoustic recordings annually"
+        },
+        {
+          "value": "Five-kilometer",
+          "metric": "radius of detection around a hydrophone",
+          "sourceText": "By leveraging CNN models and AI AWS models, we can detect minke whales within a five-kilometer radius of a hydrophone with up to 89.4% accuracy."
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Real-time monitoring of whale populations",
+          "detail": "Replaced manual processes that took weeks with instant analysis",
+          "sourceText": "Real-time monitoring of whale populations across vast ocean areas, replacing manual processes that took weeks"
+        },
+        {
+          "benefit": "Precise mapping of migration patterns and habitats",
+          "detail": "Informs protected area decisions",
+          "sourceText": "Precise mapping of migration patterns and critical habitats, informing protected area decisions"
+        },
+        {
+          "benefit": "Detailed assessment of human impact",
+          "detail": "Evaluates how shipping and drilling affect whale behavior",
+          "sourceText": "Detailed assessment of how human activities like shipping and drilling affect whale behavior"
+        },
+        {
+          "benefit": "Standardized data sharing",
+          "detail": "Enables coordinated protection efforts between international conservation groups",
+          "sourceText": "Standardized data sharing between international conservation groups, enabling coordinated protection efforts"
+        },
+        {
+          "benefit": "Immediate, data-driven conservation actions",
+          "detail": "Creating protected zones, redirecting shipping, modifying drilling operations, and adjusting fishing zones",
+          "sourceText": "Claude's integration has transformed how researchers protect whales by enabling immediate, data-driven actions."
+        }
+      ],
+      "timeToValue": "Immediate (transformed two-week manual process into instant insights)",
+      "roi": "Not mentioned specifically in financial terms"
+    },
+    "technicalDetails": {
+      "architecture": "Dual AI system that combines Claude's visual recognition capabilities with a specialized CNN (Convolutional Neural Network). Raw underwater sound recordings are transformed into spectrograms which are then analyzed by both systems in parallel.",
+      "promptEngineering": "Not specifically mentioned",
+      "challenges": "Limited labeled acoustic data for marine species, overwhelming volume of acoustic data, need for high accuracy with smaller training datasets",
+      "solutions": "Used Claude's transfer learning capabilities to achieve high accuracy with limited training data. Leveraged Claude's reasoning and computer vision capabilities for analyzing spectrograms.",
+      "scale": "Analysis of hundreds of thousands of acoustic recordings annually across thousands of kilometers of North American coastline"
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "5",
+      "companyInfo": "4",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/university-of-sydney",
+      "extractionDate": "2023-06-13",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.025535999999999996,
+  "success": true,
+  "processed_at": "2025-03-06 19:27:02"
+}

@@ -1,0 +1,14 @@
+{
+  "url": "https://www.anthropic.com/customers/magicschool",
+  "data": {
+    "companyInfo": {
+      "name": "MagicSchool",
+      "industry": "Education Technology (EdTech)"
+    },
+    "extraction_error": "Expecting ',' delimiter: line 57 column 112 (char 2929)",
+    "partial_json": "{\n  \"companyInfo\": {\n    \"name\": \"MagicSchool\",\n    \"industry\": \"Education Technology (EdTech)\",\n    \"size\": \"Not mentioned\",\n    \"region\": \"United States (with global presence)\"\n  },\n  \"implementation\": {\n    \"useCase\": \"AI copilot for educators and students that streamlines lesson planning, provides personalized student feedback, creates engaging content, generates curriculum plans, quizzes, behavior support plans, report card comments, and Individual Education Plans (IEPs).\",\n    \"problem\": \""
+  },
+  "cost": 0.025695,
+  "success": true,
+  "processed_at": "2025-03-06 19:35:29"
+}

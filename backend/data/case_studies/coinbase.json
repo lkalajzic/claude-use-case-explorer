@@ -1,0 +1,102 @@
+{
+  "url": "https://www.anthropic.com/customers/coinbase",
+  "data": {
+    "companyInfo": {
+      "name": "Coinbase",
+      "industry": "Cryptocurrency exchange",
+      "size": "Enterprise (supporting several million users)",
+      "region": "Global (over 100 geographies)"
+    },
+    "implementation": {
+      "useCase": "Coinbase integrated Claude into three key systems: a customer support chatbot (an agentic system using Claude for query rephrasing, response generation, and output styling with financial compliance guardrails), an agent assist tool (helping human agents draft responses, explain procedures, and access information), and an AI-powered help center search (enhancing result relevance and generating concise answers). They also created CB-GPT, an internal platform for building AI-powered applications.",
+      "problem": "Coinbase needed a flexible AI solution to handle unpredictable spikes in trading volume and customer inquiries, automate routine support tasks, assist human agents, improve help center functionality, scale rapidly during demand surges, and maintain strict security and compliance standards in the volatile crypto market.",
+      "model": "Claude (specific version not mentioned)",
+      "integrationMethod": "Multi-cloud implementation through AWS Bedrock and Google Vertex AI",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "Increase",
+          "metric": "automation rate for their customer-facing chatbot",
+          "sourceText": "\u2022 Increase in automation rate for their customer-facing chatbot"
+        },
+        {
+          "value": "Reduced",
+          "metric": "customer service handling time",
+          "sourceText": "\u2022 Reduced customer service handling time"
+        },
+        {
+          "value": "Significant improvements",
+          "metric": "search relevance for their AI-powered help center",
+          "sourceText": "\u2022 Significant improvements in search relevance for their AI-powered help center"
+        },
+        {
+          "value": "thousands",
+          "metric": "messages handled per hour",
+          "sourceText": "\u2022 Ability to handle thousands of messages per hour"
+        },
+        {
+          "value": "several million",
+          "metric": "users supported",
+          "sourceText": "\u2022 Support for several million users"
+        },
+        {
+          "value": "$226 billion",
+          "metric": "quarterly trading volume",
+          "sourceText": "Coinbase, a leading cryptocurrency exchange, uses Claude to power its AI-driven customer support chatbot, agent assist tool, and help center search. This enhances customer experiences and improves operational efficiency across its platform, supporting over 100 geographies and $226 billion in quarterly trading volume."
+        },
+        {
+          "value": "35 to 50",
+          "metric": "AI applications built on internal CB-GPT platform",
+          "sourceText": "Mahadevan reports, \"We've built over 35 to 50 applications.\""
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Improved handling of unpredictable trading volumes and support demands",
+          "detail": "Flexibility to handle traffic spikes while maintaining high-quality support",
+          "sourceText": "Claude has successfully managed unpredictable cryptocurrency trading volumes and support demands. This has given Coinbase flexibility to handle traffic spikes while maintaining high-quality support."
+        },
+        {
+          "benefit": "Faster onboarding and increased support staff productivity",
+          "detail": "Agent Assist chatbot streamlines onboarding by enabling staff to query knowledge bases and offering multi-lingual support",
+          "sourceText": "Coinbase's AI tools have also sped up onboarding and increased support staff productivity. Mahadevan highlighted the benefit, \"New agents join weekly and require proper training and familiarity with procedures. This Agent Assist chatbot streamlines onboarding by enabling them to query knowledge bases, offering multi-lingual support, and efficiently processing a wide range of unstructured text inputs.\""
+        },
+        {
+          "benefit": "Multi-cloud strategy enhances availability and security",
+          "detail": "Achieving 99.9999% availability for near-constant uptime and reliability",
+          "sourceText": "Coinbase's multi-cloud strategy with Claude addresses challenges in the volatile crypto market. Mahadevan explains, \"In our industry, it's essential that customers have uninterrupted access to their funds. We're committed to achieving 99.9999% availability for near-constant uptime and reliability.\""
+        },
+        {
+          "benefit": "Increased employee productivity across various roles",
+          "detail": "AI frees up hours each week for employees to explore new possibilities",
+          "sourceText": "Mahadevan outlines AI's impact on Coinbase and its customers: \"AI frees up hours each week for employees across various roles. It's not just about doing more of the same work; it's about exploring new frontiers. It's about unlocking new value and possibilities for our employees. Our vision is two-fold: AI support for every customer and employee.\""
+        }
+      ],
+      "timeToValue": "Not mentioned",
+      "roi": "Not specifically mentioned"
+    },
+    "technicalDetails": {
+      "architecture": "Multi-cloud implementation using AWS Bedrock and Google Vertex AI. Created CB-GPT (Coinbase GPT), an internal platform for building AI-powered applications. Customer support chatbot is an agentic system with Claude handling query rephrasing, response generation, and output styling, including financial compliance guardrails.",
+      "promptEngineering": "Coinbase engaged in collaborative sessions with Anthropic, sharing their system architecture and prompts. Anthropic provided feedback, best practices, and optimization tips. Anthropic also shared examples of their complex internal prompts, which inspired Coinbase to structure their instructions to Claude more effectively.",
+      "challenges": "Handling unpredictable spikes in trading volume and customer inquiries, maintaining strict security and compliance standards, achieving high availability in a volatile market.",
+      "solutions": "Multi-cloud strategy for high availability (99.9999%), load balancing, and enhanced security through redundancy. Optimizing performance and cost by managing AI model quotas across different cloud platforms.",
+      "scale": "Supporting several million users, handling thousands of messages per hour, operating across over 100 geographies, and processing $226 billion in quarterly trading volume."
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "4",
+      "companyInfo": "5",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/coinbase",
+      "extractionDate": "2023-11-09",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.030888000000000002,
+  "success": true,
+  "processed_at": "2025-03-06 19:44:13"
+}

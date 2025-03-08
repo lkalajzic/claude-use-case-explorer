@@ -1,0 +1,97 @@
+{
+  "url": "https://www.anthropic.com/customers/zoom",
+  "data": {
+    "companyInfo": {
+      "name": "Zoom",
+      "industry": "Video communications and collaboration software",
+      "size": "Enterprise",
+      "region": "Global"
+    },
+    "implementation": {
+      "useCase": "Integration of Claude into Zoom AI Companion to enhance meeting productivity features including automated meeting summaries, in-meeting questions, meeting next steps, document creation, and meeting preparation",
+      "problem": "Addressing time management and productivity challenges in hybrid work environments where employees have insufficient time between meetings, spend excessive hours in meetings/emails, and struggle to complete tasks",
+      "model": "Claude 3.5 Sonnet",
+      "integrationMethod": "Federated approach using Claude alongside other third-party models",
+      "implementationTime": "Claude 3.5 Sonnet was deployed within two weeks of its release"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "14%",
+          "metric": "improvement in meeting summary accuracy based on Zoom's internal testing",
+          "sourceText": "With the addition of Claude to its federated approach, Zoom AI Companion, the company's AI assistant, was able to achieve a 14% accuracy improvement in meeting summaries based on Zoom's internal testing."
+        },
+        {
+          "value": "82%",
+          "metric": "of leaders reported insufficient time between meetings or chats to complete tasks",
+          "sourceText": "82% of leaders and 72% of employees reported insufficient time between meetings or chats to complete tasks"
+        },
+        {
+          "value": "72%",
+          "metric": "of employees reported insufficient time between meetings or chats to complete tasks",
+          "sourceText": "82% of leaders and 72% of employees reported insufficient time between meetings or chats to complete tasks"
+        },
+        {
+          "value": "35%",
+          "metric": "of leaders spend three or more hours daily on in-person meetings or email",
+          "sourceText": "Over one-third of leaders (35%) spend three or more hours daily on in-person meetings or email"
+        },
+        {
+          "value": "84%",
+          "metric": "of leaders whose teams use AI reported faster task completion and increased productivity",
+          "sourceText": "Conversely, 84% of leaders whose teams use AI reported faster task completion and increased productivity"
+        },
+        {
+          "value": "two weeks",
+          "metric": "timeframe for enhancing features after new model releases",
+          "sourceText": "Rapid integration of new AI models, with features being enhanced within just two weeks of new model releases"
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Higher user engagement and satisfaction",
+          "detail": "Particularly with automated meeting summaries and AI-assisted document creation",
+          "sourceText": "We're seeing much higher user engagement and satisfaction, particularly with our automated meeting summaries and AI-assisted document creation"
+        },
+        {
+          "benefit": "Improved competitive differentiation",
+          "detail": "Ability to rapidly innovate and respond to customer requests for new features",
+          "sourceText": "Partnering with Anthropic, along with other LLMs as part of our federated approach, has allowed us to keep rapidly innovating and respond to customer requests for new features quickly, which really differentiates us in the market"
+        },
+        {
+          "benefit": "Enhanced meeting participation",
+          "detail": "Participants can stay fully engaged during meetings without worrying about note-taking",
+          "sourceText": "Claude helps generate high-quality, automated recaps, and next steps allowing participants to stay fully engaged during meetings without worrying about note-taking."
+        },
+        {
+          "benefit": "Enterprise-grade AI capabilities",
+          "detail": "Meeting high standards for intelligence, reliability and security required by large customers",
+          "sourceText": "Deploying Claude models as part of our federated approach allows us to offer more enterprise-grade AI capabilities while meeting our largest customers' high standards for intelligence, reliability and security."
+        }
+      ],
+      "timeToValue": "Two weeks for deployment of new Claude model features",
+      "roi": "Not specifically mentioned in financial terms"
+    },
+    "technicalDetails": {
+      "architecture": "Federated approach using Claude alongside other third-party models within Zoom AI Companion",
+      "promptEngineering": "Not specifically mentioned",
+      "challenges": "Not specifically detailed",
+      "solutions": "Rapid integration of Claude 3.5 Sonnet within two weeks of its release",
+      "scale": "Serving millions of users globally"
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "5",
+      "companyInfo": "4",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/zoom",
+      "extractionDate": "2023-11-09",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.024627000000000003,
+  "success": true,
+  "processed_at": "2025-03-06 19:28:59"
+}

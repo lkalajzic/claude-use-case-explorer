@@ -1,0 +1,97 @@
+{
+  "url": "https://www.anthropic.com/customers/palo-alto-networks",
+  "data": {
+    "companyInfo": {
+      "name": "Palo Alto Networks",
+      "industry": "Cybersecurity",
+      "size": "Enterprise (World's largest cybersecurity company)",
+      "region": "Global"
+    },
+    "implementation": {
+      "useCase": "Using Claude to enhance developer productivity in software development while maintaining security standards. Specifically for code completion, code chat, architectural explanation, complex code generation, debugging, and onboarding new developers.",
+      "problem": "Developers spent 30-35% of their time in initial development, which was also where the most critical issues emerged. Bugs found later in the development process cost money, reputation, and customer satisfaction.",
+      "model": "Claude 3.5 Haiku for real-time code completion and Claude 3.5 Sonnet for IDE code chat",
+      "integrationMethod": "Google Cloud's Vertex AI platform with SDK integration",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "20-30%",
+          "metric": "increase in feature development velocity",
+          "sourceText": "\u2022 20-30% increase in feature development velocity"
+        },
+        {
+          "value": "70%",
+          "metric": "faster completion of integration tasks by junior developers with no prior knowledge of a complex product",
+          "sourceText": "In the pilot program, junior developers with no prior knowledge of a complex product completed integration tasks 70% faster with Claude's assistance."
+        },
+        {
+          "value": "2,500",
+          "metric": "developers onboarded, with plans to scale to 3,500",
+          "sourceText": "\u2022 Onboarded 2,500 developers, ramping up to 3,500 in the coming months"
+        },
+        {
+          "value": "from months to weeks",
+          "metric": "reduction in new developer onboarding time",
+          "sourceText": "\u2022 Reduction in new developer onboarding time from months to weeks"
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Faster onboarding for new developers",
+          "detail": "New developers can contribute meaningfully within weeks instead of months",
+          "sourceText": "New developers can now contribute meaningfully within weeks, instead of taking months to fully understand and contribute to complex codebases."
+        },
+        {
+          "benefit": "Understanding complex codebases without senior developer support",
+          "detail": "Reduces dependency on senior developers for onboarding",
+          "sourceText": "\u2022 Enables understanding of complex codebases without extensive senior developer support"
+        },
+        {
+          "benefit": "Always-available pair programmer",
+          "detail": "Provides continuous support for experienced developers",
+          "sourceText": "\u2022 Acts as an always-available pair programmer"
+        },
+        {
+          "benefit": "Assistance with complex tasks",
+          "detail": "Helps with debugging and architectural decisions",
+          "sourceText": "\u2022 Assists with complex debugging and architectural decisions"
+        },
+        {
+          "benefit": "Instant feedback on code quality",
+          "detail": "Provides feedback on code quality and performance optimization",
+          "sourceText": "\u2022 Provides instant feedback on code quality and performance optimization"
+        },
+        {
+          "benefit": "Improved code quality through AI post-processing",
+          "detail": "System automatically improves variable names, adds code comments, and generates unit tests",
+          "sourceText": "The company is already pioneering innovative uses of Claude, including an AI post-processing system which improves the code quality and security in CI/CD. This system automatically improves variable names, adds code comments for readability, and generates unit tests\u2014all while maintaining Palo Alto Networks' rigorous security standards."
+        }
+      ],
+      "timeToValue": "New developers can contribute meaningfully within weeks instead of months",
+      "roi": "Not mentioned specifically, though increased development velocity and reduced onboarding time imply significant ROI"
+    },
+    "technicalDetails": {
+      "architecture": "Claude integrated with Google Cloud's Vertex AI platform, with different Claude models used for specific tasks (Haiku for code completion, Sonnet for complex tasks)",
+      "promptEngineering": "Not mentioned specifically",
+      "challenges": "Not mentioned specifically",
+      "solutions": "Using different Claude models for specific tasks (Haiku for real-time code completion, Sonnet for complex tasks)",
+      "scale": "Onboarded 2,500 developers with plans to scale to 3,500 in the coming months"
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "5",
+      "companyInfo": "4",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/palo-alto-networks",
+      "extractionDate": "2023-11-09",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.024353999999999997,
+  "success": true,
+  "processed_at": "2025-03-06 19:34:23"
+}

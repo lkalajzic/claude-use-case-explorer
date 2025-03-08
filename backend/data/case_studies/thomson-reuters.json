@@ -1,0 +1,67 @@
+{
+  "url": "https://www.anthropic.com/customers/thomson-reuters",
+  "data": {
+    "companyInfo": {
+      "name": "Thomson Reuters",
+      "industry": "Professional information services (legal and tax)",
+      "size": "Enterprise (with 3,000+ domain experts mentioned)",
+      "region": "Global"
+    },
+    "implementation": {
+      "useCase": "Thomson Reuters uses Claude to power their AI platform, CoCounsel, which helps legal and tax professionals synthesize expert knowledge and deliver comprehensive advice to clients. They've built a comprehensive Retrieval-Augmented Generation (RAG) architecture for tax and legal analysis, processing complex contracts and tax documents.",
+      "problem": "Thomson Reuters needed an AI solution to leverage their vast professional knowledge base while meeting strict accuracy and reliability requirements. They needed technology to maintain their high standards while making expert knowledge more accessible\u2014empowering users to better discover subject matter expertise from 3,000 domain experts and over 150 years of authoritative content.",
+      "model": "Claude 3 Haiku and Claude 3.5 Sonnet",
+      "integrationMethod": "Claude in Amazon Bedrock",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "half or more",
+          "metric": "reduction in time for completing tasks",
+          "sourceText": "From a time-saving perspective, I can easily see it cutting the time in half, maybe even more,"
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Comprehensive analysis of complex problems",
+          "detail": "Providing multiple sides and perspectives of complex problems for professionals",
+          "sourceText": "There's tremendous value in giving professionals multiple sides and perspectives of complex problems. We're not just providing faster information access\u2014we're delivering a more complete and comprehensive view of all sides of an issue."
+        },
+        {
+          "benefit": "Enhanced professional productivity",
+          "detail": "Professionals can focus on higher-level, strategic work",
+          "sourceText": "CoCounsel will become a foundational tool for our firm. Its efficiency is staggering and frees up more of my time to focus on higher-level, more strategic work."
+        },
+        {
+          "benefit": "Expanded task delegation capabilities",
+          "detail": "AI functions like an associate lawyer handling delegated tasks",
+          "sourceText": "It's like having an associate lawyer ready to take on an endless number of delegated tasks and deliver it all in minutes."
+        }
+      ],
+      "timeToValue": "Not mentioned",
+      "roi": "Not mentioned"
+    },
+    "technicalDetails": {
+      "architecture": "Comprehensive Retrieval-Augmented Generation (RAG) architecture for tax and legal analysis, deployed on AWS Global Cloud Infrastructure. They strategically deployed different Claude models across their product suite, using Claude 3 Haiku for rapid processing and Claude 3.5 Sonnet for more complex analysis.",
+      "promptEngineering": "Implemented prompt caching for efficient processing",
+      "challenges": "Meeting extremely high quality thresholds for professional advice, maintaining security and governance standards for sensitive professional data",
+      "solutions": "Leveraging Amazon Bedrock for rapid testing and deployment of new Claude models while maintaining strict security standards, using expert validation to maintain accuracy",
+      "scale": "Processing expertise from 3,000+ subject matter experts and over 150 years of authoritative content"
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "3",
+      "companyInfo": "4",
+      "implementation": "5"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/thomson-reuters",
+      "extractionDate": "2023-11-09",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.020499,
+  "success": true,
+  "processed_at": "2025-03-06 19:58:18"
+}

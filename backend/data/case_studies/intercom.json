@@ -1,0 +1,137 @@
+{
+  "url": "https://www.anthropic.com/customers/intercom",
+  "data": {
+    "companyInfo": {
+      "name": "Intercom",
+      "industry": "Customer service software",
+      "size": "Enterprise (serves over 25,000 customers)",
+      "region": "Not mentioned"
+    },
+    "implementation": {
+      "useCase": "Intercom integrated Claude into their AI agent called Fin to automatically resolve customer support queries with human-quality responses. Fin provides instant, accurate answers for customers 24/7, delivers personalized, conversational support, and enables human agents to focus on more complex queries.",
+      "problem": "Traditional support models were breaking under modern pressures: support teams were stretched thin, customers expected instant, human-quality answers, and businesses needed to scale support without sacrificing the personal touch. Support representatives spent excessive time searching for answers to repetitive questions, and businesses faced difficult tradeoffs between response times, quality, and hiring costs.",
+      "model": "Claude (specific version not specified)",
+      "integrationMethod": "Integrated into Intercom's AI agent called Fin",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "up to 86%",
+          "metric": "resolution rates of customer's support volume with human-quality, personalized responses",
+          "sourceText": "Resolves up to 86% of customer's support volume with human-quality, personalized responses"
+        },
+        {
+          "value": "51%",
+          "metric": "average resolution rate out of the box",
+          "sourceText": "Achieves a 51% average resolution rate out of the box"
+        },
+        {
+          "value": "from 30 minutes to seconds",
+          "metric": "reduction in response times",
+          "sourceText": "Reduces response times from 30 minutes to seconds"
+        },
+        {
+          "value": "over 45",
+          "metric": "languages supported for global customers",
+          "sourceText": "Delivers responses in over 45 languages for global customers"
+        },
+        {
+          "value": "over 6,000",
+          "metric": "conversations resolved by Fin for Synthesia within six months",
+          "sourceText": "Within six months of implementing Fin, the software company saw the AI agent resolve over 6,000 conversations, save over 1,300 hours, and achieve self-serve support rates as high as 87%."
+        },
+        {
+          "value": "over 1,300",
+          "metric": "hours saved for Synthesia within six months",
+          "sourceText": "Within six months of implementing Fin, the software company saw the AI agent resolve over 6,000 conversations, save over 1,300 hours, and achieve self-serve support rates as high as 87%."
+        },
+        {
+          "value": "as high as 87%",
+          "metric": "self-serve support rates achieved by Synthesia",
+          "sourceText": "Within six months of implementing Fin, the software company saw the AI agent resolve over 6,000 conversations, save over 1,300 hours, and achieve self-serve support rates as high as 87%."
+        },
+        {
+          "value": "over 50%",
+          "metric": "of total support volume automated by Fundrise within three months",
+          "sourceText": "Within three months of implementing Fin, the real estate investment platform automated over 50% of their total support volume while maintaining a 95% response accuracy rate."
+        },
+        {
+          "value": "95%",
+          "metric": "response accuracy rate maintained by Fundrise",
+          "sourceText": "Within three months of implementing Fin, the real estate investment platform automated over 50% of their total support volume while maintaining a 95% response accuracy rate."
+        },
+        {
+          "value": "nearly 50%",
+          "metric": "year-over-year reduction in case volume during seasonal support spikes for Fundrise",
+          "sourceText": "During seasonal support spikes, Fin helped reduce their case volume by nearly 50% year-over-year."
+        },
+        {
+          "value": "up to 65%",
+          "metric": "resolution rates achieved by Lightspeed",
+          "sourceText": "Using AI across their global support operations, Lightspeed achieves resolution rates of up to 65% while maintaining stable customer satisfaction scores."
+        },
+        {
+          "value": "99%",
+          "metric": "of conversations at Lightspeed involve their AI system",
+          "sourceText": "Their AI system is involved in 99% of conversations, enabling their support agents to close 31% more conversations daily while reducing training time and costs to serve."
+        },
+        {
+          "value": "31%",
+          "metric": "more conversations closed daily by Lightspeed support agents",
+          "sourceText": "Their AI system is involved in 99% of conversations, enabling their support agents to close 31% more conversations daily while reducing training time and costs to serve."
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Elevation of support team roles",
+          "detail": "Support teams can focus on more strategic work instead of repetitive tasks",
+          "sourceText": "The impact extends beyond just automation metrics. By handling routine inquiries, Fin enables support teams to focus on more strategic work. \"We're seeing people deploy Fin and switch roles. The customer service team does things they couldn't do before and move up the value chain,\" said Reid."
+        },
+        {
+          "benefit": "Improved customer experience",
+          "detail": "Instant, accurate answers available 24/7 with personalized, conversational support",
+          "sourceText": "Powered by Claude, Intercom's AI agent Fin provides instant, accurate answers for customers 24/7, delivers personalized, conversational support, and enables human agents to focus on more complex queries."
+        },
+        {
+          "benefit": "Consistent brand voice",
+          "detail": "Fin adapts its communication style to match each business",
+          "sourceText": "Fin adapts its communication style to match each business, maintaining a consistent tone of voice while following specific policies and procedures. This ensures reliable, personalized support that aligns with each company's brand and guidelines."
+        },
+        {
+          "benefit": "Enhanced analytics and insights",
+          "detail": "AI-generated analytics provide visibility across support operations",
+          "sourceText": "Fin provides visibility across the entire support operation through AI-generated analytics. This helps businesses ensure consistently high-quality support while identifying areas for improvement."
+        },
+        {
+          "benefit": "Strategic partnership value",
+          "detail": "Collaboration with Anthropic provided expertise beyond just model performance",
+          "sourceText": "The partnership with Anthropic was excellent because we had very good solutions engineers who shared important expertise,' noted Tabacof. This collaboration helped Intercom optimize their implementation and unlock new capabilities, including personalized answer length and tone, policy-aware responses, and sophisticated conversation analysis."
+        }
+      ],
+      "timeToValue": "Rapid (Fundrise saw results within three months, Synthesia within six months)",
+      "roi": "Not explicitly mentioned, but implied through time savings, increased resolution rates, and reduced case volumes"
+    },
+    "technicalDetails": {
+      "architecture": "Intercom's AI agent Fin is powered by Claude, with capabilities across four key pillars: Knowledge (learns from company knowledge base), Behavior (adapts communication style), Actions (can take concrete actions on behalf of customers), and Insights (provides AI-generated analytics).",
+      "promptEngineering": "Intercom customizes Fin to provide personalized answer length and tone, policy-aware responses, and sophisticated conversation analysis.",
+      "challenges": "Ensuring consistent, high-quality responses at scale across diverse customer base; maintaining accuracy while handling millions of support queries daily.",
+      "solutions": "Rigorous testing process for every change; comprehensive evaluations examining answer accuracy, resolution rates, customer satisfaction, and response quality; optimization through collaboration with Anthropic's solutions engineers.",
+      "scale": "Handles millions of customer support queries daily across Intercom's 25,000+ customers; delivers responses in over 45 languages."
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "5",
+      "companyInfo": "4",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/intercom",
+      "extractionDate": "2023-11-09",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.039009,
+  "success": true,
+  "processed_at": "2025-03-06 19:47:25"
+}

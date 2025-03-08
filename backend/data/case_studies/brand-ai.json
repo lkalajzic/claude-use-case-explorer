@@ -1,0 +1,87 @@
+{
+  "url": "https://www.anthropic.com/customers/brand-ai",
+  "data": {
+    "companyInfo": {
+      "name": "Brand.ai",
+      "industry": "Brand management software/AI-powered branding",
+      "size": "Not mentioned",
+      "region": "Not mentioned"
+    },
+    "implementation": {
+      "useCase": "Brand.ai built an AI-powered platform that transforms static brand guidelines into dynamic brand management systems. The platform uses Claude to understand and maintain brand voice consistency across numerous digital touchpoints while preserving the human qualities that make brands distinctive.",
+      "problem": "Traditional brand management relies on static guidelines created by agencies that take too long to produce (up to 2 years) and can't keep up with the constant content creation needs across global teams and numerous digital channels. This leads to inconsistency, exhausted teams working across time zones, and a culture of settling for 'good enough' rather than growing brands.",
+      "model": "Claude (specific version not mentioned)",
+      "integrationMethod": "Brand.ai built their platform around Claude and implemented two complementary retrieval systems\u2014one for surfacing relevant brand insights and another for maintaining context in conversations.",
+      "implementationTime": "Not specifically mentioned for the Claude integration itself"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "from $5M to a small fraction of that amount per year",
+          "metric": "Reduction in brand compliance costs for enterprise clients",
+          "sourceText": "Enterprise clients have cut their brand compliance costs from $5M annually to a fraction while improving consistency."
+        },
+        {
+          "value": "600 pieces",
+          "metric": "Content management capacity for one copywriter",
+          "sourceText": "\u2022 Enables one copywriter to manage 600 pieces of content"
+        },
+        {
+          "value": "from 24 months to just days",
+          "metric": "Reduction in brand guideline creation and rollout time",
+          "sourceText": "\u2022 Reduces brand guideline creation and rollout from 24 months to just days"
+        },
+        {
+          "value": "from months to days",
+          "metric": "Acceleration of agency onboarding time",
+          "sourceText": "\u2022 Accelerates agency onboarding from months to days"
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Improved brand consistency",
+          "detail": "Maintains consistency across thousands of global touchpoints",
+          "sourceText": "\u2022 Maintains consistency across thousands of global touchpoints"
+        },
+        {
+          "benefit": "Enhanced creative focus",
+          "detail": "Frees creative teams to focus on strategic work rather than routine brand management tasks",
+          "sourceText": "By automating routine brand management tasks, brand.ai frees creative teams to focus on strategic work."
+        },
+        {
+          "benefit": "Instant brand alignment",
+          "detail": "Helps partners quickly align with brand standards",
+          "sourceText": "For established brands, it provides instant brand alignment. David Corns, Chief Marketing Officer at Opendoor, said, 'The Opendoor brand is our most valuable asset. With Brand.AI, we can quickly align partners with our brand standards while driving sharper insights, faster briefs, and stronger ideas.'"
+        },
+        {
+          "benefit": "Global brand consistency at scale",
+          "detail": "Enables global brands to maintain consistency efficiently",
+          "sourceText": "Global brands particularly benefit from the platform's ability to scale brand consistency. 'As a CMO, my priority is growing the brand so we can grow the business in the most efficient way possible,' said Brian Irving, Chief Marketing Officer at Lyft. 'From Airbnb and Eventbrite to Apple and Google, brand has always been important but incredibly manual, time consuming and expensive work, especially at a global scale. Brand.ai is the first tool I've seen that actually understands the brand and culture and powers better, faster work for marketers and partners.'"
+        }
+      ],
+      "timeToValue": "Days (for brand guideline creation and agency onboarding) compared to previous timeframes of months to years",
+      "roi": "Reduction in brand compliance costs from $5M annually to a small fraction of that amount"
+    },
+    "technicalDetails": {
+      "architecture": "Brand.ai built their platform around Claude and implemented two complementary retrieval systems\u2014one for surfacing relevant brand insights and another for maintaining context in conversations.",
+      "promptEngineering": "Not specifically mentioned",
+      "challenges": "The challenge of making AI preserve authentic brand voice while handling the analytical burden of brand management",
+      "solutions": "Leveraged Claude's industry-leading context window to process entire brand guidelines at once, and implemented dual retrieval systems to maintain context and surface relevant insights",
+      "scale": "Handles thousands of global touchpoints and enables one copywriter to manage 600 pieces of content"
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "5",
+      "companyInfo": "3",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/brand-ai",
+      "extractionDate": "2023-11-09",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.025899,
+  "success": true,
+  "processed_at": "2025-03-06 19:57:59"
+}

@@ -1,0 +1,77 @@
+{
+  "url": "https://www.anthropic.com/customers/jumpcut",
+  "data": {
+    "companyInfo": {
+      "name": "Jumpcut",
+      "industry": "Entertainment Technology (Script Analysis)",
+      "size": "Not mentioned",
+      "region": "Not mentioned"
+    },
+    "implementation": {
+      "useCase": "Jumpcut built ScriptSense, a product that uses Claude to analyze screenplays and generate comprehensive script coverage including scene summaries, character breakdowns, and similar titles. The system helps entertainment industry professionals review scripts more efficiently.",
+      "problem": "Entertainment industry professionals (executives, agents, managers) lack time to thoroughly review the hundreds of thousands of screenplays submitted annually, leading to prioritization of established writers and overlooking new talent with potentially novel ideas.",
+      "model": "Claude 3 Opus",
+      "integrationMethod": "Multi-step, agentic architecture that breaks scripts down into core components to understand plot, character, and thematic devices",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "200+",
+          "metric": "companies using ScriptSense",
+          "sourceText": "To date, users at 200+ companies are using ScriptSense and have saved 35,000+ hours in reading scripts to save time in finding their next big hit."
+        },
+        {
+          "value": "35,000+",
+          "metric": "hours saved in reading scripts",
+          "sourceText": "To date, users at 200+ companies are using ScriptSense and have saved 35,000+ hours in reading scripts to save time in finding their next big hit."
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Improved script coverage quality",
+          "detail": "Better capture of nuances in complex screenplays including humor types and implied character motivations",
+          "sourceText": "After integrating Claude, Jumpcut observed a dramatic increase in both the quality of generated script coverage and reported user satisfaction. The coverage started to capture nuances in complex screenplays that were previously being missed\u2014such as certain types of humor, or implied character motivations."
+        },
+        {
+          "benefit": "Increased user satisfaction",
+          "detail": "Users reported higher satisfaction with the script coverage generated using Claude",
+          "sourceText": "After integrating Claude, Jumpcut observed a dramatic increase in both the quality of generated script coverage and reported user satisfaction."
+        },
+        {
+          "benefit": "Secured enterprise deals",
+          "detail": "The improved quality of script coverage helped Jumpcut close several key enterprise deals",
+          "sourceText": "With the increased quality of script coverage, Jumpcut was able to close several key enterprise deals."
+        },
+        {
+          "benefit": "Breaking down silos across teams",
+          "detail": "ScriptSense indexes all uploaded material and makes it searchable in a centralized database",
+          "sourceText": "ScriptSense breaks down silos across large teams by indexing all uploaded material and making it easily searchable in a centralized database. When a studio or agent is looking to meet a very specific content mandate, they can easily search across the thousands of scripts that their teams have collected, down to the detail of subgenres, settings, themes, type of characters, or storylines."
+        }
+      ],
+      "timeToValue": "Not mentioned",
+      "roi": "Not mentioned"
+    },
+    "technicalDetails": {
+      "architecture": "Multi-step, agentic architecture that breaks scripts down into core components to understand plot, character, and thematic devices",
+      "promptEngineering": "The Anthropic Console workbench facilitated team collaboration, iteration, and testing of various prompts. The prompt engineering process was faster than with other LLMs, and Claude was more responsive to detailed instructions and easier to steer.",
+      "challenges": "Standard LLM summaries were unable to capture the nuance and subtext in screenplays, particularly across multiple storylines, flashbacks, and changing points of view.",
+      "solutions": "Jumpcut built a multi-step process to break scripts into core components for deeper analysis, leveraging Claude's ability to understand context and nuance.",
+      "scale": "Processing hundreds of thousands of screenplays, with users at 200+ companies saving 35,000+ hours in script reading time"
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "5",
+      "companyInfo": "3",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/jumpcut",
+      "extractionDate": "2023-06-13",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.022569000000000002,
+  "success": true,
+  "processed_at": "2025-03-06 20:00:40"
+}

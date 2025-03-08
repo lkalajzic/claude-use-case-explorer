@@ -1,0 +1,87 @@
+{
+  "url": "https://www.anthropic.com/customers/hebbia",
+  "data": {
+    "companyInfo": {
+      "name": "Hebbia",
+      "industry": "AI-powered document analysis for financial and legal sectors",
+      "size": "Not mentioned",
+      "region": "Not mentioned"
+    },
+    "implementation": {
+      "useCase": "Hebbia uses Claude to power their AI platform for knowledge work, analyzing vast amounts of complex documents and generating actionable insights. Claude is used both as a model choice offered to customers and to power core platform features like meta-prompting and document analysis.",
+      "problem": "Knowledge workers, particularly in finance and law, need to process, analyze, and extract insights from vast amounts of complex information efficiently and accurately. Traditional retrieval methods like RAG and basic AI chat applications fail to handle the nuance, context, and scale required for meaningful insights, with basic AI chat applications failing to handle 84% of real-world queries.",
+      "model": "Claude Sonnet and Claude Haiku",
+      "integrationMethod": "Integrated into Hebbia's platform, particularly for their Matrix feature that analyzes hundreds of documents simultaneously",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "84%",
+          "metric": "percentage of real-world queries that basic AI chat applications fail to handle",
+          "sourceText": "Basic AI chat applications fail to handle 84% of real-world queries, according to Divya Mehta, Product Manager."
+        },
+        {
+          "value": "1/3",
+          "metric": "proportion of the top 50 asset managers serviced by Hebbia",
+          "sourceText": "Hebbia is the AI platform for knowledge work, servicing over 1/3 of the top 50 asset managers as well as Tier 1 Investment Banks and Law Firms."
+        },
+        {
+          "value": "95%",
+          "metric": "percentage of tokens repeated across document analysis",
+          "sourceText": "With 95% of tokens repeated across document analysis, prompt caching can reduce response times by up to 85%."
+        },
+        {
+          "value": "up to 85%",
+          "metric": "potential reduction in response times through prompt caching",
+          "sourceText": "With 95% of tokens repeated across document analysis, prompt caching can reduce response times by up to 85%."
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Elimination of prompt engineering for users",
+          "detail": "Investment analysts no longer need to become prompt engineers as Hebbia translates natural language into performant prompts",
+          "sourceText": "\"Investment analysts who leverage Hebbia love that they no longer need to become prompt engineers thanks to Hebbia's ability to translate natural language into the most performant prompts,\" notes Raymond Verbeke, Strategy Lead at Hebbia."
+        },
+        {
+          "benefit": "Scalable document analysis",
+          "detail": "Platform can handle massive document sets in parallel with consistent performance",
+          "sourceText": "The platform's ability to handle massive document sets in parallel means \"running 700 rows is actually not that different than running 10,\" said Mehta."
+        },
+        {
+          "benefit": "Superior analysis of technical documents",
+          "detail": "Users choose Claude specifically for complex analysis tasks involving technical, credit, or legal documents",
+          "sourceText": "\"Users choose Claude for analysis over technical documents, credit agreements, or legal documents, especially when asking nuanced questions requiring detailed and descriptive answers,\" Mehta said."
+        },
+        {
+          "benefit": "Faster follow-up analysis",
+          "detail": "Prompt caching enables instant responses to follow-up questions",
+          "sourceText": "\"With prompt caching, the minute users ask a follow-up question, we can load responses instantly.\" This speed will let users dive deeper into their analysis, exploring different angles and insights in real-time."
+        }
+      ],
+      "timeToValue": "Not mentioned",
+      "roi": "Not mentioned"
+    },
+    "technicalDetails": {
+      "architecture": "Hebbia's Matrix feature allows users to analyze hundreds of documents simultaneously. Claude is used for generating prompts for complex analysis, providing metadata and quick summaries (via Claude Haiku), and offering detailed analysis of technical documents.",
+      "promptEngineering": "Hebbia uses meta-prompting as a cornerstone of their approach, with all meta-prompting done using Claude Sonnet. Their prompt generator was 'largely inspired by the Anthropic prompt generator.' This approach automatically generates optimal prompts for different types of analysis tasks.",
+      "challenges": "Processing vast amounts of complex documents efficiently while maintaining accuracy and speed",
+      "solutions": "Implementation of prompt caching to reduce response times, especially for follow-up questions where 95% of tokens are repeated across document analysis",
+      "scale": "The platform can handle hundreds of documents simultaneously, with the ability to run '700 rows' with similar performance to running just 10"
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "4",
+      "companyInfo": "3",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/hebbia",
+      "extractionDate": "2023-06-13",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.025935,
+  "success": true,
+  "processed_at": "2025-03-06 19:33:22"
+}

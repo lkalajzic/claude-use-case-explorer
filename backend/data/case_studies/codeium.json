@@ -1,0 +1,92 @@
+{
+  "url": "https://www.anthropic.com/customers/codeium",
+  "data": {
+    "companyInfo": {
+      "name": "Codeium",
+      "industry": "AI coding platform/Software development tools",
+      "size": "800,000+ active users and 1,000+ enterprise customers",
+      "region": "Not mentioned"
+    },
+    "implementation": {
+      "useCase": "Codeium uses Claude to power Windsurf (an AI-native IDE) and Cascade (an intelligent AI coding assistant). Claude specifically powers the reasoning and planning capabilities in Cascade, helping developers write better code faster by maintaining awareness of the development session history and determining the best next steps.",
+      "problem": "Traditional development tools lack AI capabilities that could make coding more accessible and efficient. Codeium aimed to solve challenges around speed of AI responses and understanding complex codebases to create a more collaborative coding experience.",
+      "model": "Claude (specific version not mentioned)",
+      "integrationMethod": "Integrated into Codeium's Windsurf IDE and Cascade AI agent",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "38%",
+          "metric": "improvement in how often developers accept AI suggestions",
+          "sourceText": "\"Understanding the codebase and improving that technology over time led to a 38% improvement in how often developers accept our AI suggestions,\" said Jeff Wang of Codeium."
+        },
+        {
+          "value": "nearly half",
+          "metric": "of all new committed code is written by Codeium's AI in companies that install it",
+          "sourceText": "\"In companies that install Codeium, nearly half of all new committed code is written by our AI.\""
+        },
+        {
+          "value": "10,000",
+          "metric": "users within just two days of launch",
+          "sourceText": "Within just two days of launch, Codeium reached 10,000 users, with numbers climbing into the hundreds of thousands by the end of week two."
+        },
+        {
+          "value": "hundreds of thousands",
+          "metric": "users by the end of week two after launch",
+          "sourceText": "Within just two days of launch, Codeium reached 10,000 users, with numbers climbing into the hundreds of thousands by the end of week two."
+        },
+        {
+          "value": "over 100M",
+          "metric": "tokens processed per minute",
+          "sourceText": "\u2022 Processes over 100M tokens per minute"
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "High user retention",
+          "detail": "Users are staying and using the platform extensively, returning daily",
+          "sourceText": "\"At first, we were afraid people would try this out as a novelty or demo, but after looking at the data, we are seeing very high retention numbers and users keep returning daily.\""
+        },
+        {
+          "benefit": "Adoption by experienced developers",
+          "detail": "Some users are dropping existing IDEs to switch to Windsurf full-time",
+          "sourceText": "Some users are even dropping their existing IDEs to switch to Windsurf full-time, a transition Codeium hadn't expected. \"We hoped to get there someday, but perhaps not on day two,\" said Ramachandran."
+        },
+        {
+          "benefit": "Accessibility for non-technical users",
+          "detail": "Non-technical users like recruiters were able to build games without prior programming experience",
+          "sourceText": "\"I had our recruiters who've never programmed try it. They started building games right away. It just worked,\" said Wang. \"It gets all the right libraries, creates the files and folders, even writes the documentation. Anybody can be a developer with this.\""
+        },
+        {
+          "benefit": "Real-time collaboration experience",
+          "detail": "Fast response times create a more interactive experience compared to other AI systems",
+          "sourceText": "\"Most AI systems make you wait around for results,\" said Ramachandran. \"We made ours fast enough to feel like a real-time collaboration with the developer.\""
+        }
+      ],
+      "timeToValue": "Immediate - users were able to start building applications right away, including non-technical users",
+      "roi": "Not specifically mentioned, though the high adoption rate and retention suggest strong value"
+    },
+    "technicalDetails": {
+      "architecture": "Codeium combines their expertise in ML infrastructure with Claude's capabilities. Their system processes over 100M tokens per minute and has been enhanced to take image inputs and leverage Claude's multimodal features.",
+      "promptEngineering": "Claude looks at everything that's happened in a development session and figures out the best next steps, maintaining full context throughout the conversation.",
+      "challenges": "Two fundamental challenges: speed (most AI systems make users wait for responses) and codebase understanding (AI assistants typically struggle with complex applications and production code).",
+      "solutions": "Codeium's infrastructure expertise enables instant interactions, and their deep expertise in parsing enterprise-scale codebases allows Cascade to effectively understand and work with production code.",
+      "scale": "Processes over 100M tokens per minute, serving hundreds of thousands of users with high retention rates"
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "5",
+      "companyInfo": "4",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/codeium",
+      "extractionDate": "2023-11-09",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.027015,
+  "success": true,
+  "processed_at": "2025-03-06 19:31:43"
+}

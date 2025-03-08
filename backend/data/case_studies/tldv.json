@@ -1,0 +1,92 @@
+{
+  "url": "https://www.anthropic.com/customers/tldv",
+  "data": {
+    "companyInfo": {
+      "name": "tl;dv",
+      "industry": "Meeting intelligence software",
+      "size": "Not mentioned",
+      "region": "Not mentioned"
+    },
+    "implementation": {
+      "useCase": "tl;dv integrated Claude to transform their platform from a basic meeting recap tool (recording, transcription, and summarization) into a sophisticated AI-powered analytics engine that can synthesize insights across multiple meetings and deliver actionable recommendations.",
+      "problem": "tl;dv faced challenges in delivering fast, accurate, and actionable insights to users from virtual meetings. They needed to modernize their technology to go beyond basic meeting recaps to provide deeper business intelligence.",
+      "model": "Claude (specific version not mentioned)",
+      "integrationMethod": "Not specifically mentioned, though they reference using Anthropic's documentation and SDKs",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "500%",
+          "metric": "increase in revenue",
+          "sourceText": "\u2022 500% increase in revenue"
+        },
+        {
+          "value": "300%",
+          "metric": "growth in new customer sign-ups",
+          "sourceText": "\u2022 300% growth in new customer sign-ups"
+        },
+        {
+          "value": "20-30%",
+          "metric": "decrease in monthly customer churn",
+          "sourceText": "\u2022 20-30% decrease in monthly customer churn"
+        },
+        {
+          "value": "50%",
+          "metric": "increase in summary generation speed",
+          "sourceText": "Users experienced a 50% increase in summary generation speed, allowing them to access key meeting insights faster than ever before."
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Improved product capabilities",
+          "detail": "Transformed from a basic meeting recap tool to a sophisticated AI-powered analytics engine",
+          "sourceText": "This partnership transformed tl;dv from a meeting recap tool into a sophisticated AI-powered analytics engine."
+        },
+        {
+          "benefit": "Enhanced customer satisfaction",
+          "detail": "Faster summary generation led to quicker insights and improved customer experience",
+          "sourceText": "This rapid \"time to aha moment\" significantly boosted customer satisfaction."
+        },
+        {
+          "benefit": "Deeper, more actionable insights",
+          "detail": "Ability to identify trends across multiple meetings and provide concrete recommendations",
+          "sourceText": "Claude's advanced analysis capabilities enabled tl;dv to offer deeper, more actionable insights from meeting data. Instead of simple summaries, customers now received customized reports identifying trends across weeks worth of meetings at once and providing concrete recommendations."
+        },
+        {
+          "benefit": "Innovative new features",
+          "detail": "Created automated sales playbook monitoring system that analyzes sales calls against methodologies like MEDDIC",
+          "sourceText": "Their automated sales playbook monitoring system, a first of its kind, analyzes sales calls against defined or custom methodologies like MEDDIC. Sales managers can now track team performance across up to 30 meetings at once, identify areas for improvement, and provide data-driven coaching, all through an intuitive dashboard."
+        },
+        {
+          "benefit": "Improved AI reliability and consistency",
+          "detail": "Allowed integration of AI-generated insights into more sophisticated user interfaces",
+          "sourceText": "\"Reliability and consistency really matter for the Product Team. Embedding AI into more sophisticated User Interfaces requires the AI to deliver consistent, well-formatted results. Anthropic is the only AI that satisfies our requirements,\" said Aranzazu del Castillo Figueruelo, Designer and Researcher at tl;dv."
+        }
+      ],
+      "timeToValue": "Immediate impact noted with 50% increase in speed and reliability",
+      "roi": "500% increase in revenue, 300% growth in sign-ups, 20-30% decrease in monthly customer churn"
+    },
+    "technicalDetails": {
+      "architecture": "Not specifically mentioned",
+      "promptEngineering": "Not mentioned",
+      "challenges": "Delivering fast, accurate, and actionable insights to users; ensuring reliability and consistency for UI integration",
+      "solutions": "Integration of Claude to provide faster, more reliable analysis and consistent, well-formatted results",
+      "scale": "Ability to analyze up to 30 meetings at once, with plans to scale to hundreds of meetings"
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "5",
+      "companyInfo": "3",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/tldv",
+      "extractionDate": "2023-11-09",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.024224999999999997,
+  "success": true,
+  "processed_at": "2025-03-06 19:34:01"
+}

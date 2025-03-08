@@ -1,0 +1,82 @@
+{
+  "url": "https://www.anthropic.com/customers/skillfully",
+  "data": {
+    "companyInfo": {
+      "name": "Skillfully",
+      "industry": "HR Technology/Talent Acquisition",
+      "size": "Not mentioned",
+      "region": "Not mentioned"
+    },
+    "implementation": {
+      "useCase": "Skillfully uses Claude to power AI-driven job simulations that allow candidates to demonstrate their actual skills in realistic workplace scenarios, rather than relying on traditional resumes. Claude powers their 'Lego LLM' infrastructure which combines multiple AI models to create seamless simulated experiences without requiring additional model training for each new simulation.",
+      "problem": "Traditional resume-based hiring is broken as candidates can use AI to mass-generate perfectly tailored applications, making it difficult for employers to identify genuine talent. Employers need a way to evaluate candidates based on actual skills rather than claimed credentials.",
+      "model": "Claude (specific version not mentioned)",
+      "integrationMethod": "Integrated into Skillfully's 'Lego LLM' infrastructure which combines multiple AI models working together",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "10x",
+          "metric": "Candidates identified on the basis of demonstrated skills are 10x more likely to convert to full time hires than conventional resume-driven methods",
+          "sourceText": "Identifies candidates on the basis of demonstrated skills are 10x more likely to convert to full time hires than conventional resume-driven methods"
+        },
+        {
+          "value": "50%",
+          "metric": "reduction in hiring cycle time for employers",
+          "sourceText": "Helps employers on average realize a 50% reduction in hiring cycle time, and a 70% decrease in the total cost to hire"
+        },
+        {
+          "value": "70%",
+          "metric": "decrease in the total cost to hire for employers",
+          "sourceText": "Helps employers on average realize a 50% reduction in hiring cycle time, and a 70% decrease in the total cost to hire"
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Ability to generate job simulations without model fine-tuning",
+          "detail": "Skillfully can create customized job simulations without requiring extensive fine-tuning for each new scenario",
+          "sourceText": "Generates a large volume of AI-powered job simulations weekly without requiring complex model fine-tuning"
+        },
+        {
+          "benefit": "Partnership with major employers",
+          "detail": "Skillfully has partnered with leading companies to transform their hiring practices",
+          "sourceText": "Partners with leading employers like Ernst & Young and Athena to transform their hiring practices"
+        },
+        {
+          "benefit": "Increased opportunities for underrepresented talent",
+          "detail": "The platform helps surface hidden talent that might be missed in traditional resume screening",
+          "sourceText": "Opens doors for historically underrepresented talent through partnerships with CUNY, America Needs You, and American Student Assistance"
+        },
+        {
+          "benefit": "More inclusive campus recruiting",
+          "detail": "Major employers like Bloomberg use Skillfully to transform campus recruiting at HBCUs and other diverse institutions",
+          "sourceText": "Major employers like Bloomberg use Skillfully to transform campus recruiting at HBCUs and other diverse institutions. By giving candidates access to job simulations before recruiting events, students can experience potential roles firsthand and receive constructive feedback."
+        }
+      ],
+      "timeToValue": "Not mentioned",
+      "roi": "Not explicitly mentioned beyond the metrics on hiring conversion rates, cycle time reduction, and cost savings"
+    },
+    "technicalDetails": {
+      "architecture": "Skillfully uses a 'Lego LLM' infrastructure that combines multiple AI models working together to create simulated experiences without additional model training",
+      "promptEngineering": "Not specifically mentioned",
+      "challenges": "Needed an AI solution that wouldn't require extensive fine-tuning for each new simulation",
+      "solutions": "Selected Claude for its superior out-of-the-box performance that fit with their 'Lego LLM' infrastructure",
+      "scale": "Generates a large volume of AI-powered job simulations weekly"
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "4",
+      "companyInfo": "3",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/skillfully",
+      "extractionDate": "2023-11-09",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.023043,
+  "success": true,
+  "processed_at": "2025-03-06 19:26:41"
+}

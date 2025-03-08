@@ -1,0 +1,77 @@
+{
+  "url": "https://www.anthropic.com/customers/wrtn",
+  "data": {
+    "companyInfo": {
+      "name": "WRTN",
+      "industry": "Consumer AI aggregation, AI entertainment and storytelling",
+      "size": "Not mentioned",
+      "region": "South Korea and Japan"
+    },
+    "implementation": {
+      "useCase": "WRTN uses Claude to power interactive storytelling, AI companionship, and productivity tools. Claude enables natural character interactions for entertainment, creates AI companions for meaningful dialogue, and helps users enhance written communication.",
+      "problem": "Bridging the gap between AI power users and mainstream populations in Asia, addressing urban loneliness by providing meaningful connections, and transforming passive content consumption into interactive experiences.",
+      "model": "Claude (specific version not mentioned)",
+      "integrationMethod": "Not mentioned",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "4.5 million",
+          "metric": "monthly active users served by WRTN",
+          "sourceText": "\u2022 Serves 4.5 million monthly active users"
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Superior Korean language capabilities",
+          "detail": "Claude provides more natural Korean tone and better emulates human language",
+          "sourceText": "Claude has a more natural Korean tone and emulates human language better, understands intent, and knows how to speak sentimentally"
+        },
+        {
+          "benefit": "Enhanced storytelling experiences",
+          "detail": "Creates dynamic, interactive stories that transcend traditional storytelling",
+          "sourceText": "In entertainment, Claude powers hundreds of thousands of interactive story characters, creating experiences that transcend traditional storytelling."
+        },
+        {
+          "benefit": "Improved prompt following",
+          "detail": "Claude strictly follows prompts compared to other models",
+          "sourceText": "They also chose Claude for its ability to strictly follow prompts compared to other models, making it ideal for character-based interactions."
+        },
+        {
+          "benefit": "Shift from passive to active content consumption",
+          "detail": "Users now actively participate in dynamic stories instead of passively consuming content",
+          "sourceText": "The platform has revolutionized how users engage with creative content. Instead of passive consumption of web novels or comics, users now actively participate in dynamic stories."
+        },
+        {
+          "benefit": "Cost-effective entertainment alternative",
+          "detail": "Users switch from paid web novels to AI character chat for personalized stories",
+          "sourceText": "Before this product, I spent 20 to 50 bucks a month for web novels and webtoons. Now I just use the character chat because it writes endless stories just for you"
+        }
+      ],
+      "timeToValue": "Not mentioned",
+      "roi": "Not mentioned"
+    },
+    "technicalDetails": {
+      "architecture": "Not mentioned",
+      "promptEngineering": "WRTN uses Claude for specific character-based interactions that require strict adherence to prompts",
+      "challenges": "Bridging the gap between AI power users and mainstream populations, providing natural interactions in Korean language",
+      "solutions": "Leveraging Claude's superior Korean language capabilities and prompt-following abilities",
+      "scale": "Powers hundreds of thousands of interactive story characters and serves 4.5 million monthly active users"
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "3",
+      "companyInfo": "4",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/wrtn",
+      "extractionDate": "2023-11-09",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.020145,
+  "success": true,
+  "processed_at": "2025-03-06 20:04:53"
+}

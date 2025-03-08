@@ -1,0 +1,127 @@
+{
+  "url": "https://www.anthropic.com/customers/micro1",
+  "data": {
+    "companyInfo": {
+      "name": "micro1",
+      "industry": "Technical recruiting/HR technology",
+      "size": "Not mentioned",
+      "region": "Not mentioned"
+    },
+    "implementation": {
+      "useCase": "AI-powered technical interviews for recruiting, where Claude conducts technical assessments through dynamic conversations, provides unbiased evaluations, creates lower-pressure interview experiences, generates comprehensive reports, and enables 24/7 candidate evaluation across time zones.",
+      "problem": "Traditional recruiting methods are inefficient and costly. Resumes alone cannot determine interview eligibility, manual screening calls consume recruiter time, and take-home tests are compromised by AI usage (up to 85% of candidates). Companies struggle with resource-intensive screening processes that often fail to identify the best candidates.",
+      "model": "Claude (specific version not mentioned)",
+      "integrationMethod": "Not specifically detailed beyond implementation being 'straightforward'",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "over 3,000",
+          "metric": "AI interviews conducted per day",
+          "sourceText": "micro1 uses Claude to conduct thousands of AI-powered technical interviews daily, helping companies evaluate global talent while providing candidates with an unbiased, lower pressure interview experience."
+        },
+        {
+          "value": "85%",
+          "metric": "reduction in recruitment costs compared to traditional methods",
+          "sourceText": "\u2022 Reduces recruitment costs by 85% compared to traditional methods"
+        },
+        {
+          "value": "5x",
+          "metric": "higher human interview pass rates",
+          "sourceText": "\u2022 Achieves 5x higher human interview pass rates"
+        },
+        {
+          "value": "64%",
+          "metric": "less staff time while maintaining 10,000 monthly interviews at Legal Soft",
+          "sourceText": "\u2022 Enables teams like Legal Soft to maintain 10,000 monthly interviews with 64% less staff time"
+        },
+        {
+          "value": "from 10% to 50%",
+          "metric": "increase in human interview pass rates at Deel",
+          "sourceText": "At Deel, where 85% of candidates used AI for take-home tests, micro1's AI interviewer increased human interview pass rates from 10% to 50%."
+        },
+        {
+          "value": "over 80%",
+          "metric": "reduction in recruitment costs at Deel",
+          "sourceText": "This improvement helped Deel reduce recruitment costs by over 80% while improving candidate quality."
+        },
+        {
+          "value": "from 33 to 12",
+          "metric": "reduction in interviewing team size at Legal Soft",
+          "sourceText": "Legal Soft demonstrates the platform's scalability. By implementing micro1, they streamlined their interviewing team from 33 to 12 while maintaining 10,000 monthly candidate screenings."
+        },
+        {
+          "value": "30%",
+          "metric": "improvement in EBITDA margins at Legal Soft",
+          "sourceText": "This efficiency improved their EBITDA margins by 30% and saved over $400,000 annually in recruitment costs."
+        },
+        {
+          "value": "over $400,000",
+          "metric": "annual savings in recruitment costs at Legal Soft",
+          "sourceText": "This efficiency improved their EBITDA margins by 30% and saved over $400,000 annually in recruitment costs."
+        },
+        {
+          "value": "85%",
+          "metric": "of candidates using AI for take-home tests at Deel",
+          "sourceText": "At Deel, where 85% of candidates used AI for take-home tests, micro1's AI interviewer increased human interview pass rates from 10% to 50%."
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Superior technical understanding",
+          "detail": "Claude demonstrated better understanding of technical concepts compared to other AI models",
+          "sourceText": "Claude stands out for its general intelligence and ability to truly understand technical queries"
+        },
+        {
+          "benefit": "Straightforward implementation",
+          "detail": "Well-presented documentation and prompting guidelines",
+          "sourceText": "The documentation is very well presented, and the prompting guidelines helped us get exactly what we wanted."
+        },
+        {
+          "benefit": "Ethical alignment",
+          "detail": "Claude's ethical foundation aligned with micro1's values",
+          "sourceText": "We really value Anthropic's commitment to ethical standards as a safety-minded research company."
+        },
+        {
+          "benefit": "Improved candidate experience",
+          "detail": "Lower pressure, anxiety-free interview experience",
+          "sourceText": "micro1 uses Claude to conduct thousands of AI-powered technical interviews daily, helping companies evaluate global talent while providing candidates with an unbiased, lower pressure interview experience."
+        },
+        {
+          "benefit": "Unbiased evaluation",
+          "detail": "Fair assessment regardless of candidate background",
+          "sourceText": "Through unbiased AI evaluation, micro1 ensures every candidate gets a fair chance to demonstrate their abilities."
+        },
+        {
+          "benefit": "Strategic focus for recruiters",
+          "detail": "Recruiters can focus on high-value decisions rather than routine screenings",
+          "sourceText": "The platform transforms recruiters into strategic operators who can focus on high-value decisions rather than routine screenings."
+        }
+      ],
+      "timeToValue": "Not mentioned",
+      "roi": "Specific ROI not mentioned beyond cost savings and efficiency metrics"
+    },
+    "technicalDetails": {
+      "architecture": "Not specifically detailed",
+      "promptEngineering": "micro1 mentioned that Anthropic's 'prompting guidelines helped us get exactly what we wanted'",
+      "challenges": "Not specifically detailed",
+      "solutions": "Not specifically detailed",
+      "scale": "Over 3,000 AI interviews conducted per day; Legal Soft maintains 10,000 monthly candidate screenings"
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "5",
+      "companyInfo": "3",
+      "implementation": "3"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/micro1",
+      "extractionDate": "2023-11-09",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.029529,
+  "success": true,
+  "processed_at": "2025-03-06 20:01:25"
+}

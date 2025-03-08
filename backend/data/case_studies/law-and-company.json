@@ -1,0 +1,122 @@
+{
+  "url": "https://www.anthropic.com/customers/law-and-company",
+  "data": {
+    "companyInfo": {
+      "name": "Law&Company",
+      "industry": "Legal technology/services",
+      "size": "Not mentioned",
+      "region": "South Korea"
+    },
+    "implementation": {
+      "useCase": "Law&Company built SuperLawyer, South Korea's first AI legal assistant that helps lawyers reduce time spent on legal research and document preparation while maintaining high accuracy for sensitive legal work. The platform uses Claude to streamline legal research, precedent analysis, document drafting and creation, case law summarization, document-based conversation, and regulatory compliance checking.",
+      "problem": "The legal industry faces the challenge of handling complex cases while managing routine document preparation and research. In South Korea's legal sector, lawyers struggle to balance client meetings and court appearances with time-consuming documentation tasks. For many firms, a single case requires hours of research and document preparation, creating bottlenecks that limit their ability to serve more clients.",
+      "model": "Claude 3.5 Sonnet (mentioned as a recent upgrade)",
+      "integrationMethod": "Retrieval Augmented Generation (RAG) system with function-calling capabilities, implemented within a flexible architecture that can accommodate various AI models",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "6,000 users",
+          "metric": "user adoption representing 20% of South Korean practicing lawyers within 180 days",
+          "sourceText": "Attracted 6,000 users\u201420% of South Korean Practicing lawyers\u2014within 180 days"
+        },
+        {
+          "value": "60.2%",
+          "metric": "free-to-paid conversion rate",
+          "sourceText": "Achieved a 60.2% free-to-paid conversion rate and a 79.1% second-month retention"
+        },
+        {
+          "value": "79.1%",
+          "metric": "second-month retention rate",
+          "sourceText": "Achieved a 60.2% free-to-paid conversion rate and a 79.1% second-month retention"
+        },
+        {
+          "value": "1.7x",
+          "metric": "increase in lawyer efficiency",
+          "sourceText": "Helped lawyers increase efficiency 1.7x, saving 25 minutes per hour of work"
+        },
+        {
+          "value": "25 minutes",
+          "metric": "time saved per hour of work",
+          "sourceText": "Helped lawyers increase efficiency 1.7x, saving 25 minutes per hour of work"
+        },
+        {
+          "value": "over 2.3 million",
+          "metric": "collective work hours saved in the first 180 days",
+          "sourceText": "Enabled legal teams to save over 2.3 million collective work hours in the first 180 days"
+        },
+        {
+          "value": "92.5%",
+          "metric": "of users reported saving time",
+          "sourceText": "Survey results show 92.5% of users saved time, with 46.8% saving over 30 minutes per hour of work."
+        },
+        {
+          "value": "46.8%",
+          "metric": "of users saved over 30 minutes per hour of work",
+          "sourceText": "Survey results show 92.5% of users saved time, with 46.8% saving over 30 minutes per hour of work."
+        },
+        {
+          "value": "70%",
+          "metric": "of users reported cost savings",
+          "sourceText": "Additionally, 70% reported cost savings, with 30% noting a 'meaningful reduction in costs.'"
+        },
+        {
+          "value": "30%",
+          "metric": "of users noted a 'meaningful reduction in costs'",
+          "sourceText": "Additionally, 70% reported cost savings, with 30% noting a 'meaningful reduction in costs.'"
+        },
+        {
+          "value": "over 40%",
+          "metric": "reduction in response times after upgrading to Claude 3.5 Sonnet",
+          "sourceText": "Recent improvements, including the adoption of Claude 3.5 Sonnet, have reduced response times by over 40% while maintaining high accuracy."
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Dramatic time savings for experienced attorneys",
+          "detail": "Tasks that previously took days now take minutes",
+          "sourceText": "A partner attorney with 15 years of experience said, 'Tasks that used to take 3 hours to 2 days now take minutes, allowing me to devote more time to high-priority tasks.'"
+        },
+        {
+          "benefit": "Enhanced capabilities for solo practitioners",
+          "detail": "Enables modularization of case handling, multiplying effectiveness",
+          "sourceText": "One solo practitioner explained, 'SuperLawyer enables the modularization of case handling\u2014it's like how a single developer using Claude can be as effective as a team of 10 junior developers.'"
+        },
+        {
+          "benefit": "Democratization of legal services",
+          "detail": "Making legal services more accessible in South Korea",
+          "sourceText": "Law&Company sees AI as key to democratizing legal services in South Korea."
+        },
+        {
+          "benefit": "Reduced AI hallucination for legal work",
+          "detail": "Implementation of citation appropriateness evaluation feature",
+          "sourceText": "Furthermore, Law&Company is focused on rapidly advancing their service to reduce AI hallucination. Recently, They've implemented a citation appropriateness evaluation feature to mitigate hallucination."
+        }
+      ],
+      "timeToValue": "Immediate value with rapid adoption (6,000 users within 180 days)",
+      "roi": "Not explicitly mentioned, though the high conversion rate (60.2%) and retention rate (79.1%) suggest strong ROI"
+    },
+    "technicalDetails": {
+      "architecture": "Flexible architecture that can accommodate various AI models while enabling easy updates to system prompts and experiments with diverse data implementations. Includes a Retrieval Augmented Generation (RAG) system that allows Claude to reference relevant legal data before responding.",
+      "promptEngineering": "The team continues to fine-tune Claude's system prompts to optimize performance according to their standards. Claude's function-calling capabilities help organize information in the needed sequence for each unique user request.",
+      "challenges": "The platform initially faced scaling challenges as user numbers surged, requiring an expansion of API usage limits.",
+      "solutions": "With support from Anthropic's customer service team, they quickly resolved scaling issues to maintain service reliability. They also secured an exclusive supply contract with Park Young Sa, South Korea's leading legal publishing house, to enhance their AI capabilities and improve response quality.",
+      "scale": "6,000 users representing 20% of South Korean practicing lawyers, with plans to extend Claude's capabilities across their product suite, including LawTalk (1.3 million monthly visitors) and Big Case."
+    },
+    "confidenceScore": {
+      "overall": "5",
+      "metrics": "5",
+      "companyInfo": "4",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/law-and-company",
+      "extractionDate": "2023-11-09",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.033057,
+  "success": true,
+  "processed_at": "2025-03-06 20:03:17"
+}

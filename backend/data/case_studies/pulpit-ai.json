@@ -1,0 +1,77 @@
+{
+  "url": "https://www.anthropic.com/customers/pulpit-ai",
+  "data": {
+    "companyInfo": {
+      "name": "Pulpit AI",
+      "industry": "Faith-based content creation and distribution",
+      "size": "Not mentioned",
+      "region": "Not mentioned"
+    },
+    "implementation": {
+      "useCase": "Pulpit AI uses Claude to transform sermons into multiple pieces of content (20+ pieces) in various formats, including devotionals, social media posts, e-books, and discipleship materials. Claude also analyzes sermon transcripts to identify impactful moments for video clips and provides feedback on sermon content.",
+      "problem": "Pastors spend approximately 30 hours per week creating sermons that reach only about 100 people during Sunday service, with limited resources to amplify their message beyond that initial audience. The average church has minimal staff (one pastor and an admin) and lacks the means to extend their message's reach.",
+      "model": "Claude Sonnet",
+      "integrationMethod": "Platform integration",
+      "implementationTime": "Quick, with minimal prompt engineering required"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "80%",
+          "metric": "reduction in operational costs while maintaining high-quality output",
+          "sourceText": "When we integrated Claude Sonnet into our platform, our costs went down 80% overnight."
+        },
+        {
+          "value": "200%",
+          "metric": "increase in customer base within three months of Claude integration",
+          "sourceText": "This cost reduction fueled rapid growth, and Pulpit AI saw a 200% increase in its customer base within three months."
+        },
+        {
+          "value": "20+",
+          "metric": "pieces of content created from one sermon to increase reach and engagement",
+          "sourceText": "Using AI, it allows pastors to upload sermons and quickly receive 20+ pieces of content."
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Improved content quality",
+          "detail": "Claude produces more natural-sounding content that can adopt the voice of the preacher",
+          "sourceText": "We chose Claude for its superior ability to parse theological ideas without sounding robotic or obviously written by AI. Our customers noticed the improvement, noting that Claude sounds human and can adopt the 'voice' of the preacher."
+        },
+        {
+          "benefit": "Time savings for pastors",
+          "detail": "Reduces content creation time from hours to minutes",
+          "sourceText": "Pulpit AI drastically reduces pastors' content creation time, turning hours into minutes. Waters explained, 'We're increasing pastors' reach and scaling their ability to engage with their congregations.'"
+        },
+        {
+          "benefit": "Extended sermon impact",
+          "detail": "Provides spiritual content throughout the week beyond Sunday service",
+          "sourceText": "It transforms a single sermon into multiple pieces of content, providing 'spiritual nourishment' throughout the week, catering to diverse learning styles and preferences. 'Our goal is for the local church pastor's voice to be the loudest in a Christian's life,' says Whittle. 'Pulpit AI helps extend the impact of sermons beyond Sunday.'"
+        }
+      ],
+      "timeToValue": "Immediate cost reduction ('overnight') with growth benefits within three months",
+      "roi": "80% operational cost reduction while achieving 200% customer base growth in three months"
+    },
+    "technicalDetails": {
+      "architecture": "Not mentioned in detail",
+      "promptEngineering": "Minimal prompt engineering required for integration",
+      "challenges": "Previous LLM struggled to parse complex theological ideas and produced robotic-sounding content",
+      "solutions": "Switched to Claude which better handles theological concepts and produces more natural-sounding content",
+      "scale": "Potential impact on 5 million sermons delivered worldwide to 2 billion Christians every week"
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "5",
+      "companyInfo": "3",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/pulpit-ai",
+      "extractionDate": "2023-06-13",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.021303,
+  "success": true,
+  "processed_at": "2025-03-06 19:35:47"
+}

@@ -1,0 +1,77 @@
+{
+  "url": "https://www.anthropic.com/customers/intuit",
+  "data": {
+    "companyInfo": {
+      "name": "Intuit",
+      "industry": "Financial technology (tax preparation software)",
+      "size": "Enterprise (serves millions of customers)",
+      "region": "Global (primarily United States)"
+    },
+    "implementation": {
+      "useCase": "Integration of Claude into Intuit Assist for TurboTax to generate clear and accurate tax explanations for customers during federal tax reviews",
+      "problem": "Customer fear and lack of confidence when filing taxes due to concerns about making mistakes and not understanding tax calculations",
+      "model": "Claude (specific version not mentioned)",
+      "integrationMethod": "Integrated via Amazon Bedrock",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "Increase (specific percentage not provided)",
+          "metric": "Customer ratings on helpfulness compared to previous experiences that weren't powered by Claude",
+          "sourceText": "By powering federal tax explanations with Claude, Intuit saw an increase in customer ratings on helpfulness compared to previous experiences that weren't powered by Claude."
+        },
+        {
+          "value": "Increase (specific percentage not provided)",
+          "metric": "Conversion rate for successful federal tax filings",
+          "sourceText": "The company also observed an increased conversion rate for successful federal tax filings\u2014a win-win for customers and Intuit."
+        },
+        {
+          "value": "Millions",
+          "metric": "TurboTax customers served during peak season",
+          "sourceText": "\u2022 Served millions of TurboTax customers during peak season."
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Improved customer confidence in tax filing",
+          "detail": "Claude provides simple explanations of tax calculations, helping users better understand how their tax result is calculated",
+          "sourceText": "During federal tax reviews, where customers see a summary of their return, the combined work of Intuit, Anthropic and AWS provides simple explanations of tax calculations, helping users better understand how their tax result is calculated and feel assured their taxes were completed correctly."
+        },
+        {
+          "benefit": "Enhanced performance and output quality",
+          "detail": "Close partnership with Anthropic improved the quality of explanations",
+          "sourceText": "Anthropic provides exceptional support, giving us direct access to expert researchers who help us get the most out of Claude. Our close partnership has been instrumental in pushing output quality for our customers."
+        },
+        {
+          "benefit": "Reliable scaling during peak demand",
+          "detail": "Claude was able to handle millions of customers during concentrated tax filing periods",
+          "sourceText": "Notably, Claude was able to scale to meet incredible demand, serving millions of customers during peak tax season\u2014a necessity given the concentrated nature of days when people file their taxes."
+        }
+      ],
+      "timeToValue": "Not mentioned",
+      "roi": "Not mentioned"
+    },
+    "technicalDetails": {
+      "architecture": "Integration of Claude via Amazon Bedrock into Intuit's AI financial assistant (Intuit Assist for TurboTax), working in conjunction with Intuit's proprietary tax knowledge engine",
+      "promptEngineering": "Not mentioned specifically, but Intuit collaborated with Anthropic's expert researchers to optimize Claude's performance",
+      "challenges": "Not explicitly mentioned",
+      "solutions": "Combining Claude's natural language capabilities with Intuit's extensive tax knowledge engine that codifies more than 100,000 pages of tax code and 15,000+ tax forms",
+      "scale": "Served millions of TurboTax customers during peak tax season"
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "3",
+      "companyInfo": "4",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/intuit",
+      "extractionDate": "2023-06-13",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.020201999999999998,
+  "success": true,
+  "processed_at": "2025-03-06 20:02:27"
+}

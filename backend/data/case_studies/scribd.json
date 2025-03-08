@@ -1,0 +1,77 @@
+{
+  "url": "https://www.anthropic.com/customers/scribd",
+  "data": {
+    "companyInfo": {
+      "name": "Scribd, Inc.",
+      "industry": "Digital content platform/Technology",
+      "size": "Enterprise (multinational technology company)",
+      "region": "Global"
+    },
+    "implementation": {
+      "useCase": "Using Claude to automatically generate high-quality metadata (primarily descriptions) for millions of user-uploaded documents across Scribd and SlideShare platforms to improve content discoverability",
+      "problem": "Approximately 70% of user-uploaded content had low-quality or missing metadata, making it difficult for users to discover relevant material",
+      "model": "Claude (specific version not mentioned)",
+      "integrationMethod": "Not specifically mentioned, but involves large-scale inference processing",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "7%",
+          "metric": "increase in users who view content and ultimately sign up as subscribers",
+          "sourceText": "We saw a 7% increase in the users who are viewing it that ultimately come to the site and then sign up and become subscribers."
+        },
+        {
+          "value": "70%",
+          "metric": "of user-uploaded content that previously lacked quality metadata and was addressed with Claude",
+          "sourceText": "Helped address 70% of user-uploaded content that lacked quality metadata"
+        },
+        {
+          "value": "over 100 million",
+          "metric": "documents processed by Claude",
+          "sourceText": "Scaled to process over 100 million documents"
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Improved content discoverability",
+          "detail": "AI-generated descriptions provide more context about documents at first glance",
+          "sourceText": "Having the content right there at first glance gives the user more context about the particular document versus having to read through the whole thing"
+        },
+        {
+          "benefit": "Enhanced recommendations",
+          "detail": "Similar improvements when incorporating descriptions into homepage recommendations",
+          "sourceText": "They've seen similar improvements when incorporating the descriptions into recommendations on their homepage, and are preparing to integrate them into search results."
+        },
+        {
+          "benefit": "Reduced creator burden",
+          "detail": "Creators no longer need to manually add metadata to their content",
+          "sourceText": "When a creator uploads a document to Scribd or a deck to SlideShare, they've already done the work of creating the content. Attaching metadata like titles, descriptions, or categories is extra work for them."
+        }
+      ],
+      "timeToValue": "Not mentioned",
+      "roi": "Not specifically mentioned, though the 7% increase in subscriber conversion suggests positive ROI"
+    },
+    "technicalDetails": {
+      "architecture": "Not specifically detailed",
+      "promptEngineering": "The team conducted testing of language capabilities and summarization abilities, and evaluated different prompts during experimentation phase",
+      "challenges": "Evaluating the quality of models and prompts during experimentation; scaling to handle large volumes of content",
+      "solutions": "Conducted extensive human-led evaluations with content operations department; selected Claude for its ability to perform large volume inference in short time",
+      "scale": "Processing over 100 million documents across Scribd and SlideShare platforms"
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "5",
+      "companyInfo": "4",
+      "implementation": "3"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/scribd",
+      "extractionDate": "2023-11-09",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.019854,
+  "success": true,
+  "processed_at": "2025-03-06 20:03:50"
+}

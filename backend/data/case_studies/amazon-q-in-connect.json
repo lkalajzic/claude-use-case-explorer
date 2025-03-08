@@ -1,0 +1,72 @@
+{
+  "url": "https://www.anthropic.com/customers/amazon-q-in-connect",
+  "data": {
+    "companyInfo": {
+      "name": "Amazon Connect",
+      "industry": "Customer service software/Cloud contact center",
+      "size": "Enterprise",
+      "region": "Global"
+    },
+    "implementation": {
+      "useCase": "Amazon Connect uses Claude to power Amazon Q in Connect, an AI-driven customer service assistant that provides real-time support to agents handling complex issues and offers immediate self-service options to end-customers across voice and digital channels.",
+      "problem": "Two fundamental challenges in customer service: 1) How to help agents efficiently handle complex support requests while maintaining quality, and 2) How to give end-customers immediate answers without long wait times. Agents spend significant time searching through documentation and disparate applications while customers wait for answers.",
+      "model": "Claude",
+      "integrationMethod": "Not mentioned",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "10-15%",
+          "metric": "time savings on every customer contact through AI-assisted support for businesses like Orbit",
+          "sourceText": "The impact extends beyond just handle times\u2014businesses like Orbit have reported 10-15% time savings on every customer contact through AI-assisted support."
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Improved agent capability to handle difficult cases",
+          "detail": "Agents who would normally transfer difficult contacts can now solve them",
+          "sourceText": "For one customer pilot, their average handle time actually increased. But this is because agents who normally would just transfer away hard contacts could now solve them"
+        },
+        {
+          "benefit": "Faster customer service",
+          "detail": "Customers receive instant responses instead of waiting 30 minutes",
+          "sourceText": "Instead of waiting 30 minutes for answers, they receive instant, personalized responses based on their full context and history."
+        },
+        {
+          "benefit": "Reduced need for transfers and repeat explanations",
+          "detail": "Better equipped agents avoid transfers and customers don't need to repeat themselves",
+          "sourceText": "When they do need to speak with an agent, they connect with someone better equipped to help thanks to AI assistance, avoiding transfers and repeat explanations."
+        },
+        {
+          "benefit": "Multilingual support",
+          "detail": "Supports customer service in 61 languages without additional training",
+          "sourceText": "Supports customer service in 61 languages without additional training"
+        }
+      ],
+      "timeToValue": "Not mentioned",
+      "roi": "Not mentioned"
+    },
+    "technicalDetails": {
+      "architecture": "Not mentioned",
+      "promptEngineering": "Customizable prompt templates for unique voice, policies and workflows",
+      "challenges": "Traditional AI works well for certain scenarios, but more complex interactions involving language nuances and ambiguous questions required more sophisticated AI capabilities",
+      "solutions": "Implemented Claude to handle ambiguous and highly-fluid self-service use cases while enabling human agents to focus on complex issues",
+      "scale": "Supports customer service in 61 languages"
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "4",
+      "companyInfo": "3",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/amazon-q-in-connect",
+      "extractionDate": "2023-06-14",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.01866,
+  "success": true,
+  "processed_at": "2025-03-06 19:26:04"
+}

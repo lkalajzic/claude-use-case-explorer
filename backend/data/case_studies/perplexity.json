@@ -1,0 +1,82 @@
+{
+  "url": "https://www.anthropic.com/customers/perplexity",
+  "data": {
+    "companyInfo": {
+      "name": "Perplexity",
+      "industry": "AI-powered search/conversational answer engine",
+      "size": "Startup (founded in 2022)",
+      "region": "Not mentioned"
+    },
+    "implementation": {
+      "useCase": "Perplexity uses Claude models to power its conversational answer engine, delivering factual and relevant search results to users. Different Claude models are deployed across free and paid tiers to optimize cost, performance, and accuracy. The models help generate comprehensive answers with citations to verify factuality.",
+      "problem": "Providing high-quality AI-powered search experiences while balancing cost and performance, and ensuring factual and contextually relevant information delivery to users.",
+      "model": "Claude 3.5 Sonnet, Claude 3 Opus, and Claude 3 Haiku",
+      "integrationMethod": "Integration via Amazon Bedrock on AWS infrastructure",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "2x faster",
+          "metric": "response times with Claude 3.5 Sonnet compared to Claude 3 Opus",
+          "sourceText": "Claude 3.5 Sonnet offers similar intelligence and is 2x faster than Claude 3 Opus\u2014this performance boost, combined with its cost-effective pricing, makes Claude 3.5 Sonnet ideal for complex, context-sensitive tasks."
+        },
+        {
+          "value": "2x more accurate",
+          "metric": "results with Claude 3 Opus compared to Claude 2.1",
+          "sourceText": "Claude 3 Opus outperforms its peers on most of the common evaluation benchmarks for AI systems and is 2x more accurate than Claude 2.1."
+        },
+        {
+          "value": "<3 seconds",
+          "metric": "for Claude 3 Haiku to read data-dense research papers with charts and graphs",
+          "sourceText": "Haiku can read a data-dense research paper with charts and graphs in less than 3 seconds\u2014allowing Perplexity to offer a high-quality experience for free users without affecting financial sustainability."
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Improved user experience",
+          "detail": "Users appreciate Claude's reasoning capacity and tone of responses",
+          "sourceText": "\"Claude has consistently demonstrated a remarkable capacity for reasoning and provides well-balanced answers,\" says Aarash Heydari, infrastructure engineer at Perplexity. \"Our users like the tone in which Claude delivers responses.\""
+        },
+        {
+          "benefit": "Customizable outputs",
+          "detail": "Ability to align Claude's outputs with Perplexity's vision for answer presentation",
+          "sourceText": "\"We've customized Claude so that we can align these outputs with our ideal vision of how an answer should be presented. But even out of the box, the answers from Claude 3 Opus are excellent, and our users are happy with them.\""
+        },
+        {
+          "benefit": "Financial sustainability for free tier",
+          "detail": "Using Claude 3 Haiku for free users maintains quality while controlling costs",
+          "sourceText": "Haiku can read a data-dense research paper with charts and graphs in less than 3 seconds\u2014allowing Perplexity to offer a high-quality experience for free users without affecting financial sustainability."
+        },
+        {
+          "benefit": "Premium experience for paid users",
+          "detail": "Offering advanced models (Claude 3 Opus and Claude 3.5 Sonnet) for paid users",
+          "sourceText": "For paid users, Perplexity offers a choice between Claude 3 Opus and Claude 3.5 Sonnet. These models cater to users who require the most advanced reasoning capabilities and desire top performance."
+        }
+      ],
+      "timeToValue": "Not mentioned",
+      "roi": "Not mentioned"
+    },
+    "technicalDetails": {
+      "architecture": "Built on AWS infrastructure, using AWS for core foundational cloud services like databases and container services. Uses Amazon Bedrock to serve Claude models alongside Perplexity's internally developed LLMs.",
+      "promptEngineering": "Customization of Claude to align outputs with Perplexity's vision for answer presentation",
+      "challenges": "Not specifically mentioned",
+      "solutions": "Using different Claude models for different tiers (Haiku for free users, Opus and 3.5 Sonnet for paid users) to balance cost and performance",
+      "scale": "Not specifically mentioned"
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "5",
+      "companyInfo": "4",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/perplexity",
+      "extractionDate": "2023-11-09",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.024777,
+  "success": true,
+  "processed_at": "2025-03-06 19:47:44"
+}

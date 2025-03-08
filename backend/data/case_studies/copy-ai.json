@@ -1,0 +1,97 @@
+{
+  "url": "https://www.anthropic.com/customers/copy-ai",
+  "data": {
+    "companyInfo": {
+      "name": "Copy.ai",
+      "industry": "Marketing technology, AI-powered content creation",
+      "size": "Not mentioned",
+      "region": "Not mentioned"
+    },
+    "implementation": {
+      "useCase": "Copy.ai uses Claude to power its AI-driven content creation platform, helping marketing teams generate high-quality content faster and more cost-effectively. Claude is used for long-form content generation (blog posts, articles, thought leadership pieces), brand voice adaptation, and research/fact-checking.",
+      "problem": "Marketing teams spending excessive time and money on routine content creation tasks, with high costs for outsourcing to writers, freelancers, and agencies.",
+      "model": "Claude 3 family (Opus, Sonnet, and Haiku)",
+      "integrationMethod": "Incorporated across most of Copy.ai's generative AI products",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "4x",
+          "metric": "increase in content output",
+          "sourceText": "Copy.ai's tools reduce workloads for marketing teams by enabling them to produce four times the output for a quarter of the cost."
+        },
+        {
+          "value": "75%",
+          "metric": "reduction in content creation costs",
+          "sourceText": "Some of our customers have gone from spending $15,000 to $20,000 a month on content creation with writers, freelancers, and agencies to now spending less than 20% of that"
+        },
+        {
+          "value": "40%",
+          "metric": "of content generation powered by Claude",
+          "sourceText": "\u2022 40% of content generation powered by Claude"
+        },
+        {
+          "value": "from one blog post a month to a blog post a day",
+          "metric": "increase in publishing frequency",
+          "sourceText": "\"We're seeing customers go from publishing one blog post a month to a blog post a day,\" says Lu. \"That's a massive difference in terms of content output and potential marketing impact.\""
+        },
+        {
+          "value": "$15,000 to $20,000 a month to less than 20% of that",
+          "metric": "reduction in monthly content creation spending",
+          "sourceText": "\"Some of our customers have gone from spending $15,000 to $20,000 a month on content creation with writers, freelancers, and agencies to now spending less than 20% of that,\" says Coleman."
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Improved brand voice consistency",
+          "detail": "Claude maintains consistent brand voice across various content types and authors",
+          "sourceText": "\u2022 Improved brand voice consistency across content"
+        },
+        {
+          "benefit": "Enhanced content quality and creativity",
+          "detail": "Claude produces high-quality, creative content that minimizes the need for extensive editing and revisions",
+          "sourceText": "Claude produces high-quality, creative content that minimizes the need for extensive editing and revisions."
+        },
+        {
+          "benefit": "Uncovering creative angles",
+          "detail": "Claude identifies creative approaches that humans might miss",
+          "sourceText": "Claude models are adept at maintaining brand consistency and uncovering creative angles that humans may overlook, which can completely change the way a marketing team approaches their content strategy."
+        },
+        {
+          "benefit": "Increased trust from clients",
+          "detail": "Claude's capabilities provide security and ethical AI that clients can rely on",
+          "sourceText": "Trust is paramount in the marketing industry, and using Claude, the company offers AI technology that clients can rely on without hesitation."
+        },
+        {
+          "benefit": "Reduced need for outsourcing",
+          "detail": "Decreased reliance on external writers and agencies",
+          "sourceText": "This efficiency also helps companies save resources by decreasing the need for expensive outsourcing and reducing overhead costs associated with content production."
+        }
+      ],
+      "timeToValue": "Not mentioned",
+      "roi": "Customers reduced content creation costs from $15,000-$20,000 per month to less than 20% of that amount"
+    },
+    "technicalDetails": {
+      "architecture": "Not mentioned",
+      "promptEngineering": "Not mentioned",
+      "challenges": "Not mentioned",
+      "solutions": "Not mentioned",
+      "scale": "Millions of professionals use Copy.ai's platform"
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "5",
+      "companyInfo": "3",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/copy-ai",
+      "extractionDate": "2023-06-13",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.024279,
+  "success": true,
+  "processed_at": "2025-03-06 19:26:23"
+}

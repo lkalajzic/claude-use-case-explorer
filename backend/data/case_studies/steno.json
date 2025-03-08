@@ -1,0 +1,77 @@
+{
+  "url": "https://www.anthropic.com/customers/steno",
+  "data": {
+    "companyInfo": {
+      "name": "Steno",
+      "industry": "Legal technology and support services",
+      "size": "Not mentioned",
+      "region": "United States"
+    },
+    "implementation": {
+      "useCase": "Transcript Genius - an AI-powered transcript analysis platform that helps attorneys search, analyze, and interrogate their firm's repository of legal transcripts",
+      "problem": "Attorneys spending excessive time manually searching through and analyzing lengthy legal transcripts (often hundreds of pages) to find relevant information",
+      "model": "Claude 3 Opus",
+      "integrationMethod": "Custom-built platform called Transcript Genius",
+      "implementationTime": "Proof of concept was up within a week"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "1.5 engineers",
+          "metric": "Engineering resources required to build the entire solution",
+          "sourceText": "\"We had a proof of concept up within a week,\" says Dan Anderson, Co-Founder and Chief Technology Officer at Steno, noting that they were able to build everything needed with one and a half engineers on the project."
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Ability to analyze complex legal concepts across transcripts",
+          "detail": "Claude can understand legal concepts and find relevant evidence without explicit mentions in the text",
+          "sourceText": "\"I'm litigating a legal malpractice case right now, and I asked the model to find all evidence of legal malpractice in a particular transcript,\" says Dylan Ruga, President and Chief Legal Officer at Steno. \"The model was able to understand four things you need to prove legal malpractice and find specific evidence relevant to those four things, which is super impressive, because there was nothing in the transcript itself that talked about the elements of proving a legal malpractice case.\""
+        },
+        {
+          "benefit": "Streamlined workflow for attorneys",
+          "detail": "Attorneys can bypass manual searching and analysis to focus on building stronger cases",
+          "sourceText": "Transcript Genius streamlines a previously time-consuming, error-prone workflow. Historically, attorneys have been limited by their own capacity to find and read transcripts. Thanks to Claude and the Steno engineering team, attorneys can bypass searching and analysis and focus their attention on building the strongest case possible."
+        },
+        {
+          "benefit": "Introducing attorneys to advanced AI capabilities",
+          "detail": "First exposure to powerful AI for many attorneys",
+          "sourceText": "\"Most attorneys aren't following the latest advancements in the AI world,\" Dan adds. \"For a lot of them, this is their first time being exposed to a model of Claude's caliber. And it's kind of mind-blowing for them.\""
+        },
+        {
+          "benefit": "Centralized transcript storage with AI-powered analysis",
+          "detail": "Eliminates need to email colleagues to locate transcripts",
+          "sourceText": "For firms that don't use Steno, these transcripts are often stored on attorneys' desktops or Google Drives. Finding a transcript requires sending an email to colleagues (\"Has anyone deposed this expert witness before?\"). Then, someone must scour several individual transcripts\u2014each of which might be hundreds of pages long\u2014for relevant information. Steno solved this problem by offering firms centralized storage for all of their Steno transcripts."
+        },
+        {
+          "benefit": "Accurate citation with hyperlinks to exact transcript locations",
+          "detail": "Provides verifiable sources despite inconsistent transcript formatting",
+          "sourceText": "Steno used prompt engineering to ensure that Transcript Genius gives accurate results and provides a hyperlink to the exact location it's citing within a transcript. This is especially useful to legal professionals, as formatting is inconsistent across different types of transcripts."
+        }
+      ],
+      "timeToValue": "One week for proof of concept",
+      "roi": "Not mentioned"
+    },
+    "technicalDetails": {
+      "architecture": "Not mentioned in detail",
+      "promptEngineering": "Used prompt engineering to ensure accurate results and provide hyperlinks to exact locations in transcripts; gave Claude guidance on how different transcripts were formatted to achieve high accuracy",
+      "challenges": "Legal transcripts were too long for previously available LLMs to handle",
+      "solutions": "Claude's 200K context window enabled processing of lengthy legal transcripts",
+      "scale": "Serves more than 1200 law firms across the United States"
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "3",
+      "companyInfo": "4",
+      "implementation": "5"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/steno",
+      "extractionDate": "2023-06-13",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.02352,
+  "success": true,
+  "processed_at": "2025-03-06 19:57:23"
+}

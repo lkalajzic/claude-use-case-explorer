@@ -40,6 +40,8 @@ CORS(app)  # Enable CORS for all routes
 api_key = os.environ.get("ANTHROPIC_API_KEY")
 if not api_key:
     logger.warning("ANTHROPIC_API_KEY not found in environment variables")
+    logger.warning("Most functionality will not work without a valid API key")
+    logger.warning("Set your API key with: export ANTHROPIC_API_KEY=your-api-key")
     
 # Initialize analyzers
 try:
@@ -208,4 +210,4 @@ if __name__ == '__main__':
     os.makedirs(os.path.join(os.path.dirname(__file__), "data", "templates"), exist_ok=True)
     
     # Start the server
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=True, host='0.0.0.0', port=5001)

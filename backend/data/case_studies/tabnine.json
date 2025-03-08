@@ -1,0 +1,92 @@
+{
+  "url": "https://www.anthropic.com/customers/tabnine",
+  "data": {
+    "companyInfo": {
+      "name": "Tabnine",
+      "industry": "AI coding assistant/Software development tools",
+      "size": "Serves over 1 million developers monthly",
+      "region": "Not mentioned"
+    },
+    "implementation": {
+      "useCase": "Tabnine uses Claude to provide code explanations, suggestions, and code generation to developers, helping with tasks like debugging, decrypting API documentation, test generation, refactoring, and migrating code to new versions or languages.",
+      "problem": "Tabnine needed a more sophisticated LLM than their temporary proprietary in-house solution to improve developer experience while maintaining high privacy and security standards.",
+      "model": "Claude 3.5 Sonnet",
+      "integrationMethod": "Claude in Amazon Bedrock",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "50% faster",
+          "metric": "delivery of answers (like generating summaries of code or documentation) compared to other models they've tested",
+          "sourceText": "They measure Claude's impact through real-world usage data, like generating summaries of code or documentation, which is 50% faster than other models they've tested."
+        },
+        {
+          "value": "20%",
+          "metric": "increase in free-to-paid user conversions since integrating Claude",
+          "sourceText": "Tabnine has seen a 20% increase in free-to-paid user conversions since integrating Claude"
+        },
+        {
+          "value": "20-30%",
+          "metric": "decrease in monthly customer churn",
+          "sourceText": "Tabnine has seen a 20% increase in free-to-paid user conversions since integrating Claude, as well as a 20-30% decrease in monthly customer churn."
+        },
+        {
+          "value": "hundreds of thousands",
+          "metric": "messages per hour handled",
+          "sourceText": "Handles hundreds of thousands of messages per hour, delivering answers up to 50% faster than other models"
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Superior code explanations and accuracy",
+          "detail": "Team was impressed by Claude's quality of code explanations and accuracy in code completion",
+          "sourceText": "During evaluation, Jung says the team was impressed by Claude 3.5 Sonnet's quality of code explanations and accuracy in code completion."
+        },
+        {
+          "benefit": "Excellent test generation capabilities",
+          "detail": "Claude excelled in test generation, covering tricky edge cases buried deep in the code",
+          "sourceText": "Claude also excelled in test generation, covering ticky edge cases buried deep in the code."
+        },
+        {
+          "benefit": "Enhanced security compliance",
+          "detail": "Claude's security posture and availability in Amazon Bedrock helps with compliance and assures customers their data is safe",
+          "sourceText": "Helps with compliance and assures customers their data is safe by using Claude in Amazon Bedrock"
+        },
+        {
+          "benefit": "Increased product stickiness",
+          "detail": "Customers expand usage beyond coding into customer service and internal knowledge management",
+          "sourceText": "In fact, once they see the value in the context of coding, they often expand usage into customer service and internal knowledge management, making Tabnine 'stickier' within organizations."
+        },
+        {
+          "benefit": "Best-in-class customer feedback",
+          "detail": "Customers have shared stories about Tabnine's impact, calling it best-in-class",
+          "sourceText": "Customers have shared stories with Jung and his team about Tabnine's impact, calling it best-in-class."
+        }
+      ],
+      "timeToValue": "Not mentioned",
+      "roi": "Not explicitly mentioned, though the 20% increase in conversions and 20-30% decrease in churn indicate positive ROI"
+    },
+    "technicalDetails": {
+      "architecture": "Tabnine serves as an intelligent interface orchestrating multiple specialized AI models, with Claude playing a central role",
+      "promptEngineering": "Not mentioned",
+      "challenges": "Needed to maintain high privacy and security standards, especially for users in regulated industries and the EU",
+      "solutions": "Implemented Claude through Amazon Bedrock to comply with customers' security practices and provide additional peace of mind",
+      "scale": "Handles hundreds of thousands of messages per hour; serves over 1 million developers monthly"
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "5",
+      "companyInfo": "4",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/tabnine",
+      "extractionDate": "2023-11-09",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.023628,
+  "success": true,
+  "processed_at": "2025-03-06 20:04:08"
+}

@@ -1,0 +1,82 @@
+{
+  "url": "https://www.anthropic.com/customers/gumroad",
+  "data": {
+    "companyInfo": {
+      "name": "Gumroad",
+      "industry": "E-commerce platform for digital creators",
+      "size": "30+ people",
+      "region": "Remote-first (location not specifically mentioned)"
+    },
+    "implementation": {
+      "useCase": "Empowering customer support team to write code, fix bugs, and ship features without engineering intervention; assisting engineers with coding tasks",
+      "problem": "Need to enable non-technical staff to contribute to technical tasks in a remote-first, cooperative company structure; reduce engineering workload for customer support issues",
+      "model": "Claude 3.5 Sonnet",
+      "integrationMethod": "Integrated Development Environment (specific IDE not mentioned)",
+      "implementationTime": "A couple months for the entire team to adopt"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "300%",
+          "metric": "increase in new features shipped to production",
+          "sourceText": "Quantitatively, the team has increased our shipping pace by 300% \u2014 shipping 4 commits in the time it took to ship 1."
+        },
+        {
+          "value": "4x",
+          "metric": "faster feature deployment",
+          "sourceText": "Quantitatively, the team has increased our shipping pace by 300% \u2014 shipping 4 commits in the time it took to ship 1."
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Customer support team can now fix code issues directly",
+          "detail": "Support staff can take on tasks that previously required engineering intervention",
+          "sourceText": "Our customer support team uses Claude to triage and often fix issues, reducing the load on our engineering team"
+        },
+        {
+          "benefit": "Reduced context switching for engineers",
+          "detail": "Engineers spend less time answering customer support tickets",
+          "sourceText": "Significant reduction in context switching for engineers to answer customer support tickets"
+        },
+        {
+          "benefit": "Increased job satisfaction",
+          "detail": "Team members expand their skills and contribute more directly to product development",
+          "sourceText": "Gumroad has seen increased job satisfaction as team members expand their skills and contribute more directly to product development."
+        },
+        {
+          "benefit": "More responsive platform for users",
+          "detail": "Platform evolves more quickly to meet user needs",
+          "sourceText": "For users, this translates to a more responsive platform that evolves to meet their needs, enhancing their ability to monetize their creative work."
+        },
+        {
+          "benefit": "Creation of a 'just fix it' culture",
+          "detail": "Support staff now proactively improve the platform rather than just addressing queries",
+          "sourceText": "Since adopting Claude, Gumroad's customer support team doesn't just address queries\u2014they proactively improve the platform."
+        }
+      ],
+      "timeToValue": "Not specifically mentioned",
+      "roi": "Not specifically mentioned"
+    },
+    "technicalDetails": {
+      "architecture": "Not specifically mentioned",
+      "promptEngineering": "Not specifically mentioned",
+      "challenges": "Initial reluctance from engineers to switch Integrated Development Environments to support Claude",
+      "solutions": "CEO used 'Founder Mode' to encourage adoption, which succeeded within a couple months",
+      "scale": "30+ team members using Claude across the organization"
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "5",
+      "companyInfo": "4",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/gumroad",
+      "extractionDate": "2023-11-09",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.020798999999999998,
+  "success": true,
+  "processed_at": "2025-03-06 19:57:39"
+}

@@ -1,0 +1,82 @@
+{
+  "url": "https://www.anthropic.com/customers/tome",
+  "data": {
+    "companyInfo": {
+      "name": "Tome",
+      "industry": "Sales enablement software / AI-powered presentation software",
+      "size": "Not mentioned",
+      "region": "Not mentioned"
+    },
+    "implementation": {
+      "useCase": "AI sales assistant that synthesizes vast amounts of information to uncover key strategic insights about target accounts, helping sales teams research prospects more efficiently",
+      "problem": "Sales teams spending excessive time researching information for presentations rather than creating the presentations or engaging with prospects",
+      "model": "Claude",
+      "integrationMethod": "Integration with company's sales and marketing stack alongside external sources like financial filings, websites, and news",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "hours",
+          "metric": "time saved researching accounts",
+          "sourceText": "By automating the research process, Tome enables sales reps to engage accounts faster. \"Time savings is huge,\" noted Sarin Devraj, Tome executive."
+        },
+        {
+          "value": "a few hours",
+          "metric": "manual research time that is now automated",
+          "sourceText": "\"But you can imagine that this is a process that takes in the order of a few hours if you have to do it manually, in the depth that you would go for your important clients.\""
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Better accuracy in information synthesis",
+          "detail": "Claude cites specific information from source documents instead of making things up",
+          "sourceText": "It was better at citing specific information from the source documents instead of making things up."
+        },
+        {
+          "benefit": "Handling larger volumes of input data",
+          "detail": "Claude's longer context window allows processing more information",
+          "sourceText": "Claude could also handle a larger volume of input data through its longer context window."
+        },
+        {
+          "benefit": "Higher quality sales strategies",
+          "detail": "More coherent and actionable sales strategies",
+          "sourceText": "Most importantly, the quality of the sales strategies Claude generated was higher\u2014 they were more coherent and actionable."
+        },
+        {
+          "benefit": "More relevant sales outreach",
+          "detail": "Enables reps to align messaging with account's strategic priorities",
+          "sourceText": "More importantly, Claude's insights allow reps to reach out with messaging relevant to the account's most pressing priorities. Sarin explained, \"At the end of the day, what signals whether a company needs your product is their overall strategic initiatives happening at that business.\""
+        },
+        {
+          "benefit": "Expected improvement in sales metrics",
+          "detail": "Anticipated improvements in emails sent, calls made, and conversion rates",
+          "sourceText": "Tome expects to improve key sales metrics like emails sent, calls made, and conversion rates."
+        }
+      ],
+      "timeToValue": "Not mentioned",
+      "roi": "Not mentioned"
+    },
+    "technicalDetails": {
+      "architecture": "System pulls data from company's sales and marketing stack alongside external sources like financial filings, websites, and news, which Claude then analyzes",
+      "promptEngineering": "Not mentioned",
+      "challenges": "Not mentioned",
+      "solutions": "Not mentioned",
+      "scale": "Not mentioned"
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "3",
+      "companyInfo": "4",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/tome",
+      "extractionDate": "2023-11-09",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.019317,
+  "success": true,
+  "processed_at": "2025-03-06 19:29:38"
+}

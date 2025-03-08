@@ -1,0 +1,97 @@
+{
+  "url": "https://www.anthropic.com/customers/kodif",
+  "data": {
+    "companyInfo": {
+      "name": "Kodif",
+      "industry": "Customer support automation platform",
+      "size": "Not mentioned",
+      "region": "Not mentioned"
+    },
+    "implementation": {
+      "useCase": "Kodif uses Claude to power AI agents that automate customer support tickets, transform support data into business intelligence, and turn traditional cost centers into revenue sources. The platform handles complex workflows like refunds and cancellations, enhances agent productivity, and analyzes unstructured support data for actionable insights.",
+      "problem": "Companies viewed customer support primarily as a cost burden, defaulting to hiring more agents instead of investing in technology. Traditional machine learning approaches had limitations in accuracy and required significant engineering resources.",
+      "model": "Claude 3.5 Sonnet",
+      "integrationMethod": "Claude in Amazon Bedrock",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "90%",
+          "metric": "automation of Trust Wallet's crypto support tickets",
+          "sourceText": "Trust Wallet automated 90% of their crypto support tickets"
+        },
+        {
+          "value": "75%",
+          "metric": "automation of tickets for Dollar Shave Club",
+          "sourceText": "Dollar Shave Club achieved 75% automation"
+        },
+        {
+          "value": "75%",
+          "metric": "automation of tickets for Halo Collar",
+          "sourceText": "Automates 75% of tickets for Halo Collar"
+        },
+        {
+          "value": "65%",
+          "metric": "automation of Dollar Shave Club's support tickets",
+          "sourceText": "Automates 65% of Dollar Shave Club's support tickets"
+        },
+        {
+          "value": "$5-6 billion",
+          "metric": "estimated annual savings from Uber's customer service automation platform (built by Kodif founders)",
+          "sourceText": "Drawing from their experience building Uber's customer service automation platform, which saved the company an estimated $5-6 billion annually"
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Increased revenue through intelligent cancellation flows",
+          "detail": "When Fellow implemented Kodif's AI-powered cancellation flow, customers initiating cancellations often realized they had forgotten to add items and added more products instead of canceling, increasing overall order values",
+          "sourceText": "For example, when Fellow implemented Kodif's AI-powered cancellation flow, they found that the streamlined cancellation process actually led to increased revenue - when customers initiated a cancellation, they often realized they had forgotten to add items to their order, and the easy modification process encouraged them to add more products instead of canceling, ultimately increasing overall order values."
+        },
+        {
+          "benefit": "Transformation of support data into business intelligence",
+          "detail": "Claude analyzes ticket content to identify trends, group similar issues, and surface emerging problems, helping support leaders understand patterns and share insights with other departments",
+          "sourceText": "Claude transforms unstructured customer support data into actionable business intelligence. Claude analyzes ticket content to identify trends, group similar issues into buckets, and surface emerging problems. This helps support leaders understand real-time patterns and share valuable insights with other departments, bridging the gap between customer issues and broader business decisions."
+        },
+        {
+          "benefit": "Enhanced prompt engineering through Claude's capabilities",
+          "detail": "Claude can recommend improvements to prompts automatically, optimizing and refining them to push quality higher",
+          "sourceText": "Engineers particularly valued Claude's prompt improvement capabilities, which help optimize and refine prompts automatically. As their engineering team noted, Claude can even recommend improvements to prompts, pushing quality to the next level."
+        },
+        {
+          "benefit": "Consistent brand voice through customizable personas",
+          "detail": "Companies can provide detailed brand instructions to ensure consistent communication instead of using simple presets",
+          "sourceText": "Beyond accuracy, Claude's ability to understand and maintain brand voice through customizable personas set it apart. Instead of using simple presets like 'friendly' or 'supportive,' companies can provide detailed brand instructions to ensure consistent communication."
+        },
+        {
+          "benefit": "Transparent and debuggable AI actions",
+          "detail": "Each automation includes detailed reasoning for decisions, making AI actions transparent and allowing support teams to debug issues",
+          "sourceText": "Each automation includes detailed reasoning for decisions, making AI actions transparent and debuggable."
+        }
+      ],
+      "timeToValue": "Not mentioned",
+      "roi": "Not explicitly mentioned beyond the automation percentages and revenue increases"
+    },
+    "technicalDetails": {
+      "architecture": "Kodif's platform uses Claude in Amazon Bedrock to power autonomous customer service agents that can interact with multiple tools like Shopify while maintaining brand voice. The system incorporates context from previous tickets and relevant documentation.",
+      "promptEngineering": "Claude offers prompt improvement capabilities that help optimize and refine prompts automatically. Engineers noted that Claude can recommend improvements to prompts, enhancing quality.",
+      "challenges": "Traditional machine learning approaches had limitations. In one case, two PhD data scientists spent a month building a ticket classification system that Claude could match or exceed with minimal engineering effort.",
+      "solutions": "Implementation in Amazon Bedrock proved straightforward, requiring minimal engineering resources. As noted by the CEO, 'It's just as easy as hitting the API.'",
+      "scale": "The platform has automated up to 90% of support tickets for clients across different industries."
+    },
+    "confidenceScore": {
+      "overall": "5",
+      "metrics": "5",
+      "companyInfo": "4",
+      "implementation": "5"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/kodif",
+      "extractionDate": "2023-10-24",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.028236,
+  "success": true,
+  "processed_at": "2025-03-06 19:28:39"
+}

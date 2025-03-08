@@ -1,0 +1,92 @@
+{
+  "url": "https://www.anthropic.com/customers/campfire",
+  "data": {
+    "companyInfo": {
+      "name": "Campfire",
+      "industry": "Accounting software for high-growth tech companies",
+      "size": "Not mentioned",
+      "region": "Not mentioned"
+    },
+    "implementation": {
+      "useCase": "Campfire integrated Claude into their accounting software platform to automate complex accounting tasks including invoicing, billing, revenue accounting, financial statements, and AI-powered conversational reporting. They created Ember AI, a chat interface that enables natural language queries of financial data, audit support, and flux analyses with detailed commentary.",
+      "problem": "Traditional accounting software had reached its limits with rule-based automation, leaving accounting teams bogged down by manual tasks. Accounting professionals needed to reduce time spent on tedious work while maintaining accuracy and auditability.",
+      "model": "Claude",
+      "integrationMethod": "Campfire leveraged Claude's financial 'recipes' API framework for rapid deployment, using Anthropic's 'cookbook' to build AI into their product.",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "3-day",
+          "metric": "monthly reduction in customer close time",
+          "sourceText": "Their customers have reduced close times by three days per month on average"
+        },
+        {
+          "value": "90%",
+          "metric": "reduction in bank reconciliation time",
+          "sourceText": "cutting time spent on bank reconciliations by 90%"
+        },
+        {
+          "value": "50%",
+          "metric": "reduction in reporting time",
+          "sourceText": "cutting time spent on... reporting by 50%"
+        },
+        {
+          "value": "80%",
+          "metric": "of bandwidth previously consumed by bank reconciliation",
+          "sourceText": "Another customer was moved to tears when describing the bank reconciliation functionality as 'life-changing,' noting it eliminated what had previously consumed 80% of their bandwidth."
+        },
+        {
+          "value": "100%",
+          "metric": "of Campfire's engineering team uses Claude",
+          "sourceText": "This efficiency extends internally\u2014100% of Campfire's engineering team uses Claude to accelerate feature development and deployment."
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Emotional impact on users",
+          "detail": "Customers described the solution as 'life-changing' and helping them 'get more done with fewer headaches'",
+          "sourceText": "One customer said about Ember AI, 'It helps us get more done with fewer headaches, and that's everything in today's \"do-more-with-less\" world.' Another customer was moved to tears when describing the bank reconciliation functionality as 'life-changing'"
+        },
+        {
+          "benefit": "Maintained accuracy and auditability",
+          "detail": "Ember AI explains logic and reasoning, shows its work, and provides source data",
+          "sourceText": "Ember explains logic and reasoning, shows its work, and provides source data\u2014a critical requirement for accounting professionals."
+        },
+        {
+          "benefit": "Streamlined integration of data analysis and task execution",
+          "detail": "Enables natural language queries of financial data and automated task execution",
+          "sourceText": "Streamlined integration of data analysis and automated task execution"
+        },
+        {
+          "benefit": "Transformation of accounting profession",
+          "detail": "Shifting accountants from number-crunchers to strategic advisors",
+          "sourceText": "By automating routine and repetitive aspects of accounting work, Campfire aims to transform accountants from number-crunchers to strategic advisors focused on driving business growth and making high-impact financial decisions."
+        }
+      ],
+      "timeToValue": "Not mentioned",
+      "roi": "Not mentioned"
+    },
+    "technicalDetails": {
+      "architecture": "Claude powers Ember AI chat interface that enables natural language queries of financial data, audit support, and flux analyses with detailed commentary. The system also includes automated bank reconciliation that parses bank statements and identifies discrepancies, and intelligent data integration that merges external data with Campfire records.",
+      "promptEngineering": "Campfire leveraged Anthropic's 'cookbook' and financial 'recipes' API framework to build AI into their product",
+      "challenges": "Not specifically mentioned",
+      "solutions": "Campfire prioritized AI projects based on usage data and time spent in their software to maximize customer impact",
+      "scale": "Not mentioned"
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "5",
+      "companyInfo": "3",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/campfire",
+      "extractionDate": "2023-11-09",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.023769,
+  "success": true,
+  "processed_at": "2025-03-06 20:05:12"
+}

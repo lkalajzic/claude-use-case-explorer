@@ -1,0 +1,137 @@
+{
+  "url": "https://www.anthropic.com/customers/assembled",
+  "data": {
+    "companyInfo": {
+      "name": "Assembled",
+      "industry": "Customer support operations platform",
+      "size": "Not mentioned",
+      "region": "Not mentioned"
+    },
+    "implementation": {
+      "useCase": "Assembled uses Claude to power 'Assist', their omnichannel AI agent and copilot that enhances support operations through dynamic ticket categorization, intelligent routing, real-time response generation, and multi-model architecture for enterprise customers.",
+      "problem": "Modern support teams struggle to deliver personalized, high-quality service at massive scale, particularly for complex Tier 2+ issues that require analysis, actions, and empathy.",
+      "model": "Claude 3.5 Sonnet and Claude 3 Haiku",
+      "integrationMethod": "Multi-model architecture enabling seamless failover during outages",
+      "implementationTime": "Able to switch to Claude in 20 minutes during a critical outage"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "20%",
+          "metric": "Increased customer satisfaction while decreasing support spend",
+          "sourceText": "\u2022 Increased customer satisfaction by 20% while decreasing support spend"
+        },
+        {
+          "value": "over 50%",
+          "metric": "reduction in escalations",
+          "sourceText": "\u2022 Achieved over 50% reduction in escalations"
+        },
+        {
+          "value": "more than 30%",
+          "metric": "Improved cases solved per hour",
+          "sourceText": "\u2022 Improved cases solved per hour by more than 30%"
+        },
+        {
+          "value": "over 50%",
+          "metric": "Automated cases while maintaining 90%+ customer satisfaction",
+          "sourceText": "\u2022 Automated over 50% of cases while maintaining 90%+ customer satisfaction"
+        },
+        {
+          "value": "20 minutes",
+          "metric": "Time to switch to Claude during a critical outage",
+          "sourceText": "\u2022 Switched to Claude in 20 minutes during a critical outage"
+        },
+        {
+          "value": "from 62% to 90%",
+          "metric": "Accuracy improvement across hundreds of categories for one major customer",
+          "sourceText": "When agents modify AI-generated responses, the system analyzes these changes to continuously improve accuracy. This approach helped achieve dramatic improvements\u2014for one major customer, accuracy jumped from 62% to 90% across hundreds of categories."
+        },
+        {
+          "value": "at least 25%",
+          "metric": "Planned automation of all support tickets for a leading consumer software company",
+          "sourceText": "\u2022 A leading consumer software company: In just the first two weeks of using Assembled Assist, they saw material improvement in both average handle time per case and CSAT. They plan on automating at least 25% of all support tickets as part of a company-wide growth push."
+        },
+        {
+          "value": "over 50%",
+          "metric": "Automation of support tickets for Thrasio",
+          "sourceText": "\u2022 Thrasio: Automates over 50% of support tickets with Assembled Assist, which led to nearly $2m in cost savings and a 50% decrease in full resolution time."
+        },
+        {
+          "value": "nearly $2m",
+          "metric": "Cost savings for Thrasio",
+          "sourceText": "\u2022 Thrasio: Automates over 50% of support tickets with Assembled Assist, which led to nearly $2m in cost savings and a 50% decrease in full resolution time."
+        },
+        {
+          "value": "50%",
+          "metric": "Decrease in full resolution time for Thrasio",
+          "sourceText": "\u2022 Thrasio: Automates over 50% of support tickets with Assembled Assist, which led to nearly $2m in cost savings and a 50% decrease in full resolution time."
+        },
+        {
+          "value": "54%",
+          "metric": "Increase in solves per hour for Honeylove",
+          "sourceText": "\u2022 Honeylove: Saw massive productivity and efficiency benefits after just 5 months using Assembled Assist \u2013 solves per hour increased by 54%, escalations decreased by 20%, and CSAT for AI-powered responses increased by 18%."
+        },
+        {
+          "value": "20%",
+          "metric": "Decrease in escalations for Honeylove",
+          "sourceText": "\u2022 Honeylove: Saw massive productivity and efficiency benefits after just 5 months using Assembled Assist \u2013 solves per hour increased by 54%, escalations decreased by 20%, and CSAT for AI-powered responses increased by 18%."
+        },
+        {
+          "value": "18%",
+          "metric": "Increase in CSAT for AI-powered responses for Honeylove",
+          "sourceText": "\u2022 Honeylove: Saw massive productivity and efficiency benefits after just 5 months using Assembled Assist \u2013 solves per hour increased by 54%, escalations decreased by 20%, and CSAT for AI-powered responses increased by 18%."
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Superior reasoning capabilities",
+          "detail": "Claude's reasoning capabilities were found to be significantly better than competitors",
+          "sourceText": "The reasoning capabilities are significantly better, and the conversational tone feels much more natural even out of the box."
+        },
+        {
+          "benefit": "Natural conversational tone",
+          "detail": "Claude's interactions feel more natural and empathetic",
+          "sourceText": "The reasoning capabilities are significantly better, and the conversational tone feels much more natural even out of the box."
+        },
+        {
+          "benefit": "Reliability during outages",
+          "detail": "Able to maintain service during competitor outages",
+          "sourceText": "We moved all LLM workflows over to Claude in real time, which was huge for us because we could ride out a five to six hour outage without disrupting our customers"
+        },
+        {
+          "benefit": "Internal operational improvements",
+          "detail": "Used Claude to train sales team on product knowledge",
+          "sourceText": "When we were using Claude internally, we used it extensively to help train our sales team on our product. Early on, our sales team was using the Claude Slack bot to answer product questions during sales calls."
+        },
+        {
+          "benefit": "Employee preference",
+          "detail": "Many employees prefer Claude for its natural, empathetic interactions",
+          "sourceText": "This was so effective that we now offer all employees a monthly LLM budget\u2014they can choose any AI model, but many prefer Claude for its natural, empathetic interactions."
+        }
+      ],
+      "timeToValue": "As little as two weeks for some customers to see material improvements",
+      "roi": "Nearly $2m in cost savings for Thrasio"
+    },
+    "technicalDetails": {
+      "architecture": "Multi-model architecture enabling seamless failover during outages with secure failover architecture for enterprise reliability",
+      "promptEngineering": "Dynamic ticket categorization using meta-prompting that adapts to each customer's unique taxonomy",
+      "challenges": "Handling complex Tier 2+ support issues that require analysis, actions, and empathy; Maintaining service during competitor outages",
+      "solutions": "Sophisticated evaluation system to measure AI model performance; Every support agent response goes through evaluation to create a golden dataset for comparison; Analysis of agent modifications to AI-generated responses to continuously improve accuracy",
+      "scale": "Enterprise-level support operations for companies like Brooks, Warner Brothers, Robinhood, and Stripe"
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "5",
+      "companyInfo": "3",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/assembled",
+      "extractionDate": "2023-10-25",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.036648,
+  "success": true,
+  "processed_at": "2025-03-06 19:44:42"
+}

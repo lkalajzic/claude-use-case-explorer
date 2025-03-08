@@ -1,3 +1,43 @@
+# Data files
+backend/data/raw_case_studies/
+backend/data/raw_html/
+backend/data/temp/
+
+# Extracted data (optional - you may want to keep these for demo purposes)
+# backend/data/case_studies/
+
+# Environment and configuration
+.env
+.env.local
+.env.*.local
+**/anthropic_api_key.txt
+**/config.json
+
+# Cache files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
 # Python backend
 /backend/__pycache__/
 /backend/*/__pycache__/

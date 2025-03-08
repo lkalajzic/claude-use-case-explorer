@@ -1,0 +1,77 @@
+{
+  "url": "https://www.anthropic.com/customers/gitlab",
+  "data": {
+    "companyInfo": {
+      "name": "GitLab",
+      "industry": "DevSecOps software development platform",
+      "size": "Enterprise",
+      "region": "Not mentioned"
+    },
+    "implementation": {
+      "useCase": "GitLab integrated Claude to power AI features across their DevSecOps platform, including generative coding, interactive chat, planning summarization, and explaining and remediating software vulnerabilities. They implemented a multi-model approach, using Claude 3 models specifically for their AI-powered Duo features.",
+      "problem": "GitLab needed to balance AI innovation with stability and security in their platform while taking a privacy-first approach to embedding AI capabilities across their software development lifecycle management tools.",
+      "model": "Claude 3 family",
+      "integrationMethod": "API integration",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "Several",
+          "metric": "Claude-powered features implemented across the platform",
+          "sourceText": "\u2022 Several Claude-powered features are implemented across the platform"
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "High-context and accurate code generation",
+          "detail": "Claude delivers high-context and accurate code generation for users",
+          "sourceText": "\u2022 Claude delivers high-context and accurate code generation for users"
+        },
+        {
+          "benefit": "Accelerated development of AI features",
+          "detail": "Faster development and deployment of AI features by GitLab's engineering team",
+          "sourceText": "\u2022 Accelerates development and deployment of AI features for Gitlab engineering team"
+        },
+        {
+          "benefit": "Accessible AI development for traditional software engineers",
+          "detail": "Anthropic's tools enabled engineers without ML backgrounds to work on AI features",
+          "sourceText": "\"The tooling Anthropic provides us is approachable for somebody who doesn't have a machine learning background,\" says Young. \"Anthropic's developer tools and docs enable us to have dozens of people with more traditional software engineering backgrounds work on AI features.\""
+        },
+        {
+          "benefit": "Strong performance for software development tasks",
+          "detail": "Claude 3 models provide thoughtful, holistic, and contextualized code generation",
+          "sourceText": "\"We see consistently strong performance from Claude 3 models for thoughtful, holistic, and contextualized code generation and other software development-related tasks,\" McCaslin notes, attributing this partly to Claude's long context window."
+        },
+        {
+          "benefit": "Alignment with privacy and transparency values",
+          "detail": "Anthropic's approach to AI aligns with GitLab's commitment to stability and security",
+          "sourceText": "\"Anthropic shares our values of privacy and transparency and are straightforward to work with. That's especially important for us as an enterprise organization that builds reliable software.\""
+        }
+      ],
+      "timeToValue": "Not mentioned",
+      "roi": "Not mentioned"
+    },
+    "technicalDetails": {
+      "architecture": "GitLab created a model evaluation team that assesses new vendors and new versions of models to ensure they're using the best tool for each task.",
+      "promptEngineering": "Not mentioned",
+      "challenges": "Balancing AI innovation with stability and security requirements",
+      "solutions": "Implemented a multi-model approach, selecting the right model for each use case, with Claude 3 models chosen for specific features due to their performance and developer experience",
+      "scale": "\"dozens of people with more traditional software engineering backgrounds work on AI features\""
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "3",
+      "companyInfo": "4",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/gitlab",
+      "extractionDate": "2023-06-13",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.020339999999999997,
+  "success": true,
+  "processed_at": "2025-03-06 20:04:37"
+}

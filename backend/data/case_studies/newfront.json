@@ -1,0 +1,87 @@
+{
+  "url": "https://www.anthropic.com/customers/newfront",
+  "data": {
+    "companyInfo": {
+      "name": "Newfront",
+      "industry": "Insurance technology (InsurTech)",
+      "size": "Enterprise (serves 20% of US startups with unicorn status)",
+      "region": "United States"
+    },
+    "implementation": {
+      "useCase": "Newfront implemented Claude across multiple insurance workflows including a benefits assistant chatbot, contract review tool, and insurance management platform for processing complex documents and automating data transfer between systems.",
+      "problem": "Insurance professionals and clients struggled with time-consuming manual processes including document navigation, data copying between systems, repetitive benefits questions, and lengthy contract review cycles.",
+      "model": "Claude (specific version not mentioned)",
+      "integrationMethod": "Integrated into Newfront's platform across multiple workflows",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "one month per year",
+          "metric": "time saved for HR teams through the benefits assistant",
+          "sourceText": "Saves HR teams one month per year and delivers 24/7 personalized support for employees"
+        },
+        {
+          "value": "60%",
+          "metric": "reduction in document processing costs",
+          "sourceText": "Reduces document processing costs by 60%"
+        },
+        {
+          "value": "12 out of 20",
+          "metric": "tough cases correctly handled by Claude that stumped other AI models",
+          "sourceText": "Without any changes to our system, Claude correctly handled twelve of our twenty toughest cases\u2014questions that had stumped other AI models."
+        },
+        {
+          "value": "hundreds of thousands",
+          "metric": "inquiries handled annually by the benefit assistant",
+          "sourceText": "The benefit assistant handles hundreds of thousands of inquiries annually, giving employees 24/7 access to accurate benefits information and reducing the burden on HR teams."
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Improved accuracy in insurance workflows",
+          "detail": "Claude provides more accurate responses to complex insurance questions and document processing",
+          "sourceText": "Newfront's AI-powered platform delivers measurable improvements across every aspect of insurance operations... Processing loss run documents now costs 60% less with higher accuracy rates."
+        },
+        {
+          "benefit": "24/7 personalized support for employees",
+          "detail": "Employees can get instant answers about benefits without waiting for HR responses",
+          "sourceText": "The benefit assistant provides employees instant answers about coverage limits, eligible expenses, and life event changes\u2014no more waiting on HR emails or business hours."
+        },
+        {
+          "benefit": "Faster contract reviews",
+          "detail": "Contract reviews completed in minutes instead of days",
+          "sourceText": "Legal teams have eliminated the need for time-consuming calls and email chains, with contract reviews now completed in minutes instead of days."
+        },
+        {
+          "benefit": "Better handling of sensitive inquiries",
+          "detail": "Private and accurate handling of sensitive personal situations",
+          "sourceText": "Whether it's questions about prescription sunglasses coverage or help during a divorce, the assistant handles sensitive inquiries privately and accurately."
+        }
+      ],
+      "timeToValue": "Not mentioned",
+      "roi": "Not specifically mentioned beyond cost reduction metrics"
+    },
+    "technicalDetails": {
+      "architecture": "Flexible AI architecture that selects the right AI for specific challenges, with Claude handling complex natural language tasks",
+      "promptEngineering": "Not mentioned",
+      "challenges": "Handling complex insurance terminology, processing inconsistent PDF formats, extracting structured data from loss run documents",
+      "solutions": "Using Claude to understand insurance terminology while providing clear explanations, automating extraction of structured data from inconsistent document formats",
+      "scale": "Handles hundreds of thousands of benefit inquiries annually"
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "5",
+      "companyInfo": "4",
+      "implementation": "3"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/newfront",
+      "extractionDate": "2023-11-09",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.021348,
+  "success": true,
+  "processed_at": "2025-03-06 19:45:42"
+}

@@ -1,0 +1,102 @@
+{
+  "url": "https://www.anthropic.com/customers/factory",
+  "data": {
+    "companyInfo": {
+      "name": "Factory",
+      "industry": "AI-powered software development automation",
+      "size": "Not mentioned",
+      "region": "Not mentioned"
+    },
+    "implementation": {
+      "useCase": "Factory builds AI-powered systems called 'Droids' that automate labor-intensive tasks throughout the software development lifecycle. These Droids handle code review, documentation, and end-to-end coding tasks like refactors, migrations, and feature requests. They use Claude to power these autonomous systems that can understand and navigate the complexities of large-scale software development.",
+      "problem": "As software is built and companies grow, organizational structure and engineering practices become inconsistent, leading to bottlenecks and slowdowns. There was no single tool or system that could handle the ambiguity required to navigate the entire software lifecycle while scaling with the organization.",
+      "model": "Claude 3 Opus and Claude 3 Haiku",
+      "integrationMethod": "Factory uses Claude 3 Opus for tasks requiring heavy reasoning and complex decision-making, and Claude 3 Haiku for high-volume tasks that still require good reasoning but need to be very fast.",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "550,000 hours",
+          "metric": "development time saved across customers",
+          "sourceText": "Factory estimates that across all their customers, they've saved approximately 550,000 hours of development time."
+        },
+        {
+          "value": "2,300 hours",
+          "metric": "average savings per organization",
+          "sourceText": "On average, each organization saves about 2,300 hours, which translates to a 20% reduction in development cycle time."
+        },
+        {
+          "value": "20%",
+          "metric": "reduction in development cycle time",
+          "sourceText": "On average, each organization saves about 2,300 hours, which translates to a 20% reduction in development cycle time."
+        },
+        {
+          "value": "3x",
+          "metric": "reduction in code churn",
+          "sourceText": "\u2022 3x reduction in code churn"
+        },
+        {
+          "value": "millions of dollars",
+          "metric": "savings across each step of the software development lifecycle",
+          "sourceText": "Factory uses Claude to power autonomous droids that streamline software development for enterprises, saving customers over 500,000 engineering hours and millions of dollars across each step of the software development lifecycle."
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Improved code review process",
+          "detail": "Review Droid automates code review by analyzing pull requests, providing contextualization, and leaving inline comments",
+          "sourceText": "One of their key products is the Review Droid, which automates the code review process. When deployed, it analyzes pull requests, provides contextualization, leaves inline comments, and helps other reviewers understand the changes."
+        },
+        {
+          "benefit": "Automated feature implementation",
+          "detail": "Code Droid can take a ticket from a project management system, work on the task, and create a pull request",
+          "sourceText": "Another product, the Code Droid, can take a ticket from a project management system like Jira or Linear, work on the task, and create a pull request to implement the requested feature or fix."
+        },
+        {
+          "benefit": "Engineers can focus on higher-level work",
+          "detail": "Droids reduce time spent on routine tasks, allowing engineers to focus on higher-level problem-solving",
+          "sourceText": "Both of these Droids, which are powered by Claude, dramatically reduce the time engineers spend on routine tasks\u2014enabling engineers to focus on higher-level problem-solving and new opportunities."
+        },
+        {
+          "benefit": "State of the art performance on software engineering benchmarks",
+          "detail": "Code Droid powered by Claude delivers leading performance on benchmarks",
+          "sourceText": "Factory's commitment to advancing the state of the art in AI-powered software development is evident in their recent technical report, where their Code Droid\u2014which is powered in part by Claude\u2014delivers state of the art performance on software engineering benchmarks."
+        },
+        {
+          "benefit": "Superior model performance",
+          "detail": "Claude 3 Opus outperformed comparable models on software engineering benchmarks",
+          "sourceText": "The Claude 3 model family is best-in-class for agentic engineering tasks. Claude 3 Opus outperformed comparable models by a fair margin across a variety of our internally-developed benchmarks for software engineering."
+        },
+        {
+          "benefit": "Optimal performance-speed balance",
+          "detail": "Claude 3 Haiku provided the best combination of performance and speed in its class",
+          "sourceText": "In addition, Claude 3 Haiku delivered the most impressive combination of performance and speed in its class."
+        }
+      ],
+      "timeToValue": "Not mentioned",
+      "roi": "Not explicitly mentioned, though the case study notes millions of dollars saved across the software development lifecycle"
+    },
+    "technicalDetails": {
+      "architecture": "Factory builds autonomous systems ('Droids') that use AI to analyze codebases, make decisions, and execute tasks with minimal human intervention. These systems model human cognition with planning, subgoal decomposition, reflection on failure, refinement of tasks, memory (both short-term and long-term), information retrieval, and tool use capabilities.",
+      "promptEngineering": "Not specifically mentioned",
+      "challenges": "Handling the ambiguity and complexity inherent in large-scale software development, creating systems that can plan, break down problems into sub-steps, and make decisions at each stage of the process.",
+      "solutions": "Using Claude 3 Opus for complex reasoning and decision-making tasks, and Claude 3 Haiku for high-volume tasks that require good reasoning but need to be fast.",
+      "scale": "Factory typically works with organizations that have hundreds to thousands of engineers."
+    },
+    "confidenceScore": {
+      "overall": "5",
+      "metrics": "5",
+      "companyInfo": "4",
+      "implementation": "5"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/factory",
+      "extractionDate": "2023-06-13",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.029601,
+  "success": true,
+  "processed_at": "2025-03-06 19:35:06"
+}

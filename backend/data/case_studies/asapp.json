@@ -1,0 +1,77 @@
+{
+  "url": "https://www.anthropic.com/customers/asapp",
+  "data": {
+    "companyInfo": {
+      "name": "ASAPP",
+      "industry": "Customer service AI solutions",
+      "size": "Not mentioned",
+      "region": "Not mentioned"
+    },
+    "implementation": {
+      "useCase": "ASAPP leverages Claude to power their GenerativeAgent solution for AI-driven customer service, enabling businesses to deliver efficient, personalized customer support that maintains context throughout conversations and handles sensitive information securely.",
+      "problem": "ASAPP's previous AI provider required implementing complex processes to identify and remove sensitive information before sending requests over the public internet, then reinserting that information into responses. This redaction process introduced errors that impacted the quality of AI interactions and made it harder for the AI to reason correctly and generate appropriate responses.",
+      "model": "Claude (specific version not mentioned)",
+      "integrationMethod": "Claude in Amazon Bedrock with AWS PrivateLink for private API access",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "25-40%",
+          "metric": "improvement in core business metrics compared to other AI models in production, varying by use case",
+          "sourceText": "Compared to other AI models, Claude delivers a 25-40% boost in key business outcomes in production, varying by use case."
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Eliminated need for sensitive data redaction",
+          "detail": "No longer needed complex processes to remove and reinsert sensitive information",
+          "sourceText": "Eliminated the need for sensitive data redaction pipeline by using Claude in Amazon Bedrock"
+        },
+        {
+          "benefit": "Enhanced security for sensitive customer data",
+          "detail": "Requests never traverse the public internet and are encrypted end-to-end",
+          "sourceText": "A key advantage of accessing Claude in Amazon Bedrock is the enhanced security. Our requests never traverse the public internet and are encrypted end-to-end. We can handle sensitive customer data without compromise, which is essential for our enterprise clients."
+        },
+        {
+          "benefit": "Better AI alignment",
+          "detail": "Claude adheres to defined parameters and follows instructions from business users",
+          "sourceText": "Claude's alignment capabilities also emerged as a crucial differentiator. Gabe Maggiotti, Director of Machine Learning Engineering at ASAPP, said, 'We have experienced that Anthropic has better alignment.' Where other AI models might ignore instructions or make problematic assumptions, Claude adheres to defined parameters."
+        },
+        {
+          "benefit": "More natural customer interactions",
+          "detail": "Customers transition from terse commands to full, natural conversations",
+          "sourceText": "Customers quickly transition from terse, command-like interactions to full, natural conversations within just a few exchanges. The platform maintains context throughout conversations, meaning customers don't have to repeat information. The interaction quality is so convincing that customers often ask mid-conversation if they're speaking with a real person, and saying 'thank you' to GenerativeAgent at the end."
+        },
+        {
+          "benefit": "Improved customer satisfaction",
+          "detail": "Through contextual conversations that maintain information throughout the interaction",
+          "sourceText": "Improved customer satisfaction through contextual conversations"
+        }
+      ],
+      "timeToValue": "Not mentioned",
+      "roi": "Not mentioned"
+    },
+    "technicalDetails": {
+      "architecture": "ASAPP's GenerativeAgent solution powered by Claude in Amazon Bedrock, using AWS PrivateLink for private API access",
+      "promptEngineering": "ASAPP allows companies to instruct GenerativeAgent on how to help solve customer problems, with Claude following these instructions and engaging customers naturally with clarifying questions when needed",
+      "challenges": "Previous AI provider required complex redaction processes for sensitive data that introduced errors and impacted interaction quality",
+      "solutions": "Switched to Claude in Amazon Bedrock which provides end-to-end encryption without traversing the public internet, eliminating the need for redaction processes",
+      "scale": "Not specifically mentioned, though referenced as 'creating a business process transformation involving millions of people'"
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "4",
+      "companyInfo": "3",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/asapp",
+      "extractionDate": "2023-11-09",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.022310999999999998,
+  "success": true,
+  "processed_at": "2025-03-06 19:30:49"
+}

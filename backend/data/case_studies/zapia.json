@@ -1,0 +1,87 @@
+{
+  "url": "https://www.anthropic.com/customers/zapia",
+  "data": {
+    "companyInfo": {
+      "name": "Zapia (by BrainLogic)",
+      "industry": "AI-powered commerce and messaging platform",
+      "size": "Startup",
+      "region": "Latin America"
+    },
+    "implementation": {
+      "useCase": "AI assistant that engages in natural, localized conversations with Latin American consumers to help them discover products, get recommendations, make purchases, and receive support through familiar messaging interfaces tailored to their specific country and region.",
+      "problem": "In Latin America, over 70% of consumer transactions involve WhatsApp, with buyers messaging sellers directly. This creates inefficiencies as businesses struggle to keep up with high message volumes.",
+      "model": "Claude Haiku (primarily), with other Claude models",
+      "integrationMethod": "Google Cloud's Vertex AI platform, with services like Cloud Run, Cloud Firestore",
+      "implementationTime": "A couple of days plus testing"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "2.5 million",
+          "metric": "users in their first year",
+          "sourceText": "Zapia demonstrates its impact on Latin American commerce and communication with 2.5 million users in its first year and handling hundreds of thousands of messages per hour."
+        },
+        {
+          "value": "over 90%",
+          "metric": "positive user feedback",
+          "sourceText": "The AI-powered experience has resonated with Latin American users who prefer chat-based interactions for business and personal matters, resulting in over 90% positive user feedback."
+        },
+        {
+          "value": "hundreds of thousands",
+          "metric": "messages per hour",
+          "sourceText": "Zapia demonstrates its impact on Latin American commerce and communication with 2.5 million users in its first year and handling hundreds of thousands of messages per hour."
+        },
+        {
+          "value": "almost 99%",
+          "metric": "of traffic handled by smaller models like Haiku",
+          "sourceText": "The smaller models like Haiku handle almost 99% of the traffic"
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Localized understanding of regional dialects and culture",
+          "detail": "Claude understands the cultural nuances of different Latin American regions",
+          "sourceText": "Claude understands the particularities of each region and speaks differently to a user in Uruguay versus Colombia"
+        },
+        {
+          "benefit": "Minimal prompt engineering required",
+          "detail": "Implementation was straightforward with high-quality outputs",
+          "sourceText": "Integrating Claude into our platform was quick, required minimal prompt engineering and had high-quality outputs"
+        },
+        {
+          "benefit": "High-quality reasoning from smaller models",
+          "detail": "Claude Haiku performed better than expected",
+          "sourceText": "The reasoning is high quality for Haiku. We didn't expect smaller models to perform so close to the larger ones."
+        },
+        {
+          "benefit": "Democratizing access to services",
+          "detail": "Helping people in remote regions access services",
+          "sourceText": "AI will help people in remote regions without access to most services but with a cell phone connection. They can talk to a personal AI assistant about their problems and get responses in their own dialect and cultural context."
+        }
+      ],
+      "timeToValue": "Quick implementation with immediate user adoption",
+      "roi": "Cost-effective performance by using Claude Haiku for most traffic"
+    },
+    "technicalDetails": {
+      "architecture": "Built on Google Cloud services including Cloud Run, Cloud Firestore, and Vertex AI",
+      "promptEngineering": "Minimal prompt engineering required for high-quality outputs",
+      "challenges": "Handling high message volume while controlling costs",
+      "solutions": "Using smaller models like Claude Haiku for most traffic to optimize cost efficiency",
+      "scale": "Handles hundreds of thousands of messages per hour with 2.5 million users"
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "5",
+      "companyInfo": "4",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/zapia",
+      "extractionDate": "2023-11-09",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.023205,
+  "success": true,
+  "processed_at": "2025-03-06 19:29:57"
+}

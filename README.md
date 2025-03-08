@@ -40,11 +40,13 @@ This tool helps companies identify the most valuable Claude API implementation o
    ```
    export ANTHROPIC_API_KEY=your-api-key
    ```
+   **IMPORTANT**: Without setting a valid API key, most functionality won't work. The backend will start, but any features that require Claude API (website analysis, description analysis, use case matching) will fail.
+
 4. Start the Flask server:
    ```
    python app.py
    ```
-   The backend will be available at http://localhost:5000
+   The backend will be available at http://localhost:5001
 
 ### Running the Frontend (Next.js Version)
 1. Navigate to the Next.js frontend directory:
@@ -53,11 +55,11 @@ This tool helps companies identify the most valuable Claude API implementation o
    ```
 2. Install dependencies:
    ```
-   npm install
+   bun install
    ```
 3. Start the development server:
    ```
-   npm run dev
+   bun run dev
    ```
    The application will be available at http://localhost:3000
 
@@ -68,11 +70,11 @@ This tool helps companies identify the most valuable Claude API implementation o
    ```
 2. Install dependencies:
    ```
-   npm install
+   bun install
    ```
 3. Start the development server:
    ```
-   npm start
+   bun start
    ```
    The application will be available at http://localhost:3000
 
@@ -83,6 +85,11 @@ This tool helps companies identify the most valuable Claude API implementation o
 - Anthropic Claude API
 - BeautifulSoup for web scraping
 - JSON for data storage
+
+**Note on API Usage**: Using the website analyzer, description analyzer, or use case matching features will make API calls to Claude that incur charges. The application handles these calls efficiently to minimize costs:  
+- Each website analysis costs approximately $0.15-$0.25 depending on website size  
+- Each description analysis costs approximately $0.05-$0.10 depending on text length  
+- Each use case matching operation costs approximately $0.10-$0.20
 
 ### Frontend (Next.js)
 - Next.js 15

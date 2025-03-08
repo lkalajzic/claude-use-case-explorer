@@ -1,0 +1,82 @@
+{
+  "url": "https://www.anthropic.com/customers/stairwell",
+  "data": {
+    "companyInfo": {
+      "name": "Stairwell",
+      "industry": "Cybersecurity",
+      "size": "Not mentioned",
+      "region": "Not mentioned"
+    },
+    "implementation": {
+      "useCase": "Stairwell uses Claude to analyze and summarize complex security data, helping identify and explain sophisticated cybersecurity threats. Claude processes security information, converts technical findings into clear insights, and helps security professionals understand potential threats without requiring extensive expertise.",
+      "problem": "Organizations face sophisticated, targeted cyber attacks that traditional security tools struggle to detect. Security teams collect vast amounts of data but have difficulty quickly identifying critical issues and understanding complex threats in real time. Technical security findings were previously only understandable to experts with years of specialized experience.",
+      "model": "Claude (specific version not mentioned)",
+      "integrationMethod": "API integration (implied by mention of API responses)",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "40,000+",
+          "metric": "characters of security data that Claude can process at once",
+          "sourceText": "Claude's large context window allows Stairwell to analyze more data at once. 'The context window is so much larger. We can literally take our API responses which were pretty big\u2014probably 30-40,000 characters\u2014and just paste it into Claude,' said Smith."
+        },
+        {
+          "value": "40,000+",
+          "metric": "characters of security data processed",
+          "sourceText": "\u2022 Processes security data with 40,000+ characters"
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Minimal prompt engineering required",
+          "detail": "Claude can understand complex technical data without extensive instructions or guidance about data structure",
+          "sourceText": "Claude also excels at understanding technical data without requiring extensive instructions. Unlike other AI models that need detailed guidance about data structure and specific fields to extract, Claude can naturally interpret complex security data. 'We didn't have to tell Claude the schema of our response. We just pasted the API call results into it and said 'Can you summarize this in English?' and it does a really good job,' said Smith."
+        },
+        {
+          "benefit": "Simplified prompting",
+          "detail": "Simple instructions work better than complex prompting",
+          "sourceText": "This simplicity extends to how the team interacts with Claude. While other AI models required complex prompting, Claude delivers better results with simple instructions: 'The best prompt for Claude was 'Can you summarize this for me?''"
+        },
+        {
+          "benefit": "Democratized security analysis",
+          "detail": "Makes complex security information accessible to professionals at all experience levels",
+          "sourceText": "With Claude, Stairwell is working to democratize how security teams process and understand threat data. Traditionally, interpreting complex security information required years of specialized experience. Now, Claude helps summarize technical security data into clear insights that any security professional can understand and act on. 'We used to produce a list of results that only an expert in security with 20 years of experience could understand. But anyone else would need training and time to digest,' said Smith."
+        },
+        {
+          "benefit": "Enhanced code intelligence",
+          "detail": "Improved internal code generation and codebase search capabilities",
+          "sourceText": "\u2022 Code Intelligence: The team leverages Claude for internal code generation and codebase search. The large context window allows them to search and understand their extensive codebase more effectively."
+        },
+        {
+          "benefit": "Improved security reporting",
+          "detail": "Transforms raw security data into accessible reports for faster threat response",
+          "sourceText": "\u2022 Security Reporting: Claude transforms raw security data into accessible reports that help teams quickly understand and respond to threats. This capability has proven crucial in Stairwell's work protecting presidential campaigns and critical infrastructure."
+        }
+      ],
+      "timeToValue": "Not mentioned",
+      "roi": "Not mentioned"
+    },
+    "technicalDetails": {
+      "architecture": "Stairwell's proprietary Maleval system handles core malware detection, while Claude enhances the platform by processing and explaining security threats. Claude analyzes programs and files collected from customer systems to help identify potentially malicious software.",
+      "promptEngineering": "Simple prompts work better than complex ones. 'The best prompt for Claude was 'Can you summarize this for me?'' Claude can understand technical data without requiring detailed guidance about data structure.",
+      "challenges": "Processing and summarizing large volumes of complex security data that previously required expert interpretation.",
+      "solutions": "Leveraging Claude's large context window to process API responses of 30-40,000 characters and its ability to naturally interpret complex security data without extensive instructions.",
+      "scale": "Processes security data with 40,000+ characters. Stairwell protects presidential campaigns, critical infrastructure, and major financial institutions."
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "4",
+      "companyInfo": "3",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/stairwell",
+      "extractionDate": "2023-11-09",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.025460999999999998,
+  "success": true,
+  "processed_at": "2025-03-06 20:00:22"
+}

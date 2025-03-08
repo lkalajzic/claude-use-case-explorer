@@ -1,0 +1,87 @@
+{
+  "url": "https://www.anthropic.com/customers/replit",
+  "data": {
+    "companyInfo": {
+      "name": "Replit",
+      "industry": "Software development platform",
+      "size": "Not mentioned",
+      "region": "Not specifically mentioned"
+    },
+    "implementation": {
+      "useCase": "Replit uses Claude to power an AI agent that helps users build and deploy software applications without coding experience. The AI agent can generate code, set up development environments, provision databases and infrastructure, and deploy applications to Google Cloud Run, all based on natural language descriptions from users.",
+      "problem": "The time and resources required to learn coding remained a significant barrier to software creation, even with Replit's simplified development environment. Citizen developers needed a solution that could automate complex technical tasks while maintaining professional-grade output.",
+      "model": "Claude",
+      "integrationMethod": "Claude on Google Cloud's Vertex AI",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "100k+",
+          "metric": "applications supported on Google Cloud Run",
+          "sourceText": "\u2022 Supports 100k+ of applications on Google Cloud Run"
+        },
+        {
+          "value": "minutes",
+          "metric": "time from idea to deployed application without coding experience",
+          "sourceText": "You can go from idea to a deployed application in minutes without any coding experience. You just need your Replit account."
+        },
+        {
+          "value": "$25",
+          "metric": "cost for single-user AI agent subscriptions",
+          "sourceText": "We pioneered affordable, single-user AI agent subscriptions. Customers could simply go to our website, put in their credit card, and pay $25 to get access to the agent."
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Democratized software development",
+          "detail": "Made software creation accessible to anyone with a connected device, regardless of coding experience",
+          "sourceText": "Replit's platform, powered by Claude on Google Cloud's Vertex AI, has revolutionized software development by making it accessible to anyone with a connected device\u2014no coding experience required."
+        },
+        {
+          "benefit": "Device-agnostic development",
+          "detail": "Users can build and deploy applications from any device, including phones",
+          "sourceText": "What's truly revolutionary is that our platform works on any device\u2014you can build and deploy production-ready applications from anywhere."
+        },
+        {
+          "benefit": "Economic empowerment",
+          "detail": "One user in India created applications entirely from their phone, earned enough to buy their first laptop, and now builds enterprise solutions",
+          "sourceText": "This accessibility has enabled remarkable transformations. One user in India created applications entirely from their phone, earned enough to buy their first laptop, and now builds enterprise solutions."
+        },
+        {
+          "benefit": "Expanded user base beyond traditional developers",
+          "detail": "Professionals across sales, operations, and marketing are adopting the platform",
+          "sourceText": "Professionals across sales, operations, and marketing are adopting Replit. Software development is becoming essential for all roles, as off-the-shelf SaaS solutions often can't meet specific business needs."
+        },
+        {
+          "benefit": "Superior code generation capabilities",
+          "detail": "Claude can create interconnected files that form a working application and handle complex tasks like editing multiple files while maintaining context",
+          "sourceText": "It creates a set of interconnected files that form a working application. The platform proved particularly adept at handling complex tasks like editing multiple files simultaneously while maintaining context across the entire codebase."
+        }
+      ],
+      "timeToValue": "Minutes from idea to deployed application",
+      "roi": "Not specifically mentioned"
+    },
+    "technicalDetails": {
+      "architecture": "Replit's AI agent is powered by Claude on Google Cloud's Vertex AI and integrates with Google Cloud infrastructure including Cloud Run, Cloud SQL, and BigQuery",
+      "promptEngineering": "The AI agent shows users a progress screen that displays its thought process while generating applications",
+      "challenges": "Not specifically mentioned",
+      "solutions": "Not specifically mentioned",
+      "scale": "Supports over 100,000 applications on Google Cloud Run and scaled quickly from launch day"
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "4",
+      "companyInfo": "3",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/replit",
+      "extractionDate": "2023-11-09",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.023781,
+  "success": true,
+  "processed_at": "2025-03-06 19:46:12"
+}

@@ -1,0 +1,112 @@
+{
+  "url": "https://www.anthropic.com/customers/stackblitz",
+  "data": {
+    "companyInfo": {
+      "name": "StackBlitz",
+      "industry": "Web development platform",
+      "size": "Not mentioned",
+      "region": "Not mentioned"
+    },
+    "implementation": {
+      "useCase": "StackBlitz integrated Claude into Bolt (bolt.new), their browser-based development platform, to enable users to create sophisticated web applications through natural language without coding experience. Bolt uses StackBlitz's WebContainers technology that runs a micro operating system directly in the user's browser, eliminating the need for cloud-based virtual machines.",
+      "problem": "Traditional web development platforms required spinning up virtual machines in the cloud for each user, creating high costs and latency issues that made free tiers impractical. Additionally, existing AI models couldn't reliably generate accurate code that could execute without bugs, which initially made Bolt a non-starter.",
+      "model": "Claude 3.5 Sonnet",
+      "integrationMethod": "Integrated into Bolt (bolt.new) platform",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "$4 million",
+          "metric": "Annual Recurring Revenue (ARR) achieved within four weeks of launching with Claude 3.5 Sonnet",
+          "sourceText": "Within four weeks of launching with Claude 3.5 Sonnet, Bolt went from zero to $4 million in ARR with tens of thousands of new customers, with usage doubling daily after integration."
+        },
+        {
+          "value": "tens of thousands",
+          "metric": "new customers acquired within four weeks of launch",
+          "sourceText": "Within four weeks of launching with Claude 3.5 Sonnet, Bolt went from zero to $4 million in ARR with tens of thousands of new customers, with usage doubling daily after integration."
+        },
+        {
+          "value": "doubling daily",
+          "metric": "usage growth rate after Claude integration",
+          "sourceText": "Within four weeks of launching with Claude 3.5 Sonnet, Bolt went from zero to $4 million in ARR with tens of thousands of new customers, with usage doubling daily after integration."
+        },
+        {
+          "value": "99%",
+          "metric": "reduction in application development costs for Bolt users",
+          "sourceText": "\u2022 99% reduction in application development costs for Bolt users"
+        },
+        {
+          "value": "over three million",
+          "metric": "developers supported monthly by StackBlitz",
+          "sourceText": "StackBlitz, supporting over three million developers monthly, made web development more accessible than traditional environments requiring complex cloud infrastructure."
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Enables one-click deployment",
+          "detail": "Users can go from idea to production deployment in a single click",
+          "sourceText": "\u2022 Enables users to go from idea-to-production deployment in one click"
+        },
+        {
+          "benefit": "Automates boilerplate code",
+          "detail": "Eliminates time spent writing repetitive code structures",
+          "sourceText": "\u2022 Automates time-consuming boilerplate code"
+        },
+        {
+          "benefit": "Handles complex configurations",
+          "detail": "Manages difficult setup and configuration tasks automatically",
+          "sourceText": "\u2022 Handles complex configurations"
+        },
+        {
+          "benefit": "Accelerates development process",
+          "detail": "Speeds up prototyping and overall development time",
+          "sourceText": "\u2022 Accelerates prototyping and development"
+        },
+        {
+          "benefit": "Democratizes web development",
+          "detail": "Allows non-coders to create and deploy applications",
+          "sourceText": "\u2022 Enables app creation & deployment without coding knowledge"
+        },
+        {
+          "benefit": "API integration capabilities",
+          "detail": "Supports powerful third-party APIs",
+          "sourceText": "\u2022 Develop with powerful APIs like Stripe, Firebase and Claude"
+        },
+        {
+          "benefit": "Reduced development timelines and costs",
+          "detail": "Significantly shortens project timelines and reduces associated costs",
+          "sourceText": "\u2022 Dramatically reduces development timelines & costs"
+        },
+        {
+          "benefit": "Empowers non-technical entrepreneurs",
+          "detail": "Allows individuals without coding skills to build their own products quickly and affordably",
+          "sourceText": "Before Bolt, one user was quoted $5k and a 2-3 month timeframe on Upwork to build her MVP. A few days later Bolt was released, she bought the $50/mo plan, and built and launched her product in less than 2 weeks"
+        }
+      ],
+      "timeToValue": "Immediate - users can create applications instantly without setup",
+      "roi": "For one user example: reduced cost from $5,000 quoted on Upwork to $50/month, and timeline from 2-3 months to less than 2 weeks"
+    },
+    "technicalDetails": {
+      "architecture": "Bolt uses StackBlitz's WebContainers technology, which runs a micro operating system directly in the user's browser instead of requiring cloud-based virtual machines.",
+      "promptEngineering": "Claude 3.5 Sonnet excelled at zero-shot code generation without requiring complex retrieval-augmented generation (RAG) systems or extensive prompt engineering that other models needed.",
+      "challenges": "Existing AI models couldn't reliably generate accurate code that could execute without bugs, making Bolt initially a non-starter.",
+      "solutions": "Claude 3.5 Sonnet provided the breakthrough capability for reliable code generation without requiring complex infrastructure or additional tooling.",
+      "scale": "Supporting over three million developers monthly; usage doubling daily after Claude integration"
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "5",
+      "companyInfo": "3",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/stackblitz",
+      "extractionDate": "2023-10-25",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.029615999999999996,
+  "success": true,
+  "processed_at": "2025-03-06 20:02:52"
+}

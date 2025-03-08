@@ -1,0 +1,82 @@
+{
+  "url": "https://www.anthropic.com/customers/inscribe",
+  "data": {
+    "companyInfo": {
+      "name": "Inscribe",
+      "industry": "Financial technology (fraud detection and risk management)",
+      "size": "Not mentioned",
+      "region": "Not mentioned"
+    },
+    "implementation": {
+      "useCase": "Inscribe uses Claude to power AI Risk Agents that automate fraud detection, document verification, and risk analysis for banks and fintechs. These AI Risk Agents handle tasks including analyzing patterns and anomalies in application data to flag potential fraud, authenticating financial documents, and summarizing complex financial data to provide nuanced risk assessments.",
+      "problem": "Financial institutions face increasingly sophisticated fraud tactics as digital transactions surge. Manual review processes create bottlenecks that hinder growth and customer satisfaction, especially among emerging fintechs and digital-first banks.",
+      "model": "Claude (specific version not mentioned)",
+      "integrationMethod": "Integration with Inscribe's existing Amazon Web Services (AWS) infrastructure using Amazon Bedrock",
+      "implementationTime": "One day to start testing and deploying"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "20x",
+          "metric": "reduction in fraud review time, from 30 minutes to 90 seconds",
+          "sourceText": "Reduce fraud review time by 20x, from 30 minutes to 90 seconds"
+        },
+        {
+          "value": "70x",
+          "metric": "increase in loan application processing capacity without adding headcount for one client",
+          "sourceText": "We've increased our loan application processing capacity by 70 times without adding headcount with Inscribe's AI Risk Agents. This has been transformative for our business growth and customer satisfaction."
+        },
+        {
+          "value": "one day",
+          "metric": "time to implement new AI models",
+          "sourceText": "Implement their new AI models in one day"
+        },
+        {
+          "value": "90 seconds",
+          "metric": "time for AI Fraud Analyst to complete comprehensive fraud detection and verification",
+          "sourceText": "Our AI Fraud Analyst can detect fraud in images and PDFs, verify applicant details through KYC and KYB checks, uncover risky transactions, and provide auditable risk reports \u2013 all in about 90 seconds"
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Competitive advantage",
+          "detail": "Ability to rapidly deploy and iterate AI solutions puts Inscribe ahead in the risk management space",
+          "sourceText": "Our ability to rapidly deploy and iterate AI solutions puts us leagues ahead in the risk management space. We're not just keeping pace with fraud tactics; we're staying several steps ahead."
+        },
+        {
+          "benefit": "Improved financial inclusion",
+          "detail": "Expanding access to financial products for underserved populations by reducing reliance on traditional credit metrics",
+          "sourceText": "We're working towards increased fairness in financial services, opening doors for thin-file, unbanked, and credit-invisible individuals who are creditworthy but often overlooked."
+        },
+        {
+          "benefit": "Enhanced customer experience",
+          "detail": "Faster application processing and potentially greater access to financial services",
+          "sourceText": "For end-users, this means faster application processing and potentially greater access to financial services. The reduction in manual review processes allows financial institutions to offer more cost-effective products and improved customer experiences."
+        }
+      ],
+      "timeToValue": "One day to start testing and deploying",
+      "roi": "Not explicitly mentioned beyond the efficiency metrics"
+    },
+    "technicalDetails": {
+      "architecture": "Integration with existing Amazon Web Services (AWS) infrastructure using Amazon Bedrock",
+      "promptEngineering": "Not mentioned",
+      "challenges": "Balancing automation with strict data privacy and security standards in the highly regulated financial sector",
+      "solutions": "Claude was selected for its performance, low latency, ability to scale costs according to task complexity, and approach to data privacy that aligned with the need to protect sensitive financial information",
+      "scale": "Not specifically mentioned beyond the capacity increases"
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "5",
+      "companyInfo": "3",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/inscribe",
+      "extractionDate": "2023-11-09",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.022608,
+  "success": true,
+  "processed_at": "2025-03-06 19:21:22"
+}

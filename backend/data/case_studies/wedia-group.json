@@ -1,0 +1,92 @@
+{
+  "url": "https://www.anthropic.com/customers/wedia-group",
+  "data": {
+    "companyInfo": {
+      "name": "Wedia Group",
+      "industry": "Digital Asset Management (DAM) solutions",
+      "size": "Not mentioned",
+      "region": "Not mentioned"
+    },
+    "implementation": {
+      "useCase": "Wedia integrated Claude into their Digital Asset Management platform to automatically analyze and describe images uploaded by clients. The system generates metadata including captions, object detection, scene description, and other attributes with a single click. Claude provides domain-specific detail for images and supports multilingual capabilities for image descriptions.",
+      "problem": "Wedia's clients generate thousands of images and videos monthly (20,000-30,000 images) that need to be tagged, organized, and made searchable. Manually tagging this volume of content was time-consuming and led to inconsistent or incomplete metadata. They needed a solution to automatically generate accurate, detailed metadata for images at scale, supporting multiple languages for their global client base.",
+      "model": "Claude's Vision model",
+      "integrationMethod": "Claude in Amazon Bedrock",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "90%",
+          "metric": "reduction in metadata generation time",
+          "sourceText": "The integration of Claude has dramatically improved both the efficiency and quality of Wedia's DAM solution. Metadata generation time has been reduced by 90%, while the accuracy and detail of image descriptions have significantly increased."
+        },
+        {
+          "value": "70%",
+          "metric": "improvement in clients' ability to quickly find relevant images",
+          "sourceText": "Clients report a 70% improvement in their ability to quickly find relevant images."
+        },
+        {
+          "value": "20,000-30,000",
+          "metric": "new client images processed per month",
+          "sourceText": "Wedia can now easily process 20,000-30,000 new client images per month, removing a major bottleneck in their workflow."
+        },
+        {
+          "value": "6 months to 2 weeks",
+          "metric": "reduction in time to ingest legacy image libraries",
+          "sourceText": "The system also enables rapid ingestion of legacy image libraries - what previously took 6 months of manual work can now be completed in 2 weeks."
+        },
+        {
+          "value": "20+",
+          "metric": "languages supported in image descriptions",
+          "sourceText": "\u2022 Support for 20+ languages in image descriptions"
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Improved accuracy and detail of image descriptions",
+          "detail": "Claude provides domain-specific details for images, such as identifying specific truck models, colors, features, and positioning for automotive clients",
+          "sourceText": "Claude can describe images with the domain-specific detail Wedia's clients need. For automotive clients, Claude doesn't just identify a truck in an image - it specifies the model, color, features, and positioning."
+        },
+        {
+          "benefit": "Enhanced multilingual capabilities",
+          "detail": "Automatic generation of image descriptions in multiple languages for multinational enterprise clients",
+          "sourceText": "\"Claude allows all this information to be brought together in several languages,\" noted Olivier. \"The translation tools provided through Claude automatically translate the caption and metadata into multiple languages.\""
+        },
+        {
+          "benefit": "Improved workflow efficiency",
+          "detail": "Removal of major bottleneck in processing large volumes of images",
+          "sourceText": "Wedia can now easily process 20,000-30,000 new client images per month, removing a major bottleneck in their workflow."
+        },
+        {
+          "benefit": "Enhanced security and privacy",
+          "detail": "Transparent privacy-centric architecture that builds client trust",
+          "sourceText": "\"With Anthropic and Amazon Bedrock's privacy-centric architecture and transparent approach, we trust there are no data leaks, and can communicate that trust to our clients.\""
+        }
+      ],
+      "timeToValue": "Not mentioned",
+      "roi": "Not mentioned"
+    },
+    "technicalDetails": {
+      "architecture": "Claude integrated into Wedia's DAM platform through Amazon Bedrock",
+      "promptEngineering": "Not mentioned",
+      "challenges": "Security and privacy concerns with other LLM providers",
+      "solutions": "Partnered with Anthropic and used Amazon Bedrock's privacy-centric architecture to ensure data security",
+      "scale": "Processing 20,000-30,000 new client images per month"
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "5",
+      "companyInfo": "3",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/wedia-group",
+      "extractionDate": "2023-11-09",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.024258,
+  "success": true,
+  "processed_at": "2025-03-06 19:30:29"
+}

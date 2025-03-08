@@ -1,0 +1,82 @@
+{
+  "url": "https://www.anthropic.com/customers/blueflame",
+  "data": {
+    "companyInfo": {
+      "name": "BlueFlame AI",
+      "industry": "Financial technology (FinTech) for investment analysis",
+      "size": "Not mentioned",
+      "region": "Not mentioned"
+    },
+    "implementation": {
+      "useCase": "BlueFlame uses Claude to provide sophisticated financial analysis capabilities to lean investment teams, enabling them to analyze vast document sets including private equity deal rooms, compare hundreds of companies simultaneously, extract KPIs across portfolios, and generate tailored investment insights without requiring in-house technical expertise.",
+      "problem": "Alternative investment managers with lean teams need to perform sophisticated financial analysis at institutional scale but lack the large technical departments typically required for processing vast amounts of unstructured data.",
+      "model": "Claude (specific version not mentioned)",
+      "integrationMethod": "Integrated into BlueFlame's platform for financial analysis",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "from 4+ hours to minutes",
+          "metric": "reduction in document analysis time",
+          "sourceText": "Reduced document analysis time from 4+ hours to minutes"
+        },
+        {
+          "value": "30 per day",
+          "metric": "average number of client queries supported",
+          "sourceText": "Supports and average of 30 client queries per day"
+        },
+        {
+          "value": "hundreds",
+          "metric": "number of companies that can be compared simultaneously",
+          "sourceText": "Automated comparison of hundreds of companies simultaneously"
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Enabling previously impossible analysis",
+          "detail": "Small teams can now perform analysis that was economically unfeasible without large technical departments",
+          "sourceText": "This isn't just about saving time\u2014we're enabling analysis that was economically unfeasible before"
+        },
+        {
+          "benefit": "Discovering new insights",
+          "detail": "Helps clients discover both questions and answers they might have missed",
+          "sourceText": "Our clients know what they want from their data, but they don't always know all the questions to ask. We help them discover both questions and answers."
+        },
+        {
+          "benefit": "Business growth",
+          "detail": "Driving client acquisition and retention through unique market capabilities",
+          "sourceText": "We're able to do something unique in the market. It's driving client acquisition and retention, while proving that generative AI really works for investment firms."
+        },
+        {
+          "benefit": "Democratizing institutional-grade analysis",
+          "detail": "Enabling lean teams to compete effectively in sophisticated investment landscape",
+          "sourceText": "Together, they're democratizing institutional-grade analysis capabilities, enabling lean teams to compete effectively in an increasingly sophisticated investment landscape."
+        }
+      ],
+      "timeToValue": "Not mentioned",
+      "roi": "Not mentioned"
+    },
+    "technicalDetails": {
+      "architecture": "Not mentioned",
+      "promptEngineering": "Not mentioned",
+      "challenges": "Need for deterministic outcomes with no randomness in financial analysis; processing documents rich with charts and graphs",
+      "solutions": "Selected Claude for its consistency, reliability, and vision capabilities to handle financial documents with charts and graphs",
+      "scale": "Processing deal room documents, comparing hundreds of companies simultaneously, supporting an average of 30 client queries per day"
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "4",
+      "companyInfo": "3",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/blueflame",
+      "extractionDate": "2023-11-09",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.019401,
+  "success": true,
+  "processed_at": "2025-03-06 19:48:00"
+}

@@ -1,0 +1,82 @@
+{
+  "url": "https://www.anthropic.com/customers/you-dot-com",
+  "data": {
+    "companyInfo": {
+      "name": "You.com",
+      "industry": "AI-powered search and productivity platform",
+      "size": "Not mentioned",
+      "region": "Not mentioned"
+    },
+    "implementation": {
+      "useCase": "You.com integrated Claude as a key AI model across their platform to power various features including research assistance, coding help, and customizable AI agents. Claude helps users conduct research, solve complex problems, and automate workflows.",
+      "problem": "Traditional search engines weren't effectively understanding user search motivation or helping users be productive. You.com aimed to transform online search into a comprehensive productivity engine that could provide better answers and automate complex tasks.",
+      "model": "Claude (specific version not mentioned)",
+      "integrationMethod": "Integrated as one of the LLMs powering the platform's features including Research Agent and coding assistance",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "1000%",
+          "metric": "revenue increase since January",
+          "sourceText": "Offering all-in-one access to the latest and most powerful LLMs, including Claude, has helped fuel remarkable growth for You.com, with revenue soaring by 1000% since January."
+        },
+        {
+          "value": "1 billion",
+          "metric": "lifetime queries hit",
+          "sourceText": "\u2022 1 billion lifetime queries hit"
+        },
+        {
+          "value": "15%",
+          "metric": "increase in productivity or nearly 1 day of work saved per week reported by users",
+          "sourceText": "\u2022 Users reporting a 15% increase in productivity or nearly 1 day of work saved per week"
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Enhanced research capabilities",
+          "detail": "The Research Agent delivers comprehensive results that save users from multiple searches",
+          "sourceText": "A standout feature is You.com's Research Agent, which leverages Claude to deliver comprehensive and contextually relevant information. McCann highlights its effectiveness: \"Our Research Agent delivers high-quality, comprehensive results...saving me many searches and scrolling through ads and attention-grabbing stuff.\""
+        },
+        {
+          "benefit": "Improved developer productivity",
+          "detail": "Claude powers coding assistance for code generation, debugging, and explaining complex algorithms",
+          "sourceText": "The platform's coding assistance feature, powered by Claude, helps developers with code generation, debugging, and explaining complex algorithms."
+        },
+        {
+          "benefit": "Time efficiency for users",
+          "detail": "Tasks that used to take hours now take minutes",
+          "sourceText": "McCann notes, \"Users accomplish tasks in minutes that used to take hours of searching and scrolling.\""
+        },
+        {
+          "benefit": "Improved answer quality",
+          "detail": "Claude's reasoning capabilities have increased overall answer quality",
+          "sourceText": "McCann emphasizes the impact of integrating Claude across these features, saying, \"The reasoning, agentic capabilities, tool use, and overall answer quality for many users has increased so much.\""
+        }
+      ],
+      "timeToValue": "Not mentioned",
+      "roi": "Not specifically mentioned beyond the 1000% revenue increase"
+    },
+    "technicalDetails": {
+      "architecture": "You.com offers a platform that integrates multiple LLMs including Claude, with features for file uploads, search, and synthesized responses from multiple sources",
+      "promptEngineering": "Not mentioned",
+      "challenges": "Not mentioned",
+      "solutions": "Not mentioned",
+      "scale": "Serving millions of knowledge workers and businesses with 1 billion lifetime queries"
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "5",
+      "companyInfo": "3",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/you-dot-com",
+      "extractionDate": "2023-11-09",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.021131999999999998,
+  "success": true,
+  "processed_at": "2025-03-06 19:56:27"
+}

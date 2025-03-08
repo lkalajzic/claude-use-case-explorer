@@ -1,0 +1,117 @@
+{
+  "url": "https://www.anthropic.com/customers/coderabbit",
+  "data": {
+    "companyInfo": {
+      "name": "CodeRabbit",
+      "industry": "Software Development Tools",
+      "size": "Not mentioned",
+      "region": "Not mentioned"
+    },
+    "implementation": {
+      "useCase": "AI-powered code review automation that analyzes code changes, provides contextual feedback, summarizes complex changes, assesses architectural impact, detects errors and bugs, and unifies quality assurance processes.",
+      "problem": "Development teams struggling with manual review bottlenecks, inconsistent quality checks, fragmented quality assurance processes requiring multiple specialized tools across different languages and frameworks, security scanning tools overwhelming teams with false positives while missing context-dependent vulnerabilities, and growing technical debt.",
+      "model": "Claude",
+      "integrationMethod": "Integration via Anthropic's SDK architecture and API specifications",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "86%",
+          "metric": "faster code delivery, from days to hours",
+          "sourceText": "\u2022 Delivers 86% faster code delivery, from days to hours"
+        },
+        {
+          "value": "over 60%",
+          "metric": "reduction in code review issues",
+          "sourceText": "\u2022 Reduces code review issues by over 60%"
+        },
+        {
+          "value": "70%",
+          "metric": "implementation rate of AI-powered fixes",
+          "sourceText": "\u2022 Reports 70% implementation rate of AI-powered fixes"
+        },
+        {
+          "value": "millions",
+          "metric": "pull requests processed monthly",
+          "sourceText": "\u2022 Processes millions of pull requests monthly, enabling unified quality assurance and automated security checks."
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Real-time code reviews with contextual feedback",
+          "detail": "Provides feedback during development process",
+          "sourceText": "\u2022 Real-time code reviews with contextual feedback during development"
+        },
+        {
+          "benefit": "Instant understanding of complex code changes",
+          "detail": "Clear summaries help developers understand changes quickly",
+          "sourceText": "\u2022 Instant understanding of complex code changes through clear summaries"
+        },
+        {
+          "benefit": "Impact assessments for architectural implications",
+          "detail": "Helps teams understand broader architectural impacts of code changes",
+          "sourceText": "\u2022 Impact assessments that help teams grasp architectural implications"
+        },
+        {
+          "benefit": "Early error and bug detection",
+          "detail": "Proactively identifies issues and suggests improvements",
+          "sourceText": "\u2022 Early error and bug detection with improvement suggestions"
+        },
+        {
+          "benefit": "Unified quality assurance",
+          "detail": "Combines linting and security tools into a single solution",
+          "sourceText": "\u2022 Unified quality assurance combining linting and security tools"
+        },
+        {
+          "benefit": "One-click fixes for faster bug resolution",
+          "detail": "Enables rapid decision-making and bug resolution",
+          "sourceText": "Their one-click fixes enable rapid decision-making and faster bug resolution"
+        },
+        {
+          "benefit": "Streamlined ticketing integrations",
+          "detail": "Integration with tools like Jira and Linear enhances workflow efficiency",
+          "sourceText": "streamlined ticketing integrations with tools like Jira and Linear enhance workflow efficiency"
+        },
+        {
+          "benefit": "Insightful analytics dashboards",
+          "detail": "Provides data-driven insights for engineering leadership",
+          "sourceText": "The platform delivers insightful analytics dashboards and customizable reports for data-driven engineering leadership"
+        },
+        {
+          "benefit": "Knowledge gap bridging",
+          "detail": "Senior developer-level insights help junior developers learn",
+          "sourceText": "Its ability to provide senior developer-level insights bridges knowledge gaps between junior and senior developers while making code reviews more educational and accessible"
+        },
+        {
+          "benefit": "Enhanced security vulnerability detection",
+          "detail": "Proactively identifies security vulnerabilities with contextual understanding",
+          "sourceText": "Its contextual explanations accelerate developer learning while proactively identifying security vulnerabilities"
+        }
+      ],
+      "timeToValue": "Not mentioned",
+      "roi": "Not mentioned"
+    },
+    "technicalDetails": {
+      "architecture": "Integration with Anthropic's SDK architecture and API specifications, with integrations to ticketing systems like Jira and Linear",
+      "promptEngineering": "Not mentioned",
+      "challenges": "Traditional code review tools weren't keeping pace with modern development velocity; rule-based systems and basic machine learning models couldn't understand code semantics, programming patterns, and developer intent",
+      "solutions": "Implemented Claude for its ability to understand code with human-like comprehension, grasp underlying architectural patterns, manage context across large repositories, translate complex technical concepts, and reason about security with minimal false positives",
+      "scale": "Processes millions of pull requests monthly"
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "5",
+      "companyInfo": "3",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/coderabbit",
+      "extractionDate": "2023-11-09",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.025568999999999998,
+  "success": true,
+  "processed_at": "2025-03-06 19:46:33"
+}

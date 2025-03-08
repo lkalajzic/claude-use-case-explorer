@@ -1,0 +1,1038 @@
+[
+  {
+    "id": "snowflake",
+    "company": "Snowflake",
+    "industry": "AI-enhanced technology",
+    "description": "Snowflake uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/snowflake",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "stackblitz",
+    "company": "Stackblitz",
+    "industry": "AI-enhanced technology",
+    "description": "Stackblitz uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/stackblitz",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "blueflame",
+    "company": "Blueflame",
+    "industry": "AI-enhanced technology",
+    "description": "Blueflame uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/blueflame",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "palo_alto_networks",
+    "company": "Palo Alto Networks",
+    "industry": "AI-enhanced technology",
+    "description": "Palo Alto Networks uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/palo-alto-networks",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "kodif",
+    "company": "Kodif",
+    "industry": "AI-enhanced technology",
+    "description": "Kodif uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/kodif",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "european_parliament",
+    "company": "European Parliament",
+    "industry": "AI-enhanced technology",
+    "description": "European Parliament uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/european-parliament",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "braintrust",
+    "company": "Braintrust",
+    "industry": "AI-enhanced technology",
+    "description": "Braintrust uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/braintrust",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "hume",
+    "company": "Hume",
+    "industry": "AI-enhanced technology",
+    "description": "Hume uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/hume",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "newfront",
+    "company": "Newfront",
+    "industry": "AI-enhanced technology",
+    "description": "Newfront uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/newfront",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "you_dot_com",
+    "company": "You Dot Com",
+    "industry": "AI-enhanced technology",
+    "description": "You Dot Com uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/you-dot-com",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "zapia",
+    "company": "Zapia",
+    "industry": "AI-enhanced technology",
+    "description": "Zapia uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/zapia",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "jumpcut",
+    "company": "Jumpcut",
+    "industry": "AI-enhanced technology",
+    "description": "Jumpcut uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/jumpcut",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "factory",
+    "company": "Factory",
+    "industry": "AI-enhanced technology",
+    "description": "Factory uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/factory",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "magicschool",
+    "company": "Magicschool",
+    "industry": "AI-enhanced technology",
+    "description": "Magicschool uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/magicschool",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "wedia_group",
+    "company": "Wedia Group",
+    "industry": "AI-enhanced technology",
+    "description": "Wedia Group uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/wedia-group",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "replit",
+    "company": "Replit",
+    "industry": "AI-enhanced technology",
+    "description": "Replit uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/replit",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "coderabbit",
+    "company": "Coderabbit",
+    "industry": "AI-enhanced technology",
+    "description": "Coderabbit uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/coderabbit",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "asapp",
+    "company": "Asapp",
+    "industry": "AI-enhanced technology",
+    "description": "Asapp uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/asapp",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "skt",
+    "company": "Skt",
+    "industry": "AI-enhanced technology",
+    "description": "Skt uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/skt",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "section",
+    "company": "Section",
+    "industry": "AI-enhanced technology",
+    "description": "Section uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/section",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "cove",
+    "company": "Cove",
+    "industry": "AI-enhanced technology",
+    "description": "Cove uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/cove",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "gumroad",
+    "company": "Gumroad",
+    "industry": "AI-enhanced technology",
+    "description": "Gumroad uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/gumroad",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "tome",
+    "company": "Tome",
+    "industry": "AI-enhanced technology",
+    "description": "Tome uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/tome",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "sourcegraph",
+    "company": "Sourcegraph",
+    "industry": "AI-enhanced technology",
+    "description": "Sourcegraph uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/sourcegraph",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "intercom",
+    "company": "Intercom",
+    "industry": "AI-enhanced technology",
+    "description": "Intercom uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/intercom",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "hebbia",
+    "company": "Hebbia",
+    "industry": "AI-enhanced technology",
+    "description": "Hebbia uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/hebbia",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "appfolio",
+    "company": "Appfolio",
+    "industry": "AI-enhanced technology",
+    "description": "Appfolio uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/appfolio",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "decagon",
+    "company": "Decagon",
+    "industry": "AI-enhanced technology",
+    "description": "Decagon uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/decagon",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "pulpit_ai",
+    "company": "Pulpit Ai",
+    "industry": "AI-enhanced technology",
+    "description": "Pulpit Ai uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/pulpit-ai",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "scribd",
+    "company": "Scribd",
+    "industry": "AI-enhanced technology",
+    "description": "Scribd uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/scribd",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "gamma",
+    "company": "Gamma",
+    "industry": "AI-enhanced technology",
+    "description": "Gamma uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/gamma",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "headstart",
+    "company": "Headstart",
+    "industry": "AI-enhanced technology",
+    "description": "Headstart uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/headstart",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "zoom",
+    "company": "Zoom",
+    "industry": "AI-enhanced technology",
+    "description": "Zoom uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/zoom",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "lex",
+    "company": "Lex",
+    "industry": "AI-enhanced technology",
+    "description": "Lex uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/lex",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "intuit",
+    "company": "Intuit",
+    "industry": "AI-enhanced technology",
+    "description": "Intuit uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/intuit",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "aes",
+    "company": "Aes",
+    "industry": "AI-enhanced technology",
+    "description": "Aes uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/aes",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "perplexity",
+    "company": "Perplexity",
+    "industry": "AI-enhanced technology",
+    "description": "Perplexity uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/perplexity",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "asana",
+    "company": "Asana",
+    "industry": "AI-enhanced technology",
+    "description": "Asana uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/asana",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "orange",
+    "company": "Orange",
+    "industry": "AI-enhanced technology",
+    "description": "Orange uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/orange",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "local_falcon",
+    "company": "Local Falcon",
+    "industry": "AI-enhanced technology",
+    "description": "Local Falcon uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/local-falcon",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "coinbase",
+    "company": "Coinbase",
+    "industry": "AI-enhanced technology",
+    "description": "Coinbase uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/coinbase",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "advolve",
+    "company": "Advolve",
+    "industry": "AI-enhanced technology",
+    "description": "Advolve uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/advolve",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "graphite",
+    "company": "Graphite",
+    "industry": "AI-enhanced technology",
+    "description": "Graphite uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/graphite",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "brian_impact_foundation",
+    "company": "Brian Impact Foundation",
+    "industry": "AI-enhanced technology",
+    "description": "Brian Impact Foundation uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/brian-impact-foundation",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "humach",
+    "company": "Humach",
+    "industry": "AI-enhanced technology",
+    "description": "Humach uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/humach",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "clay",
+    "company": "Clay",
+    "industry": "AI-enhanced technology",
+    "description": "Clay uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/clay",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "assembled",
+    "company": "Assembled",
+    "industry": "AI-enhanced technology",
+    "description": "Assembled uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/assembled",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "gitlab",
+    "company": "Gitlab",
+    "industry": "AI-enhanced technology",
+    "description": "Gitlab uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/gitlab",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "tldv",
+    "company": "Tldv",
+    "industry": "AI-enhanced technology",
+    "description": "Tldv uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/tldv",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "thomson_reuters",
+    "company": "Thomson Reuters",
+    "industry": "AI-enhanced technology",
+    "description": "Thomson Reuters uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/thomson-reuters",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "stairwell",
+    "company": "Stairwell",
+    "industry": "AI-enhanced technology",
+    "description": "Stairwell uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/stairwell",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "lazy_ai",
+    "company": "Lazy Ai",
+    "industry": "AI-enhanced technology",
+    "description": "Lazy Ai uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/lazy-ai",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "sourcegraph_claude_for_work",
+    "company": "Sourcegraph Claude For Work",
+    "industry": "AI-enhanced technology",
+    "description": "Sourcegraph Claude For Work uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/sourcegraph-claude-for-work",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "copy_ai",
+    "company": "Copy Ai",
+    "industry": "AI-enhanced technology",
+    "description": "Copy Ai uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/copy-ai",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "gitlab_enterprise",
+    "company": "Gitlab Enterprise",
+    "industry": "AI-enhanced technology",
+    "description": "Gitlab Enterprise uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/gitlab-enterprise",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "steno",
+    "company": "Steno",
+    "industry": "AI-enhanced technology",
+    "description": "Steno uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/steno",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "notion",
+    "company": "Notion",
+    "industry": "AI-enhanced technology",
+    "description": "Notion uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/notion",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "graph",
+    "company": "Graph",
+    "industry": "AI-enhanced technology",
+    "description": "Graph uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/graph",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "tabnine",
+    "company": "Tabnine",
+    "industry": "AI-enhanced technology",
+    "description": "Tabnine uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/tabnine",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "inscribe",
+    "company": "Inscribe",
+    "industry": "AI-enhanced technology",
+    "description": "Inscribe uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/inscribe",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "wrtn",
+    "company": "Wrtn",
+    "industry": "AI-enhanced technology",
+    "description": "Wrtn uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/wrtn",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "amazon_q_in_connect",
+    "company": "Amazon Q In Connect",
+    "industry": "AI-enhanced technology",
+    "description": "Amazon Q In Connect uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/amazon-q-in-connect",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "studyfetch",
+    "company": "Studyfetch",
+    "industry": "AI-enhanced technology",
+    "description": "Studyfetch uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/studyfetch",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "otter",
+    "company": "Otter",
+    "industry": "AI-enhanced technology",
+    "description": "Otter uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/otter",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "brand_ai",
+    "company": "Brand Ai",
+    "industry": "AI-enhanced technology",
+    "description": "Brand Ai uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/brand-ai",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "armanino",
+    "company": "Armanino",
+    "industry": "AI-enhanced technology",
+    "description": "Armanino uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/armanino",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "campfire",
+    "company": "Campfire",
+    "industry": "AI-enhanced technology",
+    "description": "Campfire uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/campfire",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "skillfully",
+    "company": "Skillfully",
+    "industry": "AI-enhanced technology",
+    "description": "Skillfully uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/skillfully",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "codeium",
+    "company": "Codeium",
+    "industry": "AI-enhanced technology",
+    "description": "Codeium uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/codeium",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "law_and_company",
+    "company": "Law And Company",
+    "industry": "AI-enhanced technology",
+    "description": "Law And Company uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/law-and-company",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "alexa_plus",
+    "company": "Alexa Plus",
+    "industry": "AI-enhanced technology",
+    "description": "Alexa Plus uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/alexa-plus",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "micro1",
+    "company": "Micro1",
+    "industry": "AI-enhanced technology",
+    "description": "Micro1 uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/micro1",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "university_of_sydney",
+    "company": "University Of Sydney",
+    "industry": "AI-enhanced technology",
+    "description": "University Of Sydney uses Claude to enhance their AI capabilities.",
+    "url": "https://www.anthropic.com/customers/university-of-sydney",
+    "categoryId": "productivity",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  },
+  {
+    "id": "aura",
+    "company": "Aura Intelligence",
+    "industry": "AI-driven Organizational Decision Intelligence (ODI) platform",
+    "description": "Aura uses Claude in Amazon Bedrock to transform billions of workforce data points into insights for management consulting, private equity firms, and hedge funds. Specifically, Claude helps analyze ...",
+    "url": "https://www.anthropic.com/customers/aura",
+    "categoryId": "document_qa",
+    "highlights": [
+      "Improved efficiency",
+      "Enhanced user experience",
+      "Increased productivity",
+      "Streamlined processes"
+    ]
+  }
+]

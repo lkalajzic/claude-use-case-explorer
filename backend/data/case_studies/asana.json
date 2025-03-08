@@ -1,0 +1,77 @@
+{
+  "url": "https://www.anthropic.com/customers/asana",
+  "data": {
+    "companyInfo": {
+      "name": "Asana",
+      "industry": "Enterprise work management platform",
+      "size": "Enterprise (serving 150,000+ companies)",
+      "region": "Global"
+    },
+    "implementation": {
+      "useCase": "Asana integrated Claude into their proprietary Work Graph data model to power Asana AI, enhancing their work management platform with AI capabilities for task automation, insights generation, and workflow optimization.",
+      "problem": "Teams struggle with coordination of work, answering questions like who is doing what by when, and why. Asana sought to revolutionize work management through generative AI to address these challenges.",
+      "model": "Claude",
+      "integrationMethod": "Integration with Asana's proprietary Work Graph data model through collaboration in Anthropic's Early Access Programs",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "150,000+",
+          "metric": "global customers using Asana's platform powered by Claude",
+          "sourceText": "Asana, a leading enterprise work management platform, powers their Asana AI offering with Claude for its 150,000+ global customers."
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Increased goal clarity and productivity",
+          "detail": "AI features have improved how teams understand and achieve goals",
+          "sourceText": "Asana has achieved remarkable results for users by integrating Claude. AI features have increased goal clarity and productivity, and have helped reduce decision-making time for executives."
+        },
+        {
+          "benefit": "Reduced decision-making time for executives",
+          "detail": "Executives can make decisions faster with AI-powered insights",
+          "sourceText": "Asana has achieved remarkable results for users by integrating Claude. AI features have increased goal clarity and productivity, and have helped reduce decision-making time for executives."
+        },
+        {
+          "benefit": "Accelerated feature development",
+          "detail": "Ability to build features in weeks that would have taken years",
+          "sourceText": "Asana's partnership with Anthropic has accelerated their AI capabilities. Pelz shares, \"What's cool about AI now is doing things we thought would require years of engineering effort, in just a few weeks with a small team; it's catalyzed how fast we can build features to help our customers.\""
+        },
+        {
+          "benefit": "Improved workflow management for customers",
+          "detail": "A global media company improved C-Suite escalations and work handoffs",
+          "sourceText": "One global media and entertainment company turned to Asana to streamline their workflows for roadmapping and planning projects. Thanks to Asana they've improved C-Suite escalations, smoothed work handoffs, and automated request routing to the right projects and processes."
+        },
+        {
+          "benefit": "Enhanced creative processes",
+          "detail": "An outdoor advertising company transformed their creative request process",
+          "sourceText": "Another customer, a leading outdoor advertising company, is exploring AI to transform their creative request process. With Asana AI they are able to triage requests, deliver tailored recommendations on ad designs, and streamline their ad creation process."
+        }
+      ],
+      "timeToValue": "Not mentioned",
+      "roi": "Not mentioned"
+    },
+    "technicalDetails": {
+      "architecture": "Claude is integrated into Asana's proprietary Work Graph data model, which captures work-related relationships, context, and information across an organization, providing structure for AI to access context needed for insights.",
+      "promptEngineering": "Not mentioned",
+      "challenges": "Not specifically mentioned",
+      "solutions": "Integration of AI features directly into Asana's interface to ensure seamless user experience without disrupting workflows",
+      "scale": "Supporting 150,000+ global customers"
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "3",
+      "companyInfo": "4",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/asana",
+      "extractionDate": "2023-11-09",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.022463999999999998,
+  "success": true,
+  "processed_at": "2025-03-06 19:59:39"
+}

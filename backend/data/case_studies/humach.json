@@ -1,0 +1,77 @@
+{
+  "url": "https://www.anthropic.com/customers/humach",
+  "data": {
+    "companyInfo": {
+      "name": "Humach",
+      "industry": "Customer Experience Solutions",
+      "size": "Not mentioned",
+      "region": "Not mentioned"
+    },
+    "implementation": {
+      "useCase": "Humach uses Claude to power AI-assisted agents and digital workers that streamline customer interactions across multiple channels. The implementation includes digital voice agents for natural language interactions, live agent assistance for human agents, custom language models for client-specific content, sentiment analysis, and content classification.",
+      "problem": "Humach needed to modernize and future-proof their business by adapting to the digital and AI-driven landscape. They wanted to introduce real-time insights into customer interactions, enhance their digital agent layer, manage repetitive requests, and empower customer self-service. They also aimed to enable human agents to handle more complex interactions, leading to higher job satisfaction and better customer experience.",
+      "model": "Claude (specific version not mentioned)",
+      "integrationMethod": "Claude in Amazon Bedrock, implemented with help from Innovative Solutions, an AWS Premier Tier Services partner",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "15-20%",
+          "metric": "increase in operational efficiency through optimized Custom Language Model responses",
+          "sourceText": "The collaboration between Humach and Innovative Solutions, leveraging Claude in Amazon Bedrock, has significantly improved Humach's customer service operations. The solution has led to a 15-20% increase in operational efficiency through optimized Custom Language Model responses."
+        },
+        {
+          "value": "20%",
+          "metric": "of calls automated through customer adoption of AI-powered self-service options",
+          "sourceText": "Additionally, Humach has automated about 20% of calls through customer adoption of AI-powered self-service options."
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Improved agent experience",
+          "detail": "Claude helps agents resolve customer issues faster and more accurately, reducing repetitive tasks and allowing them to focus on complex, high-value interactions",
+          "sourceText": "Claude's assistance has also transformed human agents' work. By quickly summarizing relevant information and providing context-aware suggestions, Claude helps agents resolve customer issues faster and more accurately. This improves customer satisfaction and enhances job satisfaction for agents by reducing repetitive tasks and allowing them to focus on complex, high-value interactions."
+        },
+        {
+          "benefit": "Enhanced customer satisfaction",
+          "detail": "AI-powered platform provides self-service knowledge that enhances customer satisfaction and empowers users to find answers quickly",
+          "sourceText": "The AI-powered platform provides self-service knowledge that enhances customer satisfaction and empowers users to find answers quickly and efficiently without having to speak to a live agent."
+        },
+        {
+          "benefit": "Unified solution without multiple vendors",
+          "detail": "Using Claude allowed Humach to create a comprehensive, one-stop solution for customer experience management",
+          "sourceText": "By leveraging Claude in Amazon Bedrock, Humach has created a comprehensive, one-stop solution for customer experience management."
+        },
+        {
+          "benefit": "Increased scalability and flexibility",
+          "detail": "The solution enables Humach's clients to deliver superior customer experiences while optimizing operational costs",
+          "sourceText": "This solution enables Humach's clients to deliver superior customer experiences while optimizing operational costs."
+        }
+      ],
+      "timeToValue": "Not mentioned",
+      "roi": "Not mentioned"
+    },
+    "technicalDetails": {
+      "architecture": "Humach's mAI Pilot platform integrates Claude in Amazon Bedrock through a Custom Language Model (CLM) framework for Humach-specific and customer-specific interactions",
+      "promptEngineering": "Not mentioned",
+      "challenges": "Not mentioned",
+      "solutions": "Innovative Solutions collaborated with Humach to develop a Custom Language Model (CLM) framework that integrates various AI functionalities into Humach's mAI Pilot platform",
+      "scale": "Not mentioned"
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "5",
+      "companyInfo": "3",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/humach",
+      "extractionDate": "2023-11-09",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.023094,
+  "success": true,
+  "processed_at": "2025-03-06 20:00:59"
+}

@@ -1,0 +1,97 @@
+{
+  "url": "https://www.anthropic.com/customers/snowflake",
+  "data": {
+    "companyInfo": {
+      "name": "Snowflake",
+      "industry": "Enterprise data cloud platform",
+      "size": "Enterprise (serving 10,000+ global enterprises)",
+      "region": "Global"
+    },
+    "implementation": {
+      "useCase": "Snowflake integrated Claude into their Cortex AI platform, specifically Cortex Analyst, to enable natural language data exploration and analysis. This allows users to interact with their data using conversational language rather than requiring specialized SQL expertise.",
+      "problem": "Modern enterprises collect massive amounts of data, but extracting insights often requires specialized SQL expertise and complex technical workflows. Data teams face mounting backlogs as they may spend days writing queries for basic analytics requests, leaving business users waiting for critical insights.",
+      "model": "Claude 3.5 Sonnet",
+      "integrationMethod": "Claude runs inside Snowflake's security perimeter, accessible via SQL, Python, and REST API interfaces",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "greater than 90%",
+          "metric": "accuracy on complex text-to-SQL tasks based on internal benchmarks",
+          "sourceText": "\u2022 Enables greater than 90% accuracy on complex text-to-SQL tasks based on internal benchmarks"
+        },
+        {
+          "value": "10,000+",
+          "metric": "global enterprises receiving enhanced delivery of data in natural language",
+          "sourceText": "\u2022 Enhances delivery of data in natural language for 10,000+ global enterprises"
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Accelerated time-to-insight",
+          "detail": "Claude running on Snowflake's governed customer data speeds up insight generation",
+          "sourceText": "\u2022 Accelerates time-to-insight with Claude running on Snowflake's governed customer data"
+        },
+        {
+          "benefit": "Real-time insights from multiple data types",
+          "detail": "Ability to obtain insights from both structured and unstructured data",
+          "sourceText": "\u2022 Obtain real-time insights from both structured and unstructured data"
+        },
+        {
+          "benefit": "Natural language to SQL conversion",
+          "detail": "Ability to convert natural language queries to SQL on complex databases",
+          "sourceText": "\u2022 Convert natural language queries to SQL on complex databases"
+        },
+        {
+          "benefit": "Enterprise-scale conversational analytics",
+          "detail": "Provides conversational analytics with built-in governance controls",
+          "sourceText": "\u2022 Enterprise-scale conversational analytics with built-in governance controls"
+        },
+        {
+          "benefit": "Global deployment capabilities",
+          "detail": "Cross-region inference enabling global deployment and access",
+          "sourceText": "\u2022 Cross-region inference enabling global deployment and access"
+        },
+        {
+          "benefit": "Rapid AI application deployment",
+          "detail": "Deployment of sophisticated AI applications in days instead of months",
+          "sourceText": "\u2022 Deployment of sophisticated AI applications in days instead of months"
+        },
+        {
+          "benefit": "Enhanced data pattern discovery",
+          "detail": "Simon Data used Claude to uncover previously hidden patterns in their data",
+          "sourceText": "Composable customer data platform provider Simon Data has seen particularly compelling results, using Claude to uncover previously hidden patterns and relationships in their data while maintaining strict governance standards."
+        },
+        {
+          "benefit": "Maintained security and governance",
+          "detail": "Customers can use AI while keeping their data governed and secure",
+          "sourceText": "With Claude now running inside Snowflake's security perimeter, Snowflake customers can build and deploy AI applications while keeping their data governed."
+        }
+      ],
+      "timeToValue": "Deployment of sophisticated AI applications in days instead of months",
+      "roi": "Not mentioned"
+    },
+    "technicalDetails": {
+      "architecture": "Claude runs inside Snowflake's security perimeter, accessible via SQL, Python, and REST API interfaces",
+      "promptEngineering": "Not mentioned",
+      "challenges": "Maintaining rigorous security and governance standards while implementing AI capabilities",
+      "solutions": "Integration of Claude within Snowflake's security perimeter, allowing customers to build and deploy AI applications while keeping their data governed",
+      "scale": "Supporting 10,000+ global enterprises with cross-region inference enabling global deployment and access"
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "5",
+      "companyInfo": "4",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/snowflake",
+      "extractionDate": "2023-11-09",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.024287999999999997,
+  "success": true,
+  "processed_at": "2025-03-06 19:29:21"
+}

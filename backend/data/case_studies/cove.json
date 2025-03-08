@@ -1,0 +1,67 @@
+{
+  "url": "https://www.anthropic.com/customers/cove",
+  "data": {
+    "companyInfo": {
+      "name": "Cove",
+      "industry": "AI collaboration software",
+      "size": "Not mentioned",
+      "region": "Not mentioned"
+    },
+    "implementation": {
+      "useCase": "Cove created a visual workspace for AI collaboration, where users can think alongside an AI collaborator in a canvas-like environment. Unlike traditional chatbots, Cove enables exploring ideas visually and non-linearly, mimicking natural thought processes. The AI can create and edit content in the workspace, including text, tables, images, webpages, and PDFs.",
+      "problem": "Creating a more natural and collaborative way for humans to interact with AI beyond traditional chat interfaces, enabling complex thinking and problem-solving through visual collaboration.",
+      "model": "Claude 3.5 Sonnet and Claude 3 Haiku",
+      "integrationMethod": "Dual-model architecture with different Claude models handling specific functions",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "30%",
+          "metric": "faster response times compared to previous solutions",
+          "sourceText": "Saw 30% faster response times compared to previous solutions"
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Improved response accuracy and context understanding",
+          "detail": "Claude provides better understanding of context in the visual workspace",
+          "sourceText": "Improved response accuracy and context understanding"
+        },
+        {
+          "benefit": "More reliable instruction following",
+          "detail": "Claude 3.5 Sonnet follows instructions more reliably than other models",
+          "sourceText": "Having worked with many different models, sometimes you reach a point where no matter how you phrase something, the model just stops listening and feels like it has a mind of its own. With Claude 3.5 Sonnet, it keeps listening and follows instructions more reliably."
+        },
+        {
+          "benefit": "Optimal performance through model specialization",
+          "detail": "Using different Claude models for different functions based on their strengths",
+          "sourceText": "Achieved optimal performance by pairing best-fit Claude models to different use cases"
+        }
+      ],
+      "timeToValue": "Not mentioned",
+      "roi": "Not mentioned"
+    },
+    "technicalDetails": {
+      "architecture": "Dual-model architecture: Claude 3.5 Sonnet handles core reasoning (interpreting user input, editing workspace items, generating new content) while Claude 3 Haiku manages real-time interactions requiring speed (contextual suggestions, low-latency responses for dynamic interface updates).",
+      "promptEngineering": "Complex prompting that includes commands for manipulating the workspace (creating cards, editing text, adding columns to tables). The prompt needs to be very prescriptive about syntax in some places while requiring extreme creativity in others. About 70% of the prompt is cached, mostly examples that drive good outcomes.",
+      "challenges": "Balancing advanced reasoning ability with fast response time. Creating a complex prompt that could handle both precise syntax requirements and creative outputs.",
+      "solutions": "Implemented a dual-model architecture using Claude 3.5 Sonnet for reasoning and Claude 3 Haiku for speed. As described by Mike Chu: 'After Claude 3.5 Sonnet generates an answer, we immediately trigger Claude 3 Haiku for quick suggestions, creating a seamless experience for users.'",
+      "scale": "Not mentioned"
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "4",
+      "companyInfo": "3",
+      "implementation": "5"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/cove",
+      "extractionDate": "2023-11-09",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.020978999999999998,
+  "success": true,
+  "processed_at": "2025-03-06 19:34:42"
+}

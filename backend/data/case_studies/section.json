@@ -1,0 +1,112 @@
+{
+  "url": "https://www.anthropic.com/customers/section",
+  "data": {
+    "companyInfo": {
+      "name": "Section",
+      "industry": "AI workforce transformation and training",
+      "size": "25-person team",
+      "region": "Not mentioned"
+    },
+    "implementation": {
+      "useCase": "Section uses Claude in multiple ways: 1) as a strategic thought partner for leadership, 2) to inform and develop AI upskilling programs, 3) to advise clients on AI transformation, 4) to power their AI coach called ProfAI, 5) for internal productivity across marketing, education, and leadership teams",
+      "problem": "Helping organizations and individuals become proficient, confident, and effective with AI when 'less than 10% of workers are AI-proficient' according to their data",
+      "model": "Claude (specific version not mentioned)",
+      "integrationMethod": "Claude Projects for marketing team; direct usage for other teams",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "82%",
+          "metric": "of team members use Claude, compared to a 5% benchmark for the overall workforce",
+          "sourceText": "\u2022 82% of team members use Claude, compared to a 5% benchmark for the overall workforce"
+        },
+        {
+          "value": "50%",
+          "metric": "of the team achieving at least 10% productivity gains",
+          "sourceText": "\u2022 50% of the team achieving at least 10% productivity gains"
+        },
+        {
+          "value": "92%",
+          "metric": "of the feedback the board brought up was identified by Claude in a test where Claude role-played as a board member",
+          "sourceText": "After the board meeting, they compared their notes against Claude's predictions. 'Claude identified 92% of the feedback the board brought up.'"
+        },
+        {
+          "value": "$20K",
+          "metric": "per year spent on AI accounts for their 25-person team, including Claude",
+          "sourceText": "The company spends about $20K per year on AI accounts for their 25-person team, including Claude."
+        },
+        {
+          "value": "$150-200K",
+          "metric": "estimated annual savings, or 1-2 headcount, from productivity gains",
+          "sourceText": "With half the team getting a 10% productivity gain already, they estimate they're saving $150-200K a year, or 1-2 headcount."
+        },
+        {
+          "value": "8X",
+          "metric": "increase in the number of employees they'll upskill this year while spending less on delivery and administration costs",
+          "sourceText": "'We're seeing the results already in our business model,' Malmsheimer said. 'We'll 8X the number of employees we upskill this year, yet we're spending less on delivery and administration costs than we did last year.'"
+        },
+        {
+          "value": "100,000",
+          "metric": "employees planned to be upskilled on AI this year",
+          "sourceText": "With plans to upskill 100,000 employees on AI this year and one million the next, Section and Anthropic are empowering a generation of confident workers to thrive in an AI-powered future."
+        },
+        {
+          "value": "one million",
+          "metric": "employees planned to be upskilled on AI next year",
+          "sourceText": "With plans to upskill 100,000 employees on AI this year and one million the next, Section and Anthropic are empowering a generation of confident workers to thrive in an AI-powered future."
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Improved strategic preparation",
+          "detail": "Claude helps executives prepare for board meetings by predicting questions and feedback",
+          "sourceText": "After the board meeting, they compared their notes against Claude's predictions. 'Claude identified 92% of the feedback the board brought up.'"
+        },
+        {
+          "benefit": "Increased executive confidence",
+          "detail": "Newer executives feel more prepared for high-stakes meetings",
+          "sourceText": "The impact extends beyond metrics to boosting confidence. Malmsheimer shared, 'I'm a relatively new executive. I haven't been in many board meetings. It's valuable to feel more prepared and confident going into those conversations.'"
+        },
+        {
+          "benefit": "Superior strategic thought partnership",
+          "detail": "Claude provides more business-like responses compared to other AI models",
+          "sourceText": "Malmsheimer said, 'When I upload a document to ChatGPT versus Claude, Claude feels more true to how a business person would respond.'"
+        },
+        {
+          "benefit": "Enhanced personalized learning",
+          "detail": "Claude enables personalized, contextual learning at scale through ProfAI",
+          "sourceText": "'With AI, we've been able to recreate the value of a personal, 1-on-1 tutor for every single student,' says Malmsheimer."
+        },
+        {
+          "benefit": "Better user experience for their AI coach",
+          "detail": "Claude's feedback and tone better aligns with their needs for ProfAI",
+          "sourceText": "'We've found that Claude's feedback and tone better aligns with what we need to create an engaging user experience.'"
+        }
+      ],
+      "timeToValue": "Not specifically mentioned, though immediate value was demonstrated in the board meeting experiment",
+      "roi": "Spending $20K per year on AI accounts (including Claude) while saving $150-200K a year (equivalent to 1-2 headcount) through productivity gains"
+    },
+    "technicalDetails": {
+      "architecture": "Not mentioned in detail, though Claude Projects is used by the marketing team",
+      "promptEngineering": "Not mentioned in detail, though they use Claude to role-play as board members and as a strategic thought partner",
+      "challenges": "Not specifically mentioned",
+      "solutions": "Not specifically mentioned",
+      "scale": "25-person team using Claude internally; plans to upskill 100,000 employees this year and one million next year"
+    },
+    "confidenceScore": {
+      "overall": "5",
+      "metrics": "5",
+      "companyInfo": "4",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/section",
+      "extractionDate": "2023-06-13",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.030497999999999997,
+  "success": true,
+  "processed_at": "2025-03-06 19:59:20"
+}

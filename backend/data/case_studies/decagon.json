@@ -1,0 +1,72 @@
+{
+  "url": "https://www.anthropic.com/customers/decagon",
+  "data": {
+    "companyInfo": {
+      "name": "Decagon",
+      "industry": "Customer support software platform",
+      "size": "Not mentioned",
+      "region": "Not mentioned"
+    },
+    "implementation": {
+      "useCase": "Decagon uses Claude to create AI agents that deliver personalized, 24/7 customer service. These agents integrate with existing ticketing systems and customer databases to provide white-glove support at scale, handling simple inquiries to complex processes that previously required human agents.",
+      "problem": "Providing affordable, high-quality, personalized customer support. Traditional automated systems frustrate customers with irrelevant help articles or generic responses that feel impersonal and put the burden on customers.",
+      "model": "Claude",
+      "integrationMethod": "Integration with existing ticketing systems and customer databases",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "70%",
+          "metric": "reduction in over-inferencing rates",
+          "sourceText": "\u2022 Reduced over-inferencing rates by 70%"
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Higher customer satisfaction",
+          "detail": "Due to Claude's ability to follow complex instructions and policies exactly",
+          "sourceText": "\u2022 Sees higher customer satisfaction due to Claude's ability to follow complex instructions and policies exactly"
+        },
+        {
+          "benefit": "Decreased customer support volume",
+          "detail": "Freeing up time and resources for growing their business",
+          "sourceText": "\u2022 Decreased their own customer support volume, freeing up times and resources for growing their business"
+        },
+        {
+          "benefit": "Issue resolution without human intervention",
+          "detail": "AI agents complete tasks for customers rather than just providing instructions",
+          "sourceText": "With Claude, end-users resolve issues without human intervention in most cases. Sreenivas explains, \"It's not just about answering questions - our AI agents actually complete tasks for customers. Rather than giving instructions for a refund, the agent checks your eligibility, processes the refund through the payment system, and handles all the steps a human agent would have done. From the customer's perspective, it's as good as talking to a skilled support representative.\""
+        },
+        {
+          "benefit": "Brand voice consistency",
+          "detail": "AI agents adhere to company policies and practices with high accuracy",
+          "sourceText": "Thanks to Claude, Decagon's customers are deploying AI agents that adhere to their policies and practices with remarkable accuracy, representing their brand voice with high fidelity in every interaction."
+        }
+      ],
+      "timeToValue": "Not mentioned",
+      "roi": "Not mentioned"
+    },
+    "technicalDetails": {
+      "architecture": "Integration with existing ticketing systems and customer databases",
+      "promptEngineering": "Not mentioned",
+      "challenges": "Navigating complex business logic and enterprise security requirements",
+      "solutions": "Selected Claude for its ability to digest and act on complex instructions and for its enterprise-grade security",
+      "scale": "Powers support for both B2B and B2C companies across multiple industries"
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "4",
+      "companyInfo": "3",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/decagon",
+      "extractionDate": "2023-11-09",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.01908,
+  "success": true,
+  "processed_at": "2025-03-06 19:21:01"
+}

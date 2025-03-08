@@ -1,0 +1,92 @@
+{
+  "url": "https://www.anthropic.com/customers/aes",
+  "data": {
+    "companyInfo": {
+      "name": "AES",
+      "industry": "Energy (renewable energy)",
+      "size": "Enterprise (global energy company)",
+      "region": "Global"
+    },
+    "implementation": {
+      "useCase": "AI-powered auditing system to automate internal safety audit processes for renewable energy assets. The system uses a multi-agent framework with three layers of AI agents: document processing agents that analyze audit documents and create tasks, task breakdown agents that simplify complex audit tasks, and report generation agents that compile results and produce final audit reports.",
+      "problem": "Managing the exponential growth in renewable energy assets requiring safety audits. Traditional power plants might have one large turbine, but renewable energy requires many more individual assets (e.g., 75 wind turbines to match one traditional turbine's output), creating a complex network to maintain. Manual safety audits were taking up to two weeks to complete and becoming an unsustainable drain on resources.",
+      "model": "Claude",
+      "integrationMethod": "Google Cloud's Vertex AI",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "10-20%",
+          "metric": "improvement in audit accuracy",
+          "sourceText": "AES has seen a 10-20% improvement in audit accuracy. Dr. Sherri noted, \"These agents can't make mistakes due to their focus on details.\""
+        },
+        {
+          "value": "96%",
+          "metric": "faster audit results generation",
+          "sourceText": "Generated audit results 96% faster"
+        },
+        {
+          "value": "99%",
+          "metric": "reduction in audit costs",
+          "sourceText": "Reduced audit costs by 99%"
+        },
+        {
+          "value": "99%",
+          "metric": "reduction in audit time",
+          "sourceText": "Audit reports that took two weeks to complete can now be generated in about an hour. This 99% reduction in audit time allows AES to conduct more frequent and thorough safety checks across their expanding renewable energy assets."
+        },
+        {
+          "value": "from two weeks to about an hour",
+          "metric": "reduction in time to complete audit reports",
+          "sourceText": "Audit reports that took two weeks to complete can now be generated in about an hour."
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Improved safety operations",
+          "detail": "More frequent and thorough safety checks across expanding renewable energy assets",
+          "sourceText": "This 99% reduction in audit time allows AES to conduct more frequent and thorough safety checks across their expanding renewable energy assets."
+        },
+        {
+          "benefit": "Maintained quality despite increased speed",
+          "detail": "AI agents maintain focus on details and don't make mistakes",
+          "sourceText": "The increased speed hasn't compromised quality. AES has seen a 10-20% improvement in audit accuracy. Dr. Sherri noted, \"These agents can't make mistakes due to their focus on details.\""
+        },
+        {
+          "benefit": "More effective resource allocation",
+          "detail": "Cost savings allow resources to be directed to renewable energy expansion and innovation",
+          "sourceText": "The cost savings have been equally impressive, with audit expenses reduced by 99%. This reduction allows AES to allocate resources more effectively, potentially enabling greater investment in renewable energy expansion and innovation."
+        },
+        {
+          "benefit": "Enterprise-grade security for sensitive data",
+          "detail": "Vertex AI integration provided necessary security for sensitive audit data",
+          "sourceText": "Running Claude on Vertex AI provided the enterprise-grade security AES needed for their sensitive data. As Dr. Marwan Sherri, Data Scientist at AES, noted, \"Integrating Vertex AI with Claude made it easier to get approval to start API calls. Because it's already integrated and all security issues are addressed.\""
+        }
+      ],
+      "timeToValue": "Not mentioned",
+      "roi": "99% reduction in audit costs"
+    },
+    "technicalDetails": {
+      "architecture": "Three-layer AI agent system: 1) Document processing agents that analyze audit documents and create tasks, 2) Task breakdown agents that simplify complex audit tasks, 3) Report generation agents that compile results and produce final audit reports. The system runs on Google Cloud's Vertex AI infrastructure.",
+      "promptEngineering": "Claude's ability to follow instructions precisely was essential for AES' multi-agent framework",
+      "challenges": "Security concerns with sensitive data, need for high performance and accuracy, handling high API call volumes",
+      "solutions": "Used Vertex AI's enterprise-grade security features, leveraged Claude's accuracy and speed, utilized Vertex AI's support for higher API call volumes for better synchronization of their agent system",
+      "scale": "Processing hundreds of pages of safety documentation, evaluating compliance, and generating comprehensive audit reports. AES conducts about 1,550 internal safety audits annually."
+    },
+    "confidenceScore": {
+      "overall": "5",
+      "metrics": "5",
+      "companyInfo": "4",
+      "implementation": "5"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/aes",
+      "extractionDate": "2023-11-09",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.025854,
+  "success": true,
+  "processed_at": "2025-03-06 20:02:09"
+}

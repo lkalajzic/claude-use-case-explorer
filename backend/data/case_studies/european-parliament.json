@@ -1,0 +1,87 @@
+{
+  "url": "https://www.anthropic.com/customers/european-parliament",
+  "data": {
+    "companyInfo": {
+      "name": "European Parliament",
+      "industry": "Government/Public Sector",
+      "size": "Not mentioned",
+      "region": "Europe"
+    },
+    "implementation": {
+      "useCase": "Creation of 'Ask the EP Archives' (Archibot), an AI assistant that makes over 2.1 million official European Parliament documents accessible to researchers, policymakers, educators, and the public. The system allows for advanced search, summarization, and report building across multilingual archives dating back to 1952.",
+      "problem": "Making the European Parliament's archives easy to search and ensuring they're accessible to anyone who needs to access them. Previously, accessing information required deep searches into the EU's physical archives.",
+      "model": "Claude (specifically mentioned as using Claude in Amazon Bedrock)",
+      "integrationMethod": "Integrated into the European Parliament's archive website",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "80%",
+          "metric": "reduction in document search and analysis time",
+          "sourceText": "Reduces document search and analysis time by 80%, significantly boosting efficiency."
+        },
+        {
+          "value": "2.1 million",
+          "metric": "official documents made available through the system",
+          "sourceText": "Leveraging Anthropic's Claude in Amazon Bedrock, the EU Parliament has created 'Ask the EP Archives', also known as Archibot, a sophisticated AI assistant that makes over 2.1 million official documents readily available to researchers, policymakers, educators, and the public."
+        },
+        {
+          "value": "hundreds",
+          "metric": "of educators and students using the system",
+          "sourceText": "Has been used by hundreds of educators and students for an all-access window into European parliamentary history."
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Enhanced accessibility to archives",
+          "detail": "Makes EU Parliament documents available instantly to users worldwide in multiple languages",
+          "sourceText": "Archibot, now available on the European Parliament's archive website, offers users worldwide easy access to EU Parliament documents in multiple languages - including resolutions, positions, policies, and inter-institutional negotiations"
+        },
+        {
+          "benefit": "Improved research capabilities",
+          "detail": "Helps researchers and staff analyze data and create comprehensive reports",
+          "sourceText": "while also helping researchers and staff analyze data and create comprehensive reports."
+        },
+        {
+          "benefit": "Historical context for policymaking",
+          "detail": "Provides quick access to historical context and precedents for policymakers",
+          "sourceText": "Provides policymakers and researchers with quick access to historical context and precedents."
+        },
+        {
+          "benefit": "Enhanced government transparency",
+          "detail": "Showcases how AI can be used to enhance transparency and accessibility for citizens",
+          "sourceText": "The project showcases how generative AI can be used by governments to enhance transparency and accessibility for citizens."
+        },
+        {
+          "benefit": "Educational resource",
+          "detail": "Provides educational access to European parliamentary history",
+          "sourceText": "Has been used by hundreds of educators and students for an all-access window into European parliamentary history."
+        }
+      ],
+      "timeToValue": "Not mentioned",
+      "roi": "Not mentioned"
+    },
+    "technicalDetails": {
+      "architecture": "Claude in Amazon Bedrock",
+      "promptEngineering": "Not mentioned",
+      "challenges": "Not specifically mentioned beyond the original challenges of making archives searchable and accessible",
+      "solutions": "Implementation of advanced search, summarization, report building, and multilingual capabilities",
+      "scale": "System handles over 2.1 million official documents dating back to 1952"
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "5",
+      "companyInfo": "4",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/european-parliament",
+      "extractionDate": "2023-11-09",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.020349,
+  "success": true,
+  "processed_at": "2025-03-06 20:03:34"
+}

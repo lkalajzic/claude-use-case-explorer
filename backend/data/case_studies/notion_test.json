@@ -1,0 +1,112 @@
+{
+  "url": "https://www.anthropic.com/customers/notion",
+  "data": {
+    "companyInfo": {
+      "name": "Notion",
+      "industry": "Productivity software/Connected workspace platform",
+      "size": "Not mentioned specifically, but serves millions of users from individuals to Fortune 100 companies",
+      "region": "Not mentioned"
+    },
+    "implementation": {
+      "useCase": "Notion integrated Claude to power AI features across its platform, including AI Writer (writing and editing assistant), Autofill (intelligent database field population), Q&A (universal search tool that answers questions about workspace content), and a unified AI assistant that brings these capabilities together.",
+      "problem": "Automating busywork in knowledge work to free up humans for higher-value activities, helping users find information faster, and boosting overall productivity.",
+      "model": "Claude (specific version not mentioned)",
+      "integrationMethod": "API integration with prompt caching to reduce costs and latency",
+      "implementationTime": "Not mentioned specifically, though described as 'seamless' and 'as simple as changing a flag and doing some offline evaluations'"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "35%",
+          "metric": "reduction in time spent searching for information at Osaka Gas (enterprise with approximately 3,000 employees)",
+          "sourceText": "Osaka Gas, with approximately 3,000 employees, estimates a 35% reduction in time spent searching for information"
+        },
+        {
+          "value": "10 minutes",
+          "metric": "time saved per search at Remote.com across 300 daily Q&A queries",
+          "sourceText": "Remote.com, with around 1,400 employees, saves an estimated 10 minutes per search and executes 300 Q&A queries per day"
+        },
+        {
+          "value": "over $35k",
+          "metric": "annual savings for dbt Labs by eliminating the need for additional enterprise AI or search tools",
+          "sourceText": "For companies like dbt Labs, this comprehensive functionality has translated to over $35k in annual savings by eliminating the need for additional enterprise AI or search tools."
+        },
+        {
+          "value": "10-20 times",
+          "metric": "daily usage of AI assistant by new employees during onboarding",
+          "sourceText": "The AI assistant powered by Claude has has proven particularly transformative for employee onboarding. 'When someone new joins the company, they use it 10-20 times daily,' Last shared."
+        },
+        {
+          "value": "2.7 questions",
+          "metric": "average number of questions per day asked by Notion users who use Q&A",
+          "sourceText": "Notion users who use Q&A ask an average of 2.7 questions per day, with a majority reporting they save at least 5 minutes of work time per question."
+        },
+        {
+          "value": "at least 5 minutes",
+          "metric": "work time saved per question for a majority of users",
+          "sourceText": "Notion users who use Q&A ask an average of 2.7 questions per day, with a majority reporting they save at least 5 minutes of work time per question."
+        },
+        {
+          "value": "90%",
+          "metric": "cost reduction through prompt caching",
+          "sourceText": "Notion is also using prompt caching to reduce costs by 90% and latency by up to 85%."
+        },
+        {
+          "value": "up to 85%",
+          "metric": "latency reduction through prompt caching",
+          "sourceText": "Notion is also using prompt caching to reduce costs by 90% and latency by up to 85%."
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Improved user experience",
+          "detail": "Claude's conversational tone creates more natural, helpful interactions",
+          "sourceText": "The team was particularly impressed by Claude's reasoning and instruction-following capabilities, conversational tone that creates natural, helpful interactions, and balanced approach to safety and refusals."
+        },
+        {
+          "benefit": "Higher helpfulness ratings",
+          "detail": "Claude delivered better helpfulness ratings compared to previous AI tools",
+          "sourceText": "Compared to previous AI tools, Claude delivered higher helpfulness ratings and improved task completion rates."
+        },
+        {
+          "benefit": "Improved task completion rates",
+          "detail": "Users complete tasks more successfully with Claude compared to previous AI tools",
+          "sourceText": "Compared to previous AI tools, Claude delivered higher helpfulness ratings and improved task completion rates."
+        },
+        {
+          "benefit": "Consistent performance at scale",
+          "detail": "Claude maintains performance during peak periods for millions of users",
+          "sourceText": "Claude's advanced generative AI capabilities scale for Notion's millions of users during peak periods without compromising performance, ensuring consistent user satisfaction as its customer base expands."
+        },
+        {
+          "benefit": "Transformative employee onboarding",
+          "detail": "New employees find the AI assistant extremely useful during their first few weeks",
+          "sourceText": "'When someone new joins the company, they use it 10-20 times daily,' Last shared. 'We get consistent feedback that it's amazingly useful for the first few weeks.'"
+        }
+      ],
+      "timeToValue": "Immediate for new employees during onboarding (10-20 daily uses)",
+      "roi": "Specific ROI not mentioned beyond the cost savings examples for specific customers"
+    },
+    "technicalDetails": {
+      "architecture": "Integration of Claude with Notion's retrieval system throughout the platform, including writing assistance and Q&A functionality",
+      "promptEngineering": "Notion uses prompt caching to optimize performance and reduce costs",
+      "challenges": "Not specifically mentioned",
+      "solutions": "Implemented prompt caching to reduce costs by 90% and latency by up to 85%",
+      "scale": "Serves millions of users from individuals to Fortune 100 companies, handling peak usage periods without performance degradation"
+    },
+    "confidenceScore": {
+      "overall": "5",
+      "metrics": "5",
+      "companyInfo": "4",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/notion",
+      "extractionDate": "2023-06-13",
+      "version": "1.0"
+    }
+  },
+  "raw_response": "```json\n{\n  \"companyInfo\": {\n    \"name\": \"Notion\",\n    \"industry\": \"Productivity software/Connected workspace platform\",\n    \"size\": \"Not mentioned specifically, but serves millions of users from individuals to Fortune 100 companies\",\n    \"region\": \"Not mentioned\"\n  },\n  \"implementation\": {\n    \"useCase\": \"Notion integrated Claude to power AI features across its platform, including AI Writer (writing and editing assistant), Autofill (intelligent database field population), Q&A (universal search tool that answers questions about workspace content), and a unified AI assistant that brings these capabilities together.\",\n    \"problem\": \"Automating busywork in knowledge work to free up humans for higher-value activities, helping users find information faster, and boosting overall productivity.\",\n    \"model\": \"Claude (specific version not mentioned)\",\n    \"integrationMethod\": \"API integration with prompt caching to reduce costs and latency\",\n    \"implementationTime\": \"Not mentioned specifical",
+  "cost": 0.030824999999999998,
+  "success": true
+}

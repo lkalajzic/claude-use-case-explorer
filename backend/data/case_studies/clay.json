@@ -1,0 +1,87 @@
+{
+  "url": "https://www.anthropic.com/customers/clay",
+  "data": {
+    "companyInfo": {
+      "name": "Clay",
+      "industry": "Sales and RevOps Software",
+      "size": "Not mentioned",
+      "region": "Not mentioned"
+    },
+    "implementation": {
+      "useCase": "Clay integrated Claude into their platform to help RevOps and growth teams generate highly personalized sales outreach at scale. Claude powers their AI research agent (Claygent) to identify leads, enrich data, and generate personalized sales messaging for cold calls and email campaigns.",
+      "problem": "Sales teams spending excessive time on manual, laborious data work (80% of sales work) instead of focusing on creative, human-centered tasks. Users needed high quality, cost-effective AI-powered sales outreach capabilities.",
+      "model": "Claude 3 Haiku",
+      "integrationMethod": "Added as a model option within their platform",
+      "implementationTime": "Within weeks"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "Hundreds of hours",
+          "metric": "Time saved with automated data collection",
+          "sourceText": "\u2022 Hundreds of hours saved with automated data collection"
+        },
+        {
+          "value": "80%",
+          "metric": "Portion of sales work that is manual, laborious data work",
+          "sourceText": "We're automating the mundane. 80% of Sales work today is manual, laborious, data work. In the era of AI, humans can focus on truly human, creative work, and we can leave the data work in the hands of AI."
+        },
+        {
+          "value": "50-70%",
+          "metric": "Accuracy rates for manual data retention and categorization processes even with incentives for quality",
+          "sourceText": "Tekriwal says, \"retaining and categorizing data accurately is a major challenge. Manual processes are time-consuming and prone to human error, with accuracy rates often between 50-70% even with incentives for quality.\""
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Improved email quality",
+          "detail": "Emails generated via Claude sound more human and natural compared to other LLMs",
+          "sourceText": "Customers regularly mention that emails generated via Claude sound more human and natural as compared to those written by other LLMs"
+        },
+        {
+          "benefit": "Cost-effective scaling",
+          "detail": "Claude 3 Haiku enables more volume at lower cost",
+          "sourceText": "You can scale and do a lot more volume on Haiku a lot more cheaply than any other model."
+        },
+        {
+          "benefit": "Improved performance in creative tasks",
+          "detail": "Better generation of copy and creative messaging",
+          "sourceText": "\u2022 Improved performance in generating copy and creative messaging"
+        },
+        {
+          "benefit": "Increased user satisfaction",
+          "detail": "Users were enthusiastic about Claude integration",
+          "sourceText": "Our most advanced users were really excited when we were able to ship Claude"
+        },
+        {
+          "benefit": "Multiplicative force for productivity",
+          "detail": "Helps teams do more with the same resources at higher quality",
+          "sourceText": "AI-powered tooling has definitely been a multiplicative force for where we're at size-wise. It's about how you help people do more with the same level of resources\u2014and do better, at a higher quality."
+        }
+      ],
+      "timeToValue": "Rapid adoption after implementation",
+      "roi": "Not mentioned specifically, though references to cost-effectiveness and increased volume suggest positive ROI"
+    },
+    "technicalDetails": {
+      "architecture": "Claude is integrated as a model option within Clay's platform, powering their Claygent AI research agent",
+      "promptEngineering": "Uses tailored prompts that include instructions on tone and examples of good copy to generate personalized emails",
+      "challenges": "Not specifically mentioned",
+      "solutions": "Not specifically mentioned",
+      "scale": "Enables processing more volume of personalized outreach compared to other models"
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "4",
+      "companyInfo": "3",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/clay",
+      "extractionDate": "2023-06-13",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.022563000000000003,
+  "success": true,
+  "processed_at": "2025-03-06 19:58:55"
+}

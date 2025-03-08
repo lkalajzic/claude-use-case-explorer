@@ -1,0 +1,92 @@
+{
+  "url": "https://www.anthropic.com/customers/orange",
+  "data": {
+    "companyInfo": {
+      "name": "Orange",
+      "industry": "Manga localization/translation",
+      "size": "Startup",
+      "region": "Japan (with international operations)"
+    },
+    "implementation": {
+      "useCase": "Using Claude to automate and enhance the translation of Japanese manga into English, preserving natural dialogue and character voices while handling complex translation tasks including cultural context, specialized expressions, and visual elements.",
+      "problem": "The manga industry translation bottleneck where only 2% of Japanese manga gets officially translated despite growing global demand, with traditional translation being challenging and time-consuming due to manga's unique combination of cultural context, visuals, text, and specialized expressions.",
+      "model": "Claude 3 Opus initially, later migrated to Claude 3.5 Sonnet",
+      "integrationMethod": "Integration with inpainting technology and quality assurance automation, with Claude as the core of their translation agent model",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "5-7x",
+          "metric": "efficiency improvements over existing processes",
+          "sourceText": "\u2022 Achieves 5-7x efficiency improvements over existing processes"
+        },
+        {
+          "value": "10x",
+          "metric": "improvement in delivery capacity (from 5 to 50 books per month)",
+          "sourceText": "\u2022 Increased delivery capacity from 5 to 50 books per month\u2014a 10x improvement"
+        },
+        {
+          "value": "reduction from over 10 hours to under 2 hours",
+          "metric": "generation time per manga volume",
+          "sourceText": "\u2022 Reduced generation time from over 10 hours to under 2 hours per manga volume"
+        },
+        {
+          "value": "50-75%",
+          "metric": "adoption rate of Claude-generated translations",
+          "sourceText": "\u2022 Maintains 50-75% adoption rate of Claude-generated translations"
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Improved translation quality",
+          "detail": "Claude creates translations that feel natural and authentically capture characters' tone and personality",
+          "sourceText": "\"Our Claude-powered agent model creates translations that feel natural and authentically capture the characters' tone and personality, while traditional machine and LLM-based translation struggle with 'mechanical accuracy.'\""
+        },
+        {
+          "benefit": "Handling complex translation elements",
+          "detail": "Successfully translates difficult manga-specific elements",
+          "sourceText": "\u2022 Successfully translates complex elements like onomatopoeia and specialized expressions"
+        },
+        {
+          "benefit": "Freeing translators for higher-value work",
+          "detail": "Allows translators to focus on creative aspects of localization",
+          "sourceText": "\u2022 Enables translators to focus on creative and nuanced aspects of localization"
+        },
+        {
+          "benefit": "Streamlined workflow",
+          "detail": "Direct image processing eliminated intermediate steps",
+          "sourceText": "The ability to process images directly has streamlined their workflow by eliminating intermediate steps."
+        },
+        {
+          "benefit": "Artist satisfaction with localization quality",
+          "detail": "Manga artists appreciate the quality of translations",
+          "sourceText": "Manga artist Yajima said, \"I'm comfortable with Orange's localization process. While AI plays a role, professionals polish the dialogue and capture the characters' nuances. It's great to see the care translators, typesetters, and others put into staying true to the story's original intent and world-building. I'm genuinely happy with how the English versions turn out.\""
+        }
+      ],
+      "timeToValue": "Not mentioned",
+      "roi": "Not specifically mentioned in financial terms"
+    },
+    "technicalDetails": {
+      "architecture": "Translation agent model powered by Claude for core translation tasks, integrated with inpainting technology to handle visual elements, quality assurance automation for review process",
+      "promptEngineering": "Not specifically detailed",
+      "challenges": "Handling manga-specific translation challenges like onomatopoeia, specialized expressions, and maintaining character voice",
+      "solutions": "Developed a Claude-powered agent model that preserves natural dialogue and character voices; integrated with inpainting technology; migrated to Claude 3.5 Sonnet for direct image processing",
+      "scale": "Increased capacity from 5 to 50 books per month"
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "5",
+      "companyInfo": "4",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/orange",
+      "extractionDate": "2023-10-25",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.023814000000000002,
+  "success": true,
+  "processed_at": "2025-03-06 19:56:09"
+}

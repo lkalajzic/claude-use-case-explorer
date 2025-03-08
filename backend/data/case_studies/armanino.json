@@ -1,0 +1,112 @@
+{
+  "url": "https://www.anthropic.com/customers/armanino",
+  "data": {
+    "companyInfo": {
+      "name": "Armanino",
+      "industry": "Accounting and consulting services",
+      "size": "One of the largest accounting firms in the United States",
+      "region": "United States"
+    },
+    "implementation": {
+      "useCase": "Building AI-powered accounting tools to transform accounting and consulting services, including an automated document request tool for auditors that generates formal notes explaining why a document is incorrect and providing detailed guidance for clients",
+      "problem": "Highly manual accounting processes, particularly around document requests during audits, which consumed significant time and caused stress for both auditors and clients",
+      "model": "Claude 3 model family",
+      "integrationMethod": "Claude on Amazon Bedrock integrated with Armanino's modern server-less architecture on AWS",
+      "implementationTime": "2 weeks from idea to production for their first AI-powered tool"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "65%",
+          "metric": "reduction in time spent on manual writing tasks",
+          "sourceText": "\u2022 65% reduction in time spent on manual writing tasks"
+        },
+        {
+          "value": "60%",
+          "metric": "decrease in follow-up clarifications needed",
+          "sourceText": "\u2022 60% decrease in follow-up clarifications needed"
+        },
+        {
+          "value": "2 weeks",
+          "metric": "from idea to production for new AI-powered tools",
+          "sourceText": "\u2022 2 weeks from idea to production for new AI-powered tools"
+        },
+        {
+          "value": "65%",
+          "metric": "reduction in time spent writing rejection notes",
+          "sourceText": "\u2022 65% reduction in time spent writing rejection notes"
+        },
+        {
+          "value": "60%",
+          "metric": "decrease in the need for follow-up clarifications",
+          "sourceText": "\u2022 60% decrease in the need for follow-up clarifications"
+        },
+        {
+          "value": "Thousands",
+          "metric": "of hours saved across the firm annually",
+          "sourceText": "\u2022 Thousands of hours saved across the firm annually"
+        },
+        {
+          "value": "90%",
+          "metric": "of users report feeling more confident when using the AI-assisted feature",
+          "sourceText": "\u2022 90% of users report feeling more confident when using the AI-assisted feature"
+        },
+        {
+          "value": "10-15 minutes",
+          "metric": "per rejected item in the previous manual process",
+          "sourceText": "This process took 10-15 minutes per rejected item, with 50-75 items typically rejected per audit."
+        },
+        {
+          "value": "50-75 items",
+          "metric": "typically rejected per audit",
+          "sourceText": "This process took 10-15 minutes per rejected item, with 50-75 items typically rejected per audit."
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Improved client communication",
+          "detail": "The AI-powered tool provides personalized, detailed guidance for clients when documents are incorrect",
+          "sourceText": "The new tool leverages Claude to automatically generate formal notes explaining why a document is incorrect and providing detailed guidance for clients."
+        },
+        {
+          "benefit": "Enthusiastic user adoption",
+          "detail": "Users had very positive reactions to the Claude-powered document request explainer",
+          "sourceText": "\"When we demoed our Claude-powered document request explainer, you could see the users' eyes immediately light up,\" AJ recalls. \"We received glowing feedback. We were even told that the feature would change our users' lives.\""
+        },
+        {
+          "benefit": "More human-like AI responses",
+          "detail": "Claude provides more personalized, less robotic responses compared to other LLMs",
+          "sourceText": "\"Many of the other LLMs we've evaluated produce responses that are too robotic for our use cases\u2014and would not meet our expectations for using in customer-facing workflows,\" Maliq notes. \"Claude is different, it provides a really personalized feel.\""
+        },
+        {
+          "benefit": "Reduced hallucinations",
+          "detail": "Claude hallucinates less than other models they evaluated",
+          "sourceText": "\"Claude is the consistent top-performer. It hallucinates a lot less, and the quality of the output is significantly better than any other model we've evaluated. It's simply night and day.\""
+        }
+      ],
+      "timeToValue": "2 weeks from idea to production for their first AI-powered tool",
+      "roi": "Not specifically mentioned beyond time savings metrics"
+    },
+    "technicalDetails": {
+      "architecture": "Modern server-less architecture on AWS with Claude on Amazon Bedrock",
+      "promptEngineering": "Small prompts can generate personalized, detailed responses: \"We're able to provide Claude a small prompt and it gives us a really nice personalized text, about three to four sentences, that delivers exactly what we need from the client in order to fulfill this request\"",
+      "challenges": "Not specifically mentioned",
+      "solutions": "Not specifically mentioned",
+      "scale": "Thousands of audits each year with 50-75 typically rejected items per audit"
+    },
+    "confidenceScore": {
+      "overall": "5",
+      "metrics": "5",
+      "companyInfo": "4",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/armanino",
+      "extractionDate": "2023-06-13",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.027282,
+  "success": true,
+  "processed_at": "2025-03-06 19:59:59"
+}

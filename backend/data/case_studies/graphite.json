@@ -1,0 +1,87 @@
+{
+  "url": "https://www.anthropic.com/customers/graphite",
+  "data": {
+    "companyInfo": {
+      "name": "Graphite",
+      "industry": "Developer tools/Software development",
+      "size": "Not mentioned",
+      "region": "Not mentioned"
+    },
+    "implementation": {
+      "useCase": "AI-powered code review that automatically identifies bugs, suggests fixes, and provides feedback on pull requests for software development teams",
+      "problem": "Code review bottlenecks in software development where developers wait hours or days for feedback, creating time-consuming cycles of fixes and re-reviews",
+      "model": "Claude 3.5 Sonnet",
+      "integrationMethod": "Integration into Graphite's developer platform with a multi-step architecture for code analysis",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "40x",
+          "metric": "faster pull request feedback loop, from 1 hour to 90 seconds",
+          "sourceText": "\u2022 40x faster pull request feedback loop, from 1 hour to 90 seconds"
+        },
+        {
+          "value": "96%",
+          "metric": "positive feedback rate on AI-generated comments",
+          "sourceText": "\u2022 96% positive feedback rate on AI-generated comments"
+        },
+        {
+          "value": "67%",
+          "metric": "implementation rate of suggested changes",
+          "sourceText": "\u2022 67% implementation rate of suggested changes"
+        },
+        {
+          "value": "one in five",
+          "metric": "pull requests receive actionable feedback from the AI system",
+          "sourceText": "The system currently provides actionable feedback on one in five pull requests, nearing the industry standard of one in three receiving human comments."
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Improved code quality by catching subtle bugs",
+          "detail": "The system identifies bugs that even experienced engineers struggle to spot",
+          "sourceText": "Not only did our eval performance skyrocket, but it identified bugs in our test dataset that we hadn't even realized were bugs."
+        },
+        {
+          "benefit": "Faster development iteration",
+          "detail": "Developers can implement fixes with a single click, reducing the traditional fix-and-review cycle time",
+          "sourceText": "When issues are identified, the system automatically generates fix suggestions for developers to implement with a single click, reducing the traditional fix-and-review cycle time."
+        },
+        {
+          "benefit": "Enhanced developer experience",
+          "detail": "Developers feel less isolated and can iterate faster",
+          "sourceText": "I'm able to iterate faster and produce something that is workable faster. This helps as a single developer because you're really not alone anymore."
+        },
+        {
+          "benefit": "Improved engineering workflow",
+          "detail": "Smoother and more productive development process",
+          "sourceText": "The AI reviewer's automatic comments catch subtle errors before they become bugs, helping us maintain quality without slowing down. Overall, Graphite has made our workflow smoother and more productive."
+        }
+      ],
+      "timeToValue": "Not mentioned",
+      "roi": "Not mentioned"
+    },
+    "technicalDetails": {
+      "architecture": "Multi-step architecture that breaks complex code analysis into discrete tasks, with multiple validation layers including voting, chain of reasoning, and self-critique to ensure high-quality comments",
+      "promptEngineering": "Not mentioned specifically, though they mention working with Anthropic on 'how we should structure our evals and our code in general'",
+      "challenges": "Early AI models would hallucinate and confidently claim problems in pull requests that didn't exist, causing user frustration",
+      "solutions": "Implemented a rigorous evaluation framework testing models against 500 pull requests, including synthetic and real-world examples with known bugs; focused on objective bugs rather than subjective suggestions; added multiple validation layers",
+      "scale": "Support for hundreds of thousands of pull requests across their customer base"
+    },
+    "confidenceScore": {
+      "overall": "5",
+      "metrics": "5",
+      "companyInfo": "4",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/graphite",
+      "extractionDate": "2023-11-09",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.022932,
+  "success": true,
+  "processed_at": "2025-03-06 19:55:49"
+}

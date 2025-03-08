@@ -1,0 +1,14 @@
+{
+  "url": "https://www.anthropic.com/customers/studyfetch",
+  "data": {
+    "companyInfo": {
+      "name": "StudyFetch",
+      "industry": "Education Technology"
+    },
+    "extraction_error": "Expecting ',' delimiter: line 57 column 102 (char 3140)",
+    "partial_json": "{\n  \"companyInfo\": {\n    \"name\": \"StudyFetch\",\n    \"industry\": \"Education Technology\",\n    \"size\": \"Not mentioned\",\n    \"region\": \"Global (with US presence)\"\n  },\n  \"implementation\": {\n    \"useCase\": \"StudyFetch built an AI-powered learning platform that transforms educational content into personalized learning experiences. The platform includes an AI tutor called Spark.E that can analyze lectures, generate study materials, provide 24/7 tutoring support, and assist students in mastering complex "
+  },
+  "cost": 0.029988,
+  "success": true,
+  "processed_at": "2025-03-06 19:48:24"
+}

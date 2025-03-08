@@ -1,0 +1,102 @@
+{
+  "url": "https://www.anthropic.com/customers/advolve",
+  "data": {
+    "companyInfo": {
+      "name": "Advolve",
+      "industry": "Digital Marketing Automation (B2B Service-as-a-Software)",
+      "size": "Not mentioned",
+      "region": "Brazil"
+    },
+    "implementation": {
+      "useCase": "Advolve uses Claude as the central orchestrator of their AI platform to automate the entire digital customer acquisition process. The system generates static creative assets and copywriting, builds an end-to-end system of AI agents that generate and evaluate each asset layer, automates cross-platform campaign configuration, deployment, and optimization, and uses machine learning to allocate budgets dynamically across platforms and adapt content for optimal return on ad spend.",
+      "problem": "Managing complex digital marketing workflows spanning multiple platforms, creative assets, and data streams that exceed human capabilities. The challenge was creating a complex system connecting multiple software, platforms, and data inputs while maintaining robust validation mechanisms and reliable code generation support.",
+      "model": "Claude (specific version not mentioned)",
+      "integrationMethod": "Direct API integration (implied but not explicitly stated)",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "90%",
+          "metric": "reduction in operational work time",
+          "sourceText": "\u2022 Reduce operational work time by 90%"
+        },
+        {
+          "value": "15%",
+          "metric": "increase in customer return on ad spend (ROAS)",
+          "sourceText": "\u2022 Increase customer return on ad spend (ROAS) by 15%"
+        },
+        {
+          "value": "10x",
+          "metric": "projected revenue increase for 2025",
+          "sourceText": "\u2022 Project 10x revenue for 2025"
+        },
+        {
+          "value": "millions",
+          "metric": "advertisements managed simultaneously",
+          "sourceText": "\"Since Claude powers our platform's central reasoning, we can efficiently manage millions of advertisements simultaneously due to its processing speed,\" said Sobreira."
+        },
+        {
+          "value": "$100M+",
+          "metric": "ad budgets expected to be managed by year-end 2025",
+          "sourceText": "With their AI-native approach, Advolve anticipates scaling significantly in 2025, managing ad budgets exceeding $100M by year's end."
+        },
+        {
+          "value": "30 days",
+          "metric": "time to achieve human-level ROAS when managing multi-million dollar budgets",
+          "sourceText": "\"Our platform achieves human-level ROAS when managing multi-million dollar budgets in under 30 days,\" said Sobreira."
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Enterprise-grade reliability",
+          "detail": "Lower hallucination rates and superior performance in technical validation tasks",
+          "sourceText": "\u2022 Consistent reliability with lower hallucination rates\n\u2022 Superior performance in technical validation tasks"
+        },
+        {
+          "benefit": "Advanced code generation capabilities",
+          "detail": "Support for complex technical implementations",
+          "sourceText": "\u2022 Advanced code generation for complex technical implementations"
+        },
+        {
+          "benefit": "Comprehensive workflow orchestration",
+          "detail": "End-to-end automation across advertising platforms with real-time data validation",
+          "sourceText": "\u2022 Sophisticated multi-platform workflow orchestration\n\u2022 End-to-end workflow automation across advertising platforms\n\u2022 Real-time data validation and process integrity checks"
+        },
+        {
+          "benefit": "Attraction of major enterprise clients",
+          "detail": "Trusted by large companies in Brazil such as iFood and Cogna",
+          "sourceText": "The system's effectiveness has attracted major enterprise clients. \"Our platform achieves human-level ROAS when managing multi-million dollar budgets in under 30 days,\" said Sobreira. \"We're trusted by some of the largest companies in Brazil, such as iFood and Cogna, validating our impact and scalability.\""
+        },
+        {
+          "benefit": "Operational efficiency for clients",
+          "detail": "Operations that previously required large teams now run efficiently with lean staffs",
+          "sourceText": "The transformation is even more dramatic for clients. Operations that previously required large teams now run efficiently with lean staffs while maintaining human-level performance."
+        }
+      ],
+      "timeToValue": "Under 30 days to achieve human-level ROAS for clients",
+      "roi": "15% increase in customer return on ad spend (ROAS)"
+    },
+    "technicalDetails": {
+      "architecture": "AI-native platform with Claude as the central orchestrator, connecting multiple software platforms and data inputs. System of AI agents that generate and evaluate creative assets (background, art, fonts, copywriting) based on data from successful past ads.",
+      "promptEngineering": "Not specifically mentioned",
+      "challenges": "Creating a complex system connecting multiple software, platforms, and data inputs beyond human capabilities. Requiring robust validation mechanisms and reliable code generation support.",
+      "solutions": "Using Claude for central reasoning, sophisticated multi-platform workflow orchestration, real-time data validation, and process integrity checks.",
+      "scale": "Managing millions of advertisements simultaneously; handling multi-million dollar advertising budgets; projecting to manage ad budgets exceeding $100M by end of 2025."
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "5",
+      "companyInfo": "3",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/advolve",
+      "extractionDate": "2023-11-09",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.026741999999999995,
+  "success": true,
+  "processed_at": "2025-03-06 19:45:23"
+}

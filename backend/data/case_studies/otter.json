@@ -1,0 +1,92 @@
+{
+  "url": "https://www.anthropic.com/customers/otter",
+  "data": {
+    "companyInfo": {
+      "name": "Otter",
+      "industry": "AI Meeting Assistant Software",
+      "size": "Not mentioned",
+      "region": "Not mentioned"
+    },
+    "implementation": {
+      "useCase": "Otter integrated Claude to enhance its AI Meeting Assistant platform, using it to extract insights from meeting transcripts, generate summaries, identify action items, and power natural language queries across meeting content. Claude also enables Otter's AI-powered Chat features including Channel Chat for topic-specific discussions.",
+      "problem": "Organizations struggle to transform daily conversations into lasting institutional knowledge. Otter needed to evolve beyond just transcription to help extract more valuable insights from millions of meetings processed daily.",
+      "model": "Claude (specific version not mentioned)",
+      "integrationMethod": "API integration (implied but not explicitly stated)",
+      "implementationTime": "Completed without delaying their launch (exact timeframe not specified)"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "over 50 million",
+          "metric": "meetings summarized by Otter using its own model before adding Claude",
+          "sourceText": "Last year, Otter announced it used its own model to summarize over 50 million meetings. Now with the help of Claude, Otter can extract more valuable insights from the millions of meetings it processes every day."
+        },
+        {
+          "value": "millions",
+          "metric": "meetings processed every day by Otter",
+          "sourceText": "Last year, Otter announced it used its own model to summarize over 50 million meetings. Now with the help of Claude, Otter can extract more valuable insights from the millions of meetings it processes every day."
+        },
+        {
+          "value": "200k",
+          "metric": "context window size of Claude that improved Otter's ability to process long meeting transcripts",
+          "sourceText": "Claude's 200k context window dramatically improved Otter's ability to process long meeting transcripts. Tasker explained that while testing with other models, the team 'had to make compromises in our solution.' Claude's larger context window eliminated these constraints."
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Eliminated constraints in processing long meeting transcripts",
+          "detail": "Claude's larger context window removed the need for compromises in their solution",
+          "sourceText": "Claude's 200k context window dramatically improved Otter's ability to process long meeting transcripts. Tasker explained that while testing with other models, the team 'had to make compromises in our solution.' Claude's larger context window eliminated these constraints."
+        },
+        {
+          "benefit": "Enhanced privacy and security compliance",
+          "detail": "Zero data retention agreement with Anthropic",
+          "sourceText": "Privacy and security requirements were also equally crucial. Tasker said, 'The Anthropic team was really accommodating in working with us. One of our requirements was zero data retention with Anthropic, which they agreed to\u2014that was key for us.'"
+        },
+        {
+          "benefit": "Time savings for information retrieval and meeting follow-up",
+          "detail": "Automatic summarization and action item identification eliminates manual recap work",
+          "sourceText": "For individual users, Otter saves significant time in information retrieval and meeting follow-up. Product managers, researchers, and consultants can instantly surface insights from information-dense meetings through natural language queries. 'Having meetings summarized and actions identified removes that legwork. You don't have to have that next meeting to recap what you discussed last time,' explained Tasker."
+        },
+        {
+          "benefit": "Automated sales call analysis and CRM integration",
+          "detail": "Automatic syncing of insights to Salesforce and HubSpot",
+          "sourceText": "For sales teams, Otter automatically analyzes sales calls according to established methodologies and syncs insights directly to CRMs like Salesforce and HubSpot. This automation keeps revenue teams aligned without requiring manual documentation. 'That's a huge time saver and also just the value of having your Salesforce or Hubspot CRM up to date with what's going on in the deal,' said Tasker."
+        },
+        {
+          "benefit": "Breaking down information silos across departments",
+          "detail": "Company-wide deployment enabled by competitive pricing",
+          "sourceText": "At the organizational level, Otter breaks down traditional information silos by making their platform accessible across departments. Unlike specialized tools for specific teams due to cost constraints, Otter's competitive pricing enables company-wide deployment. Tasker adds, 'The value is in having everybody using the same AI meeting note taker regardless of which virtual meeting platform is used,' explaining how this is crucial to facilitating seamless information exchange and handoffs between teams."
+        },
+        {
+          "benefit": "Creation of a centralized knowledge hub for organizational meetings",
+          "detail": "Continuous capture of critical context across teams and syncing of conversation insights to business systems",
+          "sourceText": "Otter has become the living knowledge hub for all the organization's meetings. Tasker shares, 'Our institutional knowledge, our spoken knowledge, is inside of Otter.' By continuously capturing critical context across teams and actively syncing real-time conversation insights to key business systems, Otter empowers organizations to stay current, learn from live interactions, and make better-informed decisions in the moment and moving forward."
+        }
+      ],
+      "timeToValue": "Not mentioned",
+      "roi": "Not mentioned"
+    },
+    "technicalDetails": {
+      "architecture": "Otter combines Claude with its proprietary AI models to power its platform",
+      "promptEngineering": "Not mentioned",
+      "challenges": "Prior to Claude, Otter had to make compromises in their solution when testing with other models due to context window limitations",
+      "solutions": "Claude's 200k context window eliminated these constraints",
+      "scale": "Processes millions of meetings every day"
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "4",
+      "companyInfo": "3",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/otter",
+      "extractionDate": "2023-11-09",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.028709999999999996,
+  "success": true,
+  "processed_at": "2025-03-06 20:01:48"
+}

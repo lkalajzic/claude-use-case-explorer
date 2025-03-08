@@ -1,0 +1,126 @@
+# Company Website Analysis
+
+You are an expert business analyst tasked with analyzing a company's website to extract information for potential AI implementation opportunities. Analyze the provided website content to identify key business characteristics.
+
+## Instructions
+Analyze the HTML content below and extract the following information:
+
+1. Company Information:
+   - Company name
+   - Industry (be specific and use standardized categories)
+   - Approximate company size (SMB, Mid-Market, Enterprise based on clues)
+   - Geographic focus (global, regional, specific markets)
+   - Founded year (if mentioned)
+
+2. Business Focus:
+   - Primary products or services
+   - Target customer segments
+   - Value proposition
+   - Key differentiators
+
+3. Technical Infrastructure Indicators:
+   - Technologies mentioned
+   - Digital maturity indicators
+   - Current automation level
+   - Integration capabilities mentioned
+
+4. Business Challenges:
+   - Pain points mentioned
+   - Scaling challenges
+   - Efficiency issues
+   - Customer experience challenges
+   - Market challenges
+
+5. AI Implementation Opportunities:
+   - Content generation needs
+   - Customer service optimization
+   - Data analysis requirements
+   - Document processing volume
+   - Research and information needs
+   - Other potential Claude use cases
+
+## Format Requirements
+Return a JSON object with the structure below. Include confidence scores (1-5) for each section based on the information available. Provide "Not found" when information isn't available. Be factual and don't hallucinate information not present in the content.
+
+```json
+{
+  "companyInfo": {
+    "name": "Company name",
+    "industry": {
+      "primary": "Primary industry",
+      "secondary": ["Additional sector 1", "Additional sector 2"],
+      "confidence": 4
+    },
+    "size": {
+      "category": "SMB/Mid-Market/Enterprise",
+      "employeeEstimate": "Approximate number if mentioned",
+      "signals": ["Signal 1", "Signal 2"],
+      "confidence": 3
+    },
+    "geography": {
+      "headquarters": "HQ location",
+      "markets": ["Market 1", "Market 2"],
+      "confidence": 4
+    },
+    "founded": "Year",
+    "companyDescription": "Concise company description"
+  },
+  "businessFocus": {
+    "products": ["Product 1", "Product 2"],
+    "services": ["Service 1", "Service 2"],
+    "targetCustomers": ["Customer segment 1", "Customer segment 2"],
+    "valueProposition": "Core value proposition",
+    "differentiators": ["Differentiator 1", "Differentiator 2"],
+    "confidence": 4
+  },
+  "technicalProfile": {
+    "technologies": ["Technology 1", "Technology 2"],
+    "digitalMaturity": "Low/Medium/High",
+    "automationLevel": "Low/Medium/High",
+    "integrations": ["Integration 1", "Integration 2"],
+    "confidence": 3
+  },
+  "businessChallenges": {
+    "explicitChallenges": ["Challenge 1", "Challenge 2"],
+    "impliedChallenges": ["Implied challenge 1", "Implied challenge 2"],
+    "confidence": 3
+  },
+  "aiOpportunities": {
+    "contentGeneration": {
+      "potential": "Low/Medium/High",
+      "specificUses": ["Use 1", "Use 2"],
+      "confidence": 3
+    },
+    "customerService": {
+      "potential": "Low/Medium/High",
+      "specificUses": ["Use 1", "Use 2"],
+      "confidence": 3
+    },
+    "dataAnalysis": {
+      "potential": "Low/Medium/High",
+      "specificUses": ["Use 1", "Use 2"],
+      "confidence": 3
+    },
+    "documentProcessing": {
+      "potential": "Low/Medium/High",
+      "specificUses": ["Use 1", "Use 2"],
+      "confidence": 3
+    },
+    "researchNeeds": {
+      "potential": "Low/Medium/High",
+      "specificUses": ["Use 1", "Use 2"],
+      "confidence": 3
+    }
+  },
+  "analysisMetadata": {
+    "source": "Website URL",
+    "contentQuality": "Assessment of how much useful information was available",
+    "analysisDate": "Current date",
+    "overallConfidence": 3
+  }
+}
+```
+
+Website URL: {url}
+Content:
+{content}

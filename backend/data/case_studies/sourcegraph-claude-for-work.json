@@ -1,0 +1,77 @@
+{
+  "url": "https://www.anthropic.com/customers/sourcegraph-claude-for-work",
+  "data": {
+    "companyInfo": {
+      "name": "Sourcegraph",
+      "industry": "Code intelligence software",
+      "size": "Not mentioned",
+      "region": "Not mentioned"
+    },
+    "implementation": {
+      "useCase": "Using Claude to analyze and synthesize community feedback and competitor sentiment to generate actionable insights for the product team",
+      "problem": "Disconnect between community feedback and product team, need to efficiently process user feedback to reduce churn and increase retention",
+      "model": "Claude 3.5 Sonnet",
+      "integrationMethod": "Project-based workflow with PDF uploads",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "95%",
+          "metric": "Completion of structured reports that require only final refinements before sending to product managers",
+          "sourceText": "Claude gets it 95% of the way there, and then our team adds final refinements before sending the report to the product managers"
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Accelerated community feedback analysis",
+          "detail": "Automating feedback processing to free up employees for high-value tasks",
+          "sourceText": "By automating much of their feedback process, Claude has freed up employees to focus on high-value tasks and take action on insights quickly, increasing overall productivity."
+        },
+        {
+          "benefit": "Increased product team responsiveness",
+          "detail": "Better connection between community feedback and product development",
+          "sourceText": "Claude has also created a feedback loop between community input and product development. This cycle ensures that Sourcegraph's products continue to evolve in line with user needs and expectations."
+        },
+        {
+          "benefit": "Simplified competitor sentiment analysis",
+          "detail": "Created a dashboard to track and compare user sentiment across competitors",
+          "sourceText": "Competitor sentiment dashboard: Sourcegraph created a dashboard using Claude to track and compare user sentiment across competitors."
+        },
+        {
+          "benefit": "Improved regional performance feedback",
+          "detail": "Identifying and addressing regional performance issues",
+          "sourceText": "With Claude's analysis, Sourcegraph is able to identify and address regional performance feedback, leading to more tailored solutions for their global user base."
+        },
+        {
+          "benefit": "Enhanced customer satisfaction and retention",
+          "detail": "Faster issue resolution based on feedback analysis",
+          "sourceText": "This approach has contributed to improved customer satisfaction and retention through faster issue resolution."
+        }
+      ],
+      "timeToValue": "Not mentioned",
+      "roi": "Not mentioned"
+    },
+    "technicalDetails": {
+      "architecture": "Not mentioned",
+      "promptEngineering": "Not mentioned",
+      "challenges": "Disconnect between community feedback and product team",
+      "solutions": "Weekly community feedback reports and competitor sentiment dashboard",
+      "scale": "Not mentioned"
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "4",
+      "companyInfo": "3",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/sourcegraph-claude-for-work",
+      "extractionDate": "2023-11-09",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.017763,
+  "success": true,
+  "processed_at": "2025-03-06 19:33:37"
+}

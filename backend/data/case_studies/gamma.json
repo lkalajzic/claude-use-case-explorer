@@ -1,0 +1,87 @@
+{
+  "url": "https://www.anthropic.com/customers/gamma",
+  "data": {
+    "companyInfo": {
+      "name": "Gamma",
+      "industry": "AI-powered presentation software",
+      "size": "16-person team",
+      "region": "Not mentioned"
+    },
+    "implementation": {
+      "useCase": "Gamma integrated Claude to power their AI-driven presentation generation features, particularly for creating presentations from scratch and iterating on slide content and design. Claude helps users generate presentations with better quality output and more appropriate tone.",
+      "problem": "Gamma's initial LLM choices performed well on simple tasks but struggled with advanced concepts like turning long documents into presentations. User feedback on advanced use cases was only 50% positive, which the team considered unsatisfactory. They also faced concerns about costs as they scaled after a viral launch.",
+      "model": "Claude 3 Haiku",
+      "integrationMethod": "Direct API integration",
+      "implementationTime": "A couple days"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "30%",
+          "metric": "improvement in user satisfaction for advanced use cases",
+          "sourceText": "In fact, positive feedback for advanced use cases increased 30%."
+        },
+        {
+          "value": "20%",
+          "metric": "increase in conversions from free to paid",
+          "sourceText": "Based on the positive outcome of the A/B test, Gamma quickly shipped the new version of their app to production\u2014and that initial 30% improvement in user satisfaction has driven a 20% increase in conversions from free to paid."
+        },
+        {
+          "value": "17 million",
+          "metric": "users supported by Gamma's 16-person team",
+          "sourceText": "Though they consider themselves an AI-native company, they no longer feel sharp pressure to aggressively hire AI specialists onto their 16-person team, which supports 17 million users."
+        },
+        {
+          "value": "well over half",
+          "metric": "of Gamma's AI features powered by Claude",
+          "sourceText": "Today, Claude powers well over half of Gamma's AI features."
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Improved tone and voice in presentations",
+          "detail": "Users appreciated Claude's more neutral tone compared to the previous LLM's 'very salesy' tone",
+          "sourceText": "Gamma users responded particularly well to Claude's voice and tone. 'People had been frustrated that the tone of all of these presentations sounded the same,' Jon says, adding that the previous LLM's tone was 'very salesy.' Users appreciated Claude's more neutral tone and ability to adapt to different audiences."
+        },
+        {
+          "benefit": "Better performance on advanced use cases",
+          "detail": "Claude exceeded their previous LLM on output quality while being more cost-effective",
+          "sourceText": "'In our evaluations, Claude 3 Haiku exceeded our previous LLM on output quality, in spite of being significantly more cost-effective for our business.' Jon says. 'I had expected similar quality for lower cost, but Claude 3 Haiku exceeded our expectations.'"
+        },
+        {
+          "benefit": "Reduced need for specialized AI talent",
+          "detail": "Gamma didn't need to build a large AI team due to Claude's capabilities",
+          "sourceText": "'One benefit of models like Claude being so good is that we haven't had to build a huge team around AI,' Jon says. 'We've been able to focus more on productizing the experience versus training our own models or even fine-tuning them, because there's already so much we can do.'"
+        },
+        {
+          "benefit": "Lower operational costs",
+          "detail": "Claude provided better quality at a more cost-effective price point",
+          "sourceText": "The team was initially drawn to Claude for its state of the art performance and cost-effective price point, which had become a concern as the company's viral growth continued to scale."
+        }
+      ],
+      "timeToValue": "Quick value realization after A/B testing",
+      "roi": "Lower costs while improving performance and conversion rates"
+    },
+    "technicalDetails": {
+      "architecture": "Not mentioned in detail",
+      "promptEngineering": "Not mentioned",
+      "challenges": "Previous LLMs struggled with advanced concepts like turning long documents into presentations, with only 50% positive feedback",
+      "solutions": "Implemented Claude 3 Haiku after A/B testing against their existing solution",
+      "scale": "Supporting 17 million users with a 16-person team"
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "5",
+      "companyInfo": "4",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/gamma",
+      "extractionDate": "2023-10-30",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.024003,
+  "success": true,
+  "processed_at": "2025-03-06 19:45:02"
+}

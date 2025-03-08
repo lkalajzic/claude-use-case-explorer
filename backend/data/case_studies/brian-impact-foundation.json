@@ -1,0 +1,82 @@
+{
+  "url": "https://www.anthropic.com/customers/brian-impact-foundation",
+  "data": {
+    "companyInfo": {
+      "name": "Brian Impact Foundation",
+      "industry": "Nonprofit/Philanthropy",
+      "size": "13 employees",
+      "region": "Not specifically mentioned"
+    },
+    "implementation": {
+      "useCase": "The foundation built a platform called Benevolence Enhancing Expert System (BEES) that uses Claude to process unstructured data about potential fellowship candidates and applications. BEES gathers diverse data related to social problems and innovation, then uses Claude to extract candidate information, summarize contents, analyze data quality, and organize information based on the foundation's assessment criteria.",
+      "problem": "The foundation needed to review more fellowship candidates and applications thoroughly with limited staff resources. They were previously relying on manual searches and recommendations from their expert network, which limited their reach and potentially missed deserving candidates.",
+      "model": "Claude (specific version not mentioned)",
+      "integrationMethod": "Custom web application (BEES) that surfaces Claude-processed information to reviewers",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "100x",
+          "metric": "increase in number of candidates reviewed compared to the previous year",
+          "sourceText": "Last year, with Claude, they reviewed over 20,000 candidates\u2014one hundred times more candidates than the previous year."
+        },
+        {
+          "value": "20,000",
+          "metric": "total candidates reviewed with Claude",
+          "sourceText": "Last year, with Claude, they reviewed over 20,000 candidates\u2014one hundred times more candidates than the previous year."
+        },
+        {
+          "value": "3x",
+          "metric": "increase in number of reviews for each candidate",
+          "sourceText": "\"We tripled the number of reviews for each candidate,\" Soomin says."
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "More equitable fellowship application process",
+          "detail": "Ability to consider a much larger pool of innovators",
+          "sourceText": "Brian Impact Foundation, a nonprofit focused on using technology to solve social problems, used Claude to help the team review 100x more candidates than the year prior, allowing the team to consider a much larger pool of innovators and create a more equitable process for identifying fellowship candidates."
+        },
+        {
+          "benefit": "Improved efficiency in resource allocation",
+          "detail": "Eliminated laborious manual searches for information about prospective fellows",
+          "sourceText": "Previously, reviewers had to conduct laborious manual searches to gather information about each prospective fellow. \"This is really huge in terms of improving efficiency in resource allocation,\" Soomin says."
+        },
+        {
+          "benefit": "More thorough candidate review",
+          "detail": "Ability to study every applicant deeply and select fellows based on thorough review",
+          "sourceText": "Claude also accelerates the process of reviewing fellowship applications, enabling the team to study every applicant deeply and select fellows based on the most thorough review possible."
+        },
+        {
+          "benefit": "Confidence in supporting the most deserving innovators",
+          "detail": "Without diverting resources from core mission",
+          "sourceText": "With Claude, Brian Impact Foundation can be confident that it's supporting the most deserving social innovators without diverting resources away from its core mission: creating positive change."
+        }
+      ],
+      "timeToValue": "Not mentioned",
+      "roi": "Not specifically mentioned in financial terms"
+    },
+    "technicalDetails": {
+      "architecture": "BEES platform that gathers data from the open web, processes it through Claude, and presents it in a custom web app for reviewers",
+      "promptEngineering": "Not specifically mentioned",
+      "challenges": "Processing large amounts of unstructured data from the philanthropy sector",
+      "solutions": "Leveraging Claude's long context window to process numerous news articles and other unstructured data",
+      "scale": "Processing data for over 20,000 candidates"
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "5",
+      "companyInfo": "4",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/brian-impact-foundation",
+      "extractionDate": "2023-11-09",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.021861,
+  "success": true,
+  "processed_at": "2025-03-06 19:36:06"
+}

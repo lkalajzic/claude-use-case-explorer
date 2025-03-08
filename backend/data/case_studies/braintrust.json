@@ -1,0 +1,87 @@
+{
+  "url": "https://www.anthropic.com/customers/braintrust",
+  "data": {
+    "companyInfo": {
+      "name": "Braintrust",
+      "industry": "AI-powered recruiting platform",
+      "size": "Not mentioned",
+      "region": "Not mentioned"
+    },
+    "implementation": {
+      "useCase": "Braintrust integrated Claude into their recruiting platform to power multiple features including an AI Recruiter for screening interviews, a job description generator, and semantic search capabilities. Claude helps match talent with opportunities at scale while maintaining ethical standards in the hiring process.",
+      "problem": "Efficiently matching quality candidates with opportunities amid overwhelming application volumes. As stated by Elena Luneva, Chief Product Officer, 'over 800 applicants might apply to a role, and only 10% are real.'",
+      "model": "Claude 3.5 Sonnet (for AIR - AI Recruiter)",
+      "integrationMethod": "Integrated through Amazon Bedrock within their AWS infrastructure, leveraging AWS tools like CloudWatch for monitoring and troubleshooting",
+      "implementationTime": "Not mentioned"
+    },
+    "outcomes": {
+      "metrics": [
+        {
+          "value": "25%",
+          "metric": "increase in job applicants for clients using Claude-powered job descriptions",
+          "sourceText": "Luneva reported strong adoption of the AI-powered features, noting, '50% of clients are already using the job description generator. Those jobs now get 25% more applicants because the descriptions are richer.'"
+        },
+        {
+          "value": "50%",
+          "metric": "of clients using their AI-generated job description generator",
+          "sourceText": "Luneva reported strong adoption of the AI-powered features, noting, '50% of clients are already using the job description generator. Those jobs now get 25% more applicants because the descriptions are richer.'"
+        },
+        {
+          "value": "close to 90%",
+          "metric": "of hires coming from matches rated as good or great",
+          "sourceText": "\u2022 Close to 90% of hires coming from matches rated as good or great"
+        },
+        {
+          "value": "over $150K",
+          "metric": "saved to date through 100% AI-powered talent screens",
+          "sourceText": "\u2022 100% AI-powered talent screens, giving results in minutes rather than weeks, uncapping throughput and saving over $150K to date"
+        }
+      ],
+      "qualitativeBenefits": [
+        {
+          "benefit": "Time savings for recruiters",
+          "detail": "AI-assisted screening and interviews allow recruiters to interview more candidates efficiently",
+          "sourceText": "AI-assisted screening and interviews save recruiters significant time. Teng noted, 'Recruiters would love to speak to more candidates, but it's time-consuming. With AI conducting the interviews, you can spread your net a little wider. This is a win-win for recruiters and talent.'"
+        },
+        {
+          "benefit": "Faster talent screening",
+          "detail": "AI-powered talent screens provide results in minutes rather than weeks",
+          "sourceText": "\u2022 100% AI-powered talent screens, giving results in minutes rather than weeks, uncapping throughput and saving over $150K to date"
+        },
+        {
+          "benefit": "Reduced hiring bias",
+          "detail": "AI helps eliminate bias from past experiences, promoting diversity",
+          "sourceText": "The company is excited about Claude's potential to reduce hiring bias. Luneva emphasized, 'With LLMs or AIs, there's no bias from past experiences, so you get built-in diversity by seeing previously unseen candidates.'"
+        },
+        {
+          "benefit": "More human-centric recruiting",
+          "detail": "AI eliminates tedious tasks, allowing recruiters to focus on meaningful candidate relationships",
+          "sourceText": "Luneva envisions a future where AI eliminates tedious tasks, allowing recruiters to focus on building meaningful candidate relationships and telling their company's story. She explains, 'AI is actually making things more human. You get rid of the fluff, the box-checking, the vanilla questions and recruiters can focus on finding the right person for the job.'"
+        }
+      ],
+      "timeToValue": "Not mentioned",
+      "roi": "Over $150K saved to date through AI-powered talent screens"
+    },
+    "technicalDetails": {
+      "architecture": "Built on AWS infrastructure, using Amazon Bedrock to access Claude models, with AWS CloudWatch for monitoring and troubleshooting",
+      "promptEngineering": "Not mentioned specifically, though they leverage Claude's 200,000-token context window for lengthy interactions like interviews",
+      "challenges": "Handling overwhelming volumes of applications for popular roles, with only about 10% being qualified candidates",
+      "solutions": "Selected Claude for its ethical AI capabilities, performance, and seamless integration with their AWS tech stack. Leveraged Claude's 200,000-token context window for lengthy interactions like interviews.",
+      "scale": "Not mentioned specifically, though they reference handling roles that can receive over 800 applicants"
+    },
+    "confidenceScore": {
+      "overall": "4",
+      "metrics": "5",
+      "companyInfo": "3",
+      "implementation": "4"
+    },
+    "metadata": {
+      "source": "https://www.anthropic.com/customers/braintrust",
+      "extractionDate": "2023-06-13",
+      "version": "1.0"
+    }
+  },
+  "cost": 0.025872,
+  "success": true,
+  "processed_at": "2025-03-06 19:46:53"
+}
