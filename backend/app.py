@@ -195,7 +195,37 @@ def get_use_case_database():
         else:
             # Load existing database
             with open(use_case_path, 'r') as f:
-                use_cases = json.load(f)
+                use_cases_array = json.load(f)
+                
+                # Transform array to object with id as key
+                use_cases = {}
+                for use_case in use_cases_array:
+                    # Skip any use cases without an id
+                    if "id" not in use_case:
+                        continue
+                    
+                    # Create categorical grouping by categoryId
+                    category_id = use_case.get("categoryId", "productivity")
+                    
+                    # Fix structure to match frontend expectations
+                    transformed_use_case = {
+                        "id": use_case["id"],
+                        "company": use_case["company"],  # Keep company field
+                        "name": use_case["company"],  # Also add name for compatibility
+                        "industry": use_case["industry"],  # Keep industry field
+                        "description": use_case["description"],
+                        "url": use_case["url"],  # Keep URL
+                        "categoryId": use_case.get("categoryId", "productivity"),  # Keep categoryId
+                        "highlights": use_case["highlights"],  # Keep highlights
+                        "idealFit": {
+                            "industries": [use_case["industry"]],  # Wrap industry in array
+                            "companySize": ["SMB", "Mid-Market", "Enterprise"],  # Default sizes
+                            "technicalRequirements": "Medium"  # Default requirement
+                        },
+                        "examples": use_case["highlights"]  # Add examples pointing to the same data
+                    }
+                    
+                    use_cases[use_case["id"]] = transformed_use_case
                 
         return jsonify(use_cases)
     except Exception as e:

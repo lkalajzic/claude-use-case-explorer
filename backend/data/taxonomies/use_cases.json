@@ -2,10 +2,10 @@
   {
     "id": "snowflake",
     "company": "Snowflake",
-    "industry": "AI-enhanced technology",
-    "description": "Snowflake uses Claude to enhance their AI capabilities.",
+    "industry": "Enterprise data cloud platform",
+    "description": "Snowflake integrated Claude into their Cortex AI platform, specifically Cortex Analyst, to enable natural language data exploration and analysis. This allows users to interact with their data using...",
     "url": "https://www.anthropic.com/customers/snowflake",
-    "categoryId": "productivity",
+    "categoryId": "document_qa",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -15,11 +15,11 @@
   },
   {
     "id": "stackblitz",
-    "company": "Stackblitz",
-    "industry": "AI-enhanced technology",
-    "description": "Stackblitz uses Claude to enhance their AI capabilities.",
+    "company": "StackBlitz",
+    "industry": "Web development platform",
+    "description": "StackBlitz integrated Claude into Bolt (bolt.new), their browser-based development platform, to enable users to create sophisticated web applications through natural language without coding experie...",
     "url": "https://www.anthropic.com/customers/stackblitz",
-    "categoryId": "productivity",
+    "categoryId": "coding",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -29,11 +29,11 @@
   },
   {
     "id": "blueflame",
-    "company": "Blueflame",
-    "industry": "AI-enhanced technology",
-    "description": "Blueflame uses Claude to enhance their AI capabilities.",
+    "company": "BlueFlame AI",
+    "industry": "Financial technology (FinTech) for investment analysis",
+    "description": "BlueFlame uses Claude to provide sophisticated financial analysis capabilities to lean investment teams, enabling them to analyze vast document sets including private equity deal rooms, compare hun...",
     "url": "https://www.anthropic.com/customers/blueflame",
-    "categoryId": "productivity",
+    "categoryId": "document_qa",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -44,10 +44,10 @@
   {
     "id": "palo_alto_networks",
     "company": "Palo Alto Networks",
-    "industry": "AI-enhanced technology",
-    "description": "Palo Alto Networks uses Claude to enhance their AI capabilities.",
+    "industry": "Cybersecurity",
+    "description": "Using Claude to enhance developer productivity in software development while maintaining security standards. Specifically for code completion, code chat, architectural explanation, complex code gen...",
     "url": "https://www.anthropic.com/customers/palo-alto-networks",
-    "categoryId": "productivity",
+    "categoryId": "customer_service",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -58,10 +58,10 @@
   {
     "id": "kodif",
     "company": "Kodif",
-    "industry": "AI-enhanced technology",
-    "description": "Kodif uses Claude to enhance their AI capabilities.",
+    "industry": "Customer support automation platform",
+    "description": "Kodif uses Claude to power AI agents that automate customer support tickets, transform support data into business intelligence, and turn traditional cost centers into revenue sources. The platform ...",
     "url": "https://www.anthropic.com/customers/kodif",
-    "categoryId": "productivity",
+    "categoryId": "customer_service",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -72,10 +72,10 @@
   {
     "id": "european_parliament",
     "company": "European Parliament",
-    "industry": "AI-enhanced technology",
-    "description": "European Parliament uses Claude to enhance their AI capabilities.",
+    "industry": "Government/Public Sector",
+    "description": "Creation of 'Ask the EP Archives' (Archibot), an AI assistant that makes over 2.1 million official European Parliament documents accessible to researchers, policymakers, educators, and the public. ...",
     "url": "https://www.anthropic.com/customers/european-parliament",
-    "categoryId": "productivity",
+    "categoryId": "document_qa",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -86,8 +86,8 @@
   {
     "id": "braintrust",
     "company": "Braintrust",
-    "industry": "AI-enhanced technology",
-    "description": "Braintrust uses Claude to enhance their AI capabilities.",
+    "industry": "AI-powered recruiting platform",
+    "description": "Braintrust integrated Claude into their recruiting platform to power multiple features including an AI Recruiter for screening interviews, a job description generator, and semantic search capabilit...",
     "url": "https://www.anthropic.com/customers/braintrust",
     "categoryId": "productivity",
     "highlights": [
@@ -99,9 +99,9 @@
   },
   {
     "id": "hume",
-    "company": "Hume",
-    "industry": "AI-enhanced technology",
-    "description": "Hume uses Claude to enhance their AI capabilities.",
+    "company": "Hume AI",
+    "industry": "Artificial Intelligence, Voice Technology",
+    "description": "Hume AI uses Claude to power EVI, their voice-to-voice AI platform that enables natural, emotionally intelligent voice conversations. The platform can detect nuances in a user's tone of voice and g...",
     "url": "https://www.anthropic.com/customers/hume",
     "categoryId": "productivity",
     "highlights": [
@@ -114,10 +114,10 @@
   {
     "id": "newfront",
     "company": "Newfront",
-    "industry": "AI-enhanced technology",
-    "description": "Newfront uses Claude to enhance their AI capabilities.",
+    "industry": "Insurance technology (InsurTech)",
+    "description": "Newfront implemented Claude across multiple insurance workflows including a benefits assistant chatbot, contract review tool, and insurance management platform for processing complex documents and ...",
     "url": "https://www.anthropic.com/customers/newfront",
-    "categoryId": "productivity",
+    "categoryId": "customer_service",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -127,11 +127,11 @@
   },
   {
     "id": "you_dot_com",
-    "company": "You Dot Com",
-    "industry": "AI-enhanced technology",
-    "description": "You Dot Com uses Claude to enhance their AI capabilities.",
+    "company": "You.com",
+    "industry": "AI-powered search and productivity platform",
+    "description": "You.com integrated Claude as a key AI model across their platform to power various features including research assistance, coding help, and customizable AI agents. Claude helps users conduct resear...",
     "url": "https://www.anthropic.com/customers/you-dot-com",
-    "categoryId": "productivity",
+    "categoryId": "document_qa",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -141,11 +141,11 @@
   },
   {
     "id": "zapia",
-    "company": "Zapia",
-    "industry": "AI-enhanced technology",
-    "description": "Zapia uses Claude to enhance their AI capabilities.",
+    "company": "Zapia (by BrainLogic)",
+    "industry": "AI-powered commerce and messaging platform",
+    "description": "AI assistant that engages in natural, localized conversations with Latin American consumers to help them discover products, get recommendations, make purchases, and receive support through familiar...",
     "url": "https://www.anthropic.com/customers/zapia",
-    "categoryId": "productivity",
+    "categoryId": "customer_service",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -156,10 +156,10 @@
   {
     "id": "jumpcut",
     "company": "Jumpcut",
-    "industry": "AI-enhanced technology",
-    "description": "Jumpcut uses Claude to enhance their AI capabilities.",
+    "industry": "Entertainment Technology (Script Analysis)",
+    "description": "Jumpcut built ScriptSense, a product that uses Claude to analyze screenplays and generate comprehensive script coverage including scene summaries, character breakdowns, and similar titles. The syst...",
     "url": "https://www.anthropic.com/customers/jumpcut",
-    "categoryId": "productivity",
+    "categoryId": "document_qa",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -170,10 +170,10 @@
   {
     "id": "factory",
     "company": "Factory",
-    "industry": "AI-enhanced technology",
-    "description": "Factory uses Claude to enhance their AI capabilities.",
+    "industry": "AI-powered software development automation",
+    "description": "Factory builds AI-powered systems called 'Droids' that automate labor-intensive tasks throughout the software development lifecycle. These Droids handle code review, documentation, and end-to-end c...",
     "url": "https://www.anthropic.com/customers/factory",
-    "categoryId": "productivity",
+    "categoryId": "coding",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -183,8 +183,8 @@
   },
   {
     "id": "magicschool",
-    "company": "Magicschool",
-    "industry": "AI-enhanced technology",
+    "company": "MagicSchool",
+    "industry": "Education Technology (EdTech)",
     "description": "Magicschool uses Claude to enhance their AI capabilities.",
     "url": "https://www.anthropic.com/customers/magicschool",
     "categoryId": "productivity",
@@ -198,10 +198,10 @@
   {
     "id": "wedia_group",
     "company": "Wedia Group",
-    "industry": "AI-enhanced technology",
-    "description": "Wedia Group uses Claude to enhance their AI capabilities.",
+    "industry": "Digital Asset Management (DAM) solutions",
+    "description": "Wedia integrated Claude into their Digital Asset Management platform to automatically analyze and describe images uploaded by clients. The system generates metadata including captions, object detec...",
     "url": "https://www.anthropic.com/customers/wedia-group",
-    "categoryId": "productivity",
+    "categoryId": "document_qa",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -212,10 +212,10 @@
   {
     "id": "replit",
     "company": "Replit",
-    "industry": "AI-enhanced technology",
-    "description": "Replit uses Claude to enhance their AI capabilities.",
+    "industry": "Software development platform",
+    "description": "Replit uses Claude to power an AI agent that helps users build and deploy software applications without coding experience. The AI agent can generate code, set up development environments, provision...",
     "url": "https://www.anthropic.com/customers/replit",
-    "categoryId": "productivity",
+    "categoryId": "coding",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -225,11 +225,11 @@
   },
   {
     "id": "coderabbit",
-    "company": "Coderabbit",
-    "industry": "AI-enhanced technology",
-    "description": "Coderabbit uses Claude to enhance their AI capabilities.",
+    "company": "CodeRabbit",
+    "industry": "Software Development Tools",
+    "description": "AI-powered code review automation that analyzes code changes, provides contextual feedback, summarizes complex changes, assesses architectural impact, detects errors and bugs, and unifies quality a...",
     "url": "https://www.anthropic.com/customers/coderabbit",
-    "categoryId": "productivity",
+    "categoryId": "coding",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -239,11 +239,11 @@
   },
   {
     "id": "asapp",
-    "company": "Asapp",
-    "industry": "AI-enhanced technology",
-    "description": "Asapp uses Claude to enhance their AI capabilities.",
+    "company": "ASAPP",
+    "industry": "Customer service AI solutions",
+    "description": "ASAPP leverages Claude to power their GenerativeAgent solution for AI-driven customer service, enabling businesses to deliver efficient, personalized customer support that maintains context through...",
     "url": "https://www.anthropic.com/customers/asapp",
-    "categoryId": "productivity",
+    "categoryId": "customer_service",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -253,11 +253,11 @@
   },
   {
     "id": "skt",
-    "company": "Skt",
-    "industry": "AI-enhanced technology",
-    "description": "Skt uses Claude to enhance their AI capabilities.",
+    "company": "SK Telecom",
+    "industry": "Telecommunications",
+    "description": "SK Telecom implemented Claude in two key ways: 1) In-Call Assist to provide agents with real-time document search and answers during customer calls, and 2) Post-Call Processing to automate routine ...",
     "url": "https://www.anthropic.com/customers/skt",
-    "categoryId": "productivity",
+    "categoryId": "document_qa",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -268,10 +268,10 @@
   {
     "id": "section",
     "company": "Section",
-    "industry": "AI-enhanced technology",
-    "description": "Section uses Claude to enhance their AI capabilities.",
+    "industry": "AI workforce transformation and training",
+    "description": "Section uses Claude in multiple ways: 1) as a strategic thought partner for leadership, 2) to inform and develop AI upskilling programs, 3) to advise clients on AI transformation, 4) to power their...",
     "url": "https://www.anthropic.com/customers/section",
-    "categoryId": "productivity",
+    "categoryId": "coding",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -282,10 +282,10 @@
   {
     "id": "cove",
     "company": "Cove",
-    "industry": "AI-enhanced technology",
-    "description": "Cove uses Claude to enhance their AI capabilities.",
+    "industry": "AI collaboration software",
+    "description": "Cove created a visual workspace for AI collaboration, where users can think alongside an AI collaborator in a canvas-like environment. Unlike traditional chatbots, Cove enables exploring ideas visu...",
     "url": "https://www.anthropic.com/customers/cove",
-    "categoryId": "productivity",
+    "categoryId": "customer_service",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -296,10 +296,10 @@
   {
     "id": "gumroad",
     "company": "Gumroad",
-    "industry": "AI-enhanced technology",
-    "description": "Gumroad uses Claude to enhance their AI capabilities.",
+    "industry": "E-commerce platform for digital creators",
+    "description": "Empowering customer support team to write code, fix bugs, and ship features without engineering intervention; assisting engineers with coding tasks",
     "url": "https://www.anthropic.com/customers/gumroad",
-    "categoryId": "productivity",
+    "categoryId": "customer_service",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -310,10 +310,10 @@
   {
     "id": "tome",
     "company": "Tome",
-    "industry": "AI-enhanced technology",
-    "description": "Tome uses Claude to enhance their AI capabilities.",
+    "industry": "Sales enablement software / AI-powered presentation software",
+    "description": "AI sales assistant that synthesizes vast amounts of information to uncover key strategic insights about target accounts, helping sales teams research prospects more efficiently",
     "url": "https://www.anthropic.com/customers/tome",
-    "categoryId": "productivity",
+    "categoryId": "document_qa",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -324,10 +324,10 @@
   {
     "id": "sourcegraph",
     "company": "Sourcegraph",
-    "industry": "AI-enhanced technology",
-    "description": "Sourcegraph uses Claude to enhance their AI capabilities.",
+    "industry": "Code intelligence/Developer tools",
+    "description": "Integration of Claude 3 model family (Haiku, Sonnet, and Opus) into Cody, Sourcegraph's AI coding assistant, to provide context-aware chat, inline completions, inline editing, and custom commands t...",
     "url": "https://www.anthropic.com/customers/sourcegraph",
-    "categoryId": "productivity",
+    "categoryId": "customer_service",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -338,10 +338,10 @@
   {
     "id": "intercom",
     "company": "Intercom",
-    "industry": "AI-enhanced technology",
-    "description": "Intercom uses Claude to enhance their AI capabilities.",
+    "industry": "Customer service software",
+    "description": "Intercom integrated Claude into their AI agent called Fin to automatically resolve customer support queries with human-quality responses. Fin provides instant, accurate answers for customers 24/7, ...",
     "url": "https://www.anthropic.com/customers/intercom",
-    "categoryId": "productivity",
+    "categoryId": "customer_service",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -352,10 +352,10 @@
   {
     "id": "hebbia",
     "company": "Hebbia",
-    "industry": "AI-enhanced technology",
-    "description": "Hebbia uses Claude to enhance their AI capabilities.",
+    "industry": "AI-powered document analysis for financial and legal sectors",
+    "description": "Hebbia uses Claude to power their AI platform for knowledge work, analyzing vast amounts of complex documents and generating actionable insights. Claude is used both as a model choice offered to cu...",
     "url": "https://www.anthropic.com/customers/hebbia",
-    "categoryId": "productivity",
+    "categoryId": "document_qa",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -365,9 +365,9 @@
   },
   {
     "id": "appfolio",
-    "company": "Appfolio",
-    "industry": "AI-enhanced technology",
-    "description": "Appfolio uses Claude to enhance their AI capabilities.",
+    "company": "AppFolio",
+    "industry": "Real estate technology / Property management software",
+    "description": "AI-assisted responses and task automation for property management communications through Realm-X, an embedded generative AI solution within AppFolio's platform. The system helps property managers r...",
     "url": "https://www.anthropic.com/customers/appfolio",
     "categoryId": "productivity",
     "highlights": [
@@ -380,10 +380,10 @@
   {
     "id": "decagon",
     "company": "Decagon",
-    "industry": "AI-enhanced technology",
-    "description": "Decagon uses Claude to enhance their AI capabilities.",
+    "industry": "Customer support software platform",
+    "description": "Decagon uses Claude to create AI agents that deliver personalized, 24/7 customer service. These agents integrate with existing ticketing systems and customer databases to provide white-glove suppor...",
     "url": "https://www.anthropic.com/customers/decagon",
-    "categoryId": "productivity",
+    "categoryId": "customer_service",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -393,11 +393,11 @@
   },
   {
     "id": "pulpit_ai",
-    "company": "Pulpit Ai",
-    "industry": "AI-enhanced technology",
-    "description": "Pulpit Ai uses Claude to enhance their AI capabilities.",
+    "company": "Pulpit AI",
+    "industry": "Faith-based content creation and distribution",
+    "description": "Pulpit AI uses Claude to transform sermons into multiple pieces of content (20+ pieces) in various formats, including devotionals, social media posts, e-books, and discipleship materials. Claude al...",
     "url": "https://www.anthropic.com/customers/pulpit-ai",
-    "categoryId": "productivity",
+    "categoryId": "content_creation",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -407,11 +407,11 @@
   },
   {
     "id": "scribd",
-    "company": "Scribd",
-    "industry": "AI-enhanced technology",
-    "description": "Scribd uses Claude to enhance their AI capabilities.",
+    "company": "Scribd, Inc.",
+    "industry": "Digital content platform/Technology",
+    "description": "Using Claude to automatically generate high-quality metadata (primarily descriptions) for millions of user-uploaded documents across Scribd and SlideShare platforms to improve content discoverability",
     "url": "https://www.anthropic.com/customers/scribd",
-    "categoryId": "productivity",
+    "categoryId": "document_qa",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -422,10 +422,10 @@
   {
     "id": "gamma",
     "company": "Gamma",
-    "industry": "AI-enhanced technology",
-    "description": "Gamma uses Claude to enhance their AI capabilities.",
+    "industry": "AI-powered presentation software",
+    "description": "Gamma integrated Claude to power their AI-driven presentation generation features, particularly for creating presentations from scratch and iterating on slide content and design. Claude helps users...",
     "url": "https://www.anthropic.com/customers/gamma",
-    "categoryId": "productivity",
+    "categoryId": "content_creation",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -436,10 +436,10 @@
   {
     "id": "headstart",
     "company": "Headstart",
-    "industry": "AI-enhanced technology",
-    "description": "Headstart uses Claude to enhance their AI capabilities.",
+    "industry": "AI-native software development",
+    "description": "Using Claude to accelerate software development by automating code generation, handling large codebases, and building applications rapidly for enterprise clients",
     "url": "https://www.anthropic.com/customers/headstart",
-    "categoryId": "productivity",
+    "categoryId": "coding",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -450,10 +450,10 @@
   {
     "id": "zoom",
     "company": "Zoom",
-    "industry": "AI-enhanced technology",
-    "description": "Zoom uses Claude to enhance their AI capabilities.",
+    "industry": "Video communications and collaboration software",
+    "description": "Integration of Claude into Zoom AI Companion to enhance meeting productivity features including automated meeting summaries, in-meeting questions, meeting next steps, document creation, and meeting...",
     "url": "https://www.anthropic.com/customers/zoom",
-    "categoryId": "productivity",
+    "categoryId": "customer_service",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -464,10 +464,10 @@
   {
     "id": "lex",
     "company": "Lex",
-    "industry": "AI-enhanced technology",
-    "description": "Lex uses Claude to enhance their AI capabilities.",
+    "industry": "AI-powered writing platform",
+    "description": "Lex integrated Claude to provide AI-powered writing assistance for professionals, academics, and creative writers. Claude powers features like AI-powered comments for specific feedback, high-level ...",
     "url": "https://www.anthropic.com/customers/lex",
-    "categoryId": "productivity",
+    "categoryId": "content_creation",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -478,8 +478,8 @@
   {
     "id": "intuit",
     "company": "Intuit",
-    "industry": "AI-enhanced technology",
-    "description": "Intuit uses Claude to enhance their AI capabilities.",
+    "industry": "Financial technology (tax preparation software)",
+    "description": "Integration of Claude into Intuit Assist for TurboTax to generate clear and accurate tax explanations for customers during federal tax reviews",
     "url": "https://www.anthropic.com/customers/intuit",
     "categoryId": "productivity",
     "highlights": [
@@ -491,11 +491,11 @@
   },
   {
     "id": "aes",
-    "company": "Aes",
-    "industry": "AI-enhanced technology",
-    "description": "Aes uses Claude to enhance their AI capabilities.",
+    "company": "AES",
+    "industry": "Energy (renewable energy)",
+    "description": "AI-powered auditing system to automate internal safety audit processes for renewable energy assets. The system uses a multi-agent framework with three layers of AI agents: document processing agent...",
     "url": "https://www.anthropic.com/customers/aes",
-    "categoryId": "productivity",
+    "categoryId": "document_qa",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -506,8 +506,8 @@
   {
     "id": "perplexity",
     "company": "Perplexity",
-    "industry": "AI-enhanced technology",
-    "description": "Perplexity uses Claude to enhance their AI capabilities.",
+    "industry": "AI-powered search/conversational answer engine",
+    "description": "Perplexity uses Claude models to power its conversational answer engine, delivering factual and relevant search results to users. Different Claude models are deployed across free and paid tiers to ...",
     "url": "https://www.anthropic.com/customers/perplexity",
     "categoryId": "productivity",
     "highlights": [
@@ -520,10 +520,10 @@
   {
     "id": "asana",
     "company": "Asana",
-    "industry": "AI-enhanced technology",
-    "description": "Asana uses Claude to enhance their AI capabilities.",
+    "industry": "Enterprise work management platform",
+    "description": "Asana integrated Claude into their proprietary Work Graph data model to power Asana AI, enhancing their work management platform with AI capabilities for task automation, insights generation, and w...",
     "url": "https://www.anthropic.com/customers/asana",
-    "categoryId": "productivity",
+    "categoryId": "document_qa",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -534,8 +534,8 @@
   {
     "id": "orange",
     "company": "Orange",
-    "industry": "AI-enhanced technology",
-    "description": "Orange uses Claude to enhance their AI capabilities.",
+    "industry": "Manga localization/translation",
+    "description": "Using Claude to automate and enhance the translation of Japanese manga into English, preserving natural dialogue and character voices while handling complex translation tasks including cultural con...",
     "url": "https://www.anthropic.com/customers/orange",
     "categoryId": "productivity",
     "highlights": [
@@ -548,10 +548,10 @@
   {
     "id": "local_falcon",
     "company": "Local Falcon",
-    "industry": "AI-enhanced technology",
-    "description": "Local Falcon uses Claude to enhance their AI capabilities.",
+    "industry": "Local SEO and search ranking optimization",
+    "description": "Local Falcon uses Claude to analyze millions of customer reviews for businesses to deliver actionable recommendations for improving Google search rankings. Their Reviews Analysis tool processes and...",
     "url": "https://www.anthropic.com/customers/local-falcon",
-    "categoryId": "productivity",
+    "categoryId": "document_qa",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -562,10 +562,10 @@
   {
     "id": "coinbase",
     "company": "Coinbase",
-    "industry": "AI-enhanced technology",
-    "description": "Coinbase uses Claude to enhance their AI capabilities.",
+    "industry": "Cryptocurrency exchange",
+    "description": "Coinbase integrated Claude into three key systems: a customer support chatbot (an agentic system using Claude for query rephrasing, response generation, and output styling with financial compliance...",
     "url": "https://www.anthropic.com/customers/coinbase",
-    "categoryId": "productivity",
+    "categoryId": "customer_service",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -576,10 +576,10 @@
   {
     "id": "advolve",
     "company": "Advolve",
-    "industry": "AI-enhanced technology",
-    "description": "Advolve uses Claude to enhance their AI capabilities.",
+    "industry": "Digital Marketing Automation (B2B Service-as-a-Software)",
+    "description": "Advolve uses Claude as the central orchestrator of their AI platform to automate the entire digital customer acquisition process. The system generates static creative assets and copywriting, builds...",
     "url": "https://www.anthropic.com/customers/advolve",
-    "categoryId": "productivity",
+    "categoryId": "content_creation",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -590,10 +590,10 @@
   {
     "id": "graphite",
     "company": "Graphite",
-    "industry": "AI-enhanced technology",
-    "description": "Graphite uses Claude to enhance their AI capabilities.",
+    "industry": "Developer tools/Software development",
+    "description": "AI-powered code review that automatically identifies bugs, suggests fixes, and provides feedback on pull requests for software development teams",
     "url": "https://www.anthropic.com/customers/graphite",
-    "categoryId": "productivity",
+    "categoryId": "coding",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -604,10 +604,10 @@
   {
     "id": "brian_impact_foundation",
     "company": "Brian Impact Foundation",
-    "industry": "AI-enhanced technology",
-    "description": "Brian Impact Foundation uses Claude to enhance their AI capabilities.",
+    "industry": "Nonprofit/Philanthropy",
+    "description": "The foundation built a platform called Benevolence Enhancing Expert System (BEES) that uses Claude to process unstructured data about potential fellowship candidates and applications. BEES gathers ...",
     "url": "https://www.anthropic.com/customers/brian-impact-foundation",
-    "categoryId": "productivity",
+    "categoryId": "document_qa",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -618,8 +618,8 @@
   {
     "id": "humach",
     "company": "Humach",
-    "industry": "AI-enhanced technology",
-    "description": "Humach uses Claude to enhance their AI capabilities.",
+    "industry": "Customer Experience Solutions",
+    "description": "Humach uses Claude to power AI-assisted agents and digital workers that streamline customer interactions across multiple channels. The implementation includes digital voice agents for natural langu...",
     "url": "https://www.anthropic.com/customers/humach",
     "categoryId": "productivity",
     "highlights": [
@@ -632,10 +632,10 @@
   {
     "id": "clay",
     "company": "Clay",
-    "industry": "AI-enhanced technology",
-    "description": "Clay uses Claude to enhance their AI capabilities.",
+    "industry": "Sales and RevOps Software",
+    "description": "Clay integrated Claude into their platform to help RevOps and growth teams generate highly personalized sales outreach at scale. Claude powers their AI research agent (Claygent) to identify leads, ...",
     "url": "https://www.anthropic.com/customers/clay",
-    "categoryId": "productivity",
+    "categoryId": "document_qa",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -646,10 +646,10 @@
   {
     "id": "assembled",
     "company": "Assembled",
-    "industry": "AI-enhanced technology",
-    "description": "Assembled uses Claude to enhance their AI capabilities.",
+    "industry": "Customer support operations platform",
+    "description": "Assembled uses Claude to power 'Assist', their omnichannel AI agent and copilot that enhances support operations through dynamic ticket categorization, intelligent routing, real-time response gener...",
     "url": "https://www.anthropic.com/customers/assembled",
-    "categoryId": "productivity",
+    "categoryId": "customer_service",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -659,11 +659,11 @@
   },
   {
     "id": "gitlab",
-    "company": "Gitlab",
-    "industry": "AI-enhanced technology",
-    "description": "Gitlab uses Claude to enhance their AI capabilities.",
+    "company": "GitLab",
+    "industry": "DevSecOps software development platform",
+    "description": "GitLab integrated Claude to power AI features across their DevSecOps platform, including generative coding, interactive chat, planning summarization, and explaining and remediating software vulnera...",
     "url": "https://www.anthropic.com/customers/gitlab",
-    "categoryId": "productivity",
+    "categoryId": "customer_service",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -673,9 +673,9 @@
   },
   {
     "id": "tldv",
-    "company": "Tldv",
-    "industry": "AI-enhanced technology",
-    "description": "Tldv uses Claude to enhance their AI capabilities.",
+    "company": "tl;dv",
+    "industry": "Meeting intelligence software",
+    "description": "tl;dv integrated Claude to transform their platform from a basic meeting recap tool (recording, transcription, and summarization) into a sophisticated AI-powered analytics engine that can synthesiz...",
     "url": "https://www.anthropic.com/customers/tldv",
     "categoryId": "productivity",
     "highlights": [
@@ -688,8 +688,8 @@
   {
     "id": "thomson_reuters",
     "company": "Thomson Reuters",
-    "industry": "AI-enhanced technology",
-    "description": "Thomson Reuters uses Claude to enhance their AI capabilities.",
+    "industry": "Professional information services (legal and tax)",
+    "description": "Thomson Reuters uses Claude to power their AI platform, CoCounsel, which helps legal and tax professionals synthesize expert knowledge and deliver comprehensive advice to clients. They've built a c...",
     "url": "https://www.anthropic.com/customers/thomson-reuters",
     "categoryId": "productivity",
     "highlights": [
@@ -702,10 +702,10 @@
   {
     "id": "stairwell",
     "company": "Stairwell",
-    "industry": "AI-enhanced technology",
-    "description": "Stairwell uses Claude to enhance their AI capabilities.",
+    "industry": "Cybersecurity",
+    "description": "Stairwell uses Claude to analyze and summarize complex security data, helping identify and explain sophisticated cybersecurity threats. Claude processes security information, converts technical fin...",
     "url": "https://www.anthropic.com/customers/stairwell",
-    "categoryId": "productivity",
+    "categoryId": "document_qa",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -715,11 +715,11 @@
   },
   {
     "id": "lazy_ai",
-    "company": "Lazy Ai",
-    "industry": "AI-enhanced technology",
-    "description": "Lazy Ai uses Claude to enhance their AI capabilities.",
+    "company": "Lazy AI",
+    "industry": "Software Development/AI-assisted Coding",
+    "description": "Lazy AI integrated Claude into their platform to automate complex tasks like cloud deployment and code generation, enabling users to build functional web applications through simple conversational ...",
     "url": "https://www.anthropic.com/customers/lazy-ai",
-    "categoryId": "productivity",
+    "categoryId": "coding",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -729,11 +729,11 @@
   },
   {
     "id": "sourcegraph_claude_for_work",
-    "company": "Sourcegraph Claude For Work",
-    "industry": "AI-enhanced technology",
-    "description": "Sourcegraph Claude For Work uses Claude to enhance their AI capabilities.",
+    "company": "Sourcegraph",
+    "industry": "Code intelligence software",
+    "description": "Using Claude to analyze and synthesize community feedback and competitor sentiment to generate actionable insights for the product team",
     "url": "https://www.anthropic.com/customers/sourcegraph-claude-for-work",
-    "categoryId": "productivity",
+    "categoryId": "document_qa",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -743,11 +743,11 @@
   },
   {
     "id": "copy_ai",
-    "company": "Copy Ai",
-    "industry": "AI-enhanced technology",
-    "description": "Copy Ai uses Claude to enhance their AI capabilities.",
+    "company": "Copy.ai",
+    "industry": "Marketing technology, AI-powered content creation",
+    "description": "Copy.ai uses Claude to power its AI-driven content creation platform, helping marketing teams generate high-quality content faster and more cost-effectively. Claude is used for long-form content ge...",
     "url": "https://www.anthropic.com/customers/copy-ai",
-    "categoryId": "productivity",
+    "categoryId": "content_creation",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -757,11 +757,11 @@
   },
   {
     "id": "gitlab_enterprise",
-    "company": "Gitlab Enterprise",
-    "industry": "AI-enhanced technology",
-    "description": "Gitlab Enterprise uses Claude to enhance their AI capabilities.",
+    "company": "GitLab",
+    "industry": "DevSecOps platform",
+    "description": "GitLab adopted Claude for Work to empower teams across departments to create high-quality content, gain deeper data insights, and accelerate sales cycles. They use Claude for various workflows incl...",
     "url": "https://www.anthropic.com/customers/gitlab-enterprise",
-    "categoryId": "productivity",
+    "categoryId": "document_qa",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -772,10 +772,10 @@
   {
     "id": "steno",
     "company": "Steno",
-    "industry": "AI-enhanced technology",
-    "description": "Steno uses Claude to enhance their AI capabilities.",
+    "industry": "Legal technology and support services",
+    "description": "Transcript Genius - an AI-powered transcript analysis platform that helps attorneys search, analyze, and interrogate their firm's repository of legal transcripts",
     "url": "https://www.anthropic.com/customers/steno",
-    "categoryId": "productivity",
+    "categoryId": "document_qa",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -786,10 +786,10 @@
   {
     "id": "notion",
     "company": "Notion",
-    "industry": "AI-enhanced technology",
-    "description": "Notion uses Claude to enhance their AI capabilities.",
+    "industry": "Productivity software/Connected workspace platform",
+    "description": "Notion integrated Claude to power AI features across its platform, including Q&A through RAG, improved search, AI Connectors, and a unified AI assistant that helps users find information faster, au...",
     "url": "https://www.anthropic.com/customers/notion",
-    "categoryId": "productivity",
+    "categoryId": "customer_service",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -799,11 +799,11 @@
   },
   {
     "id": "graph",
-    "company": "Graph",
-    "industry": "AI-enhanced technology",
-    "description": "Graph uses Claude to enhance their AI capabilities.",
+    "company": "LaunchNotes",
+    "industry": "Software Development/Engineering Productivity",
+    "description": "LaunchNotes uses Claude in Amazon Bedrock to power their core product management platform and their new developer productivity solution called Graph. Graph combines data from GitHub, Jira, and Line...",
     "url": "https://www.anthropic.com/customers/graph",
-    "categoryId": "productivity",
+    "categoryId": "coding",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -814,10 +814,10 @@
   {
     "id": "tabnine",
     "company": "Tabnine",
-    "industry": "AI-enhanced technology",
-    "description": "Tabnine uses Claude to enhance their AI capabilities.",
+    "industry": "AI coding assistant/Software development tools",
+    "description": "Tabnine uses Claude to provide code explanations, suggestions, and code generation to developers, helping with tasks like debugging, decrypting API documentation, test generation, refactoring, and ...",
     "url": "https://www.anthropic.com/customers/tabnine",
-    "categoryId": "productivity",
+    "categoryId": "coding",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -828,10 +828,10 @@
   {
     "id": "inscribe",
     "company": "Inscribe",
-    "industry": "AI-enhanced technology",
-    "description": "Inscribe uses Claude to enhance their AI capabilities.",
+    "industry": "Financial technology (fraud detection and risk management)",
+    "description": "Inscribe uses Claude to power AI Risk Agents that automate fraud detection, document verification, and risk analysis for banks and fintechs. These AI Risk Agents handle tasks including analyzing pa...",
     "url": "https://www.anthropic.com/customers/inscribe",
-    "categoryId": "productivity",
+    "categoryId": "document_qa",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -841,9 +841,9 @@
   },
   {
     "id": "wrtn",
-    "company": "Wrtn",
-    "industry": "AI-enhanced technology",
-    "description": "Wrtn uses Claude to enhance their AI capabilities.",
+    "company": "WRTN",
+    "industry": "Consumer AI aggregation, AI entertainment and storytelling",
+    "description": "WRTN uses Claude to power interactive storytelling, AI companionship, and productivity tools. Claude enables natural character interactions for entertainment, creates AI companions for meaningful d...",
     "url": "https://www.anthropic.com/customers/wrtn",
     "categoryId": "productivity",
     "highlights": [
@@ -855,11 +855,11 @@
   },
   {
     "id": "amazon_q_in_connect",
-    "company": "Amazon Q In Connect",
-    "industry": "AI-enhanced technology",
-    "description": "Amazon Q In Connect uses Claude to enhance their AI capabilities.",
+    "company": "Amazon Connect",
+    "industry": "Customer service software/Cloud contact center",
+    "description": "Amazon Connect uses Claude to power Amazon Q in Connect, an AI-driven customer service assistant that provides real-time support to agents handling complex issues and offers immediate self-service ...",
     "url": "https://www.anthropic.com/customers/amazon-q-in-connect",
-    "categoryId": "productivity",
+    "categoryId": "customer_service",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -869,8 +869,8 @@
   },
   {
     "id": "studyfetch",
-    "company": "Studyfetch",
-    "industry": "AI-enhanced technology",
+    "company": "StudyFetch",
+    "industry": "Education Technology",
     "description": "Studyfetch uses Claude to enhance their AI capabilities.",
     "url": "https://www.anthropic.com/customers/studyfetch",
     "categoryId": "productivity",
@@ -884,8 +884,8 @@
   {
     "id": "otter",
     "company": "Otter",
-    "industry": "AI-enhanced technology",
-    "description": "Otter uses Claude to enhance their AI capabilities.",
+    "industry": "AI Meeting Assistant Software",
+    "description": "Otter integrated Claude to enhance its AI Meeting Assistant platform, using it to extract insights from meeting transcripts, generate summaries, identify action items, and power natural language qu...",
     "url": "https://www.anthropic.com/customers/otter",
     "categoryId": "productivity",
     "highlights": [
@@ -897,9 +897,9 @@
   },
   {
     "id": "brand_ai",
-    "company": "Brand Ai",
-    "industry": "AI-enhanced technology",
-    "description": "Brand Ai uses Claude to enhance their AI capabilities.",
+    "company": "Brand.ai",
+    "industry": "Brand management software/AI-powered branding",
+    "description": "Brand.ai built an AI-powered platform that transforms static brand guidelines into dynamic brand management systems. The platform uses Claude to understand and maintain brand voice consistency acro...",
     "url": "https://www.anthropic.com/customers/brand-ai",
     "categoryId": "productivity",
     "highlights": [
@@ -912,10 +912,10 @@
   {
     "id": "armanino",
     "company": "Armanino",
-    "industry": "AI-enhanced technology",
-    "description": "Armanino uses Claude to enhance their AI capabilities.",
+    "industry": "Accounting and consulting services",
+    "description": "Building AI-powered accounting tools to transform accounting and consulting services, including an automated document request tool for auditors that generates formal notes explaining why a document...",
     "url": "https://www.anthropic.com/customers/armanino",
-    "categoryId": "productivity",
+    "categoryId": "document_qa",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -926,8 +926,8 @@
   {
     "id": "campfire",
     "company": "Campfire",
-    "industry": "AI-enhanced technology",
-    "description": "Campfire uses Claude to enhance their AI capabilities.",
+    "industry": "Accounting software for high-growth tech companies",
+    "description": "Campfire integrated Claude into their accounting software platform to automate complex accounting tasks including invoicing, billing, revenue accounting, financial statements, and AI-powered conver...",
     "url": "https://www.anthropic.com/customers/campfire",
     "categoryId": "productivity",
     "highlights": [
@@ -940,8 +940,8 @@
   {
     "id": "skillfully",
     "company": "Skillfully",
-    "industry": "AI-enhanced technology",
-    "description": "Skillfully uses Claude to enhance their AI capabilities.",
+    "industry": "HR Technology/Talent Acquisition",
+    "description": "Skillfully uses Claude to power AI-driven job simulations that allow candidates to demonstrate their actual skills in realistic workplace scenarios, rather than relying on traditional resumes. Clau...",
     "url": "https://www.anthropic.com/customers/skillfully",
     "categoryId": "productivity",
     "highlights": [
@@ -954,10 +954,10 @@
   {
     "id": "codeium",
     "company": "Codeium",
-    "industry": "AI-enhanced technology",
-    "description": "Codeium uses Claude to enhance their AI capabilities.",
+    "industry": "AI coding platform/Software development tools",
+    "description": "Codeium uses Claude to power Windsurf (an AI-native IDE) and Cascade (an intelligent AI coding assistant). Claude specifically powers the reasoning and planning capabilities in Cascade, helping dev...",
     "url": "https://www.anthropic.com/customers/codeium",
-    "categoryId": "productivity",
+    "categoryId": "coding",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -967,11 +967,11 @@
   },
   {
     "id": "law_and_company",
-    "company": "Law And Company",
-    "industry": "AI-enhanced technology",
-    "description": "Law And Company uses Claude to enhance their AI capabilities.",
+    "company": "Law&Company",
+    "industry": "Legal technology/services",
+    "description": "Law&Company built SuperLawyer, South Korea's first AI legal assistant that helps lawyers reduce time spent on legal research and document preparation while maintaining high accuracy for sensitive l...",
     "url": "https://www.anthropic.com/customers/law-and-company",
-    "categoryId": "productivity",
+    "categoryId": "document_qa",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
@@ -981,9 +981,9 @@
   },
   {
     "id": "alexa_plus",
-    "company": "Alexa Plus",
-    "industry": "AI-enhanced technology",
-    "description": "Alexa Plus uses Claude to enhance their AI capabilities.",
+    "company": "Amazon",
+    "industry": "Technology/Consumer Electronics",
+    "description": "Integration of Claude models to help power Alexa+, Amazon's enhanced voice assistant service",
     "url": "https://www.anthropic.com/customers/alexa-plus",
     "categoryId": "productivity",
     "highlights": [
@@ -995,9 +995,9 @@
   },
   {
     "id": "micro1",
-    "company": "Micro1",
-    "industry": "AI-enhanced technology",
-    "description": "Micro1 uses Claude to enhance their AI capabilities.",
+    "company": "micro1",
+    "industry": "Technical recruiting/HR technology",
+    "description": "AI-powered technical interviews for recruiting, where Claude conducts technical assessments through dynamic conversations, provides unbiased evaluations, creates lower-pressure interview experience...",
     "url": "https://www.anthropic.com/customers/micro1",
     "categoryId": "productivity",
     "highlights": [
@@ -1009,11 +1009,11 @@
   },
   {
     "id": "university_of_sydney",
-    "company": "University Of Sydney",
-    "industry": "AI-enhanced technology",
-    "description": "University Of Sydney uses Claude to enhance their AI capabilities.",
+    "company": "University of Sydney",
+    "industry": "Higher Education/Marine Conservation Research",
+    "description": "Using Claude to analyze acoustic datasets from underwater microphones (hydrophones) to detect and monitor whale populations in real-time, specifically focusing on minke whale detection and conserva...",
     "url": "https://www.anthropic.com/customers/university-of-sydney",
-    "categoryId": "productivity",
+    "categoryId": "document_qa",
     "highlights": [
       "Improved efficiency",
       "Enhanced user experience",
