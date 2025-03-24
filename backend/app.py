@@ -13,7 +13,12 @@ from flask_cors import CORS
 import os
 import json
 import logging
+import re
 from pathlib import Path
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Import our analyzers
 from analyzers.company_analyzer import CompanyAnalyzer
@@ -42,6 +47,7 @@ if not api_key:
     logger.warning("ANTHROPIC_API_KEY not found in environment variables")
     logger.warning("Most functionality will not work without a valid API key")
     logger.warning("Set your API key with: export ANTHROPIC_API_KEY=your-api-key")
+    logger.warning("Or add it to the .env file")
     
 # Initialize analyzers
 try:
@@ -158,18 +164,43 @@ def get_case_studies():
             return jsonify({"message": "No case studies available yet"}), 404
             
         # List all JSON files in the directory
-        case_study_files = [f for f in os.listdir(case_studies_dir) if f.endswith('.json')]
+        case_study_files = [f for f in os.listdir(case_studies_dir) if f.endswith('.json') and f != 'all_case_studies.json']
         
         if not case_study_files:
             return jsonify({"message": "No case studies available yet"}), 404
-            
-        # Load the first case study file (we can enhance this later)
-        with open(os.path.join(case_studies_dir, case_study_files[0]), 'r') as f:
-            case_studies = json.load(f)
-            
-        return jsonify(case_studies)
+        
+        # Return the list of available case study IDs
+        case_study_ids = [os.path.splitext(f)[0] for f in case_study_files]
+        return jsonify({"case_studies": case_study_ids})
     except Exception as e:
         logger.error(f"Error retrieving case studies: {e}")
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route('/api/case-studies/<case_id>', methods=['GET'])
+def get_case_study(case_id):
+    """
+    Get a specific case study by ID
+    """
+    # Validate the case ID (prevent path traversal)
+    if not re.match(r'^[a-zA-Z0-9_-]+$', case_id):
+        return jsonify({"error": "Invalid case study ID"}), 400
+        
+    # Find the case study file
+    case_study_path = os.path.join(os.path.dirname(__file__), "data", "case_studies", f"{case_id}.json")
+    
+    try:
+        # Check if the file exists
+        if not os.path.exists(case_study_path):
+            return jsonify({"error": f"Case study '{case_id}' not found"}), 404
+            
+        # Load the case study
+        with open(case_study_path, 'r') as f:
+            case_study = json.load(f)
+            
+        return jsonify(case_study)
+    except Exception as e:
+        logger.error(f"Error retrieving case study {case_id}: {e}")
         return jsonify({"error": str(e)}), 500
 
 
@@ -207,22 +238,68 @@ def get_use_case_database():
                     # Create categorical grouping by categoryId
                     category_id = use_case.get("categoryId", "productivity")
                     
+                    # Get the full case study data if available
+                    case_study_path = os.path.join(os.path.dirname(__file__), "data", "case_studies", f"{use_case['id']}.json")
+                    full_case_data = None
+                    if os.path.exists(case_study_path):
+                        try:
+                            with open(case_study_path, 'r') as cs_file:
+                                full_case_data = json.load(cs_file)
+                        except Exception as cs_err:
+                            logger.error(f"Error loading case study data for {use_case['id']}: {cs_err}")
+                    
+                    # Extract real metrics instead of using placeholders
+                    real_metrics = []
+                    if full_case_data and 'data' in full_case_data and 'outcomes' in full_case_data['data']:
+                        # Extract numeric metrics with their values
+                        outcomes = full_case_data['data']['outcomes']
+                        if 'metrics' in outcomes and isinstance(outcomes['metrics'], list):
+                            for metric in outcomes['metrics'][:5]:  # Limit to 5 metrics
+                                if 'value' in metric and 'metric' in metric:
+                                    real_metrics.append(f"{metric['value']} {metric['metric']}")
+                        
+                        # If we don't have enough metrics, add qualitative benefits
+                        if len(real_metrics) < 3 and 'qualitativeBenefits' in outcomes:
+                            for benefit in outcomes['qualitativeBenefits'][:5-len(real_metrics)]:
+                                if 'benefit' in benefit:
+                                    real_metrics.append(benefit['benefit'])
+                    
+                    # If we still don't have metrics, use the highlights
+                    if not real_metrics:
+                        real_metrics = use_case['highlights']
+                    
+                    # Get implementation details if available
+                    implementation_desc = use_case['description']
+                    if full_case_data and 'data' in full_case_data and 'implementation' in full_case_data['data']:
+                        if 'useCase' in full_case_data['data']['implementation']:
+                            implementation_desc = full_case_data['data']['implementation']['useCase']
+                    
+                    # Extract company info
+                    company_size = "Not specified"
+                    company_region = "Not specified"
+                    if full_case_data and 'data' in full_case_data and 'companyInfo' in full_case_data['data']:
+                        company_info = full_case_data['data']['companyInfo']
+                        if 'size' in company_info:
+                            company_size = company_info['size']
+                        if 'region' in company_info:
+                            company_region = company_info['region']
+                    
                     # Fix structure to match frontend expectations
                     transformed_use_case = {
                         "id": use_case["id"],
-                        "company": use_case["company"],  # Keep company field
-                        "name": use_case["company"],  # Also add name for compatibility
-                        "industry": use_case["industry"],  # Keep industry field
-                        "description": use_case["description"],
-                        "url": use_case["url"],  # Keep URL
-                        "categoryId": use_case.get("categoryId", "productivity"),  # Keep categoryId
-                        "highlights": use_case["highlights"],  # Keep highlights
-                        "idealFit": {
-                            "industries": [use_case["industry"]],  # Wrap industry in array
-                            "companySize": ["SMB", "Mid-Market", "Enterprise"],  # Default sizes
-                            "technicalRequirements": "Medium"  # Default requirement
+                        "company": use_case["company"],
+                        "industry": use_case["industry"],
+                        "description": implementation_desc,
+                        "url": use_case["url"],
+                        "categoryId": use_case.get("categoryId", "productivity"),
+                        "companyInfo": {
+                            "size": company_size,
+                            "region": company_region,
+                            "industry": use_case["industry"]
                         },
-                        "examples": use_case["highlights"]  # Add examples pointing to the same data
+                        "metrics": real_metrics,
+                        "highlights": real_metrics,
+                        "has_full_data": full_case_data is not None
                     }
                     
                     use_cases[use_case["id"]] = transformed_use_case
