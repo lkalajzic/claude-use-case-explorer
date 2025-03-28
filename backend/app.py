@@ -186,22 +186,30 @@ def get_case_study(case_id):
     if not re.match(r'^[a-zA-Z0-9_-]+$', case_id):
         return jsonify({"error": "Invalid case study ID"}), 400
         
-    # Find the case study file
-    case_study_path = os.path.join(os.path.dirname(__file__), "data", "case_studies", f"{case_id}.json")
+    # Try multiple formats of the case ID (handle underscore/hyphen discrepancies)
+    case_id_variants = [
+        case_id,                    # Original ID
+        case_id.replace('_', '-'),  # Replace underscores with hyphens
+        case_id.replace('-', '_')   # Replace hyphens with underscores
+    ]
     
-    try:
-        # Check if the file exists
-        if not os.path.exists(case_study_path):
-            return jsonify({"error": f"Case study '{case_id}' not found"}), 404
-            
-        # Load the case study
-        with open(case_study_path, 'r') as f:
-            case_study = json.load(f)
-            
-        return jsonify(case_study)
-    except Exception as e:
-        logger.error(f"Error retrieving case study {case_id}: {e}")
-        return jsonify({"error": str(e)}), 500
+    # Try each variant
+    for variant in case_id_variants:
+        case_study_path = os.path.join(os.path.dirname(__file__), "data", "case_studies", f"{variant}.json")
+        
+        if os.path.exists(case_study_path):
+            try:
+                # Load the case study
+                with open(case_study_path, 'r') as f:
+                    case_study = json.load(f)
+                    
+                return jsonify(case_study)
+            except Exception as e:
+                logger.error(f"Error reading case study {variant}: {e}")
+                break  # Exit the loop if we found the file but had an error reading it
+    
+    # If we get here, the case study wasn't found in any variant
+    return jsonify({"error": f"Case study '{case_id}' not found"}), 404
 
 
 @app.route('/api/use-case-database', methods=['GET'])
