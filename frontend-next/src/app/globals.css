@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff; /* pure white for clean look */
+  --foreground: #18181b; /* zinc-900 */
+  --primary: #dc7454; /* coral-500 - Claude's brand color */
+  --primary-hover: #e74f2f; /* coral-600 */
+  --secondary: #6b7280; /* gray-500 */
+  --accent: #dc7454; /* coral-500 */
+  --success: #10b981; /* emerald-500 */
+  --warning: #f59e0b; /* amber-500 */
+  --danger: #ef4444; /* red-500 */
+  --card-bg: #ffffff;
+  --card-border: #e5e7eb; /* gray-200 */
+  --font-sans: var(--font-dm-sans);
+  --font-serif: var(--font-dm-serif);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
+
+/* Custom button styles */
+.btn-primary {
+  @apply bg-coral-500 hover:bg-coral-600 text-white font-medium py-2 px-4 rounded-md transition-colors;
+}
+
+.btn-secondary {
+  @apply bg-white hover:bg-gray-50 text-gray-700 font-medium py-2 px-4 rounded-md border border-gray-300 transition-colors;
+}
+
+.btn-outline {
+  @apply border border-coral-500 text-coral-500 hover:bg-coral-50 font-medium py-2 px-4 rounded-md transition-colors;
+}
+
+/* Card styles */
+.card {
+  @apply bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden;
+}
+
+.card-header {
+  @apply px-6 py-4 border-b border-gray-200;
+}
+
+.card-body {
+  @apply p-6;
+}
+
+/* Form styles */
+input, textarea, select {
+  @apply rounded-md border-gray-300 shadow-sm focus:border-coral-500 focus:ring focus:ring-coral-500 focus:ring-opacity-50;
+}
+
+/* Fix to handle Tailwind form styles */
+[type='text'],
+[type='email'],
+[type='url'],
+[type='password'],
+[type='number'],
+[type='date'],
+[type='datetime-local'],
+[type='month'],
+[type='search'],
+[type='tel'],
+[type='time'],
+[type='week'],
+[multiple],
+textarea,
+select {
+  @apply rounded-md shadow-sm border-gray-300 focus:border-coral-500 focus:ring-coral-500;
+}
