@@ -60,22 +60,15 @@ yarn-error.log*
 .pnp.js
 .yarn/install-state.gz
 
-# React frontend build
-/frontend/build/
-/frontend/dist/
-/frontend/.env.local
-/frontend/.env.development.local
-/frontend/.env.test.local
-/frontend/.env.production.local
-
 # Next.js frontend build
 /frontend-next/.next/
 /frontend-next/out/
 /frontend-next/build/
-/frontend-next/.env.local
-/frontend-next/.env.development.local
-/frontend-next/.env.test.local
-/frontend-next/.env.production.local
+/frontend-next/node_modules/
+/frontend-next/.env*
+/frontend-next/npm-debug.log*
+/frontend-next/yarn-debug.log*
+/frontend-next/yarn-error.log*
 
 # Common
 .DS_Store
