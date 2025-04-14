@@ -1,0 +1,79 @@
+{
+  "industries": {
+    "Technology": {
+      "time_savings": {"median": 0.4, "min": 0.2, "max": 0.6, "count": 10},
+      "cost_savings": {"median": 0.3, "min": 0.1, "max": 0.5, "count": 8},
+      "productivity": {"median": 0.35, "min": 0.15, "max": 0.6, "count": 12},
+      "quality": {"median": 0.25, "min": 0.1, "max": 0.4, "count": 6}
+    },
+    "Financial Services": {
+      "time_savings": {"median": 0.35, "min": 0.15, "max": 0.5, "count": 8},
+      "cost_savings": {"median": 0.25, "min": 0.1, "max": 0.4, "count": 7},
+      "productivity": {"median": 0.3, "min": 0.1, "max": 0.5, "count": 9},
+      "quality": {"median": 0.2, "min": 0.1, "max": 0.35, "count": 5}
+    },
+    "Healthcare": {
+      "time_savings": {"median": 0.3, "min": 0.1, "max": 0.5, "count": 6},
+      "cost_savings": {"median": 0.2, "min": 0.1, "max": 0.35, "count": 5},
+      "productivity": {"median": 0.25, "min": 0.1, "max": 0.4, "count": 7},
+      "quality": {"median": 0.3, "min": 0.15, "max": 0.5, "count": 8}
+    },
+    "Retail": {
+      "time_savings": {"median": 0.35, "min": 0.15, "max": 0.55, "count": 7},
+      "cost_savings": {"median": 0.3, "min": 0.1, "max": 0.5, "count": 6},
+      "productivity": {"median": 0.3, "min": 0.1, "max": 0.45, "count": 8},
+      "quality": {"median": 0.25, "min": 0.1, "max": 0.4, "count": 4}
+    },
+    "Other": {
+      "time_savings": {"median": 0.3, "min": 0.1, "max": 0.5, "count": 20},
+      "cost_savings": {"median": 0.25, "min": 0.1, "max": 0.45, "count": 18},
+      "productivity": {"median": 0.3, "min": 0.1, "max": 0.5, "count": 25},
+      "quality": {"median": 0.2, "min": 0.05, "max": 0.35, "count": 15}
+    }
+  },
+  "use_cases": {
+    "Customer Service": {
+      "time_savings": {"median": 0.45, "min": 0.2, "max": 0.7, "count": 15},
+      "cost_savings": {"median": 0.35, "min": 0.15, "max": 0.6, "count": 12},
+      "automation": {"median": 0.7, "min": 0.4, "max": 0.9, "count": 10}
+    },
+    "Knowledge Management": {
+      "time_savings": {"median": 0.4, "min": 0.2, "max": 0.6, "count": 12},
+      "productivity": {"median": 0.35, "min": 0.15, "max": 0.55, "count": 10}
+    },
+    "Content Creation": {
+      "time_savings": {"median": 0.5, "min": 0.3, "max": 0.7, "count": 8},
+      "productivity": {"median": 0.4, "min": 0.2, "max": 0.6, "count": 6}
+    },
+    "Software Development": {
+      "time_savings": {"median": 0.3, "min": 0.15, "max": 0.5, "count": 10},
+      "productivity": {"median": 0.25, "min": 0.1, "max": 0.45, "count": 8}
+    },
+    "Research & Analysis": {
+      "time_savings": {"median": 0.35, "min": 0.2, "max": 0.55, "count": 7},
+      "quality": {"median": 0.3, "min": 0.15, "max": 0.5, "count": 6}
+    },
+    "Other": {
+      "time_savings": {"median": 0.3, "min": 0.1, "max": 0.5, "count": 25},
+      "productivity": {"median": 0.25, "min": 0.1, "max": 0.4, "count": 20}
+    }
+  },
+  "case_studies": {
+    "Technology": {
+      "Customer Service": [
+        {"company": "Asana", "url": "https://www.anthropic.com/customers/asana"},
+        {"company": "Intercom", "url": "https://www.anthropic.com/customers/intercom"},
+        {"company": "Notion", "url": "https://www.anthropic.com/customers/notion"}
+      ],
+      "Content Creation": [
+        {"company": "Copy AI", "url": "https://www.anthropic.com/customers/copy-ai"},
+        {"company": "Tome", "url": "https://www.anthropic.com/customers/tome"}
+      ]
+    },
+    "Financial Services": {
+      "Knowledge Management": [
+        {"company": "Coinbase", "url": "https://www.anthropic.com/customers/coinbase"}
+      ]
+    }
+  }
+}

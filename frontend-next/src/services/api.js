@@ -78,20 +78,32 @@ export const useCaseApi = {
   }
 };
 
-// ROI Calculator API (to be implemented)
+// ROI Calculator API
 export const roiCalculatorApi = {
   // Calculate ROI based on use case and parameters
   calculateRoi: async (useCase, parameters) => {
     try {
-      // This will be implemented later
-      // For now, we'll do calculations client-side
       const response = await axios.post(`${API_BASE_URL}/calculate-roi`, {
         useCase,
-        parameters
+        ...parameters
       });
       return response.data;
     } catch (error) {
       console.error('Error calculating ROI:', error);
+      throw error;
+    }
+  }
+};
+
+// Benchmarks API
+export const benchmarksApi = {
+  // Get benchmark data for ROI calculations
+  getBenchmarks: async () => {
+    try {
+      const response = await axios.get(`${BACKEND_URL}/api/benchmarks`);
+      return response.data;
+    } catch (error) {
+      console.error('Error retrieving benchmarks:', error);
       throw error;
     }
   }

@@ -1,0 +1,630 @@
+{
+  "industries": {
+    "Other": {
+      "quality": {
+        "median": 0.895,
+        "min": 0.2,
+        "max": 10.0,
+        "count": 12
+      },
+      "time_savings": {
+        "median": 0.96,
+        "min": 0.3,
+        "max": 20.0,
+        "count": 13
+      },
+      "cost_savings": {
+        "median": 1.495,
+        "min": 0.15,
+        "max": 150.0,
+        "count": 12
+      },
+      "automation": {
+        "median": 0.75,
+        "min": 0.25,
+        "max": 10.0,
+        "count": 5
+      },
+      "productivity": {
+        "median": 0.5,
+        "min": 0.2,
+        "max": 7.0,
+        "count": 5
+      },
+      "other": {
+        "median": 0.98,
+        "min": 0.08,
+        "max": 226.0,
+        "count": 25
+      },
+      "customer_experience": {
+        "median": 14.0,
+        "min": 0.2,
+        "max": 150.0,
+        "count": 8
+      }
+    },
+    "Technology": {
+      "time_savings": {
+        "median": 2.0,
+        "min": 0.15,
+        "max": 550.0,
+        "count": 55
+      },
+      "other": {
+        "median": 0.985,
+        "min": 0.1,
+        "max": 600.0,
+        "count": 60
+      },
+      "cost_savings": {
+        "median": 0.8,
+        "min": 0.15,
+        "max": 400.0,
+        "count": 27
+      },
+      "customer_experience": {
+        "median": 2.0,
+        "min": 0.07,
+        "max": 45.0,
+        "count": 11
+      },
+      "quality": {
+        "median": 0.7,
+        "min": 0.14,
+        "max": 60.0,
+        "count": 11
+      },
+      "automation": {
+        "median": 0.65,
+        "min": 0.5,
+        "max": 0.8,
+        "count": 2
+      },
+      "productivity": {
+        "median": 2.85,
+        "min": 1.7,
+        "max": 4.0,
+        "count": 2
+      }
+    },
+    "Government": {
+      "time_savings": {
+        "median": 0.8,
+        "min": 0.8,
+        "max": 0.8,
+        "count": 1
+      },
+      "other": {
+        "median": 2.1,
+        "min": 2.1,
+        "max": 2.1,
+        "count": 1
+      }
+    },
+    "Retail": {
+      "customer_experience": {
+        "median": 2.5,
+        "min": 0.9,
+        "max": 4.5,
+        "count": 3
+      },
+      "other": {
+        "median": 0.99,
+        "min": 0.99,
+        "max": 0.99,
+        "count": 1
+      }
+    },
+    "Education": {
+      "quality": {
+        "median": 0.8295,
+        "min": 0.765,
+        "max": 0.894,
+        "count": 2
+      }
+    }
+  },
+  "use_cases": {
+    "Content Creation": {
+      "quality": {
+        "median": 0.94,
+        "min": 0.3,
+        "max": 10.0,
+        "count": 7
+      },
+      "time_savings": {
+        "median": 4.5,
+        "min": 0.5,
+        "max": 35.0,
+        "count": 14
+      },
+      "cost_savings": {
+        "median": 0.9199999999999999,
+        "min": 0.7,
+        "max": 400.0,
+        "count": 8
+      },
+      "other": {
+        "median": 3.0,
+        "min": 0.08,
+        "max": 600.0,
+        "count": 15
+      },
+      "customer_experience": {
+        "median": 3.25,
+        "min": 0.2,
+        "max": 20.0,
+        "count": 4
+      },
+      "productivity": {
+        "median": 3.6,
+        "min": 0.2,
+        "max": 7.0,
+        "count": 2
+      }
+    },
+    "Knowledge Management": {
+      "time_savings": {
+        "median": 1.0,
+        "min": 0.2,
+        "max": 550.0,
+        "count": 21
+      },
+      "other": {
+        "median": 2.0,
+        "min": 0.1,
+        "max": 100.0,
+        "count": 31
+      },
+      "cost_savings": {
+        "median": 0.9,
+        "min": 0.15,
+        "max": 150.0,
+        "count": 17
+      },
+      "customer_experience": {
+        "median": 0.9,
+        "min": 0.07,
+        "max": 17.0,
+        "count": 7
+      },
+      "quality": {
+        "median": 0.7,
+        "min": 0.2,
+        "max": 3.7,
+        "count": 5
+      },
+      "automation": {
+        "median": 5.4,
+        "min": 0.8,
+        "max": 10.0,
+        "count": 2
+      },
+      "productivity": {
+        "median": 1.7,
+        "min": 0.5,
+        "max": 4.0,
+        "count": 3
+      }
+    },
+    "Customer Service": {
+      "other": {
+        "median": 0.995,
+        "min": 0.1,
+        "max": 226.0,
+        "count": 32
+      },
+      "time_savings": {
+        "median": 0.85,
+        "min": 0.15,
+        "max": 30.0,
+        "count": 27
+      },
+      "automation": {
+        "median": 0.5,
+        "min": 0.25,
+        "max": 0.9,
+        "count": 5
+      },
+      "cost_savings": {
+        "median": 0.8,
+        "min": 0.15,
+        "max": 100.0,
+        "count": 11
+      },
+      "customer_experience": {
+        "median": 27.0,
+        "min": 0.36,
+        "max": 150.0,
+        "count": 9
+      },
+      "quality": {
+        "median": 0.68,
+        "min": 0.14,
+        "max": 0.95,
+        "count": 9
+      },
+      "productivity": {
+        "median": 3.3,
+        "min": 3.3,
+        "max": 3.3,
+        "count": 1
+      }
+    },
+    "Research & Analysis": {
+      "other": {
+        "median": 10.46,
+        "min": 0.82,
+        "max": 100.0,
+        "count": 4
+      },
+      "productivity": {
+        "median": 0.5,
+        "min": 0.5,
+        "max": 0.5,
+        "count": 1
+      },
+      "cost_savings": {
+        "median": 8.0,
+        "min": 5.0,
+        "max": 150.0,
+        "count": 3
+      },
+      "customer_experience": {
+        "median": 1.65,
+        "min": 0.3,
+        "max": 3.0,
+        "count": 2
+      },
+      "time_savings": {
+        "median": 0.5,
+        "min": 0.5,
+        "max": 0.5,
+        "count": 1
+      },
+      "quality": {
+        "median": 0.8295,
+        "min": 0.765,
+        "max": 0.894,
+        "count": 2
+      }
+    },
+    "Other": {
+      "time_savings": {
+        "median": 11.0,
+        "min": 3.0,
+        "max": 26.0,
+        "count": 3
+      }
+    },
+    "Software Development": {
+      "time_savings": {
+        "median": 40.0,
+        "min": 4.0,
+        "max": 100.0,
+        "count": 3
+      },
+      "other": {
+        "median": 0.73,
+        "min": 0.51,
+        "max": 0.97,
+        "count": 5
+      },
+      "quality": {
+        "median": 30.32,
+        "min": 0.64,
+        "max": 60.0,
+        "count": 2
+      }
+    }
+  },
+  "case_studies": {
+    "Other": {
+      "Content Creation": [
+        {
+          "company": "Snowflake",
+          "url": "https://www.anthropic.com/customers/snowflake"
+        },
+        {
+          "company": "StackBlitz",
+          "url": "https://www.anthropic.com/customers/stackblitz"
+        },
+        {
+          "company": "Orange",
+          "url": "https://www.anthropic.com/customers/orange"
+        },
+        {
+          "company": "Humach",
+          "url": "https://www.anthropic.com/customers/humach"
+        },
+        {
+          "company": "Aura Intelligence",
+          "url": "https://www.anthropic.com/customers/aura"
+        }
+      ],
+      "Customer Service": [
+        {
+          "company": "Kodif",
+          "url": "https://www.anthropic.com/customers/kodif"
+        },
+        {
+          "company": "ASAPP",
+          "url": "https://www.anthropic.com/customers/asapp"
+        },
+        {
+          "company": "SK Telecom",
+          "url": "https://www.anthropic.com/customers/skt"
+        },
+        {
+          "company": "Sourcegraph",
+          "url": "https://www.anthropic.com/customers/sourcegraph"
+        },
+        {
+          "company": "Hebbia",
+          "url": "https://www.anthropic.com/customers/hebbia"
+        },
+        {
+          "company": "Asana",
+          "url": "https://www.anthropic.com/customers/asana"
+        },
+        {
+          "company": "Coinbase",
+          "url": "https://www.anthropic.com/customers/coinbase"
+        },
+        {
+          "company": "Assembled",
+          "url": "https://www.anthropic.com/customers/assembled"
+        }
+      ],
+      "Research & Analysis": [
+        {
+          "company": "Section",
+          "url": "https://www.anthropic.com/customers/section"
+        }
+      ],
+      "Knowledge Management": [
+        {
+          "company": "AES",
+          "url": "https://www.anthropic.com/customers/aes"
+        },
+        {
+          "company": "Perplexity",
+          "url": "https://www.anthropic.com/customers/perplexity"
+        },
+        {
+          "company": "Local Falcon",
+          "url": "https://www.anthropic.com/customers/local-falcon"
+        },
+        {
+          "company": "GitLab",
+          "url": "https://www.anthropic.com/customers/gitlab-enterprise"
+        },
+        {
+          "company": "Armanino",
+          "url": "https://www.anthropic.com/customers/armanino"
+        }
+      ]
+    },
+    "Technology": {
+      "Knowledge Management": [
+        {
+          "company": "BlueFlame AI",
+          "url": "https://www.anthropic.com/customers/blueflame"
+        },
+        {
+          "company": "Braintrust",
+          "url": "https://www.anthropic.com/customers/braintrust"
+        },
+        {
+          "company": "You.com",
+          "url": "https://www.anthropic.com/customers/you-dot-com"
+        },
+        {
+          "company": "Factory",
+          "url": "https://www.anthropic.com/customers/factory"
+        },
+        {
+          "company": "Scribd, Inc.",
+          "url": "https://www.anthropic.com/customers/scribd"
+        },
+        {
+          "company": "Gamma",
+          "url": "https://www.anthropic.com/customers/gamma"
+        },
+        {
+          "company": "Lex",
+          "url": "https://www.anthropic.com/customers/lex"
+        },
+        {
+          "company": "Brian Impact Foundation",
+          "url": "https://www.anthropic.com/customers/brian-impact-foundation"
+        },
+        {
+          "company": "Clay",
+          "url": "https://www.anthropic.com/customers/clay"
+        },
+        {
+          "company": "Stairwell",
+          "url": "https://www.anthropic.com/customers/stairwell"
+        },
+        {
+          "company": "Copy.ai",
+          "url": "https://www.anthropic.com/customers/copy-ai"
+        },
+        {
+          "company": "Steno",
+          "url": "https://www.anthropic.com/customers/steno"
+        },
+        {
+          "company": "Notion",
+          "url": "https://www.anthropic.com/customers/notion"
+        },
+        {
+          "company": "Tabnine",
+          "url": "https://www.anthropic.com/customers/tabnine"
+        },
+        {
+          "company": "Inscribe",
+          "url": "https://www.anthropic.com/customers/inscribe"
+        },
+        {
+          "company": "Law&Company",
+          "url": "https://www.anthropic.com/customers/law-and-company"
+        }
+      ],
+      "Customer Service": [
+        {
+          "company": "Palo Alto Networks",
+          "url": "https://www.anthropic.com/customers/palo-alto-networks"
+        },
+        {
+          "company": "Hume AI",
+          "url": "https://www.anthropic.com/customers/hume"
+        },
+        {
+          "company": "Newfront",
+          "url": "https://www.anthropic.com/customers/newfront"
+        },
+        {
+          "company": "Wedia Group",
+          "url": "https://www.anthropic.com/customers/wedia-group"
+        },
+        {
+          "company": "Cove",
+          "url": "https://www.anthropic.com/customers/cove"
+        },
+        {
+          "company": "Gumroad",
+          "url": "https://www.anthropic.com/customers/gumroad"
+        },
+        {
+          "company": "Intercom",
+          "url": "https://www.anthropic.com/customers/intercom"
+        },
+        {
+          "company": "Decagon",
+          "url": "https://www.anthropic.com/customers/decagon"
+        },
+        {
+          "company": "Zoom",
+          "url": "https://www.anthropic.com/customers/zoom"
+        },
+        {
+          "company": "Advolve",
+          "url": "https://www.anthropic.com/customers/advolve"
+        },
+        {
+          "company": "Amazon Connect",
+          "url": "https://www.anthropic.com/customers/amazon-q-in-connect"
+        },
+        {
+          "company": "Otter",
+          "url": "https://www.anthropic.com/customers/otter"
+        },
+        {
+          "company": "Campfire",
+          "url": "https://www.anthropic.com/customers/campfire"
+        }
+      ],
+      "Content Creation": [
+        {
+          "company": "Jumpcut",
+          "url": "https://www.anthropic.com/customers/jumpcut"
+        },
+        {
+          "company": "Replit",
+          "url": "https://www.anthropic.com/customers/replit"
+        },
+        {
+          "company": "CodeRabbit",
+          "url": "https://www.anthropic.com/customers/coderabbit"
+        },
+        {
+          "company": "Pulpit AI",
+          "url": "https://www.anthropic.com/customers/pulpit-ai"
+        },
+        {
+          "company": "Sourcegraph",
+          "url": "https://www.anthropic.com/customers/sourcegraph-claude-for-work"
+        },
+        {
+          "company": "LaunchNotes",
+          "url": "https://www.anthropic.com/customers/graph"
+        },
+        {
+          "company": "Brand.ai",
+          "url": "https://www.anthropic.com/customers/brand-ai"
+        },
+        {
+          "company": "Skillfully",
+          "url": "https://www.anthropic.com/customers/skillfully"
+        },
+        {
+          "company": "Codeium",
+          "url": "https://www.anthropic.com/customers/codeium"
+        },
+        {
+          "company": "micro1",
+          "url": "https://www.anthropic.com/customers/micro1"
+        }
+      ],
+      "Other": [
+        {
+          "company": "AppFolio",
+          "url": "https://www.anthropic.com/customers/appfolio"
+        }
+      ],
+      "Software Development": [
+        {
+          "company": "Headstart",
+          "url": "https://www.anthropic.com/customers/headstart"
+        },
+        {
+          "company": "Graphite",
+          "url": "https://www.anthropic.com/customers/graphite"
+        },
+        {
+          "company": "Lazy AI",
+          "url": "https://www.anthropic.com/customers/lazy-ai"
+        }
+      ],
+      "Research & Analysis": [
+        {
+          "company": "tl;dv",
+          "url": "https://www.anthropic.com/customers/tldv"
+        }
+      ]
+    },
+    "Government": {
+      "Knowledge Management": [
+        {
+          "company": "European Parliament",
+          "url": "https://www.anthropic.com/customers/european-parliament"
+        }
+      ]
+    },
+    "Retail": {
+      "Customer Service": [
+        {
+          "company": "Zapia (by BrainLogic)",
+          "url": "https://www.anthropic.com/customers/zapia"
+        }
+      ],
+      "Content Creation": [
+        {
+          "company": "WRTN",
+          "url": "https://www.anthropic.com/customers/wrtn"
+        }
+      ]
+    },
+    "Education": {
+      "Research & Analysis": [
+        {
+          "company": "University of Sydney",
+          "url": "https://www.anthropic.com/customers/university-of-sydney"
+        }
+      ]
+    }
+  }
+}

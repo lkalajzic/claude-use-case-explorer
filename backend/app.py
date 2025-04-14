@@ -141,13 +141,146 @@ def match_use_cases():
         return jsonify({"error": str(e)}), 500
 
 
+@app.route('/api/benchmarks', methods=['GET'])
+def get_benchmarks():
+    """
+    Get benchmarks for ROI calculator
+    """
+    try:
+        # Try to load the simplified benchmarks file first
+        benchmarks_path = os.path.join(os.path.dirname(__file__), "data", "benchmarks", "simplified_benchmarks.json")
+        
+        # If that doesn't exist, try the detailed benchmarks file
+        if not os.path.exists(benchmarks_path):
+            benchmarks_path = os.path.join(os.path.dirname(__file__), "data", "benchmarks", "benchmarks.json")
+        
+        # If that doesn't exist either, try the default benchmarks
+        if not os.path.exists(benchmarks_path):
+            benchmarks_path = os.path.join(os.path.dirname(__file__), "data", "benchmarks", "default_benchmarks.json")
+        
+        # If none exist, return an error
+        if not os.path.exists(benchmarks_path):
+            return jsonify({"error": "Benchmark data not available"}), 404
+        
+        # Load and return the benchmarks
+        with open(benchmarks_path, 'r') as f:
+            benchmarks = json.load(f)
+            
+        return jsonify(benchmarks)
+    except Exception as e:
+        logger.error(f"Error retrieving benchmarks: {e}")
+        return jsonify({"error": str(e)}), 500
+
+
 @app.route('/api/calculate-roi', methods=['POST'])
 def calculate_roi():
     """
     Calculate ROI for implemented use cases
     """
-    # To be implemented
-    return jsonify({"message": "ROI calculator coming soon"}), 501
+    data = request.json
+    
+    if not data:
+        return jsonify({"error": "No data provided"}), 400
+    
+    try:
+        # Extract user inputs
+        num_employees = data.get('numEmployees', 100)
+        hourly_rate = data.get('hourlyRate', 50)
+        hours_per_week = data.get('hoursPerWeek', 10)
+        automation_level = data.get('automationLevel', 0.7)  # 70% default
+        industry = data.get('industry', 'Technology')
+        use_case = data.get('useCase', 'Customer Service')
+        
+        # Load benchmarks
+        benchmarks_path = os.path.join(os.path.dirname(__file__), "data", "benchmarks", "simplified_benchmarks.json")
+        
+        if not os.path.exists(benchmarks_path):
+            benchmarks_path = os.path.join(os.path.dirname(__file__), "data", "benchmarks", "default_benchmarks.json")
+        
+        if not os.path.exists(benchmarks_path):
+            return jsonify({"error": "Benchmark data not available"}), 500
+        
+        with open(benchmarks_path, 'r') as f:
+            benchmarks = json.load(f)
+        
+        # Get industry benchmarks
+        industry_data = benchmarks.get('industries', {}).get(industry, benchmarks.get('industries', {}).get('Other', {}))
+        
+        # Get use case benchmarks
+        use_case_data = benchmarks.get('use_cases', {}).get(use_case, benchmarks.get('use_cases', {}).get('Other', {}))
+        
+        # Calculate annual cost of current process
+        weekly_hours = num_employees * hours_per_week
+        annual_hours = weekly_hours * 52  # 52 weeks in a year
+        annual_cost = annual_hours * hourly_rate
+        
+        # Calculate savings based on automation level and benchmarks
+        # Use either industry or use case time savings benchmark - prefer use case if available
+        time_savings_benchmark = None
+        if 'time_savings' in use_case_data:
+            time_savings_benchmark = use_case_data['time_savings'].get('median', 0.3)  # 30% default
+        elif 'time_savings' in industry_data:
+            time_savings_benchmark = industry_data['time_savings'].get('median', 0.3)  # 30% default
+        else:
+            time_savings_benchmark = 0.3  # Default if no benchmark available
+        
+        # Calculate effective time savings - user's automation level * benchmark
+        effective_time_savings = automation_level * time_savings_benchmark
+        
+        # Calculate annual savings
+        annual_savings = annual_cost * effective_time_savings
+        
+        # Implementation cost estimate (simplified)
+        implementation_cost = 10000  # Placeholder for now
+        
+        # Calculate ROI
+        roi = (annual_savings - implementation_cost) / implementation_cost * 100
+        
+        # Calculate payback period (in months)
+        if annual_savings > 0:
+            payback_period = (implementation_cost / annual_savings) * 12  # Convert to months
+        else:
+            payback_period = float('inf')  # Infinite if no savings
+        
+        # Calculate confidence interval
+        if 'time_savings' in use_case_data:
+            min_savings = use_case_data['time_savings'].get('min', 0.1)  # 10% default
+            max_savings = use_case_data['time_savings'].get('max', 0.5)  # 50% default
+        elif 'time_savings' in industry_data:
+            min_savings = industry_data['time_savings'].get('min', 0.1)  # 10% default
+            max_savings = industry_data['time_savings'].get('max', 0.5)  # 50% default
+        else:
+            min_savings = 0.1  # Default if no benchmark available
+            max_savings = 0.5  # Default if no benchmark available
+        
+        min_roi = ((annual_cost * (automation_level * min_savings) - implementation_cost) / implementation_cost) * 100
+        max_roi = ((annual_cost * (automation_level * max_savings) - implementation_cost) / implementation_cost) * 100
+        
+        # Get case studies for this industry and use case
+        related_case_studies = []
+        if 'case_studies' in benchmarks:
+            if industry in benchmarks['case_studies']:
+                if use_case in benchmarks['case_studies'][industry]:
+                    related_case_studies = benchmarks['case_studies'][industry][use_case]
+        
+        # Return the results
+        return jsonify({
+            "annualCostSavings": round(annual_savings, 2),
+            "implementationCost": implementation_cost,
+            "roi": round(roi, 2),
+            "minRoi": round(min_roi, 2),
+            "maxRoi": round(max_roi, 2),
+            "paybackPeriod": round(payback_period, 2),
+            "timeSavingsBenchmark": round(time_savings_benchmark * 100, 2),  # Convert to percentage
+            "relatedCaseStudies": related_case_studies,
+            "benchmarks": {
+                "industry": industry_data,
+                "useCase": use_case_data
+            }
+        })
+    except Exception as e:
+        logger.error(f"Error calculating ROI: {e}")
+        return jsonify({"error": str(e)}), 500
 
 
 @app.route('/api/case-studies', methods=['GET'])
@@ -323,6 +456,7 @@ if __name__ == '__main__':
     os.makedirs(os.path.join(os.path.dirname(__file__), "data", "case_studies"), exist_ok=True)
     os.makedirs(os.path.join(os.path.dirname(__file__), "data", "taxonomies"), exist_ok=True)
     os.makedirs(os.path.join(os.path.dirname(__file__), "data", "templates"), exist_ok=True)
+    os.makedirs(os.path.join(os.path.dirname(__file__), "data", "benchmarks"), exist_ok=True)
     
     # Start the server
     app.run(debug=True, host='0.0.0.0', port=5001)
