@@ -32,7 +32,15 @@ class CompanyAnalyzer:
         if not self.api_key:
             raise ValueError("Anthropic API key is required. Set it in the environment or pass to the constructor.")
         
-        self.client = anthropic.Anthropic(api_key=self.api_key)
+        # Initialize client with simpler configuration to avoid proxies issue
+        try:
+            # Try the older initialization method first
+            self.client = anthropic.Anthropic(api_key=self.api_key)
+        except TypeError:
+            # If that fails, try the newer method
+            print("Using alternate client initialization method...")
+            self.client = anthropic.Client(api_key=self.api_key)
+        
         self.templates_dir = os.path.join(os.path.dirname(__file__), "..", "data", "templates")
         
         # Ensure templates directory exists
@@ -338,21 +346,37 @@ Company Description:
         
         # Process with Claude
         print(f"Analyzing website: {url}")
-        response = self.client.messages.create(
-            model="claude-3-7-sonnet-20250219",
-            max_tokens=2000,
-            messages=[{"role": "user", "content": prompt}]
-        )
+        try:
+            # Try the newer API format first
+            response = self.client.messages.create(
+                model="claude-3-7-sonnet-20250219",
+                max_tokens=2000,
+                messages=[{"role": "user", "content": prompt}]
+            )
+        except AttributeError:
+            # Fall back to older format if needed
+            print("Using alternate message creation method...")
+            response = self.client.completion(
+                model="claude-3-7-sonnet-20250219",
+                max_tokens_to_sample=2000,
+                prompt=f"\n\nHuman: {prompt}\n\nAssistant:"
+            )
         
-        # Print token usage
-        print(f"Token usage:")
-        print(f"Input tokens: {response.usage.input_tokens}")
-        print(f"Output tokens: {response.usage.output_tokens}")
-        print(f"Total tokens: {response.usage.input_tokens + response.usage.output_tokens}")
-        print(f"Estimated cost: ${(response.usage.input_tokens * 0.000003) + (response.usage.output_tokens * 0.000015):.4f}")
-        
-        # Parse the JSON response
-        result = response.content[0].text
+        # Extract completion result based on API version
+        try:
+            # For newer API
+            result = response.content[0].text
+            
+            # Print token usage
+            print(f"Token usage:")
+            print(f"Input tokens: {response.usage.input_tokens}")
+            print(f"Output tokens: {response.usage.output_tokens}")
+            print(f"Total tokens: {response.usage.input_tokens + response.usage.output_tokens}")
+            print(f"Estimated cost: ${(response.usage.input_tokens * 0.000003) + (response.usage.output_tokens * 0.000015):.4f}")
+        except AttributeError:
+            # For older API
+            result = response.completion
+            print("Token usage data not available in this API version")
         
         try:
             # Clean the result in case it has markdown code blocks
@@ -384,21 +408,37 @@ Company Description:
         
         # Process with Claude
         print(f"Analyzing company description")
-        response = self.client.messages.create(
-            model="claude-3-7-sonnet-20250219",
-            max_tokens=2000,
-            messages=[{"role": "user", "content": prompt}]
-        )
+        try:
+            # Try the newer API format first
+            response = self.client.messages.create(
+                model="claude-3-7-sonnet-20250219",
+                max_tokens=2000,
+                messages=[{"role": "user", "content": prompt}]
+            )
+        except AttributeError:
+            # Fall back to older format if needed
+            print("Using alternate message creation method...")
+            response = self.client.completion(
+                model="claude-3-7-sonnet-20250219",
+                max_tokens_to_sample=2000,
+                prompt=f"\n\nHuman: {prompt}\n\nAssistant:"
+            )
         
-        # Print token usage
-        print(f"Token usage:")
-        print(f"Input tokens: {response.usage.input_tokens}")
-        print(f"Output tokens: {response.usage.output_tokens}")
-        print(f"Total tokens: {response.usage.input_tokens + response.usage.output_tokens}")
-        print(f"Estimated cost: ${(response.usage.input_tokens * 0.000003) + (response.usage.output_tokens * 0.000015):.4f}")
-        
-        # Parse the JSON response
-        result = response.content[0].text
+        # Extract completion result based on API version
+        try:
+            # For newer API
+            result = response.content[0].text
+            
+            # Print token usage
+            print(f"Token usage:")
+            print(f"Input tokens: {response.usage.input_tokens}")
+            print(f"Output tokens: {response.usage.output_tokens}")
+            print(f"Total tokens: {response.usage.input_tokens + response.usage.output_tokens}")
+            print(f"Estimated cost: ${(response.usage.input_tokens * 0.000003) + (response.usage.output_tokens * 0.000015):.4f}")
+        except AttributeError:
+            # For older API
+            result = response.completion
+            print("Token usage data not available in this API version")
         
         try:
             # Clean the result in case it has markdown code blocks
@@ -419,86 +459,253 @@ Company Description:
     def match_use_cases(self, company_analysis: Dict[str, Any]) -> Dict[str, Any]:
         """
         Match company analysis to potential Claude use cases with confidence scores
+        and provide role-specific recommendations based on case studies.
         """
-        # Load the use case database
-        use_case_db_path = os.path.join(os.path.dirname(__file__), "..", "data", "taxonomies", "use_cases.json")
+        # Load the case studies
+        case_studies_path = os.path.join(os.path.dirname(__file__), "..", "data", "case_studies", "all_case_studies.json")
         
         try:
-            with open(use_case_db_path, "r") as f:
-                use_cases = json.load(f)
+            with open(case_studies_path, "r") as f:
+                case_studies = json.load(f)
         except FileNotFoundError:
-            print(f"Use case database not found at {use_case_db_path}")
-            use_cases = self._get_default_use_cases()
+            print(f"Case studies not found at {case_studies_path}")
+            # Fall back to use cases
+            use_case_db_path = os.path.join(os.path.dirname(__file__), "..", "data", "taxonomies", "use_cases.json")
             
-            # Save the default use cases for future use
-            os.makedirs(os.path.dirname(use_case_db_path), exist_ok=True)
-            with open(use_case_db_path, "w") as f:
-                json.dump(use_cases, f, indent=2)
+            try:
+                with open(use_case_db_path, "r") as f:
+                    use_cases = json.load(f)
+            except FileNotFoundError:
+                print(f"Use case database not found at {use_case_db_path}")
+                use_cases = self._get_default_use_cases()
+                
+                # Save the default use cases for future use
+                os.makedirs(os.path.dirname(use_case_db_path), exist_ok=True)
+                with open(use_case_db_path, "w") as f:
+                    json.dump(use_cases, f, indent=2)
+            
+            # Use default cases instead
+            case_studies = {"caseStudies": []}
+            for use_case_id, use_case in use_cases.items():
+                case_study = {
+                    "id": use_case_id,
+                    "companyName": "Example Company",
+                    "industry": use_case.get("idealFit", {}).get("industries", ["Technology"])[0],
+                    "useCases": [use_case_id],
+                    "challengesSolved": [f"Implementing {use_case.get('name')}"],
+                    "results": [f"Success with {use_case.get('name')}"],
+                    "implementation": f"Implementation of {use_case.get('name')}",
+                    "metadata": {
+                        "source": "Default use cases",
+                        "confidence": 3
+                    }
+                }
+                case_studies["caseStudies"].append(case_study)
         
-        # Create a matching prompt
+        # Create a matching prompt with special focus on employee roles and using real case studies
         matching_prompt = f"""
-        You are an AI implementation expert matching a company's profile to potential Claude AI use cases.
+        You are an AI implementation expert tasked with recommending Claude AI use cases for a company based on their profile and existing case studies.
         
         ## Company Analysis
         ```json
         {json.dumps(company_analysis, indent=2)}
         ```
         
-        ## Available Use Cases
+        ## Available Case Studies
         ```json
-        {json.dumps(use_cases, indent=2)}
+        {json.dumps(case_studies, indent=2)}
         ```
         
         ## Your Task
-        Based on the company analysis, match the company to the most relevant Claude use cases. Provide:
-        1. A relevance score (0-100) for each use case
-        2. A brief explanation of why the use case is relevant
-        3. Potential implementation ideas specific to this company
-        4. Expected challenges for implementation
+        Based on the company analysis, recommend the most relevant Claude use cases by matching the company's profile with existing case studies. 
+
+        IMPORTANT: You are NOT trying to match the company to other companies in the case studies. Instead, you are recommending Claude use cases that would be beneficial for the company based on their employee roles, industry, and challenges.
         
-        Return ONLY a JSON object with this structure:
-        ```json
+        Focus on:
+        1. Employee role distribution in the company analysis
+        2. Industry-specific applications from the case studies
+        3. Challenge alignment between the company and successful case studies
+        4. Potential ROI based on similar implementations
+        
+        For each recommended use case, provide:
+        1. A relevance score (0-100) showing how well this use case fits the company
+        2. A brief explanation of why the use case is relevant
+        3. The specific employee roles that would benefit from this use case
+        4. The approximate number of employees that would use this solution
+        5. Potential implementation ideas specific to this company
+        6. Expected challenges for implementation
+        7. Expected benefits and ROI factors for this use case
+        
+        Return ONLY a JSON object with this structure (NO MARKDOWN OR TEXT, ONLY JSON):
         {{
-          "useCase": "name_of_use_case",
-          "relevanceScore": 85,
-          "relevanceExplanation": "Why this use case is relevant for this company",
-          "implementationIdeas": ["Specific idea 1", "Specific idea 2"],
-          "expectedChallenges": ["Challenge 1", "Challenge 2"],
-          "expectedBenefits": ["Benefit 1", "Benefit 2"]
+          "useCases": [
+            {{
+              "id": "case_study_id",
+              "name": "Descriptive name of use case",
+              "relevanceScore": 85,
+              "relevanceExplanation": "Why this use case is relevant for this company",
+              "targetRoles": [
+                {{
+                  "role": "Engineering/Development",
+                  "employeeCount": 50,
+                  "timeSavings": "20-40%"
+                }},
+                {{
+                  "role": "Customer Service",
+                  "employeeCount": 100,
+                  "timeSavings": "30-50%"
+                }}
+              ],
+              "totalEmployeesAffected": 150,
+              "implementationIdeas": ["Specific idea 1", "Specific idea 2"],
+              "expectedChallenges": ["Challenge 1", "Challenge 2"],
+              "expectedBenefits": ["Benefit 1", "Benefit 2"],
+              "estimatedImplementationCost": {{
+                "level": "Medium",
+                "range": "$10,000 - $20,000"
+              }}
+            }}
+          ]
         }}
-        ```
         
         Sort the use cases by relevanceScore in descending order (highest score first).
         Only include use cases with a relevance score of 50 or higher.
         Be specific and practical in your implementation ideas and expected benefits.
+        For employee roles, use the actual roles mentioned in the company analysis if available.
         """
         
         # Process with Claude
         print(f"Matching company profile to use cases")
-        response = self.client.messages.create(
-            model="claude-3-7-sonnet-20250219",
-            max_tokens=2000,
-            messages=[{"role": "user", "content": matching_prompt}]
-        )
+        try:
+            # Try the newer API format first
+            response = self.client.messages.create(
+                model="claude-3-7-sonnet-20250219",
+                max_tokens=4000,  # Increased max tokens to handle larger responses
+                messages=[{"role": "user", "content": matching_prompt}]
+            )
+        except AttributeError:
+            # Fall back to older format if needed
+            print("Using alternate message creation method...")
+            response = self.client.completion(
+                model="claude-3-7-sonnet-20250219",
+                max_tokens_to_sample=4000,  # Increased max tokens
+                prompt=f"\n\nHuman: {matching_prompt}\n\nAssistant:"
+            )
         
-        # Parse the JSON response
-        result = response.content[0].text
+        # Extract completion result based on API version
+        try:
+            # For newer API
+            result = response.content[0].text
+            
+            # Print token usage
+            print(f"Token usage:")
+            print(f"Input tokens: {response.usage.input_tokens}")
+            print(f"Output tokens: {response.usage.output_tokens}")
+            print(f"Total tokens: {response.usage.input_tokens + response.usage.output_tokens}")
+            print(f"Estimated cost: ${(response.usage.input_tokens * 0.000003) + (response.usage.output_tokens * 0.000015):.4f}")
+        except AttributeError:
+            # For older API
+            result = response.completion
+            print("Token usage data not available in this API version")
         
         try:
             # Clean the result in case it has markdown code blocks
             cleaned_result = result.strip()
+            
+            # Enhanced JSON parsing logic to handle various formats
             if cleaned_result.startswith("```json"):
-                cleaned_result = cleaned_result[7:]
+                # Find the start and end of the JSON block
+                start_idx = cleaned_result.find("```json")
+                if start_idx != -1:
+                    start_idx += 7  # Length of "```json"
+                    end_idx = cleaned_result.find("```", start_idx)
+                    if end_idx != -1:
+                        cleaned_result = cleaned_result[start_idx:end_idx].strip()
+            elif cleaned_result.startswith("```"):
+                # Handle case where json keyword might be missing
+                start_idx = cleaned_result.find("```")
+                if start_idx != -1:
+                    start_idx += 3  # Length of "```"
+                    end_idx = cleaned_result.find("```", start_idx)
+                    if end_idx != -1:
+                        cleaned_result = cleaned_result[start_idx:end_idx].strip()
+
+            # Attempt to find a valid JSON object even in messy text
+            start_brace = cleaned_result.find("{")
+            if start_brace != -1:
+                # Find matching closing brace by counting opening and closing braces
+                open_count = 0
+                close_brace = -1
+                for i in range(start_brace, len(cleaned_result)):
+                    if cleaned_result[i] == "{":
+                        open_count += 1
+                    elif cleaned_result[i] == "}":
+                        open_count -= 1
+                        if open_count == 0:
+                            close_brace = i
+                            break
+                
+                if close_brace != -1:
+                    cleaned_result = cleaned_result[start_brace:close_brace+1]
             
-            if cleaned_result.endswith("```"):
-                cleaned_result = cleaned_result[:-3]
+            print("Attempting to parse JSON:", cleaned_result[:100] + "...")
             
-            matches = json.loads(cleaned_result.strip())
+            # Try to parse the JSON
+            matches = json.loads(cleaned_result)
+            
+            # Process matches to add category mapping information
+            role_to_category_mapping = {
+                "Engineering/Development": "coding",
+                "Software Engineer": "coding",
+                "Developer": "coding",
+                "Customer Service": "customer_service",
+                "Support": "customer_service",
+                "Marketing": "content_creation",
+                "Content": "content_creation",
+                "Sales": "productivity",
+                "Legal": "document_qa",
+                "Compliance": "document_qa",
+                "Research": "document_qa",
+                "Data Analysis": "document_qa",
+                "Operations": "productivity",
+                "Administration": "productivity",
+                "Executive": "productivity",
+                "Management": "productivity"
+            }
+            
+            # Enhance matches with category information if necessary
+            if "useCases" in matches:
+                for use_case in matches["useCases"]:
+                    if "targetRoles" in use_case:
+                        for role_info in use_case["targetRoles"]:
+                            role_name = role_info["role"]
+                            # Find matching category
+                            category = None
+                            for key, value in role_to_category_mapping.items():
+                                if key.lower() in role_name.lower():
+                                    category = value
+                                    break
+                            role_info["category"] = category or "productivity"
+            
             return matches
         except json.JSONDecodeError as e:
             print(f"Failed to parse matches as JSON: {e}")
-            print("Raw response:", result)
-            raise
+            print("Raw response (first 500 chars):", result[:500])
+            print("Attempting to fix and salvage JSON...")
+            
+            # Last resort: manually build valid JSON
+            try:
+                # Create a basic structure if parsing failed
+                fallback_response = {
+                    "useCases": [],
+                    "error": "Failed to parse Claude response",
+                    "partial_response": result[:200] + "..." # Include the start of the response
+                }
+                
+                return fallback_response
+            except Exception as e2:
+                print(f"Even fallback JSON creation failed: {e2}")
+                raise
     
     def _scrape_website(self, url: str) -> str:
         """

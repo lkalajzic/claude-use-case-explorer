@@ -1,0 +1,257 @@
+{
+  "companyInfo": {
+    "name": "TechSolutions Inc.",
+    "industry": {
+      "primary": "Enterprise Software",
+      "secondary": [
+        "Financial Services Technology",
+        "Financial Technology"
+      ],
+      "confidence": 5
+    },
+    "size": {
+      "category": "Mid-Market",
+      "employeeEstimate": "500",
+      "signals": [
+        "described as mid-size",
+        "specific count of 500 employees mentioned"
+      ],
+      "confidence": 5
+    },
+    "geography": {
+      "headquarters": "Not found",
+      "markets": [
+        "Global"
+      ],
+      "confidence": 3
+    },
+    "founded": "2010",
+    "companyDescription": "Mid-size technology company specializing in enterprise software solutions for the financial services industry"
+  },
+  "employeeRoles": {
+    "totalEmployees": {
+      "count": 500,
+      "confidence": 5
+    },
+    "roleDistribution": [
+      {
+        "role": "Engineering/Development",
+        "count": 200,
+        "percentage": 40,
+        "confidence": 5,
+        "suggestedUseCases": [
+          "coding assistance",
+          "documentation automation",
+          "test generation"
+        ],
+        "potentialSavings": "High"
+      },
+      {
+        "role": "Customer Service/Support",
+        "count": 100,
+        "percentage": 20,
+        "confidence": 5,
+        "suggestedUseCases": [
+          "information retrieval",
+          "response drafting",
+          "knowledge management"
+        ],
+        "potentialSavings": "High"
+      },
+      {
+        "role": "Marketing/Content",
+        "count": 50,
+        "percentage": 10,
+        "confidence": 5,
+        "suggestedUseCases": [
+          "content creation",
+          "brand messaging"
+        ],
+        "potentialSavings": "Medium"
+      },
+      {
+        "role": "Sales",
+        "count": 75,
+        "percentage": 15,
+        "confidence": 5,
+        "suggestedUseCases": [
+          "proposal generation",
+          "client research"
+        ],
+        "potentialSavings": "Medium"
+      },
+      {
+        "role": "Legal/Compliance",
+        "count": 25,
+        "percentage": 5,
+        "confidence": 5,
+        "suggestedUseCases": [
+          "document review",
+          "compliance checking"
+        ],
+        "potentialSavings": "Medium"
+      },
+      {
+        "role": "Other/Administration",
+        "count": 50,
+        "percentage": 10,
+        "confidence": 5,
+        "suggestedUseCases": [
+          "productivity tools",
+          "document processing"
+        ],
+        "potentialSavings": "Medium"
+      }
+    ],
+    "confidence": 5
+  },
+  "businessFocus": {
+    "products": [
+      "Enterprise software solutions"
+    ],
+    "services": [
+      "Not found"
+    ],
+    "targetCustomers": [
+      "Financial services industry"
+    ],
+    "valueProposition": "Specialized enterprise software solutions for financial services",
+    "differentiators": [
+      "Not found"
+    ],
+    "confidence": 4
+  },
+  "technicalProfile": {
+    "technologies": [
+      "Not found"
+    ],
+    "digitalMaturity": "Medium",
+    "automationLevel": "Medium",
+    "integrations": [
+      "Not found"
+    ],
+    "confidence": 2
+  },
+  "businessChallenges": {
+    "explicitChallenges": [
+      "Scaling customer support operations",
+      "Improving documentation processes efficiency",
+      "Engineers spending significant time on documentation",
+      "Support team struggling to find relevant information quickly"
+    ],
+    "impliedChallenges": [
+      "Knowledge management inefficiencies",
+      "Time spent on repetitive tasks",
+      "Information retrieval bottlenecks"
+    ],
+    "confidence": 5
+  },
+  "aiOpportunities": {
+    "contentGeneration": {
+      "potential": "High",
+      "specificUses": [
+        "Technical documentation automation",
+        "Support response drafting"
+      ],
+      "confidence": 5
+    },
+    "customerService": {
+      "potential": "High",
+      "specificUses": [
+        "Information retrieval assistance",
+        "Response generation",
+        "Knowledge management"
+      ],
+      "confidence": 5
+    },
+    "dataAnalysis": {
+      "potential": "Medium",
+      "specificUses": [
+        "Support ticket analysis",
+        "Customer inquiry patterns"
+      ],
+      "confidence": 3
+    },
+    "documentProcessing": {
+      "potential": "High",
+      "specificUses": [
+        "Technical documentation creation",
+        "Document organization",
+        "Information extraction"
+      ],
+      "confidence": 5
+    },
+    "researchNeeds": {
+      "potential": "Medium",
+      "specificUses": [
+        "Knowledge base development",
+        "Technical information gathering"
+      ],
+      "confidence": 3
+    },
+    "roleSpecificOpportunities": [
+      {
+        "role": "Engineering/Development",
+        "opportunities": [
+          "Documentation automation",
+          "Code documentation",
+          "Technical writing assistance"
+        ],
+        "estimatedTimeSavings": "20-30%",
+        "confidence": 5
+      },
+      {
+        "role": "Customer Service/Support",
+        "opportunities": [
+          "Knowledge retrieval",
+          "Response drafting",
+          "Information search"
+        ],
+        "estimatedTimeSavings": "30-40%",
+        "confidence": 5
+      },
+      {
+        "role": "Marketing/Content",
+        "opportunities": [
+          "Content creation",
+          "Brand messaging consistency"
+        ],
+        "estimatedTimeSavings": "15-25%",
+        "confidence": 3
+      },
+      {
+        "role": "Sales",
+        "opportunities": [
+          "Proposal generation",
+          "Client-specific documentation"
+        ],
+        "estimatedTimeSavings": "10-20%",
+        "confidence": 3
+      },
+      {
+        "role": "Legal/Compliance",
+        "opportunities": [
+          "Compliance document review",
+          "Policy documentation"
+        ],
+        "estimatedTimeSavings": "15-25%",
+        "confidence": 3
+      },
+      {
+        "role": "Other/Administration",
+        "opportunities": [
+          "Process documentation",
+          "Internal knowledge management"
+        ],
+        "estimatedTimeSavings": "10-20%",
+        "confidence": 3
+      }
+    ]
+  },
+  "analysisMetadata": {
+    "source": "Company description",
+    "contentQuality": "High-quality with specific details on employee count, distribution, and explicit challenges",
+    "analysisDate": "2023-11-17",
+    "overallConfidence": 4
+  }
+}
