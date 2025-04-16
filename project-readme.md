@@ -146,75 +146,90 @@ claude-use-case-explorer/
 - Add caching for frequently accessed case study data
 - Set up analytics to track user engagement with different features
 
-# Current state
+# Current Implementation Progress
 
-Important: Claude 3.7 and I tried implementing the next steps with some parts going wrong. We left off at test_enhanced_analyzer.py, which not only returns an error, but does it after mistakenly thinking the goal is to match the user's company with the companies in case studies rather than recommending claude for those specific use cases that each of the companies in the case studies benefited from.
+## Overview of Changes (April 16, 2025)
 
-# Latest error
+We've made significant progress on enhancing the Claude Use Case Explorer with role-based analysis and ROI calculations. Here's a summary of what's been accomplished and what's next.
 
-"id": "asapp",
-"name": "AI-Enhanced Customer Service Platform",
-"relevanceScore": 88,
-"relevanceExplanation": "ASAPP's GenerativeAgent solution is highly applicable as it specifically enhances customer service operations, which is a key challenge area for TechSolutions with their 100 support staff (20% of workforce). The solution's ability to maintain context through customer interactions would be valuable for complex financial software support.",
-"targetRoles": [
-{
-"role": "Customer Service/Support",
-"employeeCount": 100,
-"timeSavings": "30-40%"
-},
-{
-"role": "Sales",
-"employeeCount": 25,
-"timeSavings": "10-15%"
-}
-],
-"totalEmployeesAffected": 125,
-"implementationIdeas": [
-"Deploy AI assistants for real-time support agent guidance",
-"Implement sentiment analysis for customer interactions",
-"Create automatic categorization of incoming support issues",
-"Build personalized response templates based on customer history",
-"Develop intelligent escalation protocols for complex financial issues"
-],
-"expectedChallenges": [
-"Integration with existing CRM and support systems",
-"Training the AI on financial software-specific terminology",
-"Balancing automation with necessary human oversight",
-"Compliance with financial industry data protection regulations"
-],
-"expectedBenefits": [
-"Reduced average handle time for support tickets",
-"Increased first-contact resolution rates",
-"More consistent customer experience across all support channels",
-"Better utilization of support staff resources",
-"Improved customer satisfaction and retention"
-],
-"estimatedImplementationCost": {
-"level": "Medium-High",
-"range": "$80,000 - $150,000"
-}
-},
-{
-"id": "coderabbit",
-"name": "AI-Powered Code Review and Quality Assurance",
-"relevanceScore": 85,
-"relevanceExplanation": "With 200 engineers
-Traceback (most recent call last):
-File "/Users/luka/Documents/coding/claude-use-case-explorer/backend/test_enhanced_analyzer.py", line 76, in <module>
-test_description_analyzer()
-File "/Users/luka/Documents/coding/claude-use-case-explorer/backend/test_enhanced_analyzer.py", line 65, in test_description_analyzer
-matches = analyzer.match_use_cases(result)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-File "/Users/luka/Documents/coding/claude-use-case-explorer/backend/analyzers/company_analyzer.py", line 589, in match_use_cases
-matches = json.loads(cleaned_result.strip())
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/**init**.py", line 346, in loads
-return \_default_decoder.decode(s)
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 337, in decode
-obj, end = self.raw_decode(s, idx=\_w(s, 0).end())
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 353, in raw_decode
-obj, end = self.scan_once(s, idx)
-^^^^^^^^^^^^^^^^^^^^^^
-json.decoder.JSONDecodeError: Unterminated string starting at: line 189 column 31 (char 8365)
+## Completed Implementations
+
+### 1. Enhanced Company Analyzer ✅
+- Updated the Claude prompts in both template files to extract detailed employee role information
+- Modified the JSON response structure to include role distribution data with counts and percentages
+- Added confidence scoring for role information detection
+- Improved the matching algorithm to connect roles with suitable Claude use cases
+- Enhanced error handling in Claude API responses
+
+### 2. Form Review UI ✅
+- Created a FormReview component to display and edit extracted company data
+- Added RoleDistributionEditor for fine-tuning employee counts per role
+- Implemented validation to ensure role counts match total employee count
+- Added ConfidenceIndicator to help users assess Claude's analysis confidence
+- Created a multi-step workflow in the analyzer page
+
+### 3. Use Case Matching System ✅
+- Modified the backend to match employee roles to specific use cases
+- Added role-specific relevance scoring based on company details and role counts
+- Implemented case study linking with URL formatting
+- Created ability to toggle use cases on/off to customize ROI calculations
+
+### 4. Extended ROI Calculator ✅
+- Implemented role-specific ROI calculations with hourly rates by job type
+- Created dynamic, aggregated ROI calculation combining multiple use cases
+- Added visualization of individual use case ROI metrics
+- Added 3-year projections accounting for implementation costs
+
+## Outstanding Issues
+
+1. **Backend JSON Parsing Bug**: 
+   - The `match_use_cases` function occasionally encounters JSON parsing errors when processing Claude's response
+   - Error: `JSONDecodeError: Unterminated string` in company_analyzer.py
+   - Current workaround: Added fallback response generation, but backend still needs more robust parsing
+
+2. **Case Study Matching Logic**:
+   - Current implementation sometimes tries to match the user's company with companies in case studies
+   - Should be matching with use cases that would benefit the specific roles in the user's company
+   - Need to clarify prompt instructions to Claude for better role-to-use-case mapping
+
+3. **ROI Calculator Refinement**:
+   - Current implementation uses estimated hourly rates by role
+   - Would benefit from user-customizable salary inputs
+   - Time savings percentages are currently hardcoded and could be linked to actual case study data
+
+## Next Steps
+
+### Immediate Tasks:
+1. Fix JSON parsing issue in the backend match_use_cases function:
+   - Implement more robust JSON extraction from Claude responses
+   - Add progressive fallbacks for partial JSON responses
+   
+2. Improve case study linking:
+   - Test URLs for various case study formats
+   - Add more metadata to case study displays
+   
+3. Add direct salary customization:
+   - Allow users to input specific salary data for their organization
+   - Create more granular time savings estimates based on role specifics
+
+### Future Enhancements:
+1. Results Dashboard:
+   - Design metrics display with source citations and confidence levels
+   - Add implementation timeline visualization
+   
+2. Data Integration:
+   - Connect case study metrics directly to specific use cases
+   - Extract more granular implementation cost data
+   
+3. Testing & Deployment:
+   - Add end-to-end testing with sample company data
+   - Optimize API calls and add caching for better performance
+
+## Notes on Implementation
+
+- The frontend now successfully displays and allows editing of role-specific data
+- The ROI calculation takes into account both role-specific time savings and implementation costs
+- The UI allows toggling specific use cases on/off to customize the ROI calculation
+- Links to case studies are generated with proper URL formatting
+
+For more detailed analysis, see the individual component files in the frontend-next/src/components/analysis directory, particularly UseCaseMatches.jsx which contains the ROI calculation logic.
