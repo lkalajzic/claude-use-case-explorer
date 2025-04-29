@@ -535,6 +535,7 @@ Company Description:
         5. Potential implementation ideas specific to this company
         6. Expected challenges for implementation
         7. Expected benefits and ROI factors for this use case
+        8. Second-order benefits that go beyond direct time/cost savings
         
         Return ONLY a JSON object with this structure (NO MARKDOWN OR TEXT, ONLY JSON):
         {{
@@ -560,6 +561,16 @@ Company Description:
               "implementationIdeas": ["Specific idea 1", "Specific idea 2"],
               "expectedChallenges": ["Challenge 1", "Challenge 2"],
               "expectedBenefits": ["Benefit 1", "Benefit 2"],
+              "secondOrderBenefits": [
+                {{
+                  "benefit": "Higher Employee Retention",
+                  "description": "By automating tedious tasks, employees focus on more engaging work"
+                }},
+                {{
+                  "benefit": "Improved Decision Quality",
+                  "description": "Faster access to insights leads to better strategic choices"
+                }}
+              ],
               "estimatedImplementationCost": {{
                 "level": "Medium",
                 "range": "$10,000 - $20,000"
@@ -570,7 +581,22 @@ Company Description:
         
         Sort the use cases by relevanceScore in descending order (highest score first).
         Only include use cases with a relevance score of 50 or higher.
-        Be specific and practical in your implementation ideas and expected benefits.
+        
+        For second-order benefits, focus on organization-wide advantages that extend beyond the direct time savings, such as:
+        - Shifting employee focus to higher-level strategic tasks
+        - Enabling more proactive work (e.g., reaching out to customers/prospects)
+        - Improved work quality or customer experience
+        - Enhanced employee satisfaction or retention
+        - Reduced error rates or risk exposure
+        - Better knowledge sharing across teams
+        - Accelerated innovation or decision-making
+        - Increased organizational resilience or agility
+        - Reduced context switching and improved focus
+        
+        Each second-order benefit should have a short, descriptive name (5-10 words max) and a brief explanation (under 15 words).
+        These should be tailored to the specific company's industry, challenges, and goals.
+        
+        Be specific and practical in your implementation ideas, expected benefits, and second-order benefits.
         For employee roles, use the actual roles mentioned in the company analysis if available.
         """
         

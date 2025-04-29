@@ -216,14 +216,17 @@ const CompanyAnalyzer = () => {
         </div>
       )}
 
-      {/* Loading indicator */}
+      {/* Loading indicator with case study explanation */}
       {isLoading && (
         <div className="text-center py-8">
           <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-700"></div>
           <p className="mt-2 text-gray-600">
             {showReviewForm ? 'Processing your review...' : 'Analyzing company data with Claude...'}
             <br />
-            <span className="text-sm text-gray-500">This may take a minute.</span>
+            <span className="text-sm text-gray-500">
+              {!showReviewForm && 'Analyzing against 74 real-world Claude implementation case studies. '}
+              This may take 1-2 minutes.
+            </span>
           </p>
         </div>
       )}

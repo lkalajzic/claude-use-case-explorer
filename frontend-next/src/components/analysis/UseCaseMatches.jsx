@@ -291,6 +291,34 @@ const UseCaseMatches = ({ matches }) => {
     );
   };
 
+  // Collect all second-order benefits from enabled use cases
+  const allSecondOrderBenefits = React.useMemo(() => {
+    if (!sortedMatches || !enabledUseCases) return [];
+    
+    const enabledIds = enabledUseCases
+      .filter((item) => item.enabled)
+      .map((item) => item.id);
+    
+    const enabledMatches = sortedMatches.filter((match) =>
+      enabledIds.includes(match.id)
+    );
+    
+    // Collect all second-order benefits
+    const benefitsMap = new Map(); // Use a map to avoid duplicates
+    
+    enabledMatches.forEach(match => {
+      if (match.secondOrderBenefits && match.secondOrderBenefits.length > 0) {
+        match.secondOrderBenefits.forEach(benefit => {
+          // Use benefit name as key to prevent duplicates
+          benefitsMap.set(benefit.benefit, benefit);
+        });
+      }
+    });
+    
+    // Convert map back to array and return
+    return Array.from(benefitsMap.values());
+  }, [sortedMatches, enabledUseCases]);
+
   return (
     <div>
       {/* ROI Summary Card */}
@@ -334,6 +362,48 @@ const UseCaseMatches = ({ matches }) => {
             </p>
           </div>
         </div>
+
+        {/* Second-Order Benefits Section */}
+        {allSecondOrderBenefits.length > 0 ? (
+          <div className="mt-6 p-4 bg-teal-50 border border-teal-100 rounded-lg">
+            <h4 className="text-md font-semibold text-teal-800 mb-3">
+              Beyond Direct Time Savings: Second-Order Benefits
+            </h4>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {allSecondOrderBenefits.slice(0, 6).map((benefit, idx) => (
+                <div key={idx} className="bg-white rounded-md p-3 border border-teal-100">
+                  <span className="block text-sm font-medium text-teal-700 mb-1">{benefit.benefit}</span>
+                  <p className="text-xs text-gray-600">{benefit.description}</p>
+                </div>
+              ))}
+              {allSecondOrderBenefits.length > 6 && (
+                <div className="md:col-span-3 text-center text-sm text-teal-700 mt-2">
+                  + {allSecondOrderBenefits.length - 6} more second-order benefits across all use cases
+                </div>
+              )}
+            </div>
+          </div>
+        ) : (
+          <div className="mt-6 p-4 bg-teal-50 border border-teal-100 rounded-lg">
+            <h4 className="text-md font-semibold text-teal-800 mb-3">
+              Beyond Direct Time Savings: Second-Order Benefits
+            </h4>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="bg-white rounded-md p-3 border border-teal-100">
+                <span className="block text-sm font-medium text-teal-700 mb-1">Higher-Value Strategic Work</span>
+                <p className="text-xs text-gray-600">Employees focus on strategic tasks instead of routine ones</p>
+              </div>
+              <div className="bg-white rounded-md p-3 border border-teal-100">
+                <span className="block text-sm font-medium text-teal-700 mb-1">Proactive Customer Engagement</span>
+                <p className="text-xs text-gray-600">More time for reaching out to customers and prospects</p>
+              </div>
+              <div className="bg-white rounded-md p-3 border border-teal-100">
+                <span className="block text-sm font-medium text-teal-700 mb-1">Enhanced Job Satisfaction</span>
+                <p className="text-xs text-gray-600">Automating tedious work leads to higher employee retention</p>
+              </div>
+            </div>
+          </div>
+        )}
 
         <div className="text-center mt-4 text-sm text-gray-500">
           <p>Toggle use cases on/off to customize your ROI calculation</p>
@@ -511,6 +581,23 @@ const UseCaseMatches = ({ matches }) => {
                     ))}
                   </ul>
                 </div>
+                
+                {/* Second-Order Benefits for this use case */}
+                {match.secondOrderBenefits && match.secondOrderBenefits.length > 0 && (
+                  <div className="mb-4 p-3 bg-teal-50 rounded-md">
+                    <h4 className="text-sm font-medium text-teal-700 mb-2">
+                      Second-Order Benefits
+                    </h4>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                      {match.secondOrderBenefits.map((benefit, idx) => (
+                        <div key={idx} className="bg-white rounded-md p-2 border border-teal-100">
+                          <p className="text-sm font-medium text-teal-700">{benefit.benefit}</p>
+                          <p className="text-xs text-gray-600">{benefit.description}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
 
                 {/* Implementation Cost Section */}
                 {match.estimatedImplementationCost && (

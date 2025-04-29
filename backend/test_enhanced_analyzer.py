@@ -34,14 +34,9 @@ def test_description_analyzer():
     TechSolutions Inc. is a mid-size technology company with approximately 500 employees globally.
     Founded in 2010, we specialize in enterprise software solutions for the financial services industry.
     
-    Our team consists of about 200 software engineers working on our core products, 100 customer support
+    Our team consists of about 100 software engineers working on our core products, 150 customer support
     specialists handling client inquiries, 50 marketing professionals managing our brand and content,
-    75 sales representatives, 25 legal and compliance experts, and 50 administrative staff.
-    
-    We're facing challenges with scaling our customer support operations and improving the efficiency
-    of our documentation processes. Our engineering team spends significant time writing and maintaining
-    technical documentation, and our support team struggles to quickly find relevant information when
-    responding to customer inquiries.
+    100 sales representatives, 25 legal and compliance experts, and 75 administrative staff.
     
     We're looking for AI solutions that could help automate repetitive tasks and improve knowledge
     management across the organization.
