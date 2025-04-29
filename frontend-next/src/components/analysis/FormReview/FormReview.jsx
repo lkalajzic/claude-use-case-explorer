@@ -4,10 +4,17 @@ import React, { useState, useEffect } from 'react';
 import { ConfidenceIndicator } from './ConfidenceIndicator';
 import RoleDistributionEditor from './RoleDistributionEditor';
 
+// Edit icon component for editable fields
+const EditIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
+    <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
+  </svg>
+);
+
 const FormReview = ({ analysisData, onConfirm, onCancel }) => {
   // Clone the analysis data to avoid modifying the original
   const [formData, setFormData] = useState(null);
-  const [isEditing, setIsEditing] = useState(false);
+  const [isEditing, setIsEditing] = useState(true); // Set editing mode as default
   const [validationErrors, setValidationErrors] = useState({});
   
   // Initialize form data when analysis data is received
@@ -118,24 +125,31 @@ const FormReview = ({ analysisData, onConfirm, onCancel }) => {
     }
   };
   
+  // Editable field wrapper component
+  const EditableField = ({ children, label }) => (
+    <div className="relative group">
+      {isEditing && (
+        <div className="absolute -top-1 -right-1 bg-white rounded-full p-0.5 shadow-sm border border-gray-200 opacity-0 group-hover:opacity-100 transition-opacity">
+          <EditIcon />
+        </div>
+      )}
+      {children}
+    </div>
+  );
+  
   return (
-    <div className="bg-white rounded-lg shadow p-6">
-      <div className="flex justify-between items-center mb-6">
-        <h2 className="text-xl font-bold text-gray-800">
+    <div className="bg-white rounded-lg shadow p-4">
+      <div className="flex justify-between items-center mb-3">
+        <h2 className="text-lg font-bold text-gray-800">
           Review Company Analysis
         </h2>
-        <button
-          onClick={() => setIsEditing(!isEditing)}
-          className="text-sm px-4 py-2 rounded bg-gray-100 hover:bg-gray-200 text-gray-700"
-        >
-          {isEditing ? "View Mode" : "Edit Mode"}
-        </button>
+        <div className="text-xs text-blue-600 italic">All fields are editable</div>
       </div>
       
       {Object.keys(validationErrors).length > 0 && (
-        <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-md">
-          <h3 className="text-red-700 font-medium mb-2">Please correct the following issues:</h3>
-          <ul className="list-disc pl-5 text-red-600">
+        <div className="mb-3 p-2 bg-red-50 border border-red-200 rounded-md">
+          <h3 className="text-red-700 font-medium text-sm mb-1">Please correct the following issues:</h3>
+          <ul className="list-disc pl-5 text-red-600 text-xs">
             {Object.entries(validationErrors).map(([key, error]) => (
               <li key={key} className="error-message">
                 {typeof error === 'string' ? error : Array.isArray(error) ? error.join(', ') : JSON.stringify(error)}
@@ -145,164 +159,165 @@ const FormReview = ({ analysisData, onConfirm, onCancel }) => {
         </div>
       )}
       
-      <form onSubmit={handleSubmit} className="space-y-8">
-        {/* Company Information Section */}
-        <section className="border rounded-md p-4">
-          <div className="flex justify-between items-center mb-4">
-            <h3 className="text-lg font-semibold text-gray-700">Company Information</h3>
-            <ConfidenceIndicator 
-              score={formData.companyInfo?.industry?.confidence || 
-                    formData.confidenceScore?.companyInfo || 3} 
-            />
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {/* Company Name */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Company Name
-              </label>
-              {isEditing ? (
-                <input
-                  type="text"
-                  className="w-full p-2 border rounded focus:ring-blue-500 focus:border-blue-500"
-                  value={formData.companyInfo?.name || ''}
-                  onChange={(e) => handleChange('companyInfo', 'name', e.target.value)}
-                />
-              ) : (
-                <div className="p-2 bg-gray-50 rounded">
-                  {formData.companyInfo?.name || 'Not specified'}
-                </div>
-              )}
-            </div>
-            
-            {/* Primary Industry */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Primary Industry
-              </label>
-              {isEditing ? (
-                <input
-                  type="text"
-                  className="w-full p-2 border rounded focus:ring-blue-500 focus:border-blue-500"
-                  value={formData.companyInfo?.industry?.primary || ''}
-                  onChange={(e) => handleChange('companyInfo', 'industry', {
-                    ...formData.companyInfo?.industry,
-                    primary: e.target.value
-                  })}
-                />
-              ) : (
-                <div className="p-2 bg-gray-50 rounded">
-                  {(typeof formData.companyInfo?.industry === 'object' 
-                    ? formData.companyInfo.industry.primary 
-                    : formData.companyInfo?.industry) || 'Not specified'}
-                </div>
-              )}
-            </div>
-            
-            {/* Company Size */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Company Size
-              </label>
-              {isEditing ? (
-                <select
-                  className="w-full p-2 border rounded focus:ring-blue-500 focus:border-blue-500"
-                  value={(typeof formData.companyInfo?.size === 'object' 
-                    ? formData.companyInfo.size.category 
-                    : formData.companyInfo?.size) || ''}
-                  onChange={(e) => handleChange('companyInfo', 'size', {
-                    ...formData.companyInfo?.size,
-                    category: e.target.value
-                  })}
-                >
-                  <option value="">Select Size</option>
-                  <option value="Sole Proprietor">Sole Proprietor</option>
-                  <option value="SMB">Small Business (SMB)</option>
-                  <option value="Mid-Market">Mid-Market</option>
-                  <option value="Enterprise">Enterprise</option>
-                </select>
-              ) : (
-                <div className="p-2 bg-gray-50 rounded">
-                  {(typeof formData.companyInfo?.size === 'object' 
-                    ? formData.companyInfo.size.category 
-                    : formData.companyInfo?.size) || 'Not specified'}
-                </div>
-              )}
-            </div>
-            
-            {/* Geography */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Geography
-              </label>
-              {isEditing ? (
-                <input
-                  type="text"
-                  className="w-full p-2 border rounded focus:ring-blue-500 focus:border-blue-500"
-                  value={formData.companyInfo?.geography?.headquarters || 
-                        (typeof formData.companyInfo?.geography === 'string' ? formData.companyInfo.geography : '') || ''}
-                  onChange={(e) => handleChange('companyInfo', 'geography', {
-                    ...formData.companyInfo?.geography,
-                    headquarters: e.target.value
-                  })}
-                />
-              ) : (
-                <div className="p-2 bg-gray-50 rounded">
-                  {formData.companyInfo?.geography?.headquarters || 
-                   formData.companyInfo?.region || 
-                   (typeof formData.companyInfo?.geography === 'string' ? formData.companyInfo.geography : null) || 
-                   'Not specified'}
-                </div>
-              )}
-            </div>
-          </div>
-          
-          {/* Company Description */}
-          <div className="mt-4">
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Company Description
-            </label>
-            {isEditing ? (
-              <textarea
-                className="w-full p-2 border rounded focus:ring-blue-500 focus:border-blue-500"
-                rows="3"
-                value={formData.companyInfo?.companyDescription || ''}
-                onChange={(e) => handleChange('companyInfo', 'companyDescription', e.target.value)}
+      <form onSubmit={handleSubmit} className="space-y-4">
+        {/* Combined Company Information and Challenges Section */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {/* Company Information Section - 2/3 width */}
+          <section className="border rounded-md p-3 md:col-span-2">
+            <div className="flex justify-between items-center mb-2">
+              <h3 className="text-md font-semibold text-gray-700">Company Information</h3>
+              <ConfidenceIndicator 
+                score={formData.companyInfo?.industry?.confidence || 
+                      formData.confidenceScore?.companyInfo || 3} 
               />
-            ) : (
-              <div className="p-2 bg-gray-50 rounded">
-                {formData.companyInfo?.companyDescription || 'No description available'}
+            </div>
+            
+            <div className="grid grid-cols-2 gap-3">
+              {/* Company Name */}
+              <div>
+                <label className="block text-xs font-medium text-gray-500">
+                  Company Name
+                </label>
+                <EditableField>
+                  <input
+                    type="text"
+                    className="w-full p-1.5 text-sm border rounded focus:ring-blue-500 focus:border-blue-500"
+                    value={formData.companyInfo?.name || ''}
+                    onChange={(e) => handleChange('companyInfo', 'name', e.target.value)}
+                  />
+                </EditableField>
               </div>
-            )}
-          </div>
-        </section>
+              
+              {/* Primary Industry */}
+              <div>
+                <label className="block text-xs font-medium text-gray-500">
+                  Primary Industry
+                </label>
+                <EditableField>
+                  <input
+                    type="text"
+                    className="w-full p-1.5 text-sm border rounded focus:ring-blue-500 focus:border-blue-500"
+                    value={formData.companyInfo?.industry?.primary || ''}
+                    onChange={(e) => handleChange('companyInfo', 'industry', {
+                      ...formData.companyInfo?.industry,
+                      primary: e.target.value
+                    })}
+                  />
+                </EditableField>
+              </div>
+              
+              {/* Company Size */}
+              <div>
+                <label className="block text-xs font-medium text-gray-500">
+                  Company Size
+                </label>
+                <EditableField>
+                  <select
+                    className="w-full p-1.5 text-sm border rounded focus:ring-blue-500 focus:border-blue-500"
+                    value={(typeof formData.companyInfo?.size === 'object' 
+                      ? formData.companyInfo.size.category 
+                      : formData.companyInfo?.size) || ''}
+                    onChange={(e) => handleChange('companyInfo', 'size', {
+                      ...formData.companyInfo?.size,
+                      category: e.target.value
+                    })}
+                  >
+                    <option value="">Select Size</option>
+                    <option value="Sole Proprietor">Sole Proprietor</option>
+                    <option value="SMB">Small Business (SMB)</option>
+                    <option value="Mid-Market">Mid-Market</option>
+                    <option value="Enterprise">Enterprise</option>
+                  </select>
+                </EditableField>
+              </div>
+              
+              {/* Geography */}
+              <div>
+                <label className="block text-xs font-medium text-gray-500">
+                  Geography
+                </label>
+                <EditableField>
+                  <input
+                    type="text"
+                    className="w-full p-1.5 text-sm border rounded focus:ring-blue-500 focus:border-blue-500"
+                    value={formData.companyInfo?.geography?.headquarters || 
+                          (typeof formData.companyInfo?.geography === 'string' ? formData.companyInfo.geography : '') || ''}
+                    onChange={(e) => handleChange('companyInfo', 'geography', {
+                      ...formData.companyInfo?.geography,
+                      headquarters: e.target.value
+                    })}
+                  />
+                </EditableField>
+              </div>
+            </div>
+            
+            {/* Company Description */}
+            <div className="mt-3">
+              <label className="block text-xs font-medium text-gray-500">
+                Company Description
+              </label>
+              <EditableField>
+                <textarea
+                  className="w-full p-1.5 text-sm border rounded focus:ring-blue-500 focus:border-blue-500"
+                  rows="2"
+                  value={formData.companyInfo?.companyDescription || ''}
+                  onChange={(e) => handleChange('companyInfo', 'companyDescription', e.target.value)}
+                />
+              </EditableField>
+            </div>
+          </section>
+          
+          {/* Business Challenges Section - 1/3 width */}
+          {formData.businessChallenges && (
+            <section className="border rounded-md p-3">
+              <div className="flex justify-between items-center mb-2">
+                <h3 className="text-md font-semibold text-gray-700">Business Challenges</h3>
+                <ConfidenceIndicator score={formData.businessChallenges.confidence || 3} />
+              </div>
+              
+              {/* Explicit Challenges */}
+              {formData.businessChallenges.explicitChallenges && formData.businessChallenges.explicitChallenges.length > 0 && (
+                <div className="mb-3">
+                  <label className="block text-xs font-medium text-gray-500">
+                    Key Challenges
+                  </label>
+                  <EditableField>
+                    <textarea
+                      className="w-full p-1.5 text-sm border rounded focus:ring-blue-500 focus:border-blue-500"
+                      rows="4"
+                      value={formData.businessChallenges.explicitChallenges.join('\n')}
+                      onChange={(e) => handleChange('businessChallenges', 'explicitChallenges', 
+                        e.target.value.split('\n').filter(line => line.trim() !== '')
+                      )}
+                    />
+                  </EditableField>
+                </div>
+              )}
+            </section>
+          )}
+        </div>
         
         {/* Employee Roles Section */}
-        <section className="border rounded-md p-4">
-          <div className="flex justify-between items-center mb-4">
-            <h3 className="text-lg font-semibold text-gray-700">Employee Role Distribution</h3>
-            <ConfidenceIndicator score={formData.employeeRoles?.confidence || 3} />
-          </div>
-          
-          {/* Total Employees */}
-          <div className="mb-4">
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Total Employees
-            </label>
-            {isEditing ? (
-              <input
-                type="number"
-                min="1"
-                className="w-full md:w-1/3 p-2 border rounded focus:ring-blue-500 focus:border-blue-500"
-                value={formData.employeeRoles?.totalEmployees?.count || ''}
-                onChange={(e) => handleTotalEmployeeChange(e.target.value)}
-              />
-            ) : (
-              <div className="p-2 bg-gray-50 rounded w-full md:w-1/3">
-                {formData.employeeRoles?.totalEmployees?.count || 'Not specified'}
+        <section className="border rounded-md p-3">
+          <div className="flex justify-between items-center mb-2">
+            <div className="flex items-center">
+              <h3 className="text-md font-semibold text-gray-700 mr-3">Employee Role Distribution</h3>
+              <div className="flex items-center">
+                <label className="block text-xs font-medium text-gray-500 mr-2">
+                  Total Employees:
+                </label>
+                <EditableField>
+                  <input
+                    type="number"
+                    min="1"
+                    className="w-20 p-1 text-sm border rounded focus:ring-blue-500 focus:border-blue-500"
+                    value={formData.employeeRoles?.totalEmployees?.count || ''}
+                    onChange={(e) => handleTotalEmployeeChange(e.target.value)}
+                  />
+                </EditableField>
               </div>
-            )}
+            </div>
+            <ConfidenceIndicator score={formData.employeeRoles?.confidence || 3} />
           </div>
           
           {/* Role Distribution Editor */}
@@ -314,78 +329,18 @@ const FormReview = ({ analysisData, onConfirm, onCancel }) => {
           />
         </section>
         
-        {/* Business Challenges Section */}
-        {formData.businessChallenges && (
-          <section className="border rounded-md p-4">
-            <div className="flex justify-between items-center mb-4">
-              <h3 className="text-lg font-semibold text-gray-700">Business Challenges</h3>
-              <ConfidenceIndicator score={formData.businessChallenges.confidence || 3} />
-            </div>
-            
-            {/* Explicit Challenges */}
-            {formData.businessChallenges.explicitChallenges && formData.businessChallenges.explicitChallenges.length > 0 && (
-              <div className="mb-4">
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Explicit Challenges
-                </label>
-                {isEditing ? (
-                  <textarea
-                    className="w-full p-2 border rounded focus:ring-blue-500 focus:border-blue-500"
-                    rows="3"
-                    value={formData.businessChallenges.explicitChallenges.join('\n')}
-                    onChange={(e) => handleChange('businessChallenges', 'explicitChallenges', 
-                      e.target.value.split('\n').filter(line => line.trim() !== '')
-                    )}
-                  />
-                ) : (
-                  <ul className="list-disc pl-5 text-sm">
-                    {formData.businessChallenges.explicitChallenges.map((challenge, idx) => (
-                      <li key={idx}>{challenge}</li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            )}
-            
-            {/* Implied Challenges */}
-            {formData.businessChallenges.impliedChallenges && formData.businessChallenges.impliedChallenges.length > 0 && (
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Implied Challenges
-                </label>
-                {isEditing ? (
-                  <textarea
-                    className="w-full p-2 border rounded focus:ring-blue-500 focus:border-blue-500"
-                    rows="3"
-                    value={formData.businessChallenges.impliedChallenges.join('\n')}
-                    onChange={(e) => handleChange('businessChallenges', 'impliedChallenges', 
-                      e.target.value.split('\n').filter(line => line.trim() !== '')
-                    )}
-                  />
-                ) : (
-                  <ul className="list-disc pl-5 text-sm">
-                    {formData.businessChallenges.impliedChallenges.map((challenge, idx) => (
-                      <li key={idx}>{challenge}</li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            )}
-          </section>
-        )}
-        
         {/* Form Actions */}
         <div className="flex justify-end space-x-4">
           <button
             type="button"
             onClick={onCancel}
-            className="px-4 py-2 border border-gray-300 rounded-md text-gray-700 bg-white hover:bg-gray-50"
+            className="px-3 py-1.5 text-sm border border-gray-300 rounded-md text-gray-700 bg-white hover:bg-gray-50"
           >
             Cancel
           </button>
           <button
             type="submit"
-            className="px-4 py-2 border border-transparent rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+            className="px-3 py-1.5 text-sm border border-transparent rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
           >
             Confirm & Calculate
           </button>
