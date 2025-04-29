@@ -239,10 +239,10 @@ const CompanyAnalyzer = () => {
         </div>
       )}
 
-      {/* Results Section */}
+      {/* Results Section - more compact */}
       {reviewCompleted && analysisResults && (
-        <div className="bg-white shadow-md rounded-lg p-6 mb-8">
-          <h2 className="text-xl font-bold text-gray-800 mb-4">Analysis Results</h2>
+        <div className="bg-white shadow-md rounded-lg p-4 mb-4">
+          <h2 className="text-lg font-bold text-gray-800 mb-2">Analysis Results</h2>
           <AnalysisResults analysis={analysisResults} />
         </div>
       )}
