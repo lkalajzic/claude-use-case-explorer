@@ -283,3 +283,221 @@ Rather than rebuilding everything at once, we'll use a phased approach:
 5. Finally, remove deprecated components and code
 
 This approach ensures we can revert if issues arise while minimizing disruption to the application.
+
+## Latest Progress Update (December 30, 2024)
+
+### Important Clarifications from Today's Session
+
+1. **We already have the core components built!**
+   - ✅ Employee role extraction in company analyzer (company_website_prompt.txt and company_description_prompt.txt)
+   - ✅ Form Review UI for editing employee counts and roles  
+   - ✅ ROI calculations based on roles in UseCaseMatches.jsx
+   - ✅ 115 case studies (45 with new businessFunctions field)
+
+2. **The standardized business functions are already defined:**
+   - In the extracted case studies with the new businessFunctions field
+   - Most common: Product & Engineering (34), Sales & Marketing (19), Customer Support (17), Operations (14), IT (10)
+   - Also: Executive/Leadership (6), HR (3), Legal & Compliance (3), Finance (2), Data Analysis (2)
+   - We should limit Claude to ONLY these standardized functions, not invent new ones
+
+3. **What actually needs to be done:**
+   - Update the match_use_cases prompt in company_analyzer.py (line ~506) to:
+     - Return evidence-based examples organized by business function
+     - Include real company examples with metrics from case studies
+     - Use ONLY the standardized business functions from the case studies
+     - Structure: businessFunctions → examples from real companies → metrics
+   - Update UseCaseMatches.jsx to display the new structure with real examples
+
+4. **Key file locations:**
+   - Company analysis prompts: `/backend/data/templates/company_website_prompt.txt` and `company_description_prompt.txt`
+   - ROI matching prompt: In `company_analyzer.py` in the `match_use_cases` method starting at line 506
+   - Frontend display: `/frontend-next/src/components/analysis/UseCaseMatches.jsx`
+
+5. **The complete flow is:**
+   ```
+   Input (company description/website) 
+   ↓
+   Claude analyzes and extracts roles (using template prompts)
+   ↓ 
+   User reviews/edits in FormReview UI
+   ↓
+   Claude matches to use cases with real examples (match_use_cases method)
+   ↓
+   Frontend displays examples and calculates ROI
+   ```
+
+### New JSON Structure for match_use_cases Response
+
+**Current Structure (generic suggestions):**
+```json
+{
+  "useCases": [
+    {
+      "id": "customer_service",
+      "name": "Customer Service Automation",
+      "relevanceScore": 85,
+      "relevanceExplanation": "Why this is relevant",
+      "targetRoles": [
+        {
+          "role": "Customer Service/Support",
+          "employeeCount": 150,
+          "timeSavings": "30-50%"
+        }
+      ],
+      "implementationIdeas": ["Generic idea 1", "Generic idea 2"],
+      "expectedBenefits": ["Generic benefit 1", "Generic benefit 2"],
+      "estimatedImplementationCost": {
+        "level": "Medium",
+        "range": "$10,000 - $20,000"
+      }
+    }
+  ]
+}
+```
+
+**New Evidence-Based Structure:**
+```json
+{
+  "businessFunctions": [
+    {
+      "id": "customer_support",
+      "name": "Customer Support",
+      "relevanceScore": 95,
+      "whyRelevant": "You have 150 customer service reps handling high inquiry volume",
+      "examples": [
+        {
+          "company": "Asana",
+          "caseStudyId": "asana",
+          "industry": "Software",
+          "size": "Enterprise",
+          "implementation": "Used Claude to handle tier-1 support tickets",
+          "metric": "40% reduction in agent workload",
+          "rolesAffected": ["Customer Service Reps", "Support Managers"],
+          "source": "asana"
+        },
+        {
+          "company": "Intercom",
+          "caseStudyId": "intercom",
+          "industry": "Software",
+          "size": "Mid-Market",
+          "implementation": "Built AI assistant for customer queries",
+          "metric": "50% faster response times",
+          "rolesAffected": ["Support Engineers"],
+          "source": "intercom"
+        }
+      ],
+      "targetRoles": [
+        {
+          "role": "Customer Service/Support",
+          "employeeCount": 150,
+          "timeSavings": "30-50%"
+        }
+      ],
+      "totalEmployeesAffected": 150,
+      "estimatedROI": "$450,000/year",
+      "estimatedImplementationCost": {
+        "level": "Medium",
+        "range": "$10,000 - $20,000"
+      },
+      "secondOrderBenefits": [
+        {
+          "benefit": "Improved Customer Satisfaction",
+          "description": "Faster responses lead to happier customers"
+        }
+      ]
+    },
+    {
+      "id": "sales_marketing",
+      "name": "Sales & Marketing",
+      "relevanceScore": 80,
+      "whyRelevant": "Your 50-person sales team could benefit from AI-powered content and outreach",
+      "examples": [
+        {
+          "company": "Copy.ai",
+          "caseStudyId": "copy-ai",
+          "industry": "Marketing",
+          "size": "SMB",
+          "implementation": "Automated marketing copy generation",
+          "metric": "10x faster content creation",
+          "rolesAffected": ["Marketing Team"],
+          "source": "copy-ai"
+        }
+      ],
+      "targetRoles": [...],
+      "estimatedROI": "$225,000/year"
+    }
+  ]
+}
+```
+
+### New UI Mockup
+
+```
+┌─────────────────────────────────────────────────────┐
+│ Annual ROI Summary                                   │
+│ [Keep existing summary cards]                        │
+└─────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────┐
+│ ✓ Customer Support (95% relevance)                  │
+│   150 employees affected • $450k annual ROI         │
+├─────────────────────────────────────────────────────┤
+│ Why this matches your company:                      │
+│ "You have 150 customer service reps handling high   │
+│  inquiry volume"                                     │
+│                                                      │
+│ How similar companies succeeded:                     │
+│                                                      │
+│ 🏢 Asana (Enterprise Software)                      │
+│    "Used Claude to handle tier-1 support tickets"   │
+│    → 40% reduction in agent workload                │
+│    [View Case Study →]                              │
+│                                                      │
+│ 🏢 Intercom (Mid-Market Software)                   │
+│    "Built AI assistant for customer queries"        │
+│    → 50% faster response times                      │
+│    [View Case Study →]                              │
+│                                                      │
+│ [ROI Details] [Implementation Cost] [Timeline]      │
+└─────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────┐
+│ ✓ Sales & Marketing (80% relevance)                 │
+│   50 employees affected • $225k annual ROI          │
+├─────────────────────────────────────────────────────┤
+│ Why this matches your company:                      │
+│ "Your 50-person sales team could benefit from       │
+│  AI-powered content and outreach"                   │
+│                                                      │
+│ How similar companies succeeded:                     │
+│                                                      │
+│ 🏢 Copy.ai (SMB Marketing)                          │
+│    "Automated marketing copy generation"             │
+│    → 10x faster content creation                    │
+│    [View Case Study →]                              │
+│                                                      │
+│ [ROI Details] [Implementation Cost] [Timeline]      │
+└─────────────────────────────────────────────────────┘
+```
+
+### Key Differences in the New Approach:
+
+1. **Organization**: By business function instead of individual use cases
+2. **Evidence**: Real company examples with metrics instead of generic ideas
+3. **Clarity**: "Why this matches" explanation specific to the analyzed company
+4. **Proof**: Direct links to case studies for credibility
+5. **Simplicity**: Cleaner UI focused on the evidence
+
+### Standardized Business Functions to Use:
+- Customer Support
+- Sales & Marketing
+- Product & Engineering
+- Operations
+- Information Technology
+- Executive/Leadership
+- Human Resources
+- Legal & Compliance
+- Finance & Accounting
+- Data Analysis & Research
+
+Remember: The goal is to show real evidence instead of generic suggestions. Every recommendation should be backed by an actual company that achieved specific, measurable results.
