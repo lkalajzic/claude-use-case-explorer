@@ -148,7 +148,11 @@ claude-use-case-explorer/
 
 # Current Implementation Progress
 
-## Overview of Changes (April 16, 2025)
+## Overview of Changes (December 19, 2024)
+
+### Latest Update: Evidence-Based Implementation Started
+
+We've begun implementing the evidence-based recommendation system that shows real company examples with metrics instead of generic suggestions.
 
 We've made significant progress on enhancing the Claude Use Case Explorer with role-based analysis and ROI calculations. Here's a summary of what's been accomplished and what's next.
 
@@ -233,3 +237,81 @@ We've made significant progress on enhancing the Claude Use Case Explorer with r
 - Links to case studies are generated with proper URL formatting
 
 For more detailed analysis, see the individual component files in the frontend-next/src/components/analysis directory, particularly UseCaseMatches.jsx which contains the ROI calculation logic.
+
+## Latest Progress (December 19, 2024)
+
+### 1. Created Enhanced Case Study Fetcher
+
+We built `fetch_missing_case_studies_v2.py` with:
+
+- **Standardized Classifications**:
+  - Industries: Using GICS (Global Industry Classification Standard) - 11 sectors
+  - Business Functions: 9 standard roles (Executive/Leadership, Sales & Marketing, etc.)
+  - Company Size: SMB, Mid-Market, Enterprise
+
+- **Two-Phase Processing**:
+  - Phase 1: Downloads HTML files locally (saves on API calls, allows retries)
+  - Phase 2: Processes with Claude API using rate limiting
+
+- **Smart Rate Limiting**:
+  - Tracks 40k input / 16k output tokens per minute
+  - Automatically waits when approaching limits
+  - Processes ~6 case studies per minute safely
+
+- **Enhanced Extraction**:
+  - Captures business functions with use case types
+  - Extracts quantitative metrics with source quotes
+  - Maps all use cases to standard business functions
+
+### 2. Successfully Extracted New Case Studies
+
+Tested and confirmed extraction includes:
+- Standardized industry/function classification
+- Complete metrics and benefits
+- Role mappings for ROI calculations
+- Evidence-based examples with real data
+
+### Next Steps
+
+1. **Run Full Extraction**:
+   ```bash
+   cd backend
+   python fetch_missing_case_studies_v2.py
+   # Enter "all" to process all 42 missing case studies
+   ```
+
+2. **Analyze Extracted Data**:
+   - Aggregate business functions across all case studies
+   - Create business_functions.json taxonomy
+   - Map common use case patterns
+
+3. **Update Backend**:
+   - Modify company_analyzer.py to use new structure
+   - Update match_use_cases to pull real examples
+   - Implement evidence-based matching
+
+4. **Update Frontend**:
+   - Modify UseCaseMatches.jsx to display:
+     - Business functions sorted by relevance/ROI
+     - Real company examples under each function
+     - Direct links to case studies
+   - Create new components as outlined in evidence-based-implementation-plan.md
+
+### To Continue Work
+
+1. The enhanced fetcher is ready at `backend/fetch_missing_case_studies_v2.py`
+2. Run it to extract all missing case studies (~10 minutes)
+3. The extracted data will have standardized GICS industries and business functions
+4. This enables showing real examples: "For your 150 Customer Support reps, here's how companies in Health Care achieved 40% time savings..."
+
+# New Evidence-Based Use Case Implementation Plan
+
+We've created a comprehensive plan for enhancing the recommendation system by organizing use cases by business function and providing real-world evidence with concrete metrics from actual companies. The detailed plan is in `/Users/luka/Documents/coding/claude-use-case-explorer/evidence-based-implementation-plan.md`.
+
+Key changes include:
+1. Organizing by business functions (Customer Support, Marketing, Sales, etc.) sorted by relevance and ROI
+2. Showing real case study examples with actual metrics instead of generic suggestions
+3. Adding direct links to company case studies for deeper exploration
+4. Preserving the existing ROI calculation functionality
+
+The implementation will be phased to ensure minimum disruption, starting with backend changes to the Claude prompt, followed by frontend updates to display the new structure.

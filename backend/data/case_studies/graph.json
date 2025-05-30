@@ -1,102 +1,109 @@
 {
-  "url": "https://www.anthropic.com/customers/graph",
-  "data": {
-    "companyInfo": {
-      "name": "LaunchNotes",
-      "industry": "Software Development/Engineering Productivity",
-      "size": "16-person team",
-      "region": "Not mentioned"
-    },
-    "implementation": {
-      "useCase": "LaunchNotes uses Claude in Amazon Bedrock to power their core product management platform and their new developer productivity solution called Graph. Graph combines data from GitHub, Jira, and Linear with Claude's analysis to help R&D teams understand the context behind their development metrics and improve engineering team productivity.",
-      "problem": "Engineering managers are facing increased pressure to maintain productivity despite downsizing, with many now overseeing significantly larger teams (from 5 to 15 team members). This expansion creates challenges in maintaining team alignment, ensuring project visibility, and proactively addressing bottlenecks.",
-      "model": "Claude (specific version not mentioned)",
-      "integrationMethod": "Amazon Bedrock",
-      "implementationTime": "Not mentioned"
-    },
-    "outcomes": {
-      "metrics": [
-        {
-          "value": "5x",
-          "metric": "faster incident identification for site reliability engineering (SRE) teams",
-          "sourceText": "\u2022 5x faster incident identification for site reliability engineering (SRE) teams"
-        },
-        {
-          "value": "50%",
-          "metric": "reduction in meeting time through personalized, automated updates",
-          "sourceText": "\u2022 50% reduction in meeting time through personalized, automated updates"
-        },
-        {
-          "value": "seconds",
-          "metric": "time to generate customized release notes and technical docs",
-          "sourceText": "\u2022 Generation of customized release notes and technical docs in seconds"
-        },
-        {
-          "value": "up to 5x",
-          "metric": "reduction in incident identification time for SRE teams",
-          "sourceText": "\u2022 Reduces incident identification time by up to 5x for SRE teams"
-        },
-        {
-          "value": "50%",
-          "metric": "reduction in stand-up meeting time through automated updates",
-          "sourceText": "\u2022 Cuts stand-up meeting time by 50% through automated updates"
-        },
-        {
-          "value": "seconds",
-          "metric": "time to generate tailored, up-to-date release notes",
-          "sourceText": "\u2022 Generates tailored, up-to-date release notes in seconds"
-        }
+  "id": "graph",
+  "companyName": "LaunchNotes",
+  "companyDescription": "Product management platform and developer productivity solutions for engineering teams",
+  "industry": "Information Technology",
+  "companySize": "SMB",
+  "region": "Not specified",
+  "businessFunctions": [
+    {
+      "function": "Product & Engineering",
+      "isPrimary": true,
+      "useCaseTypes": [
+        "Sprint Analysis",
+        "Incident Identification",
+        "Release Notes Generation",
+        "Technical Documentation"
       ],
-      "qualitativeBenefits": [
-        {
-          "benefit": "Enabled expansion into new market opportunities",
-          "detail": "Claude's capabilities gave LaunchNotes confidence to develop Graph and enter a new market",
-          "sourceText": "\"Without Claude, we might not have felt confident enough to take the bet on Graph,\" said Tyler Davis, CEO at LaunchNotes. \"Having a platform our engineering team was familiar with made all the difference. Claude has literally enabled us, as a business, to attack an entirely new market opportunity.\""
-        },
-        {
-          "benefit": "Improved data privacy and security",
-          "detail": "Amazon Bedrock allows LaunchNotes to keep customer data within their control",
-          "sourceText": "\"What we value most about Bedrock is the straightforward access to the Anthropic foundational models while keeping our customers' data within our control,\" said Davis. \"This means we can focus on building a great user experience while ensuring our data privacy and security are sound.\""
-        },
-        {
-          "benefit": "Enhanced scalability and availability",
-          "detail": "Bedrock's AWS integration enabled more efficient scaling and high availability",
-          "sourceText": "\"Bedrock has enabled deeper integrations with our database and search infrastructure allowing us to scale real-time updates more efficiently,\" said Davis. \"Cross-region inference has allowed us to maintain true high availability.\""
-        },
-        {
-          "benefit": "Standardization of AI tools across the company",
-          "detail": "Team consolidated on Claude instead of using multiple AI tools",
-          "sourceText": "\"When we switched to Claude, we asked everyone to stop paying for other AI tools and standardize on the team plan,\" said Brereton."
-        },
-        {
-          "benefit": "Provides shared context for team meetings",
-          "detail": "Eliminates need for manual preparation of meeting materials",
-          "sourceText": "\u2022 Provides shared context for team meetings without manual preparation"
-        }
+      "rolesAffected": [
+        "Engineering Manager",
+        "SRE Teams",
+        "Product Manager"
       ],
-      "timeToValue": "Not mentioned",
-      "roi": "Not mentioned"
+      "description": "Transforms engineering data into actionable insights, automates documentation, and accelerates incident response"
     },
-    "technicalDetails": {
-      "architecture": "Graph functions as an ETL platform with Claude managing the data pipelines. It pulls data from Linear and GitHub, processes it, and delivers results when engineering managers request analyses.",
-      "promptEngineering": "Not mentioned",
-      "challenges": "Not specifically mentioned",
-      "solutions": "Not specifically mentioned",
-      "scale": "Not mentioned"
+    {
+      "function": "Sales & Marketing",
+      "isPrimary": false,
+      "useCaseTypes": [
+        "Content Creation",
+        "Marketing Announcements"
+      ],
+      "rolesAffected": [
+        "Marketing Team",
+        "Product Marketing"
+      ],
+      "description": "AI writing assistant converts PRDs and tech specs into marketing-grade announcements"
     },
-    "confidenceScore": {
-      "overall": "4",
-      "metrics": "5",
-      "companyInfo": "3",
-      "implementation": "4"
-    },
-    "metadata": {
-      "source": "https://www.anthropic.com/customers/graph",
-      "extractionDate": "2023-11-09",
-      "version": "1.0"
+    {
+      "function": "Operations",
+      "isPrimary": false,
+      "useCaseTypes": [
+        "Meeting Automation",
+        "Status Updates"
+      ],
+      "rolesAffected": [
+        "Engineering Managers",
+        "Team Leads"
+      ],
+      "description": "Automated updates reduce meeting time and provide shared context without manual preparation"
     }
+  ],
+  "implementation": {
+    "useCases": [
+      "Engineering data analysis and insights",
+      "AI writing assistant for announcements",
+      "Automated documentation generation",
+      "Meeting automation and updates"
+    ],
+    "approach": "ETL platform with Claude managing data pipelines, integrated with GitHub, Jira, and Linear",
+    "model": "Claude in Amazon Bedrock",
+    "integrationMethod": "API integration with AWS infrastructure",
+    "timeline": "Not specified",
+    "cost": "Not specified"
   },
-  "cost": 0.025748999999999998,
-  "success": true,
-  "processed_at": "2025-03-06 19:32:06"
+  "results": {
+    "quantitativeMetrics": [
+      {
+        "metric": "Incident identification speed",
+        "value": "5x faster",
+        "context": "For site reliability engineering (SRE) teams",
+        "source": "Teams using Graph with Claude in Amazon Bedrock have achieved: 5x faster incident identification for site reliability engineering (SRE) teams"
+      },
+      {
+        "metric": "Meeting time reduction",
+        "value": "50%",
+        "context": "Through personalized, automated updates",
+        "source": "50% reduction in meeting time through personalized, automated updates"
+      },
+      {
+        "metric": "Documentation generation speed",
+        "value": "Seconds",
+        "context": "Generation of customized release notes and technical docs",
+        "source": "Generation of customized release notes and technical docs in seconds"
+      }
+    ],
+    "qualitativeBenefits": [
+      {
+        "benefit": "Enhanced engineering management capability",
+        "description": "Enables managers to oversee larger teams while maintaining quality leadership",
+        "source": "Many engineering managers who previously oversaw teams of five now manage fifteen, yet still need to deliver the same quality of leadership and results"
+      },
+      {
+        "benefit": "New market opportunity enablement",
+        "description": "Claude enabled LaunchNotes to confidently enter an entirely new market",
+        "source": "Without Claude, we might not have felt confident enough to take the bet on Graph... Claude has literally enabled us, as a business, to attack an entirely new market opportunity"
+      },
+      {
+        "benefit": "Proactive problem prevention",
+        "description": "Helps engineering managers anticipate and prevent problems before escalation",
+        "source": "Our goal is to help engineering managers anticipate and prevent problems before they escalate"
+      }
+    ]
+  },
+  "metadata": {
+    "extractionDate": "2024-12-19",
+    "confidence": 5,
+    "dataQuality": "High"
+  }
 }

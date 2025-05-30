@@ -1,14 +1,115 @@
 {
-  "url": "https://www.anthropic.com/customers/magicschool",
-  "data": {
-    "companyInfo": {
-      "name": "MagicSchool",
-      "industry": "Education Technology (EdTech)"
+  "id": "magicschool",
+  "companyName": "MagicSchool",
+  "companyDescription": "AI copilot platform for K-12 educators and students that streamlines lesson planning, provides personalized feedback, and creates educational content",
+  "industry": "Information Technology",
+  "companySize": "SMB",
+  "region": "United States",
+  "businessFunctions": [
+    {
+      "function": "Product & Engineering",
+      "isPrimary": true,
+      "useCaseTypes": [
+        "AI-Powered Content Generation",
+        "Educational Tool Development",
+        "Platform Architecture"
+      ],
+      "rolesAffected": [
+        "Product Managers",
+        "Software Engineers",
+        "AI Engineers"
+      ],
+      "description": "Core platform development using Claude to power educational content generation and AI assistance tools"
     },
-    "extraction_error": "Expecting ',' delimiter: line 57 column 112 (char 2929)",
-    "partial_json": "{\n  \"companyInfo\": {\n    \"name\": \"MagicSchool\",\n    \"industry\": \"Education Technology (EdTech)\",\n    \"size\": \"Not mentioned\",\n    \"region\": \"United States (with global presence)\"\n  },\n  \"implementation\": {\n    \"useCase\": \"AI copilot for educators and students that streamlines lesson planning, provides personalized student feedback, creates engaging content, generates curriculum plans, quizzes, behavior support plans, report card comments, and Individual Education Plans (IEPs).\",\n    \"problem\": \""
+    {
+      "function": "Customer Support",
+      "isPrimary": false,
+      "useCaseTypes": [
+        "User Experience Enhancement",
+        "Educational Support"
+      ],
+      "rolesAffected": [
+        "Customer Success Managers",
+        "Educational Consultants"
+      ],
+      "description": "Supporting 3 million educators and 1 million students with AI-powered educational assistance"
+    }
+  ],
+  "implementation": {
+    "useCases": [
+      "Lesson plan generation",
+      "Quiz and curriculum creation",
+      "IEP generator",
+      "Writing feedback tool",
+      "Spiral review math problems",
+      "Report card comments",
+      "Behavior support plans"
+    ],
+    "approach": "Transitioned from OpenAI to Claude for better educational alignment and safety",
+    "model": "Claude",
+    "integrationMethod": "API",
+    "timeline": "Not specified",
+    "cost": "Not specified"
   },
-  "cost": 0.025695,
-  "success": true,
-  "processed_at": "2025-03-06 19:35:29"
+  "results": {
+    "quantitativeMetrics": [
+      {
+        "metric": "User adoption",
+        "value": "3 million",
+        "context": "Educators actively using the platform",
+        "source": "With Claude, MagicSchool supports: 3 million educators actively using the platform"
+      },
+      {
+        "metric": "AI engagements",
+        "value": "100 million+",
+        "context": "AI-powered engagements on the platform",
+        "source": "Over 100 million AI-powered engagements"
+      },
+      {
+        "metric": "Partnership growth",
+        "value": "5,500+",
+        "context": "School and district partnerships",
+        "source": "5,500+ school & district partnerships"
+      },
+      {
+        "metric": "Student reach",
+        "value": "1 million",
+        "context": "Students reached through teacher-guided AI interactions",
+        "source": "1 million students reached through teacher-guided AI interactions"
+      },
+      {
+        "metric": "Privacy rating",
+        "value": "93%",
+        "context": "Privacy rating from Common Sense Media",
+        "source": "Their 93% privacy rating from Common Sense Media significantly outperforms other AI platforms"
+      }
+    ],
+    "qualitativeBenefits": [
+      {
+        "benefit": "Reduced teacher burnout",
+        "description": "Teachers can reclaim nights and weekends previously consumed by administrative tasks",
+        "source": "With Claude, MagicSchool is transforming how teachers work, allowing them to reclaim nights and weekends that had previously been consumed by background tasks"
+      },
+      {
+        "benefit": "Improved educational outcomes",
+        "description": "Aurora Public Schools reported significant advancements in state performance ratings",
+        "source": "Aurora Public Schools in Colorado reported significant advancements in state performance ratings, with schools showing the greatest improvements having high concentrations of MagicSchool users"
+      },
+      {
+        "benefit": "Enhanced content quality",
+        "description": "Claude produces more challenging and creative worksheets with reliable answer keys",
+        "source": "In A/B testing, they found Claude consistently produced more challenging and creative worksheets, along with more reliable answer keys"
+      },
+      {
+        "benefit": "Responsible AI education",
+        "description": "Students learn to use AI as a thinking partner rather than replacement",
+        "source": "Instead of using AI to do their thinking for them, students turn to MagicSchool to get early feedback on their assignments"
+      }
+    ]
+  },
+  "metadata": {
+    "extractionDate": "2024-12-19",
+    "confidence": 5,
+    "dataQuality": "High"
+  }
 }

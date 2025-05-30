@@ -1,14 +1,122 @@
 {
-  "url": "https://www.anthropic.com/customers/studyfetch",
-  "data": {
-    "companyInfo": {
-      "name": "StudyFetch",
-      "industry": "Education Technology"
+  "id": "studyfetch",
+  "companyName": "StudyFetch",
+  "companyDescription": "AI-powered personalized learning platform that transforms educational content into interactive learning experiences with AI tutor support",
+  "industry": "Information Technology",
+  "companySize": "SMB",
+  "region": "Global (US-based)",
+  "businessFunctions": [
+    {
+      "function": "Product & Engineering",
+      "isPrimary": true,
+      "useCaseTypes": [
+        "AI Tutor Development",
+        "Content Processing",
+        "Platform Development"
+      ],
+      "rolesAffected": [
+        "Product Managers",
+        "Software Engineers",
+        "AI Engineers"
+      ],
+      "description": "Core platform development and AI tutor (Spark.E) implementation using Claude for natural language processing and content analysis"
     },
-    "extraction_error": "Expecting ',' delimiter: line 57 column 102 (char 3140)",
-    "partial_json": "{\n  \"companyInfo\": {\n    \"name\": \"StudyFetch\",\n    \"industry\": \"Education Technology\",\n    \"size\": \"Not mentioned\",\n    \"region\": \"Global (with US presence)\"\n  },\n  \"implementation\": {\n    \"useCase\": \"StudyFetch built an AI-powered learning platform that transforms educational content into personalized learning experiences. The platform includes an AI tutor called Spark.E that can analyze lectures, generate study materials, provide 24/7 tutoring support, and assist students in mastering complex "
+    {
+      "function": "Customer Support",
+      "isPrimary": true,
+      "useCaseTypes": [
+        "24/7 AI Tutoring",
+        "Student Query Resolution",
+        "Personalized Learning Support"
+      ],
+      "rolesAffected": [
+        "AI Tutor (Spark.E)",
+        "Student Success Teams"
+      ],
+      "description": "Provides round-the-clock tutoring support and personalized learning assistance to millions of students"
+    },
+    {
+      "function": "Operations",
+      "isPrimary": false,
+      "useCaseTypes": [
+        "Content Processing",
+        "Analytics",
+        "Performance Tracking"
+      ],
+      "rolesAffected": [
+        "Operations Teams",
+        "Data Analysts"
+      ],
+      "description": "Processes thousands of lectures and course materials daily, tracks student progress and learning outcomes"
+    }
+  ],
+  "implementation": {
+    "useCases": [
+      "AI-powered tutoring",
+      "Educational content analysis and summarization",
+      "Personalized study material generation",
+      "Multi-language learning support",
+      "Spaced repetition flashcard creation"
+    ],
+    "approach": "Comprehensive learning platform with AI tutor Spark.E powered by Claude for natural language interaction and content processing",
+    "model": "Claude 3.5 Sonnet, Claude 3 Haiku",
+    "integrationMethod": "API integration",
+    "timeline": "Rapid implementation - new Claude features deployed within 48 hours of release",
+    "cost": "Not specified"
   },
-  "cost": 0.029988,
-  "success": true,
-  "processed_at": "2025-03-06 19:48:24"
+  "results": {
+    "quantitativeMetrics": [
+      {
+        "metric": "Language support",
+        "value": "20+",
+        "context": "Languages supported for global learning",
+        "source": "20+ language support enabling global learning"
+      },
+      {
+        "metric": "Daily content processing",
+        "value": "Thousands",
+        "context": "Lectures and course materials processed daily",
+        "source": "Processing and analysis of thousands of lectures and course materials daily"
+      },
+      {
+        "metric": "User engagement",
+        "value": "240+ days",
+        "context": "Maximum study streaks maintained by students",
+        "source": "some students maintaining study streaks of over 240 days"
+      },
+      {
+        "metric": "Global reach",
+        "value": "Millions",
+        "context": "Students served globally",
+        "source": "Scale to serve millions of students globally"
+      }
+    ],
+    "qualitativeBenefits": [
+      {
+        "benefit": "Improved user satisfaction",
+        "description": "Significant improvement in response quality and user satisfaction after upgrading to Claude Haiku and Claude 3.5 Sonnet",
+        "source": "Significant improvement in response quality, shown through higher user satisfaction ratings after upgrading to Claude Haiku"
+      },
+      {
+        "benefit": "Natural human-like interaction",
+        "description": "Students feel comfortable engaging with AI tutor due to Claude's natural communication style",
+        "source": "We saw immediately that Claude sounded much more human than other AI models"
+      },
+      {
+        "benefit": "Enhanced learning outcomes",
+        "description": "Students spend hours actually learning and mastering material rather than just getting quick answers",
+        "source": "Students spend hours on our platform because they're truly mastering the material"
+      },
+      {
+        "benefit": "Global accessibility",
+        "description": "Breaking down barriers to effective learning through multi-language support and 24/7 availability",
+        "source": "Breaking down barriers to effective learning"
+      }
+    ]
+  },
+  "metadata": {
+    "extractionDate": "2024-12-19",
+    "confidence": 5,
+    "dataQuality": "High"
+  }
 }

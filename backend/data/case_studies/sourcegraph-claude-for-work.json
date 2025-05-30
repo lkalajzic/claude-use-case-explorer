@@ -1,77 +1,86 @@
 {
-  "url": "https://www.anthropic.com/customers/sourcegraph-claude-for-work",
-  "data": {
-    "companyInfo": {
-      "name": "Sourcegraph",
-      "industry": "Code intelligence software",
-      "size": "Not mentioned",
-      "region": "Not mentioned"
-    },
-    "implementation": {
-      "useCase": "Using Claude to analyze and synthesize community feedback and competitor sentiment to generate actionable insights for the product team",
-      "problem": "Disconnect between community feedback and product team, need to efficiently process user feedback to reduce churn and increase retention",
-      "model": "Claude 3.5 Sonnet",
-      "integrationMethod": "Project-based workflow with PDF uploads",
-      "implementationTime": "Not mentioned"
-    },
-    "outcomes": {
-      "metrics": [
-        {
-          "value": "95%",
-          "metric": "Completion of structured reports that require only final refinements before sending to product managers",
-          "sourceText": "Claude gets it 95% of the way there, and then our team adds final refinements before sending the report to the product managers"
-        }
+  "id": "sourcegraph-claude-for-work",
+  "companyName": "Sourcegraph",
+  "companyDescription": "Code intelligence company that builds tools for developers to search and navigate code across entire codebases",
+  "industry": "Information Technology",
+  "companySize": "SMB",
+  "region": "Not specified",
+  "businessFunctions": [
+    {
+      "function": "Product & Engineering",
+      "isPrimary": true,
+      "useCaseTypes": [
+        "Community Feedback Analysis",
+        "Product Development Insights",
+        "User Requirements Processing"
       ],
-      "qualitativeBenefits": [
-        {
-          "benefit": "Accelerated community feedback analysis",
-          "detail": "Automating feedback processing to free up employees for high-value tasks",
-          "sourceText": "By automating much of their feedback process, Claude has freed up employees to focus on high-value tasks and take action on insights quickly, increasing overall productivity."
-        },
-        {
-          "benefit": "Increased product team responsiveness",
-          "detail": "Better connection between community feedback and product development",
-          "sourceText": "Claude has also created a feedback loop between community input and product development. This cycle ensures that Sourcegraph's products continue to evolve in line with user needs and expectations."
-        },
-        {
-          "benefit": "Simplified competitor sentiment analysis",
-          "detail": "Created a dashboard to track and compare user sentiment across competitors",
-          "sourceText": "Competitor sentiment dashboard: Sourcegraph created a dashboard using Claude to track and compare user sentiment across competitors."
-        },
-        {
-          "benefit": "Improved regional performance feedback",
-          "detail": "Identifying and addressing regional performance issues",
-          "sourceText": "With Claude's analysis, Sourcegraph is able to identify and address regional performance feedback, leading to more tailored solutions for their global user base."
-        },
-        {
-          "benefit": "Enhanced customer satisfaction and retention",
-          "detail": "Faster issue resolution based on feedback analysis",
-          "sourceText": "This approach has contributed to improved customer satisfaction and retention through faster issue resolution."
-        }
+      "rolesAffected": [
+        "Product Manager",
+        "Product Team"
       ],
-      "timeToValue": "Not mentioned",
-      "roi": "Not mentioned"
+      "description": "Transforms community feedback into actionable insights for product development and increases responsiveness to user needs"
     },
-    "technicalDetails": {
-      "architecture": "Not mentioned",
-      "promptEngineering": "Not mentioned",
-      "challenges": "Disconnect between community feedback and product team",
-      "solutions": "Weekly community feedback reports and competitor sentiment dashboard",
-      "scale": "Not mentioned"
-    },
-    "confidenceScore": {
-      "overall": "4",
-      "metrics": "4",
-      "companyInfo": "3",
-      "implementation": "4"
-    },
-    "metadata": {
-      "source": "https://www.anthropic.com/customers/sourcegraph-claude-for-work",
-      "extractionDate": "2023-11-09",
-      "version": "1.0"
+    {
+      "function": "Sales & Marketing",
+      "isPrimary": false,
+      "useCaseTypes": [
+        "Community Management",
+        "Competitor Analysis",
+        "Sentiment Tracking"
+      ],
+      "rolesAffected": [
+        "Open Source Community Manager"
+      ],
+      "description": "Processes community feedback, creates competitor sentiment dashboards, and manages open-source community engagement"
     }
+  ],
+  "implementation": {
+    "useCases": [
+      "Weekly community feedback report generation",
+      "Competitor sentiment analysis dashboard",
+      "Community feedback synthesis"
+    ],
+    "approach": "Upload PDFs to Claude Projects and generate structured reports",
+    "model": "Claude 3.5 Sonnet",
+    "integrationMethod": "Web interface",
+    "timeline": "Not specified",
+    "cost": "Not specified"
   },
-  "cost": 0.017763,
-  "success": true,
-  "processed_at": "2025-03-06 19:33:37"
+  "results": {
+    "quantitativeMetrics": [
+      {
+        "metric": "Output accuracy",
+        "value": "95%",
+        "context": "Claude gets reports 95% of the way there before final refinements",
+        "source": "Claude gets it 95% of the way there, and then our team adds final refinements before sending the report to the product managers"
+      }
+    ],
+    "qualitativeBenefits": [
+      {
+        "benefit": "Improved productivity",
+        "description": "Freed up employees to focus on high-value tasks and take action on insights quickly",
+        "source": "By automating much of their feedback process, Claude has freed up employees to focus on high-value tasks and take action on insights quickly, increasing overall productivity"
+      },
+      {
+        "benefit": "Enhanced customer satisfaction",
+        "description": "Improved customer satisfaction and retention through faster issue resolution",
+        "source": "This approach has contributed to improved customer satisfaction and retention through faster issue resolution"
+      },
+      {
+        "benefit": "Strategic work enablement",
+        "description": "Makes work more strategic and enables teams to create higher impact work",
+        "source": "This makes our work more strategic and enables our teams to create higher impact work"
+      },
+      {
+        "benefit": "Better product-community alignment",
+        "description": "Created feedback loop between community input and product development ensuring products evolve with user needs",
+        "source": "Claude has also created a feedback loop between community input and product development. This cycle ensures that Sourcegraph's products continue to evolve in line with user needs and expectations"
+      }
+    ]
+  },
+  "metadata": {
+    "extractionDate": "2024-12-19",
+    "confidence": 5,
+    "dataQuality": "High"
+  }
 }

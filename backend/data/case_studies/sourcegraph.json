@@ -1,87 +1,77 @@
 {
-  "url": "https://www.anthropic.com/customers/sourcegraph",
+  "url": "https://www.anthropic.com/customers/sourcegraph-claude-for-work",
   "data": {
     "companyInfo": {
       "name": "Sourcegraph",
-      "industry": "Code intelligence/Developer tools",
+      "industry": "Code intelligence software",
       "size": "Not mentioned",
       "region": "Not mentioned"
     },
     "implementation": {
-      "useCase": "Integration of Claude 3 model family (Haiku, Sonnet, and Opus) into Cody, Sourcegraph's AI coding assistant, to provide context-aware chat, inline completions, inline editing, and custom commands that help developers write and understand code faster by analyzing the entire codebase.",
-      "problem": "Developers need to accelerate software development by having AI tools that can understand entire codebases in context rather than isolated code snippets, while balancing speed, intelligence, and cost.",
-      "model": "Claude 3 family (Haiku, Sonnet, and Opus)",
-      "integrationMethod": "Claude models are integrated into Cody's chat and custom command features, with different models available based on subscription tier",
+      "useCase": "Using Claude to analyze and synthesize community feedback and competitor sentiment to generate actionable insights for the product team",
+      "problem": "Disconnect between community feedback and product team, need to efficiently process user feedback to reduce churn and increase retention",
+      "model": "Claude 3.5 Sonnet",
+      "integrationMethod": "Project-based workflow with PDF uploads",
       "implementationTime": "Not mentioned"
     },
     "outcomes": {
       "metrics": [
         {
-          "value": "75 percent",
-          "metric": "increase in code insert rate (users taking Cody's suggestions and inserting them directly into their files)",
-          "sourceText": "Since rolling out Claude 3 Sonnet as the default model to Cody Free users, Sourcegraph has seen an approximate 75 percent increase in code insert rate; Cody users are taking almost twice as much code from Cody's suggestions and inserting it directly into their files, which indicates an increase in code quality."
-        },
-        {
-          "value": "twice as fast",
-          "metric": "delivery of chat and command responses compared to previous model",
-          "sourceText": "Claude 3 Sonnet delivers chat and command responses at twice the speed of its predecessor, which further accelerates the coding process."
-        },
-        {
-          "value": "55 percent",
-          "metric": "of Cody Pro users switched their default model to the new Claude 3 models in the month following launch",
-          "sourceText": "Sourcegraph also saw that roughly 55 percent of Cody Pro users switched their default model to the new Claude 3 models in the month following the launch."
-        },
-        {
-          "value": "two times",
-          "metric": "the speed of Anthropic's previous model, Claude 2.1",
-          "sourceText": "Claude 3 Sonnet serves as the default model for the free version of Cody, with improved coding abilities and two times the speed of Anthropic's previous model, Claude 2.1."
+          "value": "95%",
+          "metric": "Completion of structured reports that require only final refinements before sending to product managers",
+          "sourceText": "Claude gets it 95% of the way there, and then our team adds final refinements before sending the report to the product managers"
         }
       ],
       "qualitativeBenefits": [
         {
-          "benefit": "Improved code quality",
-          "detail": "Users are inserting more of Cody's suggestions directly into their files",
-          "sourceText": "Cody users are taking almost twice as much code from Cody's suggestions and inserting it directly into their files, which indicates an increase in code quality."
+          "benefit": "Accelerated community feedback analysis",
+          "detail": "Automating feedback processing to free up employees for high-value tasks",
+          "sourceText": "By automating much of their feedback process, Claude has freed up employees to focus on high-value tasks and take action on insights quickly, increasing overall productivity."
         },
         {
-          "benefit": "Better context understanding",
-          "detail": "Claude 3 Opus provides near-perfect recall accuracy for large amounts of code context",
-          "sourceText": "With the near-perfect recall accuracy of Claude 3 Opus, Cody gives developers even better results because it can understand large amounts of code context without missing key information."
+          "benefit": "Increased product team responsiveness",
+          "detail": "Better connection between community feedback and product development",
+          "sourceText": "Claude has also created a feedback loop between community input and product development. This cycle ensures that Sourcegraph's products continue to evolve in line with user needs and expectations."
         },
         {
-          "benefit": "Production-ready code generation",
-          "detail": "Claude 3 models can generate code without requiring manual intervention",
-          "sourceText": "Claude 3 models excel at following instructions, generating production-ready code without requiring manual intervention or code snippets"
+          "benefit": "Simplified competitor sentiment analysis",
+          "detail": "Created a dashboard to track and compare user sentiment across competitors",
+          "sourceText": "Competitor sentiment dashboard: Sourcegraph created a dashboard using Claude to track and compare user sentiment across competitors."
         },
         {
-          "benefit": "Flexible model options for different needs",
-          "detail": "Different Claude 3 models optimized for various use cases",
-          "sourceText": "Optimized for different levels of speed and intelligence, each Claude 3 model excels at different functions within Cody while helping Sourcegraph keep its costs low without compromising quality."
+          "benefit": "Improved regional performance feedback",
+          "detail": "Identifying and addressing regional performance issues",
+          "sourceText": "With Claude's analysis, Sourcegraph is able to identify and address regional performance feedback, leading to more tailored solutions for their global user base."
+        },
+        {
+          "benefit": "Enhanced customer satisfaction and retention",
+          "detail": "Faster issue resolution based on feedback analysis",
+          "sourceText": "This approach has contributed to improved customer satisfaction and retention through faster issue resolution."
         }
       ],
       "timeToValue": "Not mentioned",
       "roi": "Not mentioned"
     },
     "technicalDetails": {
-      "architecture": "Cody integrates Claude 3 models to power features like codebase-aware chat, inline completions, inline editing, and custom commands. Claude 3 Sonnet is the default model for free users, while Pro and Enterprise users can access Opus, and Haiku is available for speed-critical use cases.",
-      "promptEngineering": "Not mentioned specifically, but the case study indicates they provide codebase context to Claude to enable accurate answers about private codebases",
-      "challenges": "Not explicitly mentioned",
-      "solutions": "Not explicitly mentioned",
-      "scale": "Claude 3 models have a 200K context window that Sourcegraph plans to leverage for bringing in additional context sources"
+      "architecture": "Not mentioned",
+      "promptEngineering": "Not mentioned",
+      "challenges": "Disconnect between community feedback and product team",
+      "solutions": "Weekly community feedback reports and competitor sentiment dashboard",
+      "scale": "Not mentioned"
     },
     "confidenceScore": {
       "overall": "4",
-      "metrics": "5",
+      "metrics": "4",
       "companyInfo": "3",
       "implementation": "4"
     },
     "metadata": {
-      "source": "https://www.anthropic.com/customers/sourcegraph",
-      "extractionDate": "2023-06-13",
+      "source": "https://www.anthropic.com/customers/sourcegraph-claude-for-work",
+      "extractionDate": "2023-11-09",
       "version": "1.0"
     }
   },
-  "cost": 0.025859999999999998,
+  "cost": 0.017763,
   "success": true,
-  "processed_at": "2025-03-06 19:32:57"
+  "processed_at": "2025-03-06 19:33:37"
 }

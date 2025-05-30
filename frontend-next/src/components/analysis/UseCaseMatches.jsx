@@ -571,17 +571,6 @@ const UseCaseMatches = ({ matches }) => {
                   </div>
                 </div>
 
-                <div className="mb-4">
-                  <h4 className="text-sm font-medium text-gray-700 mb-2">
-                    Potential Challenges
-                  </h4>
-                  <ul className="list-disc pl-5 text-sm text-gray-600">
-                    {match.expectedChallenges.map((challenge, idx) => (
-                      <li key={idx}>{challenge}</li>
-                    ))}
-                  </ul>
-                </div>
-                
                 {/* Second-Order Benefits for this use case */}
                 {match.secondOrderBenefits && match.secondOrderBenefits.length > 0 && (
                   <div className="mb-4 p-3 bg-teal-50 rounded-md">

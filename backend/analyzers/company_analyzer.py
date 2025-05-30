@@ -533,9 +533,8 @@ Company Description:
         3. The specific employee roles that would benefit from this use case
         4. The approximate number of employees that would use this solution
         5. Potential implementation ideas specific to this company
-        6. Expected challenges for implementation
-        7. Expected benefits and ROI factors for this use case
-        8. Second-order benefits that go beyond direct time/cost savings
+        6. Expected benefits and ROI factors for this use case
+        7. Second-order benefits that go beyond direct time/cost savings
         
         Return ONLY a JSON object with this structure (NO MARKDOWN OR TEXT, ONLY JSON):
         {{
@@ -559,7 +558,6 @@ Company Description:
               ],
               "totalEmployeesAffected": 150,
               "implementationIdeas": ["Specific idea 1", "Specific idea 2"],
-              "expectedChallenges": ["Challenge 1", "Challenge 2"],
               "expectedBenefits": ["Benefit 1", "Benefit 2"],
               "secondOrderBenefits": [
                 {{

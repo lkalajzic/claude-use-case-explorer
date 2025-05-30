@@ -1,0 +1,344 @@
+{
+  "business_functions": [
+    "Consulting Services",
+    "Creative & Media Production",
+    "Customer Support",
+    "Data Analysis & Research",
+    "Executive/Leadership",
+    "Finance & Accounting",
+    "Human Resources",
+    "Information Technology",
+    "Legal & Compliance",
+    "Marketing & Content Creation",
+    "Operations",
+    "Product & Engineering",
+    "Product Development & Engineering",
+    "Sales & Marketing",
+    "Sales & Revenue Operations"
+  ],
+  "function_details": {
+    "Consulting Services": {
+      "total_occurrences": 1,
+      "primary_occurrences": 1,
+      "common_use_case_types": [
+        "Client Document Analysis",
+        "Business Process Automation",
+        "AI Implementation Consulting"
+      ],
+      "common_roles": [
+        "Consultants",
+        "AI Specialists",
+        "Client Service Teams"
+      ]
+    },
+    "Creative & Media Production": {
+      "total_occurrences": 1,
+      "primary_occurrences": 1,
+      "common_use_case_types": [
+        "Creative Strategy",
+        "Content Development",
+        "Media Analysis"
+      ],
+      "common_roles": [
+        "Creative Professionals",
+        "Strategists",
+        "Content Creators"
+      ]
+    },
+    "Customer Support": {
+      "total_occurrences": 17,
+      "primary_occurrences": 8,
+      "common_use_case_types": [
+        "Automated Query Handling",
+        "Multi-channel Support",
+        "24/7 AI Tutoring",
+        "Voice-based Support",
+        "Data-Driven Insights",
+        "Customer Success Analytics",
+        "Automated student query handling",
+        "24/7 educational support",
+        "Personalized tutoring",
+        "Student Query Response"
+      ],
+      "common_roles": [
+        "Customer Service Representatives",
+        "Support Managers",
+        "Customer Success Teams",
+        "Students",
+        "Teachers",
+        "Customer Service Agents",
+        "Customer Experience Teams",
+        "Professors",
+        "Faculty",
+        "AI Tutor System"
+      ]
+    },
+    "Data Analysis & Research": {
+      "total_occurrences": 2,
+      "primary_occurrences": 0,
+      "common_use_case_types": [
+        "Market Research",
+        "Competitive Analysis",
+        "Data Visualization",
+        "Automated Research",
+        "Content Compilation",
+        "Multi-step Analysis"
+      ],
+      "common_roles": [
+        "Researchers",
+        "Analysts",
+        "Strategists",
+        "Content Creators"
+      ]
+    },
+    "Executive/Leadership": {
+      "total_occurrences": 6,
+      "primary_occurrences": 0,
+      "common_use_case_types": [
+        "Strategic Decision Support",
+        "Strategic Decision Making",
+        "Investment Insights",
+        "KPI Monitoring",
+        "Business Performance Analysis",
+        "Strategic Communications",
+        "Executive Communications",
+        "Cross-departmental Implementation",
+        "Analytics and Reporting",
+        "Leadership coaching"
+      ],
+      "common_roles": [
+        "Executives",
+        "C-suite",
+        "COO",
+        "CTO",
+        "Investment Team Leaders",
+        "Directors",
+        "VPs",
+        "Product Lead for AI and ML",
+        "Management",
+        "Senior Leaders"
+      ]
+    },
+    "Finance & Accounting": {
+      "total_occurrences": 2,
+      "primary_occurrences": 1,
+      "common_use_case_types": [
+        "Data Analysis",
+        "Financial Reporting",
+        "Document Analysis",
+        "Financial Analysis",
+        "Due Diligence Automation",
+        "KPI Extraction"
+      ],
+      "common_roles": [
+        "Finance Teams",
+        "Accounting Teams",
+        "Risk Teams",
+        "Investment Managers",
+        "Financial Analysts",
+        "Portfolio Managers"
+      ]
+    },
+    "Human Resources": {
+      "total_occurrences": 3,
+      "primary_occurrences": 0,
+      "common_use_case_types": [
+        "Data Analysis",
+        "Recruiting Analytics",
+        "Performance Management",
+        "Feedback Generation",
+        "Training material development",
+        "Curriculum planning"
+      ],
+      "common_roles": [
+        "Recruiting Teams",
+        "Managers",
+        "Executive Committee Members",
+        "Learning & Development Teams"
+      ]
+    },
+    "Information Technology": {
+      "total_occurrences": 10,
+      "primary_occurrences": 2,
+      "common_use_case_types": [
+        "Incident Response",
+        "AI Model Integration",
+        "Infrastructure Management",
+        "Security Scanning",
+        "Dependency Analysis",
+        "Breaking Change Detection",
+        "Data Security",
+        "System Integration",
+        "Privacy Compliance",
+        "Security Alert Analysis"
+      ],
+      "common_roles": [
+        "DevOps Engineers",
+        "Security Analysts",
+        "AI Directors",
+        "Technical Leads",
+        "Security Teams",
+        "IT Security",
+        "Data Engineers",
+        "Compliance Officers",
+        "Cybersecurity Engineers",
+        "IT Security Teams"
+      ]
+    },
+    "Legal & Compliance": {
+      "total_occurrences": 3,
+      "primary_occurrences": 3,
+      "common_use_case_types": [
+        "Document Review",
+        "Compliance Analysis",
+        "Specialized Terminology Processing",
+        "Automated compliance remediation",
+        "Security control verification",
+        "Compliance framework automation",
+        "Regulatory Document Generation",
+        "Compliance Documentation",
+        "FDA Paperwork Automation"
+      ],
+      "common_roles": [
+        "Compliance Officers",
+        "Document Reviewers",
+        "Business Analysts",
+        "Compliance Teams",
+        "Security Teams",
+        "Regulatory Affairs Specialists",
+        "Quality Assurance Managers"
+      ]
+    },
+    "Marketing & Content Creation": {
+      "total_occurrences": 1,
+      "primary_occurrences": 1,
+      "common_use_case_types": [
+        "Content Strategy",
+        "Multichannel Adaptation",
+        "Tone/Voice Generation"
+      ],
+      "common_roles": [
+        "Content Strategists",
+        "Content Creators",
+        "Marketers"
+      ]
+    },
+    "Operations": {
+      "total_occurrences": 14,
+      "primary_occurrences": 4,
+      "common_use_case_types": [
+        "Case Ticket Management",
+        "Workflow Automation",
+        "Data Access",
+        "Automated Grading",
+        "Assessment Processing",
+        "Academic Workflow Management",
+        "Internal Tool Creation",
+        "Workflow Optimization",
+        "Data Processing",
+        "Workforce Analytics"
+      ],
+      "common_roles": [
+        "Operations Teams",
+        "Data Analysts",
+        "Research Operations",
+        "Instructors",
+        "Teaching Staff",
+        "Enterprise Teams",
+        "Operations Staff",
+        "Data Managers",
+        "QA Staff",
+        "QA Team Members"
+      ]
+    },
+    "Product & Engineering": {
+      "total_occurrences": 34,
+      "primary_occurrences": 28,
+      "common_use_case_types": [
+        "Code Generation",
+        "Documentation Generation",
+        "Natural Language Processing",
+        "AI Agent Development",
+        "AI Assistant Integration",
+        "Voice Interface Enhancement",
+        "Data Feature Engineering",
+        "SQL Query Generation",
+        "Product Development",
+        "Feature Implementation"
+      ],
+      "common_roles": [
+        "Product Managers",
+        "Software Engineers",
+        "Product Manager",
+        "Software Developers",
+        "Developers",
+        "AI Engineers",
+        "Data Scientists",
+        "Engineering Teams",
+        "Research Scientists",
+        "Engineers"
+      ]
+    },
+    "Product Development & Engineering": {
+      "total_occurrences": 2,
+      "primary_occurrences": 1,
+      "common_use_case_types": [
+        "Code Optimization",
+        "Technical Documentation",
+        "UX Writing",
+        "AI Agent Orchestration",
+        "Dynamic Workflow Management",
+        "Multi-Model Coordination"
+      ],
+      "common_roles": [
+        "Engineers",
+        "Developers",
+        "UX Designers",
+        "CTO",
+        "Engineering Team",
+        "Product Developers"
+      ]
+    },
+    "Sales & Marketing": {
+      "total_occurrences": 19,
+      "primary_occurrences": 7,
+      "common_use_case_types": [
+        "Content Creation",
+        "Data Analysis",
+        "Customer Engagement",
+        "Creative Prototyping",
+        "Design Workflows",
+        "Market Research Analysis",
+        "Report Generation",
+        "Insight Discovery",
+        "Product Conceptualization",
+        "MVP Development"
+      ],
+      "common_roles": [
+        "Sales Teams",
+        "Content Creators",
+        "Marketing Teams",
+        "Marketing Team",
+        "Product Teams",
+        "Designers",
+        "Market Researchers",
+        "Product Manager",
+        "Research Analysts",
+        "Founders"
+      ]
+    },
+    "Sales & Revenue Operations": {
+      "total_occurrences": 1,
+      "primary_occurrences": 0,
+      "common_use_case_types": [
+        "Proposal Development",
+        "RFP Responses",
+        "Competitive Analysis"
+      ],
+      "common_roles": [
+        "Business Development",
+        "Client Services"
+      ]
+    }
+  }
+}

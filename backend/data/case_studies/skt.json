@@ -1,97 +1,87 @@
 {
-  "url": "https://www.anthropic.com/customers/skt",
-  "data": {
-    "companyInfo": {
-      "name": "SK Telecom",
-      "industry": "Telecommunications",
-      "size": "Enterprise (Serving millions of Koreans)",
-      "region": "South Korea"
-    },
-    "implementation": {
-      "useCase": "SK Telecom implemented Claude in two key ways: 1) In-Call Assist to provide agents with real-time document search and answers during customer calls, and 2) Post-Call Processing to automate routine tasks like summarization, topic classification, to-do list generation, and sentiment analysis after calls.",
-      "problem": "SKT needed to maintain their industry-leading customer service while addressing several challenges: limited call center hours (9-6 Monday-Friday), different preferences between older customers (phone) and younger customers (chat), and reducing the cognitive burden on overwhelmed agents while maintaining service quality across regional dialects and cultural nuances.",
-      "model": "Claude (specific version not mentioned)",
-      "integrationMethod": "Claude in Amazon Bedrock, integrated with SKT's in-house RAG (Retrieval-Augmented Generation) model",
-      "implementationTime": "Not mentioned"
-    },
-    "outcomes": {
-      "metrics": [
-        {
-          "value": "34%",
-          "metric": "increase in quality rating of LLM responses by human agents in in-call assistance",
-          "sourceText": "\u2022 The quality rating of LLM responses by human agents in in-call assistance increased by 34%"
-        },
-        {
-          "value": "68%",
-          "metric": "decrease in the proportion of low-quality responses in the Telco fine-tuned model compared to the base model",
-          "sourceText": "\u2022 The proportion of low-quality responses in the Telco fine-tuned model decreased by 68% compared to the base model"
-        },
-        {
-          "value": "89%",
-          "metric": "response quality in post-call processing compared to that of human agents",
-          "sourceText": "\u2022 The response quality in post-call processing is approximately 89% of that of human agents"
-        },
-        {
-          "value": "from 3.3 to over 4.3",
-          "metric": "improvement in performance of the Telco LLM through integration with Claude",
-          "sourceText": "This integration significantly enhanced service capabilities, boosting the performance of the Telco LLM from 3.3 to over 4.3."
-        },
-        {
-          "value": "from 3.3 to mid-4s",
-          "metric": "increase in agent evaluation scores",
-          "sourceText": "Agent evaluation scores increased significantly from 3.3 to mid-4s, meeting SKT's rigorous standards for service deployment."
-        },
-        {
-          "value": "27 years",
-          "metric": "consecutive years SKT has maintained the top position in the National Customer Satisfaction Index (NCSI)",
-          "sourceText": "SK Telecom, which has maintained the top position in the National Customer Satisfaction Index (NCSI) for 27 years, is leveraging Claude in Amazon Bedrock to further enhance its renowned customer service operations."
-        }
+  "id": "skt",
+  "companyName": "SK Telecom",
+  "companyDescription": "Korea's largest telecommunications company providing mobile, internet, and digital services",
+  "industry": "Communication Services",
+  "companySize": "Enterprise",
+  "region": "South Korea",
+  "businessFunctions": [
+    {
+      "function": "Customer Support",
+      "isPrimary": true,
+      "useCaseTypes": [
+        "In-Call Assistance",
+        "Post-Call Processing",
+        "Document Search",
+        "Automated Summarization"
       ],
-      "qualitativeBenefits": [
-        {
-          "benefit": "Improved agent wellbeing",
-          "detail": "Reduced cognitive burden on overwhelmed agents through real-time assistance",
-          "sourceText": "\"We recognized that our customer service agents are stressed, overwhelmed. We wanted human-in-the-loop technology to make their lives better,\" said Davis."
-        },
-        {
-          "benefit": "Enhanced natural communication",
-          "detail": "Claude's warmth and emotional intelligence provided more relatable and creative responses",
-          "sourceText": "\"Claude is more relatable and creative,\" said Davis. This warmth and emotional intelligence proved especially valuable in Korean customer service, where cultural nuance and empathy are essential."
-        },
-        {
-          "benefit": "Streamlined workflow",
-          "detail": "Automated routine post-call processing while maintaining quality through human oversight",
-          "sourceText": "\u2022 Automates routine post-call processing, including summarization, topic classification, to-do list generation, and sentiment analysis\n\u2022 Maintains human oversight of results\n\u2022 Streamlines workflow while ensuring quality"
-        },
-        {
-          "benefit": "Brand safety",
-          "detail": "Claude's focus on safety aligned with SKT's priority on brand protection",
-          "sourceText": "\"For us, brand safety is crucial\u2014anything that tarnishes the brand is just a no-go. Anthropic's huge focus on safety really stood out,\" said Davis."
-        }
+      "rolesAffected": [
+        "Customer Service Agents",
+        "Support Managers"
       ],
-      "timeToValue": "Not mentioned",
-      "roi": "Not mentioned"
-    },
-    "technicalDetails": {
-      "architecture": "Integration of Claude in Amazon Bedrock with SKT's in-house RAG (Retrieval-Augmented Generation) model for end-to-end retrieval-augmented generation",
-      "promptEngineering": "Not mentioned",
-      "challenges": "Performance requirements including throughput and latency, maintaining brand safety, and ensuring cultural sensitivity across regional dialects",
-      "solutions": "Amazon Bedrock enabled seamless serving of custom models and rapid scaling of resources, close collaboration between AWS and Anthropic facilitated swift issue resolution, and Claude's natural communication abilities provided the cultural sensitivity needed",
-      "scale": "Serving millions of Korean customers, supporting SKT's position as Korea's #1 customer service provider"
-    },
-    "confidenceScore": {
-      "overall": "4",
-      "metrics": "5",
-      "companyInfo": "4",
-      "implementation": "4"
-    },
-    "metadata": {
-      "source": "https://www.anthropic.com/customers/skt",
-      "extractionDate": "2023-11-09",
-      "version": "1.0"
+      "description": "Real-time agent assistance and automated post-call processing to enhance service quality and reduce agent stress"
     }
+  ],
+  "implementation": {
+    "useCases": [
+      "Real-time document search and answers for agents",
+      "Automated post-call processing including summarization and sentiment analysis",
+      "Intelligence augmentation for customer service agents"
+    ],
+    "approach": "Human-in-the-loop technology with custom RAG model integration",
+    "model": "Claude in Amazon Bedrock",
+    "integrationMethod": "Custom integration with in-house RAG model",
+    "timeline": "Not specified",
+    "cost": "Not specified"
   },
-  "cost": 0.027683999999999997,
-  "success": true,
-  "processed_at": "2025-03-06 19:20:46"
+  "results": {
+    "quantitativeMetrics": [
+      {
+        "metric": "Response quality improvement",
+        "value": "34%",
+        "context": "Quality rating of LLM responses by human agents in in-call assistance",
+        "source": "The quality rating of LLM responses by human agents in in-call assistance increased by 34%"
+      },
+      {
+        "metric": "Low-quality response reduction",
+        "value": "68%",
+        "context": "Decrease in proportion of low-quality responses in Telco fine-tuned model vs base model",
+        "source": "The proportion of low-quality responses in the Telco fine-tuned model decreased by 68% compared to the base model"
+      },
+      {
+        "metric": "Agent evaluation scores",
+        "value": "3.3 to 4.3+",
+        "context": "Overall performance improvement of Telco LLM system",
+        "source": "This integration significantly enhanced service capabilities, boosting the performance of the Telco LLM from 3.3 to over 4.3"
+      },
+      {
+        "metric": "Post-call processing quality",
+        "value": "89%",
+        "context": "Response quality compared to human agents",
+        "source": "The response quality in post-call processing is approximately 89% of that of human agents"
+      }
+    ],
+    "qualitativeBenefits": [
+      {
+        "benefit": "Reduced agent stress",
+        "description": "Technology designed to make overwhelmed agents' lives better through intelligence augmentation",
+        "source": "We recognized that our customer service agents are stressed, overwhelmed. We wanted human-in-the-loop technology to make their lives better"
+      },
+      {
+        "benefit": "Maintained service leadership",
+        "description": "Preserved 27-year position as Korea's #1 customer service provider while enhancing capabilities",
+        "source": "SKT maintained their 27-year leadership in customer service while preserving the human touch"
+      },
+      {
+        "benefit": "Cultural sensitivity preservation",
+        "description": "Maintained regional support network with local dialects and cultural nuances",
+        "source": "Claude demonstrated the cultural sensitivity needed for natural conversations across regional dialects"
+      }
+    ]
+  },
+  "metadata": {
+    "extractionDate": "2024-12-19",
+    "confidence": 5,
+    "dataQuality": "High"
+  }
 }

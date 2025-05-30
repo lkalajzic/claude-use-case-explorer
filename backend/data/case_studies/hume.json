@@ -1,142 +1,122 @@
 {
-  "url": "https://www.anthropic.com/customers/hume",
-  "data": {
-    "companyInfo": {
-      "name": "Hume AI",
-      "industry": "Artificial Intelligence, Voice Technology",
-      "size": "Not mentioned",
-      "region": "Not mentioned"
-    },
-    "implementation": {
-      "useCase": "Hume AI uses Claude to power EVI, their voice-to-voice AI platform that enables natural, emotionally intelligent voice conversations. The platform can detect nuances in a user's tone of voice and generate responses with appropriate emotional resonance, while supporting various personalities, accents, and speaking styles.",
-      "problem": "Traditional AI approaches to understanding human emotions were reductive and missed over 80% of the information present in human expressions. Hume AI sought to build AI systems optimized for human wellbeing that could understand emotional nuances in voice interactions.",
-      "model": "Claude 3.5 Sonnet",
-      "integrationMethod": "Integration of Claude with EVI (Hume's Voice-to-Voice AI Platform)",
-      "implementationTime": "Not mentioned"
-    },
-    "outcomes": {
-      "metrics": [
-        {
-          "value": "Over 1 million",
-          "metric": "distinct conversations conducted across Hume's platform",
-          "sourceText": "Users have conducted over 1 million distinct conversations totaling nearly 2 million minutes of interaction time"
-        },
-        {
-          "value": "Nearly 2 million",
-          "metric": "minutes of interaction time across Hume's platform",
-          "sourceText": "Users have conducted over 1 million distinct conversations totaling nearly 2 million minutes of interaction time"
-        },
-        {
-          "value": "3 minutes",
-          "metric": "average conversation length on the platform",
-          "sourceText": "with an average conversation lasting 3 minutes and many extending beyond 30 minutes"
-        },
-        {
-          "value": "Beyond 30 minutes",
-          "metric": "length of many conversations on the platform",
-          "sourceText": "with an average conversation lasting 3 minutes and many extending beyond 30 minutes"
-        },
-        {
-          "value": "Hundreds of thousands",
-          "metric": "custom EVI configurations created by developers",
-          "sourceText": "Developers have created hundreds of thousands of custom EVI configurations"
-        },
-        {
-          "value": "36%",
-          "metric": "of all specified AI model selections are Claude models, making them the most popular choice",
-          "sourceText": "with Claude models being the most popular choice, commanding 36% of all specified AI model selections"
-        },
-        {
-          "value": "80%",
-          "metric": "reduction in costs through prompt caching",
-          "sourceText": "Prompt caching has helped Hume reduce costs by 80% and decrease latency by 10% or more"
-        },
-        {
-          "value": "10% or more",
-          "metric": "decrease in latency through prompt caching",
-          "sourceText": "Prompt caching has helped Hume reduce costs by 80% and decrease latency by 10% or more"
-        },
-        {
-          "value": "Over 2 million",
-          "metric": "minutes of AI voice conversations completed",
-          "sourceText": "\u2022 Over 2 million minutes of AI voice conversations completed"
-        },
-        {
-          "value": "36%",
-          "metric": "of users choose Claude, higher than any external LLM integrated with Hume's speech-language foundation model",
-          "sourceText": "\u2022 36% of users choose Claude, higher than any external LLM integrated with Hume's speech-language foundation model"
-        },
-        {
-          "value": "80%",
-          "metric": "reduction in costs through prompt caching",
-          "sourceText": "\u2022 80% reduction in costs and 10% decrease in latency through prompt caching"
-        },
-        {
-          "value": "10%",
-          "metric": "decrease in latency through prompt caching",
-          "sourceText": "\u2022 80% reduction in costs and 10% decrease in latency through prompt caching"
-        },
-        {
-          "value": "Over 80%",
-          "metric": "of information present in human expressions missed by traditional approaches",
-          "sourceText": "His groundbreaking research revealed that traditional approaches missed over 80% of the information present in human expressions."
-        }
+  "id": "hume",
+  "companyName": "Hume AI",
+  "companyDescription": "AI platform that creates emotionally intelligent voice interactions for healthcare, customer service, and consumer applications",
+  "industry": "Information Technology",
+  "companySize": "SMB",
+  "region": "United States",
+  "businessFunctions": [
+    {
+      "function": "Product & Engineering",
+      "isPrimary": true,
+      "useCaseTypes": [
+        "Voice AI Platform Development",
+        "Emotional Intelligence Integration",
+        "Natural Language Processing"
       ],
-      "qualitativeBenefits": [
-        {
-          "benefit": "Natural conversational abilities",
-          "detail": "Claude's eloquence and personality make it enjoyable for users to interact with",
-          "sourceText": "\"Claude is very eloquent,\" said Cowen. \"It has a really good personality that people enjoy talking to.\""
-        },
-        {
-          "benefit": "Reliability in following complex prompts",
-          "detail": "Claude's ability to follow complex prompts was crucial for diverse use cases",
-          "sourceText": "Claude's reliability in following complex prompts was crucial for diverse use cases, while its emotional intelligence excelled at interpreting user expressions."
-        },
-        {
-          "benefit": "Emotional intelligence",
-          "detail": "Claude excels at interpreting user expressions",
-          "sourceText": "Claude's reliability in following complex prompts was crucial for diverse use cases, while its emotional intelligence excelled at interpreting user expressions."
-        },
-        {
-          "benefit": "Extensive context handling",
-          "detail": "Claude can handle long conversations effectively",
-          "sourceText": "The model's extensive context handling for long conversations and built-in safety features reduced development overhead, making it ideal for powering Hume's voice platform."
-        },
-        {
-          "benefit": "Built-in safety features",
-          "detail": "Claude's safety features reduced development overhead",
-          "sourceText": "The model's extensive context handling for long conversations and built-in safety features reduced development overhead, making it ideal for powering Hume's voice platform."
-        },
-        {
-          "benefit": "Adaptation to complex personality traits",
-          "detail": "Claude adapts to complex personality traits throughout long conversations",
-          "sourceText": "\"Our users say that they love Claude 3.5 Sonnet, and find its personality fits really well with EVI. One customer is using EVI for immersive coaching simulations, helping managers practice delivering feedback to a defensive direct report. They've found Sonnet through EVI adapts to complex personality traits throughout a long conversation,\" said Cowen."
-        }
+      "rolesAffected": [
+        "AI Engineers",
+        "Product Managers",
+        "Research Scientists"
       ],
-      "timeToValue": "Not mentioned",
-      "roi": "Not mentioned"
+      "description": "Core development of EVI voice-to-voice AI platform powered by Claude for emotionally intelligent conversations"
     },
-    "technicalDetails": {
-      "architecture": "EVI (Hume's Voice-to-Voice AI Platform) integrated with Claude to enable voice-to-voice AI conversations with emotional intelligence",
-      "promptEngineering": "Prompt caching is used to reduce costs and decrease latency",
-      "challenges": "Not specifically mentioned",
-      "solutions": "Integration of Claude with EVI to create emotionally intelligent voice interactions",
-      "scale": "Over 1 million distinct conversations, nearly 2 million minutes of interaction time, hundreds of thousands of custom EVI configurations"
+    {
+      "function": "Customer Support",
+      "isPrimary": false,
+      "useCaseTypes": [
+        "Voice-based Customer Service",
+        "Emotional Response Handling"
+      ],
+      "rolesAffected": [
+        "Customer Service Representatives",
+        "Support Managers"
+      ],
+      "description": "Enabling customer service interactions through emotionally intelligent voice AI"
     },
-    "confidenceScore": {
-      "overall": "4",
-      "metrics": "5",
-      "companyInfo": "3",
-      "implementation": "4"
-    },
-    "metadata": {
-      "source": "https://www.anthropic.com/customers/hume",
-      "extractionDate": "2023-10-25",
-      "version": "1.0"
+    {
+      "function": "Sales & Marketing",
+      "isPrimary": false,
+      "useCaseTypes": [
+        "Customer Engagement",
+        "Product Demonstrations"
+      ],
+      "rolesAffected": [
+        "Sales Teams",
+        "Marketing Professionals"
+      ],
+      "description": "Supporting customer acquisition through superior voice AI capabilities and user experience"
     }
+  ],
+  "implementation": {
+    "useCases": [
+      "Voice-to-voice AI conversations",
+      "Emotional intelligence in voice interactions",
+      "Practice sessions for difficult conversations",
+      "Mental health support conversations",
+      "AI tutoring",
+      "Personal digital assistants"
+    ],
+    "approach": "Integration of Claude with EVI voice platform for natural language understanding and generation",
+    "model": "Claude 3.5 Sonnet",
+    "integrationMethod": "API",
+    "timeline": "Not specified",
+    "cost": "Not specified"
   },
-  "cost": 0.034218,
-  "success": true,
-  "processed_at": "2025-03-06 19:27:46"
+  "results": {
+    "quantitativeMetrics": [
+      {
+        "metric": "User adoption",
+        "value": "36%",
+        "context": "Percentage of users choosing Claude over other external LLMs",
+        "source": "36% of users choose Claude, higher than any external LLM integrated with Hume's speech-language foundation model"
+      },
+      {
+        "metric": "Cost reduction",
+        "value": "80%",
+        "context": "Cost savings through prompt caching",
+        "source": "80% reduction in costs and 10% decrease in latency through prompt caching"
+      },
+      {
+        "metric": "Latency improvement",
+        "value": "10%",
+        "context": "Decrease in response latency",
+        "source": "80% reduction in costs and 10% decrease in latency through prompt caching"
+      },
+      {
+        "metric": "Usage volume",
+        "value": "2 million minutes",
+        "context": "Total AI voice conversation time completed",
+        "source": "Over 2 million minutes of AI voice conversations completed"
+      },
+      {
+        "metric": "Conversation count",
+        "value": "1 million+",
+        "context": "Distinct conversations conducted on platform",
+        "source": "Users have conducted over 1 million distinct conversations"
+      }
+    ],
+    "qualitativeBenefits": [
+      {
+        "benefit": "Enhanced user experience",
+        "description": "Natural, emotionally intelligent conversations that feel remarkably human",
+        "source": "Claude's natural language capabilities and emotional intelligence complement EVI's voice processing abilities perfectly, enabling fluid, context-aware conversations that feel remarkably human"
+      },
+      {
+        "benefit": "Superior conversational quality",
+        "description": "Users appreciate Claude's eloquent personality and natural conversational abilities",
+        "source": "Claude is very eloquent. It has a really good personality that people enjoy talking to"
+      },
+      {
+        "benefit": "Complex interaction handling",
+        "description": "Ability to adapt to complex personality traits throughout long conversations",
+        "source": "They've found Sonnet through EVI adapts to complex personality traits throughout a long conversation"
+      }
+    ]
+  },
+  "metadata": {
+    "extractionDate": "2024-12-19",
+    "confidence": 5,
+    "dataQuality": "High"
+  }
 }

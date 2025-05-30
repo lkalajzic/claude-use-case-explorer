@@ -1,56 +1,67 @@
 {
-  "url": "https://www.anthropic.com/customers/alexa-plus",
-  "data": {
-    "companyInfo": {
-      "name": "Amazon",
-      "industry": "Technology/Consumer Electronics",
-      "size": "Enterprise",
-      "region": "United States"
-    },
-    "implementation": {
-      "useCase": "Integration of Claude models to help power Alexa+, Amazon's enhanced voice assistant service",
-      "problem": "Enhancing Alexa's capabilities with advanced AI technology",
-      "model": "Claude (specific version not mentioned)",
-      "integrationMethod": "Amazon Bedrock",
-      "implementationTime": "Past year"
-    },
-    "outcomes": {
-      "metrics": [],
-      "qualitativeBenefits": [
-        {
-          "benefit": "Enhanced AI capabilities for Alexa+",
-          "detail": "Alexa+ is able to leverage Claude's advanced capabilities",
-          "sourceText": "Alexa+ is able to take advantage of our best in class capabilities, such as our advanced jailbreaking resistance."
-        },
-        {
-          "benefit": "Improved safety and security",
-          "detail": "Claude's jailbreaking resistance enhances the security of Alexa+",
-          "sourceText": "Consistent with Anthropic's commitment to trust and safety, Alexa+ is able to take advantage of our best in class capabilities, such as our advanced jailbreaking resistance."
-        }
+  "id": "alexa-plus",
+  "companyName": "Amazon (Alexa+)",
+  "companyDescription": "Voice assistant and smart home platform integrated with advanced AI capabilities",
+  "industry": "Information Technology",
+  "companySize": "Enterprise",
+  "region": "United States",
+  "businessFunctions": [
+    {
+      "function": "Product & Engineering",
+      "isPrimary": true,
+      "useCaseTypes": [
+        "AI Assistant Integration",
+        "Voice Interface Enhancement"
       ],
-      "timeToValue": "Rolling out in the U.S. in the next few weeks, becoming more widely available in the coming months",
-      "roi": "Not mentioned"
+      "rolesAffected": [
+        "Product Managers",
+        "Software Engineers",
+        "AI/ML Engineers"
+      ],
+      "description": "Integration of Claude models to enhance Alexa+ voice assistant capabilities"
     },
-    "technicalDetails": {
-      "architecture": "Claude models accessed through Amazon Bedrock",
-      "promptEngineering": "Not mentioned",
-      "challenges": "Not mentioned",
-      "solutions": "Not mentioned",
-      "scale": "Not mentioned"
-    },
-    "confidenceScore": {
-      "overall": "3",
-      "metrics": "5",
-      "companyInfo": "4",
-      "implementation": "3"
-    },
-    "metadata": {
-      "source": "https://www.anthropic.com/customers/alexa-plus",
-      "extractionDate": "2023-11-09",
-      "version": "1.0"
+    {
+      "function": "Customer Support",
+      "isPrimary": false,
+      "useCaseTypes": [
+        "Automated Query Handling",
+        "Voice-based Support"
+      ],
+      "rolesAffected": [
+        "Customer Experience Teams"
+      ],
+      "description": "Enhanced customer interaction through improved voice assistant responses"
     }
+  ],
+  "implementation": {
+    "useCases": [
+      "Voice assistant enhancement",
+      "AI-powered conversational interface"
+    ],
+    "approach": "Partnership integration with close collaboration between Amazon and Anthropic teams",
+    "model": "Claude",
+    "integrationMethod": "Amazon Bedrock API",
+    "timeline": "Past year development, rolling out in next few weeks",
+    "cost": "Not specified"
   },
-  "cost": 0.013257,
-  "success": true,
-  "processed_at": "2025-03-06 20:04:20"
+  "results": {
+    "quantitativeMetrics": [],
+    "qualitativeBenefits": [
+      {
+        "benefit": "Enhanced AI capabilities",
+        "description": "Alexa+ gains access to Claude's advanced capabilities including jailbreaking resistance",
+        "source": "Alexa+ is able to take advantage of our best in class capabilities, such as our advanced jailbreaking resistance"
+      },
+      {
+        "benefit": "Improved trust and safety",
+        "description": "Integration maintains high standards for AI safety and reliability",
+        "source": "Consistent with Anthropic's commitment to trust and safety"
+      }
+    ]
+  },
+  "metadata": {
+    "extractionDate": "2024-12-19",
+    "confidence": 4,
+    "dataQuality": "Medium"
+  }
 }

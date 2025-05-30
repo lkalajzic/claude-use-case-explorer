@@ -1,82 +1,122 @@
 {
-  "url": "https://www.anthropic.com/customers/gitlab-enterprise",
-  "data": {
-    "companyInfo": {
-      "name": "GitLab",
-      "industry": "DevSecOps platform",
-      "size": "Enterprise",
-      "region": "Not mentioned"
-    },
-    "implementation": {
-      "useCase": "GitLab adopted Claude for Work to empower teams across departments to create high-quality content, gain deeper data insights, and accelerate sales cycles. They use Claude for various workflows including RFP responses, content creation and translation, documentation improvement, internal tool development, and data analysis.",
-      "problem": "GitLab needed to enhance productivity, streamline workflows across departments, and enable teams to take on more complex tasks while ensuring their intellectual property remains private and protected.",
-      "model": "Claude (specific version not mentioned)",
-      "integrationMethod": "Initially integrated Anthropic's API to add Claude to their product offerings, then adopted Claude for Work with SSO for internal team members",
-      "implementationTime": "Not mentioned"
-    },
-    "outcomes": {
-      "metrics": [
-        {
-          "value": "98%",
-          "metric": "of GitLab team members surveyed reported to be satisfied or very satisfied with Claude for Work",
-          "sourceText": "\u2022 98% of GitLab team members surveyed reported to be satisfied or very satisfied with Claude for Work"
-        },
-        {
-          "value": "25 - 50%",
-          "metric": "productivity gains",
-          "sourceText": "\u2022 25 - 50% productivity gains"
-        },
-        {
-          "value": "Significant",
-          "metric": "time savings in RFP responses and content generation",
-          "sourceText": "\u2022 Significant time savings in RFP responses and content generation"
-        }
+  "id": "gitlab-enterprise",
+  "companyName": "GitLab",
+  "companyDescription": "Leading AI-powered DevSecOps platform providing integrated software development lifecycle tools",
+  "industry": "Information Technology",
+  "companySize": "Enterprise",
+  "region": "Global",
+  "businessFunctions": [
+    {
+      "function": "Sales & Marketing",
+      "isPrimary": true,
+      "useCaseTypes": [
+        "RFP Response Generation",
+        "Content Creation",
+        "Content Translation"
       ],
-      "qualitativeBenefits": [
-        {
-          "benefit": "Improved collaboration and skill sharing",
-          "detail": "Team members share specific chats to demonstrate successful use cases",
-          "sourceText": "\u2022 Improved collaboration and skill sharing across teams"
-        },
-        {
-          "benefit": "Enhanced task complexity",
-          "detail": "Team members are more willing to take on complex tasks with Claude's assistance",
-          "sourceText": "\u2022 Team members more likely to take on complex tasks"
-        },
-        {
-          "benefit": "Extended capabilities",
-          "detail": "Claude serves as an extension of team members' work and expertise",
-          "sourceText": "Claude offers our team members a tool that feels like an extension of their work and expertise, allowing us to take on more complex tasks and deliver greater impact while ensuring GitLab's IP remains private and protected."
-        },
-        {
-          "benefit": "Expanded context window",
-          "detail": "Allows for more natural and context-aware conversations",
-          "sourceText": "One of Claude's key advantages is its expanded context window, which allows for more natural and context-aware conversations. McCaslin emphasizes, 'It's a game-changer. I can have extensive conversations with Claude while maintaining the context of the entire chat.'"
-        }
+      "rolesAffected": [
+        "Sales Team",
+        "Marketing Team"
       ],
-      "timeToValue": "Not mentioned",
-      "roi": "Not mentioned"
+      "description": "Sales team uses Claude to quickly generate and customize RFP responses, while marketing team efficiently generates and translates content"
     },
-    "technicalDetails": {
-      "architecture": "Not mentioned",
-      "promptEngineering": "Not mentioned",
-      "challenges": "Not mentioned",
-      "solutions": "SSO implementation to make it easier and more secure to control team member access to Claude",
-      "scale": "Not mentioned"
+    {
+      "function": "Product & Engineering",
+      "isPrimary": true,
+      "useCaseTypes": [
+        "Internal Tool Development",
+        "Script Creation",
+        "Documentation"
+      ],
+      "rolesAffected": [
+        "Developers",
+        "Technical Writers",
+        "Product Lead"
+      ],
+      "description": "Developers create small applications and scripts for automation, technical writers improve documentation consistency and clarity"
     },
-    "confidenceScore": {
-      "overall": "4",
-      "metrics": "5",
-      "companyInfo": "4",
-      "implementation": "4"
+    {
+      "function": "Operations",
+      "isPrimary": false,
+      "useCaseTypes": [
+        "Data Analysis",
+        "Report Analysis"
+      ],
+      "rolesAffected": [
+        "Various Teams"
+      ],
+      "description": "Teams upload reports and use Claude to ask questions and gain insights from data"
     },
-    "metadata": {
-      "source": "https://www.anthropic.com/customers/gitlab-enterprise",
-      "extractionDate": "2023-11-09",
-      "version": "1.0"
+    {
+      "function": "Executive/Leadership",
+      "isPrimary": false,
+      "useCaseTypes": [
+        "Strategic Decision Making",
+        "Cross-departmental Implementation"
+      ],
+      "rolesAffected": [
+        "Product Lead for AI and ML"
+      ],
+      "description": "Leadership driving AI adoption across departments and strategic partnership with Anthropic"
     }
+  ],
+  "implementation": {
+    "useCases": [
+      "RFP response generation",
+      "Content creation and translation",
+      "Documentation improvement",
+      "Internal tool development",
+      "Data analysis",
+      "Writing and brainstorming",
+      "Research and problem-solving"
+    ],
+    "approach": "Dual implementation: Anthropic API for external product offerings and Claude Enterprise plan for internal use across departments",
+    "model": "Claude",
+    "integrationMethod": "API and Claude for Work Enterprise plan",
+    "timeline": "Initial pilot program followed by steady expansion across organization",
+    "cost": "Not specified"
   },
-  "cost": 0.02007,
-  "success": true,
-  "processed_at": "2025-03-06 19:27:19"
+  "results": {
+    "quantitativeMetrics": [
+      {
+        "metric": "User satisfaction",
+        "value": "98%",
+        "context": "GitLab team members surveyed reported to be satisfied or very satisfied with Claude for Work",
+        "source": "98% of GitLab team members surveyed reported to be satisfied or very satisfied with Claude for Work"
+      },
+      {
+        "metric": "Productivity gains",
+        "value": "25-50%",
+        "context": "Overall productivity improvements across teams",
+        "source": "25 - 50% productivity gains"
+      }
+    ],
+    "qualitativeBenefits": [
+      {
+        "benefit": "Significant time savings",
+        "description": "Major reduction in time spent on RFP responses and content generation",
+        "source": "Significant time savings in RFP responses and content generation"
+      },
+      {
+        "benefit": "Improved collaboration",
+        "description": "Enhanced skill sharing across teams with ability to share specific chats",
+        "source": "Improved collaboration and skill sharing across teams"
+      },
+      {
+        "benefit": "Increased task complexity",
+        "description": "Team members more willing to take on complex tasks using Claude as capability extension",
+        "source": "Team members more likely to take on complex tasks"
+      },
+      {
+        "benefit": "Cultural transformation",
+        "description": "Fostered culture of efficiency, empowerment, and collaboration around AI use",
+        "source": "Everyone who uses Claude emphasizes that it enhances productivity. That is consistent across the board"
+      }
+    ]
+  },
+  "metadata": {
+    "extractionDate": "2024-12-19",
+    "confidence": 5,
+    "dataQuality": "High"
+  }
 }

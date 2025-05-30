@@ -1,77 +1,82 @@
 {
-  "url": "https://www.anthropic.com/customers/gitlab",
+  "url": "https://www.anthropic.com/customers/gitlab-enterprise",
   "data": {
     "companyInfo": {
       "name": "GitLab",
-      "industry": "DevSecOps software development platform",
+      "industry": "DevSecOps platform",
       "size": "Enterprise",
       "region": "Not mentioned"
     },
     "implementation": {
-      "useCase": "GitLab integrated Claude to power AI features across their DevSecOps platform, including generative coding, interactive chat, planning summarization, and explaining and remediating software vulnerabilities. They implemented a multi-model approach, using Claude 3 models specifically for their AI-powered Duo features.",
-      "problem": "GitLab needed to balance AI innovation with stability and security in their platform while taking a privacy-first approach to embedding AI capabilities across their software development lifecycle management tools.",
-      "model": "Claude 3 family",
-      "integrationMethod": "API integration",
+      "useCase": "GitLab adopted Claude for Work to empower teams across departments to create high-quality content, gain deeper data insights, and accelerate sales cycles. They use Claude for various workflows including RFP responses, content creation and translation, documentation improvement, internal tool development, and data analysis.",
+      "problem": "GitLab needed to enhance productivity, streamline workflows across departments, and enable teams to take on more complex tasks while ensuring their intellectual property remains private and protected.",
+      "model": "Claude (specific version not mentioned)",
+      "integrationMethod": "Initially integrated Anthropic's API to add Claude to their product offerings, then adopted Claude for Work with SSO for internal team members",
       "implementationTime": "Not mentioned"
     },
     "outcomes": {
       "metrics": [
         {
-          "value": "Several",
-          "metric": "Claude-powered features implemented across the platform",
-          "sourceText": "\u2022 Several Claude-powered features are implemented across the platform"
+          "value": "98%",
+          "metric": "of GitLab team members surveyed reported to be satisfied or very satisfied with Claude for Work",
+          "sourceText": "\u2022 98% of GitLab team members surveyed reported to be satisfied or very satisfied with Claude for Work"
+        },
+        {
+          "value": "25 - 50%",
+          "metric": "productivity gains",
+          "sourceText": "\u2022 25 - 50% productivity gains"
+        },
+        {
+          "value": "Significant",
+          "metric": "time savings in RFP responses and content generation",
+          "sourceText": "\u2022 Significant time savings in RFP responses and content generation"
         }
       ],
       "qualitativeBenefits": [
         {
-          "benefit": "High-context and accurate code generation",
-          "detail": "Claude delivers high-context and accurate code generation for users",
-          "sourceText": "\u2022 Claude delivers high-context and accurate code generation for users"
+          "benefit": "Improved collaboration and skill sharing",
+          "detail": "Team members share specific chats to demonstrate successful use cases",
+          "sourceText": "\u2022 Improved collaboration and skill sharing across teams"
         },
         {
-          "benefit": "Accelerated development of AI features",
-          "detail": "Faster development and deployment of AI features by GitLab's engineering team",
-          "sourceText": "\u2022 Accelerates development and deployment of AI features for Gitlab engineering team"
+          "benefit": "Enhanced task complexity",
+          "detail": "Team members are more willing to take on complex tasks with Claude's assistance",
+          "sourceText": "\u2022 Team members more likely to take on complex tasks"
         },
         {
-          "benefit": "Accessible AI development for traditional software engineers",
-          "detail": "Anthropic's tools enabled engineers without ML backgrounds to work on AI features",
-          "sourceText": "\"The tooling Anthropic provides us is approachable for somebody who doesn't have a machine learning background,\" says Young. \"Anthropic's developer tools and docs enable us to have dozens of people with more traditional software engineering backgrounds work on AI features.\""
+          "benefit": "Extended capabilities",
+          "detail": "Claude serves as an extension of team members' work and expertise",
+          "sourceText": "Claude offers our team members a tool that feels like an extension of their work and expertise, allowing us to take on more complex tasks and deliver greater impact while ensuring GitLab's IP remains private and protected."
         },
         {
-          "benefit": "Strong performance for software development tasks",
-          "detail": "Claude 3 models provide thoughtful, holistic, and contextualized code generation",
-          "sourceText": "\"We see consistently strong performance from Claude 3 models for thoughtful, holistic, and contextualized code generation and other software development-related tasks,\" McCaslin notes, attributing this partly to Claude's long context window."
-        },
-        {
-          "benefit": "Alignment with privacy and transparency values",
-          "detail": "Anthropic's approach to AI aligns with GitLab's commitment to stability and security",
-          "sourceText": "\"Anthropic shares our values of privacy and transparency and are straightforward to work with. That's especially important for us as an enterprise organization that builds reliable software.\""
+          "benefit": "Expanded context window",
+          "detail": "Allows for more natural and context-aware conversations",
+          "sourceText": "One of Claude's key advantages is its expanded context window, which allows for more natural and context-aware conversations. McCaslin emphasizes, 'It's a game-changer. I can have extensive conversations with Claude while maintaining the context of the entire chat.'"
         }
       ],
       "timeToValue": "Not mentioned",
       "roi": "Not mentioned"
     },
     "technicalDetails": {
-      "architecture": "GitLab created a model evaluation team that assesses new vendors and new versions of models to ensure they're using the best tool for each task.",
+      "architecture": "Not mentioned",
       "promptEngineering": "Not mentioned",
-      "challenges": "Balancing AI innovation with stability and security requirements",
-      "solutions": "Implemented a multi-model approach, selecting the right model for each use case, with Claude 3 models chosen for specific features due to their performance and developer experience",
-      "scale": "\"dozens of people with more traditional software engineering backgrounds work on AI features\""
+      "challenges": "Not mentioned",
+      "solutions": "SSO implementation to make it easier and more secure to control team member access to Claude",
+      "scale": "Not mentioned"
     },
     "confidenceScore": {
       "overall": "4",
-      "metrics": "3",
+      "metrics": "5",
       "companyInfo": "4",
       "implementation": "4"
     },
     "metadata": {
-      "source": "https://www.anthropic.com/customers/gitlab",
-      "extractionDate": "2023-06-13",
+      "source": "https://www.anthropic.com/customers/gitlab-enterprise",
+      "extractionDate": "2023-11-09",
       "version": "1.0"
     }
   },
-  "cost": 0.020339999999999997,
+  "cost": 0.02007,
   "success": true,
-  "processed_at": "2025-03-06 20:04:37"
+  "processed_at": "2025-03-06 19:27:19"
 }
