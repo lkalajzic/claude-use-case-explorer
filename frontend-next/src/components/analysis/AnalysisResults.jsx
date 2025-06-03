@@ -96,7 +96,7 @@ const AnalysisResults = ({ analysis }) => {
             {analysis.businessFocus?.products && analysis.businessFocus.products.length > 0 && (
               <div className="w-full">
                 <span className="text-gray-500 mr-1">Products:</span>
-                <span className="font-medium">{analysis.businessFocus.products.slice(0, 3).join(', ')}{analysis.businessFocus.products.length > 3 ? ', ...' : ''}</span>
+                <span className="font-medium">{analysis.businessFocus.products.join(', ')}</span>
               </div>
             )}
             
@@ -104,7 +104,7 @@ const AnalysisResults = ({ analysis }) => {
             {analysis.businessFocus?.services && analysis.businessFocus.services.length > 0 && (
               <div className="w-full">
                 <span className="text-gray-500 mr-1">Services:</span>
-                <span className="font-medium">{analysis.businessFocus.services.slice(0, 3).join(', ')}{analysis.businessFocus.services.length > 3 ? ', ...' : ''}</span>
+                <span className="font-medium">{analysis.businessFocus.services.join(', ')}</span>
               </div>
             )}
             
@@ -152,14 +152,11 @@ const AnalysisResults = ({ analysis }) => {
               <div className="flex items-center flex-wrap">
                 <span className="text-gray-500 mr-1">Tech:</span>
                 <div className="flex flex-wrap gap-1">
-                  {analysis.technicalProfile.technologies.slice(0, 3).map((tech, idx) => (
+                  {analysis.technicalProfile.technologies.map((tech, idx) => (
                     <span key={idx} className="text-xs bg-blue-100 text-blue-800 rounded px-1 py-0.5">
                       {tech}
                     </span>
                   ))}
-                  {analysis.technicalProfile.technologies.length > 3 && (
-                    <span className="text-xs text-gray-500">+{analysis.technicalProfile.technologies.length - 3} more</span>
-                  )}
                 </div>
               </div>
             )}
@@ -176,19 +173,14 @@ const AnalysisResults = ({ analysis }) => {
           <div className="text-xs">
             {/* Key Challenges (combined explicit and implied) */}
             <div className="flex flex-wrap">
-              {[...(analysis.businessChallenges.explicitChallenges || []), ...(analysis.businessChallenges.impliedChallenges || [])].slice(0, 3).map((challenge, idx) => (
+              {[...(analysis.businessChallenges.explicitChallenges || []), ...(analysis.businessChallenges.impliedChallenges || [])].map((challenge, idx) => (
                 <span 
                   key={idx} 
                   className="mr-2 mb-1 px-2 py-0.5 bg-red-50 text-red-800 rounded"
                 >
-                  {challenge.length > 40 ? challenge.substring(0, 40) + '...' : challenge}
+                  {challenge}
                 </span>
               ))}
-              {(analysis.businessChallenges.explicitChallenges?.length || 0) + (analysis.businessChallenges.impliedChallenges?.length || 0) > 3 && (
-                <span className="text-gray-500">
-                  +{(analysis.businessChallenges.explicitChallenges?.length || 0) + (analysis.businessChallenges.impliedChallenges?.length || 0) - 3} more
-                </span>
-              )}
             </div>
           </div>
         </AnalysisSection>

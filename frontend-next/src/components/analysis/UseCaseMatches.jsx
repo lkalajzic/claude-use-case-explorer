@@ -204,6 +204,19 @@ const formatCaseStudyUrl = (id) => {
 };
 
 const UseCaseMatches = ({ matches }) => {
+  // Check if we have the new businessFunctions format
+  const hasBusinessFunctions = matches && matches.businessFunctions && matches.businessFunctions.length > 0;
+  
+  // If we have the new format, use the evidence-based component
+  if (hasBusinessFunctions) {
+    const UseCaseMatchesEvidence = React.lazy(() => import('./UseCaseMatchesEvidence'));
+    return (
+      <React.Suspense fallback={<div className="text-center py-4">Loading evidence-based recommendations...</div>}>
+        <UseCaseMatchesEvidence matches={matches} />
+      </React.Suspense>
+    );
+  }
+  
   // If no matches are provided or array is empty
   if (!matches || !matches.useCases || matches.useCases.length === 0) {
     return (

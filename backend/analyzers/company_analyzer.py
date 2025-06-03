@@ -13,6 +13,7 @@ import requests
 import json
 import os
 import time
+import re
 from bs4 import BeautifulSoup
 from pathlib import Path
 from typing import Dict, List, Any, Optional, Tuple, Union
@@ -349,7 +350,7 @@ Company Description:
         try:
             # Try the newer API format first
             response = self.client.messages.create(
-                model="claude-3-7-sonnet-20250219",
+                model="claude-3-5-haiku-20241022",
                 max_tokens=2000,
                 messages=[{"role": "user", "content": prompt}]
             )
@@ -357,7 +358,7 @@ Company Description:
             # Fall back to older format if needed
             print("Using alternate message creation method...")
             response = self.client.completion(
-                model="claude-3-7-sonnet-20250219",
+                model="claude-3-5-haiku-20241022",
                 max_tokens_to_sample=2000,
                 prompt=f"\n\nHuman: {prompt}\n\nAssistant:"
             )
@@ -381,11 +382,17 @@ Company Description:
         try:
             # Clean the result in case it has markdown code blocks
             cleaned_result = result.strip()
-            if cleaned_result.startswith("```json"):
-                cleaned_result = cleaned_result[7:]
             
-            if cleaned_result.endswith("```"):
-                cleaned_result = cleaned_result[:-3]
+            # Find JSON block in the response
+            if "```json" in cleaned_result:
+                start_idx = cleaned_result.find("```json") + 7
+                end_idx = cleaned_result.find("```", start_idx)
+                if end_idx != -1:
+                    cleaned_result = cleaned_result[start_idx:end_idx].strip()
+            elif cleaned_result.startswith("```json"):
+                cleaned_result = cleaned_result[7:]
+                if cleaned_result.endswith("```"):
+                    cleaned_result = cleaned_result[:-3]
             
             analysis = json.loads(cleaned_result.strip())
             return analysis
@@ -411,7 +418,7 @@ Company Description:
         try:
             # Try the newer API format first
             response = self.client.messages.create(
-                model="claude-3-7-sonnet-20250219",
+                model="claude-3-5-haiku-20241022",
                 max_tokens=2000,
                 messages=[{"role": "user", "content": prompt}]
             )
@@ -419,7 +426,7 @@ Company Description:
             # Fall back to older format if needed
             print("Using alternate message creation method...")
             response = self.client.completion(
-                model="claude-3-7-sonnet-20250219",
+                model="claude-3-5-haiku-20241022",
                 max_tokens_to_sample=2000,
                 prompt=f"\n\nHuman: {prompt}\n\nAssistant:"
             )
@@ -443,17 +450,23 @@ Company Description:
         try:
             # Clean the result in case it has markdown code blocks
             cleaned_result = result.strip()
-            if cleaned_result.startswith("```json"):
-                cleaned_result = cleaned_result[7:]
             
-            if cleaned_result.endswith("```"):
-                cleaned_result = cleaned_result[:-3]
+            # Find JSON block in the response
+            if "```json" in cleaned_result:
+                start_idx = cleaned_result.find("```json") + 7
+                end_idx = cleaned_result.find("```", start_idx)
+                if end_idx != -1:
+                    cleaned_result = cleaned_result[start_idx:end_idx].strip()
+            elif cleaned_result.startswith("```json"):
+                cleaned_result = cleaned_result[7:]
+                if cleaned_result.endswith("```"):
+                    cleaned_result = cleaned_result[:-3]
             
             analysis = json.loads(cleaned_result.strip())
             return analysis
         except json.JSONDecodeError as e:
             print(f"Failed to parse analysis as JSON: {e}")
-            print("Raw response:", result)
+            print("Raw response:", result[:500] + "...")
             raise
     
     def match_use_cases(self, company_analysis: Dict[str, Any]) -> Dict[str, Any]:
@@ -461,141 +474,133 @@ Company Description:
         Match company analysis to potential Claude use cases with confidence scores
         and provide role-specific recommendations based on case studies.
         """
-        # Load the case studies
-        case_studies_path = os.path.join(os.path.dirname(__file__), "..", "data", "case_studies", "all_case_studies.json")
-        
+        # Load enhanced case studies with business functions
+        enhanced_path = os.path.join(os.path.dirname(__file__), "..", "data", "case_studies", "enhanced_case_studies.json")
         try:
-            with open(case_studies_path, "r") as f:
-                case_studies = json.load(f)
-        except FileNotFoundError:
-            print(f"Case studies not found at {case_studies_path}")
-            # Fall back to use cases
-            use_case_db_path = os.path.join(os.path.dirname(__file__), "..", "data", "taxonomies", "use_cases.json")
-            
-            try:
-                with open(use_case_db_path, "r") as f:
-                    use_cases = json.load(f)
-            except FileNotFoundError:
-                print(f"Use case database not found at {use_case_db_path}")
-                use_cases = self._get_default_use_cases()
-                
-                # Save the default use cases for future use
-                os.makedirs(os.path.dirname(use_case_db_path), exist_ok=True)
-                with open(use_case_db_path, "w") as f:
-                    json.dump(use_cases, f, indent=2)
-            
-            # Use default cases instead
-            case_studies = {"caseStudies": []}
-            for use_case_id, use_case in use_cases.items():
-                case_study = {
-                    "id": use_case_id,
-                    "companyName": "Example Company",
-                    "industry": use_case.get("idealFit", {}).get("industries", ["Technology"])[0],
-                    "useCases": [use_case_id],
-                    "challengesSolved": [f"Implementing {use_case.get('name')}"],
-                    "results": [f"Success with {use_case.get('name')}"],
-                    "implementation": f"Implementation of {use_case.get('name')}",
-                    "metadata": {
-                        "source": "Default use cases",
-                        "confidence": 3
-                    }
-                }
-                case_studies["caseStudies"].append(case_study)
+            with open(enhanced_path, "r") as f:
+                case_studies_with_functions = json.load(f)
+            print(f"Loaded {len(case_studies_with_functions)} enhanced case studies")
+        except Exception as e:
+            print(f"Error loading enhanced case studies: {e}")
+            case_studies_with_functions = []
         
-        # Create a matching prompt with special focus on employee roles and using real case studies
+        # Define standardized business functions based on practical company organization
+        standardized_functions = [
+            "Executive/Leadership",  # C-suite, VPs, Directors
+            "Sales & Marketing",     # Sales, Marketing, Customer Success, BD
+            "Product & Engineering", # Product Management, Software Development, QA
+            "Operations",           # Operations, Supply Chain, Procurement, Facilities
+            "Finance & Accounting", # Finance, Accounting, FP&A, Treasury
+            "Human Resources",      # HR, Recruiting, L&D, Compensation
+            "Legal & Compliance",   # Legal, Compliance, Risk, IP
+            "Customer Support",     # Support, Success, Implementation
+            "Research & Development", # R&D, Innovation, Strategy
+            "Information Technology" # IT, Security, Infrastructure, Data
+        ]
+        
+        # Create a matching prompt with evidence-based approach
         matching_prompt = f"""
-        You are an AI implementation expert tasked with recommending Claude AI use cases for a company based on their profile and existing case studies.
+        You are an AI implementation expert tasked with recommending Claude AI use cases based on real-world evidence.
         
         ## Company Analysis
         ```json
         {json.dumps(company_analysis, indent=2)}
         ```
         
-        ## Available Case Studies
+        ## Available Case Studies with Business Functions
         ```json
-        {json.dumps(case_studies, indent=2)}
+        {json.dumps(case_studies_with_functions, indent=2)}
         ```
         
+        ## Standardized Business Functions
+        Use ONLY these business functions (with their typical roles):
+        - Executive/Leadership: C-suite, VPs, Directors
+        - Sales & Marketing: Sales, Marketing, Customer Success, BD
+        - Product & Engineering: Product Management, Software Development, QA
+        - Operations: Operations, Supply Chain, Procurement, Facilities
+        - Finance & Accounting: Finance, Accounting, FP&A, Treasury
+        - Human Resources: HR, Recruiting, L&D, Compensation
+        - Legal & Compliance: Legal, Compliance, Risk, IP
+        - Customer Support: Support, Success, Implementation
+        - Research & Development: R&D, Innovation, Strategy
+        - Information Technology: IT, Security, Infrastructure, Data
+        
         ## Your Task
-        Based on the company analysis, recommend the most relevant Claude use cases by matching the company's profile with existing case studies. 
-
-        IMPORTANT: You are NOT trying to match the company to other companies in the case studies. Instead, you are recommending Claude use cases that would be beneficial for the company based on their employee roles, industry, and challenges.
+        Based on the company analysis, recommend ALL relevant business functions and provide evidence-based examples from real companies.
         
-        Focus on:
-        1. Employee role distribution in the company analysis
-        2. Industry-specific applications from the case studies
-        3. Challenge alignment between the company and successful case studies
-        4. Potential ROI based on similar implementations
+        IMPORTANT INSTRUCTIONS:
+        1. Map the company's employee roles to the standardized business functions above
+        2. Include ALL business functions that apply to this company, sorted by:
+           a) Relevance to company profile (considering their industry, size, and employee distribution)
+           b) Potential ROI in dollar value
         
-        For each recommended use case, provide:
-        1. A relevance score (0-100) showing how well this use case fits the company
-        2. A brief explanation of why the use case is relevant
-        3. The specific employee roles that would benefit from this use case
-        4. The approximate number of employees that would use this solution
-        5. Potential implementation ideas specific to this company
-        6. Expected benefits and ROI factors for this use case
-        7. Second-order benefits that go beyond direct time/cost savings
+        3. For each business function:
+           - Calculate relevance score (0-100) based on how many employees would benefit
+           - Explain why this function is relevant to their specific situation
+           - Find 3-5 real company examples from the case studies that demonstrate success in this function (when available)
+           - Focus on examples with concrete metrics or quantitative results
+           - Prefer examples from similar industries when possible
         
-        Return ONLY a JSON object with this structure (NO MARKDOWN OR TEXT, ONLY JSON):
+        4. For each example, include:
+           - Company name and basic info (industry, size)
+           - Brief implementation description (1 sentence)
+           - Concrete metric or outcome (with numeric value when available)
+           - Which roles benefited
+        
+        5. CRITICAL: Map roles correctly. For example:
+           - "Customer Service Representatives" → Customer Support
+           - "Software Engineers/Developers" → Product & Engineering
+           - "Sales Team/Account Executives" → Sales & Marketing
+           - "HR/People Ops" → Human Resources
+           - "CFO/Finance Team" → Finance & Accounting
+        
+        Return ONLY a JSON object with this structure. Do not ask questions or provide explanations. Output ONLY valid JSON:
         {{
-          "useCases": [
+          "businessFunctions": [
             {{
-              "id": "case_study_id",
-              "name": "Descriptive name of use case",
-              "relevanceScore": 85,
-              "relevanceExplanation": "Why this use case is relevant for this company",
+              "id": "customer_support",
+              "name": "Customer Support",
+              "relevanceScore": 95,
+              "whyRelevant": "You have 150 customer service reps handling high inquiry volume who could benefit from AI automation",
+              "examples": [
+                {{
+                  "company": "Company Name",
+                  "caseStudyId": "case-study-id",
+                  "industry": "Industry",
+                  "size": "Enterprise/Mid-Market/SMB",
+                  "implementation": "One sentence describing what they did",
+                  "metric": "Specific metric achieved (e.g., 40% reduction in response time)",
+                  "rolesAffected": ["Customer Service Reps", "Support Managers"],
+                  "source": "case-study-id"
+                }}
+              ],
               "targetRoles": [
                 {{
-                  "role": "Engineering/Development",
-                  "employeeCount": 50,
-                  "timeSavings": "20-40%"
-                }},
-                {{
-                  "role": "Customer Service",
-                  "employeeCount": 100,
+                  "role": "Customer Service/Support",
+                  "employeeCount": 150,
                   "timeSavings": "30-50%"
                 }}
               ],
               "totalEmployeesAffected": 150,
-              "implementationIdeas": ["Specific idea 1", "Specific idea 2"],
-              "expectedBenefits": ["Benefit 1", "Benefit 2"],
-              "secondOrderBenefits": [
-                {{
-                  "benefit": "Higher Employee Retention",
-                  "description": "By automating tedious tasks, employees focus on more engaging work"
-                }},
-                {{
-                  "benefit": "Improved Decision Quality",
-                  "description": "Faster access to insights leads to better strategic choices"
-                }}
-              ],
+              "estimatedROI": "$450,000/year",
               "estimatedImplementationCost": {{
                 "level": "Medium",
                 "range": "$10,000 - $20,000"
-              }}
+              }},
+              "secondOrderBenefits": [
+                {{
+                  "benefit": "Improved Customer Satisfaction",
+                  "description": "Faster responses lead to happier customers"
+                }}
+              ]
             }}
           ]
         }}
         
-        Sort the use cases by relevanceScore in descending order (highest score first).
-        Only include use cases with a relevance score of 50 or higher.
-        
-        For second-order benefits, focus on organization-wide advantages that extend beyond the direct time savings, such as:
-        - Shifting employee focus to higher-level strategic tasks
-        - Enabling more proactive work (e.g., reaching out to customers/prospects)
-        - Improved work quality or customer experience
-        - Enhanced employee satisfaction or retention
-        - Reduced error rates or risk exposure
-        - Better knowledge sharing across teams
-        - Accelerated innovation or decision-making
-        - Increased organizational resilience or agility
-        - Reduced context switching and improved focus
-        
-        Each second-order benefit should have a short, descriptive name (5-10 words max) and a brief explanation (under 15 words).
-        These should be tailored to the specific company's industry, challenges, and goals.
-        
-        Be specific and practical in your implementation ideas, expected benefits, and second-order benefits.
-        For employee roles, use the actual roles mentioned in the company analysis if available.
+        Sort business functions by relevanceScore (highest first).
+        Only include functions with relevance score of 50 or higher.
+        Ensure examples come from the actual case studies provided.
+        Match case study businessFunctions to our standardized list (e.g., "Product Development & Engineering" → "Product & Engineering").
         """
         
         # Process with Claude
@@ -603,15 +608,16 @@ Company Description:
         try:
             # Try the newer API format first
             response = self.client.messages.create(
-                model="claude-3-7-sonnet-20250219",
-                max_tokens=4000,  # Increased max tokens to handle larger responses
+                model="claude-3-5-haiku-20241022",
+                max_tokens=8000,  # Increased for comprehensive responses
+                system="You are a JSON-only response bot. You must ONLY output valid JSON with no additional text, markdown, or explanations.",
                 messages=[{"role": "user", "content": matching_prompt}]
             )
         except AttributeError:
             # Fall back to older format if needed
             print("Using alternate message creation method...")
             response = self.client.completion(
-                model="claude-3-7-sonnet-20250219",
+                model="claude-3-5-haiku-20241022",
                 max_tokens_to_sample=4000,  # Increased max tokens
                 prompt=f"\n\nHuman: {matching_prompt}\n\nAssistant:"
             )
@@ -677,28 +683,60 @@ Company Description:
             # Try to parse the JSON
             matches = json.loads(cleaned_result)
             
-            # Process matches to add category mapping information
-            role_to_category_mapping = {
-                "Engineering/Development": "coding",
-                "Software Engineer": "coding",
-                "Developer": "coding",
-                "Customer Service": "customer_service",
-                "Support": "customer_service",
-                "Marketing": "content_creation",
-                "Content": "content_creation",
-                "Sales": "productivity",
-                "Legal": "document_qa",
-                "Compliance": "document_qa",
-                "Research": "document_qa",
-                "Data Analysis": "document_qa",
-                "Operations": "productivity",
-                "Administration": "productivity",
-                "Executive": "productivity",
-                "Management": "productivity"
-            }
-            
-            # Enhance matches with category information if necessary
-            if "useCases" in matches:
+            # Handle both old useCases format and new businessFunctions format
+            if "businessFunctions" in matches:
+                # New evidence-based format - add category mapping for backward compatibility
+                role_to_category_mapping = {
+                    "Engineering/Development": "coding",
+                    "Software Engineer": "coding",
+                    "Developer": "coding",
+                    "Customer Service": "customer_service",
+                    "Support": "customer_service",
+                    "Marketing": "content_creation",
+                    "Content": "content_creation",
+                    "Sales": "productivity",
+                    "Legal": "document_qa",
+                    "Compliance": "document_qa",
+                    "Research": "document_qa",
+                    "Data Analysis": "document_qa",
+                    "Operations": "productivity",
+                    "Administration": "productivity",
+                    "Executive": "productivity",
+                    "Management": "productivity"
+                }
+                
+                for business_function in matches["businessFunctions"]:
+                    if "targetRoles" in business_function:
+                        for role_info in business_function["targetRoles"]:
+                            role_name = role_info["role"]
+                            # Find matching category
+                            category = None
+                            for key, value in role_to_category_mapping.items():
+                                if key.lower() in role_name.lower():
+                                    category = value
+                                    break
+                            role_info["category"] = category or "productivity"
+            elif "useCases" in matches:
+                # Old format - keep for backward compatibility
+                role_to_category_mapping = {
+                    "Engineering/Development": "coding",
+                    "Software Engineer": "coding",
+                    "Developer": "coding",
+                    "Customer Service": "customer_service",
+                    "Support": "customer_service",
+                    "Marketing": "content_creation",
+                    "Content": "content_creation",
+                    "Sales": "productivity",
+                    "Legal": "document_qa",
+                    "Compliance": "document_qa",
+                    "Research": "document_qa",
+                    "Data Analysis": "document_qa",
+                    "Operations": "productivity",
+                    "Administration": "productivity",
+                    "Executive": "productivity",
+                    "Management": "productivity"
+                }
+                
                 for use_case in matches["useCases"]:
                     if "targetRoles" in use_case:
                         for role_info in use_case["targetRoles"]:
@@ -717,12 +755,54 @@ Company Description:
             print("Raw response (first 500 chars):", result[:500])
             print("Attempting to fix and salvage JSON...")
             
+            # Try to fix common JSON errors
+            try:
+                # Remove any trailing commas before closing brackets/braces
+                fixed_json = cleaned_result
+                fixed_json = re.sub(r',\s*}', '}', fixed_json)
+                fixed_json = re.sub(r',\s*]', ']', fixed_json)
+                
+                # Try to parse the fixed JSON
+                matches = json.loads(fixed_json)
+                return matches
+            except:
+                pass
+            
+            # Try using regex to extract JSON-like structure
+            try:
+                import re
+                json_pattern = r'\{(?:[^{}]|(?:\{[^{}]*\}))*\}'
+                json_matches = re.findall(json_pattern, result, re.DOTALL)
+                if json_matches:
+                    for json_str in json_matches:
+                        try:
+                            matches = json.loads(json_str)
+                            if "businessFunctions" in matches or "useCases" in matches:
+                                return matches
+                        except:
+                            continue
+            except:
+                pass
+            
             # Last resort: manually build valid JSON
             try:
                 # Create a basic structure if parsing failed
                 fallback_response = {
-                    "useCases": [],
-                    "error": "Failed to parse Claude response",
+                    "businessFunctions": [{
+                        "id": "general",
+                        "name": "General Business Functions",
+                        "relevanceScore": 75,
+                        "whyRelevant": "Unable to parse specific recommendations, but Claude AI can benefit most knowledge workers",
+                        "examples": [],
+                        "targetRoles": [],
+                        "totalEmployeesAffected": 0,
+                        "estimatedROI": "$0",
+                        "estimatedImplementationCost": {
+                            "level": "Medium",
+                            "range": "$10,000 - $50,000"
+                        }
+                    }],
+                    "error": "Failed to parse Claude response completely",
                     "partial_response": result[:200] + "..." # Include the start of the response
                 }
                 

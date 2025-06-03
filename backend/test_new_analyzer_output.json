@@ -1,0 +1,433 @@
+{
+  "analysis": {
+    "companyInfo": {
+      "name": "Not found",
+      "industry": {
+        "primary": "Healthcare",
+        "secondary": [
+          "Healthcare Technology",
+          "Patient Services"
+        ],
+        "confidence": 5
+      },
+      "size": {
+        "category": "Mid-Market",
+        "employeeEstimate": 500,
+        "signals": [
+          "Structured team",
+          "Multiple departments"
+        ],
+        "confidence": 5
+      },
+      "geography": {
+        "headquarters": "Not specified",
+        "markets": [
+          "Healthcare"
+        ],
+        "confidence": 2
+      },
+      "founded": "Not found",
+      "companyDescription": "A mid-market healthcare company with diverse teams focusing on patient services and technology"
+    },
+    "employeeRoles": {
+      "totalEmployees": {
+        "count": 500,
+        "confidence": 5
+      },
+      "roleDistribution": [
+        {
+          "role": "Customer Service/Support",
+          "count": 150,
+          "percentage": 30,
+          "confidence": 5,
+          "suggestedUseCases": [
+            "call handling",
+            "patient inquiry management"
+          ],
+          "potentialSavings": "High"
+        },
+        {
+          "role": "Engineering/Development",
+          "count": 100,
+          "percentage": 20,
+          "confidence": 5,
+          "suggestedUseCases": [
+            "patient portal development",
+            "software engineering"
+          ],
+          "potentialSavings": "High"
+        },
+        {
+          "role": "Sales",
+          "count": 50,
+          "percentage": 10,
+          "confidence": 5,
+          "suggestedUseCases": [
+            "sales enablement",
+            "client communication"
+          ],
+          "potentialSavings": "Medium"
+        },
+        {
+          "role": "Marketing/Content",
+          "count": 30,
+          "percentage": 6,
+          "confidence": 5,
+          "suggestedUseCases": [
+            "content creation",
+            "marketing strategy"
+          ],
+          "potentialSavings": "Medium"
+        },
+        {
+          "role": "Operations",
+          "count": 50,
+          "percentage": 10,
+          "confidence": 5,
+          "suggestedUseCases": [
+            "process optimization"
+          ],
+          "potentialSavings": "Low"
+        },
+        {
+          "role": "HR",
+          "count": 20,
+          "percentage": 4,
+          "confidence": 5,
+          "suggestedUseCases": [
+            "recruitment",
+            "employee management"
+          ],
+          "potentialSavings": "Low"
+        },
+        {
+          "role": "Finance",
+          "count": 15,
+          "percentage": 3,
+          "confidence": 5,
+          "suggestedUseCases": [
+            "financial reporting",
+            "budgeting"
+          ],
+          "potentialSavings": "Low"
+        },
+        {
+          "role": "Legal/Compliance",
+          "count": 10,
+          "percentage": 2,
+          "confidence": 5,
+          "suggestedUseCases": [
+            "regulatory compliance",
+            "document review"
+          ],
+          "potentialSavings": "Medium"
+        },
+        {
+          "role": "Other/Administrative",
+          "count": 75,
+          "percentage": 15,
+          "confidence": 5,
+          "suggestedUseCases": [
+            "administrative support"
+          ],
+          "potentialSavings": "Low"
+        }
+      ],
+      "confidence": 5
+    },
+    "businessFocus": {
+      "products": [
+        "Patient Portal"
+      ],
+      "services": [
+        "Healthcare Services",
+        "Patient Support"
+      ],
+      "targetCustomers": [
+        "Patients",
+        "Healthcare Providers"
+      ],
+      "valueProposition": "Comprehensive patient support and healthcare technology solutions",
+      "differentiators": [
+        "Patient-centric approach",
+        "Technology-driven services"
+      ],
+      "confidence": 4
+    },
+    "businessChallenges": {
+      "explicitChallenges": [
+        "High customer service call volumes",
+        "Software development process inefficiencies",
+        "Sales enablement improvement",
+        "Marketing content creation"
+      ],
+      "impliedChallenges": [
+        "Scalability",
+        "Operational efficiency",
+        "Technology integration"
+      ],
+      "confidence": 4
+    },
+    "aiOpportunities": {
+      "customerService": {
+        "potential": "High",
+        "specificUses": [
+          "Automated call routing",
+          "Chatbot for initial patient inquiries",
+          "Intelligent ticket classification"
+        ],
+        "confidence": 5
+      },
+      "contentGeneration": {
+        "potential": "Medium",
+        "specificUses": [
+          "Marketing content drafting",
+          "Sales enablement materials",
+          "Patient communication templates"
+        ],
+        "confidence": 4
+      },
+      "documentProcessing": {
+        "potential": "Medium",
+        "specificUses": [
+          "Compliance document review",
+          "Patient record summarization",
+          "Automated reporting"
+        ],
+        "confidence": 3
+      }
+    },
+    "analysisMetadata": {
+      "source": "Company description",
+      "contentQuality": "Detailed breakdown of employees and challenges",
+      "analysisDate": "2023-11-16",
+      "overallConfidence": 4
+    }
+  },
+  "matches": {
+    "businessFunctions": [
+      {
+        "id": "customer_support",
+        "name": "Customer Support",
+        "relevanceScore": 95,
+        "whyRelevant": "Company has 150 customer service representatives handling patient inquiries, presenting high potential for AI-powered support automation",
+        "examples": [
+          {
+            "company": "Sendbird",
+            "caseStudyId": "sendbird",
+            "industry": "Information Technology",
+            "size": "Mid-Market",
+            "implementation": "Integrated AI agents to handle routine customer inquiries across multiple channels",
+            "metric": "30-40% of human inquiries redirected to AI agents",
+            "rolesAffected": [
+              "Customer Service Representatives",
+              "Support Managers"
+            ],
+            "source": "sendbird"
+          },
+          {
+            "company": "SK Telecom",
+            "caseStudyId": "skt",
+            "industry": "Communication Services",
+            "size": "Enterprise",
+            "implementation": "Deployed real-time agent assistance and automated post-call processing",
+            "metric": "34% improvement in response quality, 68% reduction in low-quality responses",
+            "rolesAffected": [
+              "Customer Service Agents",
+              "Support Managers"
+            ],
+            "source": "skt"
+          }
+        ],
+        "targetRoles": [
+          {
+            "role": "Customer Service/Support",
+            "employeeCount": 150,
+            "timeSavings": "30-50%",
+            "category": "customer_service"
+          }
+        ],
+        "totalEmployeesAffected": 150,
+        "estimatedROI": "$750,000/year",
+        "estimatedImplementationCost": {
+          "level": "Medium",
+          "range": "$25,000 - $50,000"
+        },
+        "secondOrderBenefits": [
+          {
+            "benefit": "Improved Patient Experience",
+            "description": "Faster, more consistent support responses"
+          }
+        ]
+      },
+      {
+        "id": "product_engineering",
+        "name": "Product & Engineering",
+        "relevanceScore": 90,
+        "whyRelevant": "100 employees in engineering/development roles with significant software development needs",
+        "examples": [
+          {
+            "company": "Sourcegraph",
+            "caseStudyId": "sourcegraph-claude-for-work",
+            "industry": "Information Technology",
+            "size": "SMB",
+            "implementation": "Used AI to analyze community feedback for product development insights",
+            "metric": "95% accuracy in generating initial product reports",
+            "rolesAffected": [
+              "Product Managers",
+              "Engineers"
+            ],
+            "source": "sourcegraph-claude-for-work"
+          },
+          {
+            "company": "Vanta",
+            "caseStudyId": "vanta",
+            "industry": "Information Technology",
+            "size": "Mid-Market",
+            "implementation": "Developed AI-powered compliance remediation system generating custom code fixes",
+            "metric": "113% increase in developer AI tool adoption in 2 months",
+            "rolesAffected": [
+              "Software Engineers",
+              "Developers"
+            ],
+            "source": "vanta"
+          }
+        ],
+        "targetRoles": [
+          {
+            "role": "Software Development",
+            "employeeCount": 100,
+            "timeSavings": "40-60%",
+            "category": "productivity"
+          }
+        ],
+        "totalEmployeesAffected": 100,
+        "estimatedROI": "$600,000/year",
+        "estimatedImplementationCost": {
+          "level": "High",
+          "range": "$50,000 - $100,000"
+        },
+        "secondOrderBenefits": [
+          {
+            "benefit": "Accelerated Innovation",
+            "description": "Faster development and prototyping of patient portal features"
+          }
+        ]
+      },
+      {
+        "id": "sales_marketing",
+        "name": "Sales & Marketing",
+        "relevanceScore": 75,
+        "whyRelevant": "50 employees in sales and 30 in marketing with potential for AI-enhanced content and communication",
+        "examples": [
+          {
+            "company": "TRY",
+            "caseStudyId": "try",
+            "industry": "Advertising & Marketing",
+            "size": "Mid-Market",
+            "implementation": "Used Claude for content strategy and multichannel content adaptation",
+            "metric": "40% faster proposal development",
+            "rolesAffected": [
+              "Sales Representatives",
+              "Marketing Teams"
+            ],
+            "source": "try"
+          },
+          {
+            "company": "Cox Automotive",
+            "caseStudyId": "cox-automotive",
+            "industry": "Consumer Discretionary",
+            "size": "Enterprise",
+            "implementation": "Generated personalized marketing communications and content",
+            "metric": "More than doubled consumer lead responses",
+            "rolesAffected": [
+              "Marketing Teams",
+              "Sales Representatives"
+            ],
+            "source": "cox-automotive"
+          }
+        ],
+        "targetRoles": [
+          {
+            "role": "Sales",
+            "employeeCount": 50,
+            "timeSavings": "20-40%",
+            "category": "productivity"
+          },
+          {
+            "role": "Marketing/Content",
+            "employeeCount": 30,
+            "timeSavings": "30-50%",
+            "category": "content_creation"
+          }
+        ],
+        "totalEmployeesAffected": 80,
+        "estimatedROI": "$350,000/year",
+        "estimatedImplementationCost": {
+          "level": "Medium",
+          "range": "$20,000 - $40,000"
+        },
+        "secondOrderBenefits": [
+          {
+            "benefit": "Enhanced Lead Generation",
+            "description": "More personalized and targeted patient communication strategies"
+          }
+        ]
+      },
+      {
+        "id": "operations",
+        "name": "Operations",
+        "relevanceScore": 60,
+        "whyRelevant": "50 employees in operations roles who could benefit from process optimization",
+        "examples": [
+          {
+            "company": "Lotte Homeshopping",
+            "caseStudyId": "lotte-homeshopping",
+            "industry": "Consumer Discretionary",
+            "size": "Enterprise",
+            "implementation": "AI assistant for quality assurance and partner communication",
+            "metric": "30-40% reduction in partner inquiries",
+            "rolesAffected": [
+              "Operations Specialists",
+              "QA Staff"
+            ],
+            "source": "lotte-homeshopping"
+          },
+          {
+            "company": "Bluenote",
+            "caseStudyId": "bluenote",
+            "industry": "Health Care",
+            "size": "SMB",
+            "implementation": "Automated manufacturing documentation and supply chain operations",
+            "metric": "40-50% boost in workflow efficiency",
+            "rolesAffected": [
+              "Operations Managers",
+              "Supply Chain Specialists"
+            ],
+            "source": "bluenote"
+          }
+        ],
+        "targetRoles": [
+          {
+            "role": "Operations",
+            "employeeCount": 50,
+            "timeSavings": "20-40%",
+            "category": "productivity"
+          }
+        ],
+        "totalEmployeesAffected": 50,
+        "estimatedROI": "$200,000/year",
+        "estimatedImplementationCost": {
+          "level": "Medium",
+          "range": "$15,000 - $30,000"
+        },
+        "secondOrderBenefits": [
+          {
+            "benefit": "Process Standardization",
+            "description": "More consistent and efficient operational workflows"
+          }
+        ]
+      }
+    ]
+  }
+}

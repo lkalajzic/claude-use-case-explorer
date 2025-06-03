@@ -7,6 +7,26 @@ import UseCaseMatches from '../../components/analysis/UseCaseMatches';
 import { FormReview } from '../../components/analysis/FormReview';
 
 const CompanyAnalyzer = () => {
+  // Default template for company description
+  const defaultTemplate = `We are a [Industry] company with approximately [Total] employees:
+
+• Engineering/Development: [X] engineers
+• Customer Support: [X] support representatives  
+• Sales & Marketing: [X] sales and marketing professionals
+• Operations: [X] operations staff
+• Human Resources: [X] HR professionals
+• Finance & Accounting: [X] finance team members
+• Legal & Compliance: [X] legal/compliance staff
+• Executive/Leadership: [X] executives
+• IT/Technology: [X] IT professionals
+• Other roles: [Describe any other significant roles]
+
+Our main products/services include:
+[Describe what your company does]
+
+Key challenges we face:
+[List main operational challenges or pain points]`;
+
   // State for form inputs and workflow
   const [analysisType, setAnalysisType] = useState('website');
   const [websiteUrl, setWebsiteUrl] = useState('');
@@ -146,7 +166,13 @@ const CompanyAnalyzer = () => {
                     ? 'bg-blue-600 text-white' 
                     : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
                 }`}
-                onClick={() => setAnalysisType('description')}
+                onClick={() => {
+                  setAnalysisType('description');
+                  // Populate template if description is empty
+                  if (!companyDescription) {
+                    setCompanyDescription(defaultTemplate);
+                  }
+                }}
                 disabled={isLoading}
               >
                 Analyze Description
@@ -221,10 +247,9 @@ const CompanyAnalyzer = () => {
         <div className="text-center py-8">
           <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-700"></div>
           <p className="mt-2 text-gray-600">
-            {showReviewForm ? 'Processing your review...' : 'Analyzing company data with Claude...'}
+            {reviewCompleted ? 'Matching your company profile against 115 real-world Claude implementation case studies...' : (showReviewForm ? 'Processing your review...' : 'Analyzing company data with Claude...')}
             <br />
             <span className="text-sm text-gray-500">
-              {!showReviewForm && 'Analyzing against 74 real-world Claude implementation case studies. '}
               This may take 1-2 minutes.
             </span>
           </p>

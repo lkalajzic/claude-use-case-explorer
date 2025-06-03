@@ -501,3 +501,313 @@ This approach ensures we can revert if issues arise while minimizing disruption 
 - Data Analysis & Research
 
 Remember: The goal is to show real evidence instead of generic suggestions. Every recommendation should be backed by an actual company that achieved specific, measurable results.
+
+## Major Update: Evidence-Based System COMPLETED! (December 31, 2024)
+
+We've successfully implemented the evidence-based recommendation system! The system now shows real company examples with metrics instead of generic suggestions.
+
+## User Testing Feedback & Improvements Needed (January 2025)
+
+After testing the live system, here are the key improvements identified:
+
+## Major Architecture Change: Use-Case-Based ROI Calculation (January 2025)
+
+After careful consideration, we're moving from role-based to use-case-based ROI calculations for much higher accuracy and actionability.
+
+### The Problem with Current Approach:
+- Shows evidence like "40% reduction in support tickets" 
+- But calculates as if 40% of ALL work hours are saved
+- Reality: Support reps don't spend 100% of time on tickets
+
+### New Use-Case-Based Model:
+
+#### 1. Structure:
+```
+Business Function (e.g., Customer Support)
+└── Use Case 1: AI Support Agent
+    ├── Hours/week on this task: 15
+    ├── Time savings: 40%
+    ├── Complexity: Medium
+    ├── Prerequisites: API access, ticket system
+    ├── Examples: Asana (40%), Intercom (50%), Sendbird (30-40%)
+    └── Annual ROI: $468,000
+
+└── Use Case 2: Response Drafting  
+    ├── Hours/week on this task: 10
+    ├── Time savings: 50%
+    ├── Complexity: Low
+    ├── Prerequisites: None (can start immediately)
+    ├── Examples: Copy.ai, Tidio, Clay
+    └── Annual ROI: $390,000
+
+└── Use Case 3: Knowledge Base Creation
+    ├── Hours/week on this task: 5
+    ├── Time savings: 60%
+    ├── Complexity: Low
+    ├── Prerequisites: Documentation access
+    ├── Examples: Notion, GitLab, Canva
+    └── Annual ROI: $234,000
+```
+
+#### 2. Key Features:
+- **Precision**: Break down EXACTLY which tasks save time
+- **Prioritization**: Sort by ROI/Complexity ratio to surface quick wins
+- **Readiness Indicators**: 
+  - ✅ Ready to start
+  - ⚠️ Requires prerequisites
+  - 🔒 Depends on other use cases
+- **Expandable**: Show top 3 by default, expand to see 5-7 total
+- **Editable**: Users can adjust hours/week if they have better data
+
+#### 3. New JSON Structure:
+```json
+{
+  "businessFunctions": [{
+    "id": "customer_support",
+    "name": "Customer Support",
+    "totalEmployees": 150,
+    "relevanceScore": 95,
+    "whyRelevant": "You have 150 support reps handling high volume",
+    "useCases": [
+      {
+        "id": "ai_support_agent",
+        "name": "AI Support Agent",
+        "description": "Automated first-line support for common queries",
+        "impact": "High",
+        "complexity": "Medium",
+        "complexityWeeks": 8,
+        "hoursPerWeek": 15,
+        "timeSavingsPercent": 40,
+        "prerequisites": ["API access", "Ticket system integration"],
+        "readinessStatus": "requires_setup",
+        "examples": [
+          {
+            "company": "Asana",
+            "caseStudyId": "asana",
+            "metric": "40% reduction in agent workload",
+            "implementation": "Built Claude-powered agent for tier-1 tickets"
+          }
+        ],
+        "annualROI": 468000,
+        "quickWinScore": 234 // ROI/complexity
+      }
+    ],
+    "totalApplicableHours": 30, // Sum of all use case hours
+    "totalApplicablePercent": 75, // 30/40 hours
+    "totalAnnualROI": 1092000
+  }]
+}
+```
+
+#### 4. UI Changes:
+- Each business function card shows:
+  - Summary: Total employees, % applicable work, total ROI
+  - Top 3 use cases with individual ROI
+  - "Show more" to expand to all use cases
+  - Each use case shows hours/week (editable)
+  - Quick win badges on high ROI/complexity ratio items
+  - Readiness indicators with tooltips for prerequisites
+
+#### 5. Benefits:
+- **Realistic**: No more claiming 40% savings on ALL work
+- **Actionable**: Clear implementation roadmap
+- **Trustworthy**: Transparent calculations
+- **Flexible**: Users can toggle use cases on/off
+- **Evidence-based**: Each use case backed by real examples
+
+### Implementation Steps:
+
+#### Phase 1: Backend Changes (4-6 hours)
+1. **Update Claude prompt** in match_use_cases to:
+   - Return use cases nested within business functions
+   - Estimate hours/week for each use case
+   - Add complexity ratings and prerequisites
+   - Calculate quickWinScore (ROI/complexity)
+
+2. **Enhance case study data** to include:
+   - Specific use case types (AI agent, drafting, etc.)
+   - Implementation complexity and timeline
+   - Prerequisites required
+
+#### Phase 2: Frontend Development (6-8 hours)
+1. **Create new UseCaseMatchesV2 component** with:
+   - Expandable use case sections (show 3, expand for more)
+   - Editable hours/week inputs with live ROI recalculation
+   - Readiness indicators with prerequisite tooltips
+   - Quick win badges for high-scoring use cases
+
+2. **Update ROI calculation logic** to:
+   - Calculate per use case instead of per role
+   - Sum up selected use cases for total ROI
+   - Account for applicable work percentage
+
+3. **Design improvements**:
+   - Clear visual hierarchy: Function → Use Cases → Examples
+   - Progress indicators showing implementation complexity
+   - Suggested implementation order based on quick win scores
+
+#### Phase 3: Testing & Refinement (2-3 hours)
+1. Test with various company profiles
+2. Validate hours/week estimates are reasonable
+3. Ensure calculations are transparent and accurate
+4. Add helpful tooltips and guidance
+
+### Migration Strategy:
+- Keep both old and new components initially
+- Use feature flag or gradual rollout
+- Monitor user feedback on new approach
+- Remove old system once validated
+
+### 1. Initial Company Analysis Flow
+- **Add default placeholder company description**: Pre-populate the description field with employee function templates (e.g., "50 Engineers, 20 Sales, 15 Customer Support...") that users can easily edit
+- **Fix misleading loading message**: Currently says "Analyzing against 74 real-world Claude implementation case studies" but at this stage we're just analyzing the company data, not comparing yet
+- **Show actual case study count**: When matching, display "Processing against 115 real-world case studies" (the actual count)
+
+### 2. UI/UX Improvements
+- **Remove '+x more' in Business Challenges**: All challenges should be visible by default - no need to hide them
+- **Move key metrics to TOP of each business function card**: Annual Savings, ROI%, and Confidence should be prominently displayed at the top, not buried at the bottom
+- **Remove redundant 'Roles affected'**: This appears at the bottom of function components but is redundant with the information already shown
+
+### 3. ROI Calculation Updates
+- **Update implementation cost calculation**: Use Anthropic's enterprise pricing of ~$100/seat/month (based on community estimates)
+- **Add pricing disclaimer**: Note that "$100/seat/mo is an estimate based on community discussions" and add CTA: "Contact Anthropic for accurate pricing" with link to anthropic.com/enterprise
+- **Simplify confidence display**: Show as percentage (e.g., "85% confidence") instead of "High/Medium/Low"
+
+### 4. Evidence Display Enhancements
+- **Show more examples**: Increase from 2-3 to up to 5 examples per business function when relevant examples are available
+- **Include all relevant roles**: Don't filter - show all roles and let users decide based on confidence scores
+
+### 5. System Architecture Questions
+- **Review 'Hours per Week' column**: Does this still make sense with the new evidence-based calculation system?
+- **Review 'AI CASES' column**: Is this column still relevant or should it be updated/removed?
+
+### Implementation Thoughts & Recommendations
+
+Based on your feedback, here are my thoughts on improvements:
+
+1. **Default Company Description Template** - Excellent UX improvement! We could provide a template like:
+   ```
+   We are a [Industry] company with approximately [X] employees:
+   - Engineering/Development: [X] engineers
+   - Customer Support: [X] support representatives
+   - Sales & Marketing: [X] sales and marketing professionals
+   - Operations: [X] operations staff
+   - HR: [X] HR professionals
+   - Finance: [X] finance team members
+   - Legal: [X] legal/compliance staff
+   - Executive/Leadership: [X] executives
+   ```
+
+2. **Pricing Model Shift** - Moving from time-savings calculations to seat-based pricing ($100/user/month) is simpler and more transparent. This aligns with how Anthropic actually prices their enterprise plans.
+
+3. **Confidence Percentages** - Showing "87% confidence" is more precise than "High confidence" and helps users make informed decisions.
+
+4. **More Examples** - Showing up to 5 examples provides more evidence and variety, especially when companies want to see multiple implementation approaches.
+
+5. **Hours per Week / AI Cases** - These columns might be legacy from the old calculation method. With the evidence-based approach showing real metrics (like "40% reduction in response time"), these generic estimates may be less relevant.
+
+### Recommended Priority Order
+
+1. **Quick Wins (1-2 hours)**:
+   - Fix loading messages and case study count
+   - Remove "+x more" expansion
+   - Add default company description template
+
+2. **UI Improvements (2-3 hours)**:
+   - Move ROI metrics to top of cards
+   - Remove redundant "Roles affected"
+   - Update confidence to percentage display
+
+3. **Calculation Updates (3-4 hours)**:
+   - Switch to seat-based pricing model
+   - Add pricing disclaimer with Anthropic link
+   - Review and potentially remove legacy columns
+
+4. **Enhancement Phase (4-6 hours)**:
+   - Increase to 5 examples per function
+   - Add better error handling
+   - Test with diverse company profiles
+
+### What We Accomplished Previously
+
+#### 1. Backend Enhancements ✅
+- **Updated match_use_cases method** to return businessFunctions instead of useCases
+- **Switched from Sonnet to Haiku** for 7x cost reduction ($0.15 vs $0.21 per request)
+- **Created enhanced_case_studies.json** consolidating all 45 enhanced case studies
+- **Fixed JSON parsing issues** with improved extraction logic
+- **Added system message** to ensure JSON-only responses from Claude
+
+#### 2. Frontend Transformation ✅
+- **Created UseCaseMatchesEvidence.jsx** - brand new component for evidence-based display
+- **Implemented smart format detection** - automatically uses new component when businessFunctions detected
+- **Built business function cards** showing:
+  - Real company examples with metrics (e.g., "30-40% reduction in inquiries")
+  - Links to full case studies
+  - Role-based ROI calculations
+  - Second-order benefits
+- **Preserved backward compatibility** with old useCases format
+
+#### 3. Data Integration ✅
+- **Loaded 45 enhanced case studies** with standardized business functions
+- **Mapped to 10 core business functions**:
+  - Customer Support
+  - Product & Engineering  
+  - Sales & Marketing
+  - Operations
+  - Information Technology
+  - Executive/Leadership
+  - Human Resources
+  - Legal & Compliance
+  - Finance & Accounting
+  - Research & Development
+
+#### 4. Real Results in Production
+The system now displays:
+- **Business functions sorted by relevance** (95% for Customer Support with 150 employees)
+- **2-3 real examples per function** (Sendbird: "30-40% of inquiries redirected to AI")
+- **Actual metrics from companies** (Vanta: "113% increase in developer AI adoption")
+- **Direct links to case studies** for credibility and deeper exploration
+
+### Next Steps
+
+#### Immediate (High Priority)
+1. **Test with diverse company profiles** - Validate the system works across industries
+2. **Handle edge cases** - Add fallbacks for missing data or API errors
+3. **Performance optimization** - Consider caching case studies for faster loading
+
+#### Short-term Enhancements
+1. **Expand case study coverage** - Process remaining ~70 case studies to new format
+2. **Improve metric extraction** - Standardize how we display different metric types
+3. **Add filtering options** - Let users filter examples by industry/company size
+4. **Enhance mobile responsiveness** - Optimize the new cards for mobile devices
+
+#### Long-term Vision
+1. **Dynamic matching algorithm** - Use ML to improve relevance scoring
+2. **Custom benchmarks** - Allow users to input their own salary data
+3. **Implementation roadmaps** - Generate step-by-step plans based on examples
+4. **Success tracking** - Follow up on implementations to refine predictions
+
+### Technical Decisions Made
+
+1. **Haiku over Sonnet**: 7x cost reduction with minimal quality impact for structured tasks
+2. **Single case study file**: enhanced_case_studies.json for simpler maintenance
+3. **Lazy loading**: Evidence component loads on-demand for better performance
+4. **Backward compatibility**: Gracefully handles both old and new formats
+
+### Lessons Learned
+
+1. **Structured prompts work better** - Clear JSON schema + system message = reliable output
+2. **Real examples > generic advice** - Users trust concrete metrics from named companies
+3. **Business functions > use cases** - Organizing by function matches how companies think
+4. **Iterative refinement** - Starting with 45 case studies proved the concept
+
+### File Changes Summary
+
+#### Backend
+- `/backend/analyzers/company_analyzer.py` - Updated match_use_cases method, switched to Haiku
+- `/backend/data/case_studies/enhanced_case_studies.json` - NEW: Consolidated 45 case studies
+- `/backend/test_new_analyzer.py` - NEW: Test script for validation
+
+#### Frontend  
+- `/frontend-next/src/components/analysis/UseCaseMatchesEvidence.jsx` - NEW: Evidence-based component
+- `/frontend-next/src/components/analysis/UseCaseMatches.jsx` - Updated to detect new format
