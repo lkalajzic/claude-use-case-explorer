@@ -527,6 +527,13 @@ Company Description:
         ## Your Task
         Based on the company analysis, recommend ALL relevant business functions and provide evidence-based examples from real companies.
         
+        CRITICAL INFORMATION FROM COMPANY ANALYSIS:
+        Company location: """ + str(company_analysis.get('companyInfo', {}).get('geography', {}).get('headquarters', 'Unknown')) + """
+        Total employees: """ + str(company_analysis.get('employeeRoles', {}).get('totalEmployees', {}).get('count', 0)) + """
+        
+        ROLE DISTRIBUTION:
+        """ + "\n        ".join([f"- {r['role']}: {r['count']} employees" for r in company_analysis.get('employeeRoles', {}).get('roleDistribution', [])]) + """
+        
         IMPORTANT INSTRUCTIONS:
         1. Map the company's employee roles to the standardized business functions above
         2. YOU MUST include ALL 9 business functions for every company (Executive/Leadership, Sales, Marketing, Product & Engineering, Operations, Finance & Accounting, Human Resources, Legal & Compliance, Customer Support).
@@ -712,7 +719,16 @@ Company Description:
         Match case study businessFunctions to our standardized list.
         Be realistic with hours/week estimates - not all work can be enhanced by AI.
         
-        IMPORTANT: Adjust hourly rates based on geography. Use these regional multipliers vs US baseline:
+        CRITICAL EMPLOYEE ALLOCATION RULES:
+        - NOT all employees in a function use every use case
+        - For each use case, estimate what PERCENTAGE of that function's employees would actually use it
+        - Example: If you have 200 engineers, maybe only 150 write code (code generation use case), only 50 write documentation (documentation use case)
+        - Be realistic: no use case should have 100% of employees unless truly universal
+        
+        MANDATORY GEOGRAPHIC ADJUSTMENT:
+        The company is based in: """ + str(company_analysis.get('companyInfo', {}).get('geography', {}).get('headquarters', 'Unknown')) + """
+        
+        You MUST adjust hourly rates based on location:
         - United States/Canada: 1.0x (baseline)
         - Western Europe (UK, Germany, France): 0.9x for support, 0.8x for engineering
         - Eastern Europe (Poland, Romania, Croatia): 0.3x for support, 0.25x for engineering  
@@ -721,10 +737,23 @@ Company Description:
         - Asia Pacific (Australia, Singapore): 1.0x
         - Other regions: estimate based on local cost of living
         
-        Example: US Customer Support = $20/hr, Croatia = $6/hr, Philippines = $3/hr
-        Example: US Software Engineer = $60/hr, Croatia = $15/hr, India = $12/hr
+        For India-based company:
+        - Customer Support: $20/hr × 0.15 = $3/hr
+        - Software Engineer: $60/hr × 0.2 = $12/hr
+        - Sales: $50/hr × 0.2 = $10/hr
+        - Marketing: $40/hr × 0.2 = $8/hr
         
         Include the adjusted hourly rates in your response for transparency.
+        
+        FINAL CHECKLIST (YOUR RESPONSE MUST HAVE):
+        ✓ Exactly 9 businessFunctions objects
+        ✓ Each function has exactly 4 use cases
+        ✓ Each use case has exactly 3 examples
+        ✓ Total: 9 functions × 4 use cases × 3 examples = 108 examples
+        ✓ Geography-adjusted hourly rates (especially for India = 0.15-0.2x US rates)
+        ✓ Realistic employee allocation per use case (not 100% for everything)
+        
+        If you don't return all 9 functions, the system will error. Start your response with the businessFunctions array containing all 9.
         """
         
         # Process with Claude

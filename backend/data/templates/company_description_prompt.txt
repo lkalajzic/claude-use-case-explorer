@@ -35,8 +35,11 @@ Analyze the text description below and extract the following information:
    - Examples:
      * "software engineers" → Product & Engineering
      * "customer success" → Customer Support
-     * "data analysts" → Product & Engineering (if technical) or Operations (if business-focused)
+     * "data analysts" → Product & Engineering
      * "business intelligence team" → Product & Engineering
+     * "data analysts and business intelligence team" → Product & Engineering
+     * "product managers and designers" → Product & Engineering
+     * "other operations and administrative staff" → Operations
 
 3. Business Focus:
    - Primary products or services
