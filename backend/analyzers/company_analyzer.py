@@ -531,6 +531,8 @@ Company Description:
         Company location: """ + str(company_analysis.get('companyInfo', {}).get('geography', {}).get('headquarters', 'Unknown')) + """
         Total employees: """ + str(company_analysis.get('employeeRoles', {}).get('totalEmployees', {}).get('count', 0)) + """
         
+        DEBUG - Geography info: """ + str(company_analysis.get('companyInfo', {}).get('geography', {})) + """
+        
         ROLE DISTRIBUTION:
         """ + "\n        ".join([f"- {r['role']}: {r['count']} employees" for r in company_analysis.get('employeeRoles', {}).get('roleDistribution', [])]) + """
         
@@ -753,7 +755,14 @@ Company Description:
         ✓ Geography-adjusted hourly rates (especially for India = 0.15-0.2x US rates)
         ✓ Realistic employee allocation per use case (not 100% for everything)
         
-        If you don't return all 9 functions, the system will error. Start your response with the businessFunctions array containing all 9.
+        CRITICAL: Even if a function has 0 employees, STILL INCLUDE IT with relevanceScore of 10-20.
+        
+        Your response MUST start with:
+        {
+          "businessFunctions": [
+            ... all 9 functions here ...
+          ]
+        }
         """
         
         # Process with Claude
@@ -762,7 +771,7 @@ Company Description:
             # Try the newer API format first
             response = self.client.messages.create(
                 model="claude-3-5-haiku-20241022",
-                max_tokens=8000,  # Increased for comprehensive responses
+                max_tokens=16000,  # Increased even more for 9 functions × 4 use cases × 3 examples
                 system="You are a JSON-only response bot. You must ONLY output valid JSON with no additional text, markdown, or explanations.",
                 messages=[{"role": "user", "content": matching_prompt}]
             )
@@ -835,6 +844,12 @@ Company Description:
             
             # Try to parse the JSON
             matches = json.loads(cleaned_result)
+            
+            # Debug logging
+            if "businessFunctions" in matches:
+                print(f"✅ Received {len(matches.get('businessFunctions', []))} business functions")
+                for func in matches.get('businessFunctions', []):
+                    print(f"  - {func.get('name')}: {func.get('totalEmployees', 0)} employees, {len(func.get('useCases', []))} use cases")
             
             # Handle both old useCases format and new businessFunctions format
             if "businessFunctions" in matches:
