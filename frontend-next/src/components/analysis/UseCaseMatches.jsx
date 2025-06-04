@@ -207,14 +207,30 @@ const UseCaseMatches = ({ matches }) => {
   // Check if we have the new businessFunctions format
   const hasBusinessFunctions = matches && matches.businessFunctions && matches.businessFunctions.length > 0;
   
-  // If we have the new format, use the evidence-based component
+  // If we have the new format, check which version to use
   if (hasBusinessFunctions) {
-    const UseCaseMatchesEvidence = React.lazy(() => import('./UseCaseMatchesEvidence'));
-    return (
-      <React.Suspense fallback={<div className="text-center py-4">Loading evidence-based recommendations...</div>}>
-        <UseCaseMatchesEvidence matches={matches} />
-      </React.Suspense>
+    // Check if business functions have nested use cases with hoursPerWeek (V2 format)
+    const hasNestedUseCases = matches.businessFunctions.some(func => 
+      func.useCases && func.useCases.length > 0 && func.useCases[0].hoursPerWeek !== undefined
     );
+    
+    if (hasNestedUseCases) {
+      // Use V2 component for use-case-based ROI
+      const UseCaseMatchesV2 = React.lazy(() => import('./UseCaseMatchesV2'));
+      return (
+        <React.Suspense fallback={<div className="text-center py-4">Loading use case analysis...</div>}>
+          <UseCaseMatchesV2 matches={matches} />
+        </React.Suspense>
+      );
+    } else {
+      // Use evidence-based component for role-based ROI
+      const UseCaseMatchesEvidence = React.lazy(() => import('./UseCaseMatchesEvidence'));
+      return (
+        <React.Suspense fallback={<div className="text-center py-4">Loading evidence-based recommendations...</div>}>
+          <UseCaseMatchesEvidence matches={matches} />
+        </React.Suspense>
+      );
+    }
   }
   
   // If no matches are provided or array is empty

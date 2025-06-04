@@ -868,3 +868,140 @@ The system now displays:
 
 ### Key Achievement:
 The system now provides **actionable implementation roadmaps** instead of vague "40% savings on everything" claims. Each use case shows specific tasks, realistic hours, and real company examples with metrics!
+
+## Critical Issues Found During Testing (January 6, 2025)
+
+### 1. Role Assignment Mapping Problems
+**Issue**: When analyzing the B2B SaaS company description, roles weren't properly mapped:
+- 200 software engineers → showed as "Select Role" instead of "Product & Engineering"
+- 180 customer success → showed as "Select Role" instead of "Customer Support"
+- Other roles similarly unmapped
+
+**Root Cause Analysis**:
+- The role extraction prompt may not have the exact mapping between common job titles and our 9 standardized business functions
+- Need to check company_description_prompt.txt and company_website_prompt.txt for role mapping instructions
+
+**Solution**:
+- Add explicit role mapping in the prompt templates
+- Include common variations (e.g., "software engineers" → "Product & Engineering", "customer success" → "Customer Support")
+
+### 2. Geographic Salary Adjustment Not Working
+**Issue**: User set company HQ as India but salaries remained at US levels ($100k for engineers)
+
+**Root Cause Analysis**:
+- The backend is supposed to apply geographic multipliers but it's not happening
+- Need to verify if geography is being extracted and passed to the use case matching
+
+**Solution**:
+- Ensure geography extraction includes country/region
+- Apply multipliers in the match_use_cases method before calculating ROI
+- Show adjusted rates transparently in the UI
+
+### 3. UI/UX Issues
+
+#### Sorting and Display:
+- **AI Opportunity Assessment** should be sorted high to low by relevance score
+- **Examples should be auto-expanded** (not hidden by default)
+- **Need comma separators** in large ROI percentage numbers (e.g., "1,250%" not "1250%")
+
+#### Labeling Confusion:
+- **"Net Annual (Yr 2+)"** → Change to "Net Annual Savings" or "Ongoing Annual ROI"
+- **"Claude Cost"** → Change to "Claude Cost (Annual)" to clarify it's yearly
+- **Total ROI display** → Add total ROI at top-right of each business function card
+
+#### Navigation Issues:
+- **State persistence**: Calculations are lost when navigating away and back
+- **Links behavior**: All external links should open in new tabs (target="_blank")
+
+### 4. Major Functionality Gaps
+
+#### Per-Use-Case Employee Counts:
+**Current**: Assumes ALL employees in a function use ALL use cases
+**Reality**: Only subset of engineers write docs, only some do code reviews, etc.
+**Solution**: Add employee count input field next to hours/week for each use case
+
+#### Limited Examples (1-2 instead of 3):
+**Issue**: Showing only 1-2 examples looks unconvincing
+**Analysis**: We have 115 case studies, should have 3 examples for most use cases
+**Solution**: 
+- Audit case study data to ensure good coverage
+- Adjust prompt to request 3 examples minimum
+- Fall back to similar use cases if exact matches are limited
+
+#### Limited Use Cases Per Function (1-2 instead of 3-6):
+**Critical Issue**: Only getting 1-2 use cases per business function
+**User Expectation**: 3-6 use cases to show comprehensive benefits
+
+**Root Cause Analysis**:
+1. **Token limits**: Current max_tokens might be too low
+2. **Prompt instructions**: May not explicitly ask for 3-6 use cases
+3. **Model choice**: Using Haiku for cost savings, but might need Sonnet/Opus for richer output
+4. **Case study data**: May not have enough variety tagged per function
+
+**Solution Strategy**:
+- First, check current max_tokens setting (likely ~2000)
+- Increase to 4000-5000 tokens to allow richer responses
+- Update prompt to explicitly request "3-6 use cases per function"
+- Consider using Sonnet for matching (still much cheaper than Opus)
+- Audit case study data to ensure we have variety
+
+## Implementation Priority & Time Estimates
+
+### Phase 1: Critical Fixes (4-6 hours)
+1. **Fix role mapping** (1 hour)
+   - Update both prompt templates with explicit mappings
+   - Test with the exact B2B SaaS example
+   
+2. **Fix geographic adjustment** (1 hour)
+   - Verify geography extraction
+   - Apply multipliers in backend
+   - Show adjusted rates in UI
+
+3. **Increase use cases per function** (2 hours)
+   - Increase max_tokens to 4000
+   - Update prompt to request 3-6 use cases
+   - Test token usage and costs
+   - Consider Sonnet if Haiku insufficient
+
+### Phase 2: UI/UX Improvements (3-4 hours)
+1. **Add employee count per use case** (2 hours)
+   - Add input field in UseCaseMatchesV2
+   - Update ROI calculations
+   - Default to full employee count with ability to adjust
+
+2. **Fix all display issues** (1-2 hours)
+   - Sort by relevance score
+   - Auto-expand examples
+   - Add comma formatting
+   - Fix labels (Yr 2+, Claude Cost)
+   - Add total ROI to function headers
+   - Make all links open in new tabs
+
+### Phase 3: State & Polish (2-3 hours)
+1. **Add state persistence** (1-2 hours)
+   - Use localStorage or URL params
+   - Restore state on navigation back
+
+2. **Ensure 3 examples per use case** (1 hour)
+   - Audit case study coverage
+   - Update prompt requirements
+   - Add fallback logic
+
+## Key Decisions to Make
+
+1. **Model Selection for Matching**:
+   - Current: Haiku ($0.25 per 1M input tokens)
+   - Alternative: Sonnet ($3 per 1M input tokens) - 12x more expensive
+   - Recommendation: Try increasing tokens first, only upgrade if necessary
+
+2. **State Persistence Method**:
+   - Option A: localStorage (simple, client-side)
+   - Option B: URL parameters (shareable)
+   - Option C: Backend session (most complex)
+   - Recommendation: Start with localStorage
+
+3. **Employee Count Defaults**:
+   - Option A: Default to 100% of employees, let users reduce
+   - Option B: Default to 50-70% based on use case type
+   - Option C: Let Claude estimate based on use case
+   - Recommendation: Option C with ability to override

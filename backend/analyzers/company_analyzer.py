@@ -536,7 +536,7 @@ Company Description:
         3. For each business function:
            - Calculate relevance score (0-100) based on how many employees would benefit
            - Explain why this function is relevant to their specific situation
-           - List specific USE CASES within this function (3-7 use cases total, sorted by impact)
+           - List specific USE CASES within this function (3-6 use cases per function, sorted by impact)
            - For each use case, estimate hours/week spent on that specific task
            - Include implementation complexity and prerequisites
         

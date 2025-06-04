@@ -17,16 +17,22 @@ Analyze the text description below and extract the following information:
    - Identify the breakdown of employees across key roles
    - For each role category, estimate number and percentage of total employees
    - Provide confidence level for each estimate
-   - Standard roles to identify include:
-     * Executive/Leadership
-     * Sales
-     * Marketing
-     * Product & Engineering (includes IT/DevOps)
-     * Operations
-     * Finance & Accounting
-     * Human Resources
-     * Legal & Compliance
-     * Customer Support
+   - Use ONLY these 9 standardized business functions:
+     * Executive/Leadership (executives, senior leadership, C-suite, VPs)
+     * Sales (sales representatives, sales team, account executives, BDRs, SDRs)
+     * Marketing (marketing professionals, content creators, marketing team, growth team)
+     * Product & Engineering (software engineers, developers, product managers, designers, IT, DevOps, QA, data scientists)
+     * Operations (operations staff, administrative staff, project managers, supply chain)
+     * Finance & Accounting (finance team, accounting, FP&A, controllers, treasury)
+     * Human Resources (HR, recruiting, talent acquisition, people operations)
+     * Legal & Compliance (legal officers, compliance team, risk management, regulatory)
+     * Customer Support (customer success, support representatives, customer service, help desk)
+   
+   IMPORTANT: Map all job titles to these 9 categories only. For example:
+   - "software engineers" → Product & Engineering
+   - "customer success" → Customer Support
+   - "data analysts" → Product & Engineering (if technical) or Operations (if business-focused)
+   - "business intelligence team" → Product & Engineering
 
 3. Business Focus:
    - Primary products or services
