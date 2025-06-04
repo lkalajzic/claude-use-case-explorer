@@ -536,7 +536,7 @@ Company Description:
         3. For each business function:
            - Calculate relevance score (0-100) based on how many employees would benefit
            - Explain why this function is relevant to their specific situation
-           - List AT LEAST 3-4 specific USE CASES within this function (aim for 4-5 use cases per function, sorted by impact)
+           - List EXACTLY 4 specific USE CASES within this function (no more, no less - exactly 4 use cases per function, sorted by impact)
            - For each use case, estimate hours/week spent on that specific task
            - Include implementation complexity and prerequisites
         
@@ -558,7 +558,20 @@ Company Description:
            - "IT/DevOps/Security" → Product & Engineering
            - "Data Scientists/Analysts" → Product & Engineering
         
-        Return ONLY a JSON object with this structure. Do not ask questions or provide explanations. Output ONLY valid JSON:
+        Return ONLY a JSON object with this structure. Do not ask questions or provide explanations. Output ONLY valid JSON.
+        
+        CRITICAL: Your response MUST contain exactly 9 businessFunctions objects, one for each of these:
+        - Executive/Leadership
+        - Sales
+        - Marketing
+        - Product & Engineering
+        - Operations
+        - Finance & Accounting
+        - Human Resources
+        - Legal & Compliance
+        - Customer Support
+        
+        Example structure (you must include ALL 9, not just this one):
         {{
           "businessFunctions": [
             {{
@@ -668,8 +681,19 @@ Company Description:
           ]
         }}
         
+        MANDATORY: You MUST return ALL 9 business functions in your response:
+        1. Executive/Leadership
+        2. Sales  
+        3. Marketing
+        4. Product & Engineering
+        5. Operations
+        6. Finance & Accounting
+        7. Human Resources
+        8. Legal & Compliance
+        9. Customer Support
+        
         Sort business functions by relevanceScore (highest first).
-        Only include functions with relevance score of 50 or higher.
+        Include ALL functions even if relevance score is low (show score as 10-30 for less relevant functions).
         For each use case, calculate quickWinScore = (hoursPerWeek * timeSavingsPercent * hourlyRate * employeeCount) / complexityWeeks
         Sort use cases within each function by quickWinScore (highest first).
         
