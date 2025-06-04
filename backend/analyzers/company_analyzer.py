@@ -529,14 +529,14 @@ Company Description:
         
         IMPORTANT INSTRUCTIONS:
         1. Map the company's employee roles to the standardized business functions above
-        2. Include ALL business functions that apply to this company, sorted by:
-           a) Relevance to company profile (considering their industry, size, and employee distribution)
-           b) Potential ROI in dollar value
+        2. YOU MUST include ALL 9 business functions for every company (Executive/Leadership, Sales, Marketing, Product & Engineering, Operations, Finance & Accounting, Human Resources, Legal & Compliance, Customer Support).
+           Even if a function has low relevance or few employees, STILL INCLUDE IT with a lower relevance score.
+           Sort by relevance score (high to low).
         
         3. For each business function:
            - Calculate relevance score (0-100) based on how many employees would benefit
            - Explain why this function is relevant to their specific situation
-           - List specific USE CASES within this function (3-6 use cases per function, sorted by impact)
+           - List AT LEAST 3-4 specific USE CASES within this function (aim for 4-5 use cases per function, sorted by impact)
            - For each use case, estimate hours/week spent on that specific task
            - Include implementation complexity and prerequisites
         
@@ -546,7 +546,7 @@ Company Description:
            - Expected time savings percentage
            - Implementation complexity (Low/Medium/High) and estimated weeks
            - Prerequisites required
-           - 2-3 real company examples with metrics
+           - EXACTLY 3 real company examples with metrics (mandatory)
         
         5. CRITICAL: Map roles correctly. For example:
            - "Customer Service Representatives" → Customer Support

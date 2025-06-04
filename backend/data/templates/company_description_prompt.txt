@@ -28,11 +28,14 @@ Analyze the text description below and extract the following information:
      * Legal & Compliance (legal officers, compliance team, risk management, regulatory)
      * Customer Support (customer success, support representatives, customer service, help desk)
    
-   IMPORTANT: Map all job titles to these 9 categories only. For example:
-   - "software engineers" → Product & Engineering
-   - "customer success" → Customer Support
-   - "data analysts" → Product & Engineering (if technical) or Operations (if business-focused)
-   - "business intelligence team" → Product & Engineering
+   IMPORTANT: 
+   - Map all job titles to these 9 categories only
+   - ALWAYS return ALL 9 categories in roleDistribution, even if count is 0
+   - Examples:
+     * "software engineers" → Product & Engineering
+     * "customer success" → Customer Support
+     * "data analysts" → Product & Engineering (if technical) or Operations (if business-focused)
+     * "business intelligence team" → Product & Engineering
 
 3. Business Focus:
    - Primary products or services

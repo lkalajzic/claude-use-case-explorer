@@ -65,7 +65,6 @@ const getReadinessIcon = (status) => {
 
 // Component for individual use case
 const UseCaseCard = ({ useCase, functionData, onHoursChange, onEmployeeCountChange, enabled }) => {
-  const [isExpanded, setIsExpanded] = useState(true); // Auto-expand examples
   const [hours, setHours] = useState(useCase.hoursPerWeek || 10);
   const [employeeCount, setEmployeeCount] = useState(functionData.totalEmployees || 0);
   
@@ -161,28 +160,19 @@ const UseCaseCard = ({ useCase, functionData, onHoursChange, onEmployeeCountChan
       
       {useCase.examples && useCase.examples.length > 0 && (
         <div className="mt-3">
-          <button
-            onClick={() => setIsExpanded(!isExpanded)}
-            className="text-sm text-blue-600 hover:text-blue-800 flex items-center"
-          >
-            {isExpanded ? "Hide" : "Show"} examples ({useCase.examples.length})
-            <svg className={`w-4 h-4 ml-1 transform ${isExpanded ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          
-          {isExpanded && (
-            <div className="mt-2 space-y-2">
-              {useCase.examples.map((example, idx) => (
-                <div key={idx} className="text-sm bg-gray-50 p-2 rounded">
-                  <Link href={`/use-cases/${example.caseStudyId}`} className="font-medium text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
-                    {example.company}
-                  </Link>
-                  <span className="text-gray-600">: {example.metric}</span>
-                </div>
-              ))}
-            </div>
-          )}
+          <div className="text-sm text-gray-700 font-medium mb-2">
+            Real-world examples:
+          </div>
+          <div className="space-y-2">
+            {useCase.examples.map((example, idx) => (
+              <div key={idx} className="text-sm bg-gray-50 p-2 rounded">
+                <Link href={`/use-cases/${example.caseStudyId}`} className="font-medium text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
+                  {example.company}
+                </Link>
+                <span className="text-gray-600">: {example.metric}</span>
+              </div>
+            ))}
+          </div>
         </div>
       )}
       
@@ -254,6 +244,7 @@ const UseCaseMatchesV2 = ({ matches }) => {
   );
   
   const [expandedFunctions, setExpandedFunctions] = useState({});
+  const [showAllUseCases, setShowAllUseCases] = useState({});
 
   // Calculate total ROI
   const totalMetrics = useMemo(() => {
@@ -425,10 +416,10 @@ const UseCaseMatchesV2 = ({ matches }) => {
             {isExpanded && hasUseCases && (
               <div className="p-4 space-y-3">
                 <div className="text-sm font-medium text-gray-700 mb-2">
-                  Use Cases (showing top {Math.min(3, func.useCases.length)} of {func.useCases.length}):
+                  Use Cases ({showAllUseCases[func.id] ? `showing all ${func.useCases.length}` : `showing top ${Math.min(3, func.useCases.length)} of ${func.useCases.length}`}):
                 </div>
                 
-                {func.useCases.slice(0, 3).map(useCase => (
+                {func.useCases.slice(0, showAllUseCases[func.id] ? func.useCases.length : 3).map(useCase => (
                   <div key={useCase.id} className="flex items-start space-x-3">
                     <input
                       type="checkbox"
@@ -455,8 +446,11 @@ const UseCaseMatchesV2 = ({ matches }) => {
                   </div>
                 ))}
                 
-                {func.useCases.length > 3 && (
-                  <button className="text-sm text-blue-600 hover:text-blue-800 mt-2">
+                {func.useCases.length > 3 && !showAllUseCases[func.id] && (
+                  <button 
+                    onClick={() => setShowAllUseCases(prev => ({ ...prev, [func.id]: true }))}
+                    className="text-sm text-blue-600 hover:text-blue-800 mt-2"
+                  >
                     Show {func.useCases.length - 3} more use cases
                   </button>
                 )}
