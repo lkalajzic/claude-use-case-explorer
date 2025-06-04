@@ -18,15 +18,15 @@ Analyze the text description below and extract the following information:
    - For each role category, estimate number and percentage of total employees
    - Provide confidence level for each estimate
    - Standard roles to identify include:
-     * Engineering/Development
-     * Customer Service/Support
-     * Marketing/Content
+     * Executive/Leadership
      * Sales
-     * Legal/Compliance
-     * Research/Data Analysis
-     * Operations/Administration
-     * Executive/Management
-     * Other specialized roles relevant to the company
+     * Marketing
+     * Product & Engineering (includes IT/DevOps)
+     * Operations
+     * Finance & Accounting
+     * Human Resources
+     * Legal & Compliance
+     * Customer Support
 
 3. Business Focus:
    - Primary products or services
@@ -49,12 +49,15 @@ Analyze the text description below and extract the following information:
 
 6. AI Implementation Opportunities:
    - Role-specific automation potential:
-     * Engineering/Development: code assistance, documentation, testing
-     * Customer Service: ticket handling, response drafting, knowledge retrieval
-     * Marketing/Content: content generation, repurposing, analysis
+     * Executive/Leadership: strategic analysis, report generation, decision support
      * Sales: prospect research, proposal generation, follow-up automation
-     * Legal/Compliance: document review, contract analysis, compliance checking
-     * Research: information synthesis, analysis automation, report generation
+     * Marketing: content generation, repurposing, analysis
+     * Product & Engineering: code assistance, documentation, testing, DevOps automation
+     * Operations: process automation, workflow optimization, data analysis
+     * Finance & Accounting: financial analysis, report generation, compliance
+     * Human Resources: recruitment support, employee communications, policy drafting
+     * Legal & Compliance: document review, contract analysis, compliance checking
+     * Customer Support: ticket handling, response drafting, knowledge retrieval
    - Content generation needs
    - Customer service optimization
    - Data analysis requirements
@@ -95,28 +98,12 @@ Return a JSON object with the structure below. Include confidence scores (1-5) f
     }},
     "roleDistribution": [
       {{
-        "role": "Engineering/Development",
-        "count": 150,
-        "percentage": 30,
+        "role": "Executive/Leadership",
+        "count": 25,
+        "percentage": 5,
         "confidence": 3,
-        "suggestedUseCases": ["coding", "productivity"],
+        "suggestedUseCases": ["document_qa", "productivity"],
         "potentialSavings": "High"
-      }},
-      {{
-        "role": "Customer Service/Support",
-        "count": 100,
-        "percentage": 20,
-        "confidence": 4,
-        "suggestedUseCases": ["customer_service"],
-        "potentialSavings": "High"
-      }},
-      {{
-        "role": "Marketing/Content",
-        "count": 75,
-        "percentage": 15,
-        "confidence": 3,
-        "suggestedUseCases": ["content_creation"],
-        "potentialSavings": "Medium"
       }},
       {{
         "role": "Sales",
@@ -127,7 +114,47 @@ Return a JSON object with the structure below. Include confidence scores (1-5) f
         "potentialSavings": "Medium"
       }},
       {{
-        "role": "Legal/Compliance",
+        "role": "Marketing",
+        "count": 75,
+        "percentage": 15,
+        "confidence": 3,
+        "suggestedUseCases": ["content_creation"],
+        "potentialSavings": "Medium"
+      }},
+      {{
+        "role": "Product & Engineering",
+        "count": 150,
+        "percentage": 30,
+        "confidence": 3,
+        "suggestedUseCases": ["coding", "productivity"],
+        "potentialSavings": "High"
+      }},
+      {{
+        "role": "Operations",
+        "count": 50,
+        "percentage": 10,
+        "confidence": 2,
+        "suggestedUseCases": ["productivity"],
+        "potentialSavings": "Low"
+      }},
+      {{
+        "role": "Finance & Accounting",
+        "count": 25,
+        "percentage": 5,
+        "confidence": 3,
+        "suggestedUseCases": ["document_qa", "productivity"],
+        "potentialSavings": "Medium"
+      }},
+      {{
+        "role": "Human Resources",
+        "count": 25,
+        "percentage": 5,
+        "confidence": 3,
+        "suggestedUseCases": ["document_qa", "productivity"],
+        "potentialSavings": "Medium"
+      }},
+      {{
+        "role": "Legal & Compliance",
         "count": 25,
         "percentage": 5,
         "confidence": 3,
@@ -135,12 +162,12 @@ Return a JSON object with the structure below. Include confidence scores (1-5) f
         "potentialSavings": "High"
       }},
       {{
-        "role": "Other/Administration",
-        "count": 50,
-        "percentage": 10,
-        "confidence": 2,
-        "suggestedUseCases": ["productivity"],
-        "potentialSavings": "Low"
+        "role": "Customer Support",
+        "count": 100,
+        "percentage": 20,
+        "confidence": 4,
+        "suggestedUseCases": ["customer_service"],
+        "potentialSavings": "High"
       }}
     ],
     "confidence": 3
@@ -193,13 +220,13 @@ Return a JSON object with the structure below. Include confidence scores (1-5) f
     }},
     "roleSpecificOpportunities": [
       {{
-        "role": "Engineering/Development",
+        "role": "Product & Engineering",
         "opportunities": ["Code assistance", "Documentation automation", "Test generation"],
         "estimatedTimeSavings": "20-40%",
         "confidence": 3
       }},
       {{
-        "role": "Customer Service/Support",
+        "role": "Customer Support",
         "opportunities": ["Ticket classification", "Response drafting", "Knowledge retrieval"],
         "estimatedTimeSavings": "30-50%",
         "confidence": 4

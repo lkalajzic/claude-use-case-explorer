@@ -515,15 +515,14 @@ Company Description:
         ## Standardized Business Functions
         Use ONLY these business functions (with their typical roles):
         - Executive/Leadership: C-suite, VPs, Directors
-        - Sales & Marketing: Sales, Marketing, Customer Success, BD
-        - Product & Engineering: Product Management, Software Development, QA
-        - Operations: Operations, Supply Chain, Procurement, Facilities
-        - Finance & Accounting: Finance, Accounting, FP&A, Treasury
-        - Human Resources: HR, Recruiting, L&D, Compensation
-        - Legal & Compliance: Legal, Compliance, Risk, IP
-        - Customer Support: Support, Success, Implementation
-        - Research & Development: R&D, Innovation, Strategy
-        - Information Technology: IT, Security, Infrastructure, Data
+        - Sales: Sales teams, Account Executives, Business Development, Sales Operations
+        - Marketing: Marketing teams, Content, Brand, Demand Gen, Growth, Customer Marketing
+        - Product & Engineering: Product Management, Software Development, QA, DevOps, Data Science, IT, Security
+        - Operations: Operations, Supply Chain, Procurement, Facilities, Business Operations
+        - Finance & Accounting: Finance, Accounting, FP&A, Treasury, Financial Planning
+        - Human Resources: HR, Recruiting, L&D, Compensation, People Operations
+        - Legal & Compliance: Legal, Compliance, Risk, IP, Regulatory
+        - Customer Support: Support, Customer Success, Implementation, Technical Support
         
         ## Your Task
         Based on the company analysis, recommend ALL relevant business functions and provide evidence-based examples from real companies.
@@ -537,22 +536,27 @@ Company Description:
         3. For each business function:
            - Calculate relevance score (0-100) based on how many employees would benefit
            - Explain why this function is relevant to their specific situation
-           - Find 3-5 real company examples from the case studies that demonstrate success in this function (when available)
-           - Focus on examples with concrete metrics or quantitative results
-           - Prefer examples from similar industries when possible
+           - List specific USE CASES within this function (3-7 use cases total, sorted by impact)
+           - For each use case, estimate hours/week spent on that specific task
+           - Include implementation complexity and prerequisites
         
-        4. For each example, include:
-           - Company name and basic info (industry, size)
-           - Brief implementation description (1 sentence)
-           - Concrete metric or outcome (with numeric value when available)
-           - Which roles benefited
+        4. For each USE CASE, provide:
+           - Specific task name and description
+           - Hours per week employees typically spend on this task
+           - Expected time savings percentage
+           - Implementation complexity (Low/Medium/High) and estimated weeks
+           - Prerequisites required
+           - 2-3 real company examples with metrics
         
         5. CRITICAL: Map roles correctly. For example:
            - "Customer Service Representatives" → Customer Support
            - "Software Engineers/Developers" → Product & Engineering
-           - "Sales Team/Account Executives" → Sales & Marketing
+           - "Sales Team/Account Executives" → Sales
+           - "Marketing Team/Content Creators" → Marketing
            - "HR/People Ops" → Human Resources
            - "CFO/Finance Team" → Finance & Accounting
+           - "IT/DevOps/Security" → Product & Engineering
+           - "Data Scientists/Analysts" → Product & Engineering
         
         Return ONLY a JSON object with this structure. Do not ask questions or provide explanations. Output ONLY valid JSON:
         {{
@@ -560,37 +564,104 @@ Company Description:
             {{
               "id": "customer_support",
               "name": "Customer Support",
+              "totalEmployees": 150,
               "relevanceScore": 95,
               "whyRelevant": "You have 150 customer service reps handling high inquiry volume who could benefit from AI automation",
-              "examples": [
+              "useCases": [
                 {{
-                  "company": "Company Name",
-                  "caseStudyId": "case-study-id",
-                  "industry": "Industry",
-                  "size": "Enterprise/Mid-Market/SMB",
-                  "implementation": "One sentence describing what they did",
-                  "metric": "Specific metric achieved (e.g., 40% reduction in response time)",
-                  "rolesAffected": ["Customer Service Reps", "Support Managers"],
-                  "source": "case-study-id"
+                  "id": "ai_support_agent",
+                  "name": "AI Support Agent",
+                  "description": "Automated first-line support for common customer queries",
+                  "hoursPerWeek": 15,
+                  "timeSavingsPercent": 40,
+                  "impact": "High",
+                  "complexity": "Medium",
+                  "complexityWeeks": 8,
+                  "prerequisites": ["API access", "Ticket system integration", "Historical ticket data"],
+                  "readinessStatus": "requires_setup",
+                  "examples": [
+                    {{
+                      "company": "Asana",
+                      "caseStudyId": "asana",
+                      "industry": "Software",
+                      "size": "Enterprise",
+                      "implementation": "Built Claude-powered agent for tier-1 support tickets",
+                      "metric": "40% reduction in agent workload"
+                    }},
+                    {{
+                      "company": "Intercom",
+                      "caseStudyId": "intercom", 
+                      "industry": "Software",
+                      "size": "Mid-Market",
+                      "implementation": "Deployed AI assistant for customer queries",
+                      "metric": "50% faster response times"
+                    }}
+                  ]
+                }},
+                {{
+                  "id": "response_drafting",
+                  "name": "Customer Response Drafting",
+                  "description": "AI-assisted drafting of customer emails and chat responses",
+                  "hoursPerWeek": 10,
+                  "timeSavingsPercent": 50,
+                  "impact": "High",
+                  "complexity": "Low",
+                  "complexityWeeks": 1,
+                  "prerequisites": [],
+                  "readinessStatus": "ready",
+                  "examples": [
+                    {{
+                      "company": "Copy.ai",
+                      "caseStudyId": "copy-ai",
+                      "industry": "Marketing",
+                      "size": "SMB",
+                      "implementation": "Used Claude for customer communication drafts",
+                      "metric": "60% faster response creation"
+                    }}
+                  ]
+                }},
+                {{
+                  "id": "knowledge_base",
+                  "name": "Knowledge Base Creation",
+                  "description": "Generate and maintain customer-facing documentation",
+                  "hoursPerWeek": 5,
+                  "timeSavingsPercent": 60,
+                  "impact": "Medium",
+                  "complexity": "Low", 
+                  "complexityWeeks": 2,
+                  "prerequisites": ["Access to product documentation"],
+                  "readinessStatus": "ready",
+                  "examples": [
+                    {{
+                      "company": "Notion",
+                      "caseStudyId": "notion",
+                      "industry": "Software", 
+                      "size": "Mid-Market",
+                      "implementation": "Automated FAQ and help article generation",
+                      "metric": "70% reduction in documentation time"
+                    }}
+                  ]
                 }}
               ],
               "targetRoles": [
                 {{
                   "role": "Customer Service/Support",
                   "employeeCount": 150,
-                  "timeSavings": "30-50%"
+                  "hourlyRate": 20,
+                  "adjustedHourlyRate": 6,
+                  "rateAdjustmentReason": "Eastern Europe (Croatia) - 0.3x US baseline"
                 }}
               ],
-              "totalEmployeesAffected": 150,
-              "estimatedROI": "$450,000/year",
-              "estimatedImplementationCost": {{
-                "level": "Medium",
-                "range": "$10,000 - $20,000"
-              }},
+              "totalApplicableHours": 30,
+              "totalApplicablePercent": 75,
               "secondOrderBenefits": [
                 {{
                   "benefit": "Improved Customer Satisfaction",
-                  "description": "Faster responses lead to happier customers"
+                  "description": "Faster, more consistent responses lead to happier customers"
+                }},
+                {{
+                  "benefit": "Employee Retention", 
+                  "description": "Less repetitive work reduces burnout"
                 }}
               ]
             }}
@@ -599,8 +670,37 @@ Company Description:
         
         Sort business functions by relevanceScore (highest first).
         Only include functions with relevance score of 50 or higher.
+        For each use case, calculate quickWinScore = (hoursPerWeek * timeSavingsPercent * hourlyRate * employeeCount) / complexityWeeks
+        Sort use cases within each function by quickWinScore (highest first).
+        
+        Common use cases by function:
+        - Customer Support: AI agent, response drafting, knowledge base, ticket routing, sentiment analysis
+        - Product & Engineering: Code generation, PR reviews, documentation, debugging, testing, infrastructure automation, security scanning, data pipeline creation
+        - Sales: Lead research, email drafting, proposal generation, deal analysis, CRM automation
+        - Marketing: Content creation, campaign copy, social media, SEO optimization, competitive analysis
+        - Operations: Process documentation, data analysis, report generation, workflow automation
+        - Finance & Accounting: Financial analysis, reporting automation, budget forecasting, invoice processing
+        - Human Resources: Candidate screening, onboarding materials, policy Q&A, performance reviews
+        - Legal & Compliance: Contract review, compliance monitoring, policy updates, risk assessment
+        - Executive/Leadership: Strategic analysis, decision support, performance dashboards, meeting summaries
+        
         Ensure examples come from the actual case studies provided.
-        Match case study businessFunctions to our standardized list (e.g., "Product Development & Engineering" → "Product & Engineering").
+        Match case study businessFunctions to our standardized list.
+        Be realistic with hours/week estimates - not all work can be enhanced by AI.
+        
+        IMPORTANT: Adjust hourly rates based on geography. Use these regional multipliers vs US baseline:
+        - United States/Canada: 1.0x (baseline)
+        - Western Europe (UK, Germany, France): 0.9x for support, 0.8x for engineering
+        - Eastern Europe (Poland, Romania, Croatia): 0.3x for support, 0.25x for engineering  
+        - Latin America (Brazil, Mexico): 0.35x for support, 0.3x for engineering
+        - India/Philippines: 0.15x for support, 0.2x for engineering
+        - Asia Pacific (Australia, Singapore): 1.0x
+        - Other regions: estimate based on local cost of living
+        
+        Example: US Customer Support = $20/hr, Croatia = $6/hr, Philippines = $3/hr
+        Example: US Software Engineer = $60/hr, Croatia = $15/hr, India = $12/hr
+        
+        Include the adjusted hourly rates in your response for transparency.
         """
         
         # Process with Claude
@@ -705,7 +805,76 @@ Company Description:
                     "Management": "productivity"
                 }
                 
+                # Default hourly rates for ROI calculation (US baseline)
+                # Based on 2024/2025 market data
+                # Aligned with our 9 standardized business functions
+                hourly_rates = {
+                    "Executive/Leadership": 100,      # ~$200k/year = $100/hr
+                    "Sales": 50,                      # ~$100k/year = $50/hr
+                    "Marketing": 40,                  # ~$80k/year = $40/hr
+                    "Product & Engineering": 60,      # ~$120k/year = $60/hr (includes IT/DevOps)
+                    "Operations": 30,                 # ~$60k/year = $30/hr
+                    "Finance & Accounting": 55,       # ~$110k/year = $55/hr
+                    "Human Resources": 35,            # ~$70k/year = $35/hr
+                    "Legal & Compliance": 75,         # ~$150k/year = $75/hr
+                    "Customer Support": 20,           # $17-22/hr US average
+                    "Other": 35                       # Generic professional fallback
+                }
+                
                 for business_function in matches["businessFunctions"]:
+                    # Calculate ROI for each use case if not provided
+                    if "useCases" in business_function:
+                        total_employees = business_function.get("totalEmployees", 0)
+                        
+                        # Get hourly rate for this function's roles
+                        hourly_rate = 35  # default
+                        if "targetRoles" in business_function and len(business_function["targetRoles"]) > 0:
+                            first_role = business_function["targetRoles"][0]
+                            
+                            # Use adjusted rate if provided by Claude
+                            if "adjustedHourlyRate" in first_role:
+                                hourly_rate = first_role["adjustedHourlyRate"]
+                            else:
+                                # Fall back to default rates
+                                role_name = first_role.get("role", "Other")
+                                for rate_key, rate_value in hourly_rates.items():
+                                    if rate_key.lower() in role_name.lower():
+                                        hourly_rate = rate_value
+                                        break
+                        
+                        total_applicable_hours = 0
+                        for use_case in business_function["useCases"]:
+                            hours_per_week = use_case.get("hoursPerWeek", 0)
+                            time_savings_percent = use_case.get("timeSavingsPercent", 0) / 100
+                            complexity_weeks = use_case.get("complexityWeeks", 1)
+                            
+                            # Calculate annual ROI for this use case
+                            annual_hours_saved = hours_per_week * time_savings_percent * 50  # 50 weeks/year
+                            annual_roi = annual_hours_saved * hourly_rate * total_employees
+                            use_case["annualROI"] = int(annual_roi)
+                            
+                            # Calculate quick win score
+                            if complexity_weeks > 0:
+                                use_case["quickWinScore"] = int(annual_roi / (complexity_weeks * 1000))  # Divide by 1000 for readability
+                            else:
+                                use_case["quickWinScore"] = 0
+                            
+                            total_applicable_hours += hours_per_week
+                        
+                        # Sort use cases by quickWinScore
+                        business_function["useCases"] = sorted(
+                            business_function["useCases"],
+                            key=lambda x: x.get("quickWinScore", 0),
+                            reverse=True
+                        )
+                        
+                        # Calculate total applicable percentage
+                        if business_function.get("totalApplicableHours") is None:
+                            business_function["totalApplicableHours"] = total_applicable_hours
+                        if business_function.get("totalApplicablePercent") is None and total_applicable_hours > 0:
+                            business_function["totalApplicablePercent"] = int((total_applicable_hours / 40) * 100)
+                    
+                    # Add category mapping for backward compatibility
                     if "targetRoles" in business_function:
                         for role_info in business_function["targetRoles"]:
                             role_name = role_info["role"]

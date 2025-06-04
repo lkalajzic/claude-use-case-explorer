@@ -3,23 +3,26 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 
-// Default hourly rates by role (can be customized)
+// Default hourly rates by role (US baseline)
+// Aligned with our 9 standardized business functions
 const DEFAULT_HOURLY_RATES = {
-  "Engineering/Development": 75,
-  "Software Development": 75,
-  "Customer Service/Support": 30,
-  "Marketing/Content": 45,
-  Sales: 60,
-  Marketing: 45,
-  "Legal/Compliance": 90,
-  "Research/Data Analysis": 65,
-  "Operations/Administration": 35,
-  Operations: 35,
-  "Executive/Management": 100,
-  HR: 50,
-  "Human Resources": 50,
-  Finance: 65,
-  Other: 50,
+  "Executive/Leadership": 100,      // ~$200k/year
+  "Sales": 50,                      // ~$100k/year
+  "Marketing": 40,                  // ~$80k/year
+  "Product & Engineering": 60,      // ~$120k/year (includes IT/DevOps)
+  "Operations": 30,                 // ~$60k/year
+  "Finance & Accounting": 55,       // ~$110k/year
+  "Human Resources": 35,            // ~$70k/year
+  "Legal & Compliance": 75,         // ~$150k/year
+  "Customer Support": 20,           // $17-22/hr average
+  // Legacy mappings for backward compatibility
+  "Engineering/Development": 60,
+  "Software Development": 60,
+  "Customer Service/Support": 20,
+  "Marketing/Content": 40,
+  "HR": 35,
+  "Finance": 55,
+  "Other": 35,
 };
 
 // Claude API subscription pricing (estimated based on community reports)

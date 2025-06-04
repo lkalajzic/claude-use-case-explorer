@@ -811,3 +811,60 @@ The system now displays:
 #### Frontend  
 - `/frontend-next/src/components/analysis/UseCaseMatchesEvidence.jsx` - NEW: Evidence-based component
 - `/frontend-next/src/components/analysis/UseCaseMatches.jsx` - Updated to detect new format
+
+## Progress Update: Use-Case-Based ROI Implementation (January 2025)
+
+### ✅ Completed Today:
+
+1. **Backend Restructuring**:
+   - Updated Claude prompt to return use cases nested within business functions
+   - Added hours/week estimation for each use case
+   - Implemented quickWinScore calculation (ROI/complexity)
+   - Added complexity ratings and prerequisites
+   - Backend now calculates ROI per use case, not per role
+
+2. **Standardized Business Functions**:
+   - Consolidated to 9 clear business functions (was 10+)
+   - Separated Sales and Marketing (previously combined)
+   - Merged IT into Product & Engineering
+   - Updated all templates and code to use consistent naming
+
+3. **Regional Wage Adjustments**:
+   - Added geography-based hourly rate multipliers
+   - US baseline rates adjusted for regions (e.g., Croatia 0.25x for engineering)
+   - Claude now estimates location-adjusted rates transparently
+   - Shows adjusted rates in response for user clarity
+
+4. **Our 9 Standard Functions**:
+   - Executive/Leadership
+   - Sales
+   - Marketing
+   - Product & Engineering (includes IT/DevOps)
+   - Operations
+   - Finance & Accounting
+   - Human Resources
+   - Legal & Compliance
+   - Customer Support
+
+### 🚧 Next Steps (Frontend):
+
+1. **Create UseCaseMatchesV2 Component**:
+   - Show business functions with nested use cases
+   - Display top 3 use cases by default, expand for more
+   - Editable hours/week inputs per use case
+   - Show readiness indicators (✅ Ready, ⚠️ Prerequisites needed)
+   - Quick win badges for high ROI/complexity scores
+
+2. **Update ROI Calculations**:
+   - Calculate based on individual use cases
+   - Show transparency: hours × time savings × rate × employees
+   - Allow toggling use cases on/off
+   - Sum selected use cases for total ROI
+
+3. **Testing**:
+   - Test with companies from different regions
+   - Verify use case hours/week are reasonable
+   - Ensure quick win scoring works correctly
+
+### Key Achievement:
+The system now provides **actionable implementation roadmaps** instead of vague "40% savings on everything" claims. Each use case shows specific tasks, realistic hours, and real company examples with metrics!
