@@ -8,29 +8,15 @@ const calculatePercentage = (count, total) => {
   return Math.round((count / total) * 100);
 };
 
-// Predefined role types with associated AI use cases and default costs/time values
+// Predefined role types matching our 9 standardized business functions
 // Note: Productivity is included for all roles as a universal benefit
 const predefinedRoles = [
   { 
-    name: 'Engineering/Development', 
-    useCases: ['coding', 'productivity'],
-    potential: 'High',
-    yearlyCost: 150000,
-    weeklyTaskHours: 30
-  },
-  { 
-    name: 'Customer Service/Support', 
-    useCases: ['customer_service', 'productivity'],
-    potential: 'High',
-    yearlyCost: 60000,
-    weeklyTaskHours: 35
-  },
-  { 
-    name: 'Marketing/Content', 
-    useCases: ['content_creation', 'productivity'],
-    potential: 'High',
-    yearlyCost: 90000,
-    weeklyTaskHours: 25
+    name: 'Executive/Leadership', 
+    useCases: ['productivity'],
+    potential: 'Medium',
+    yearlyCost: 200000,
+    weeklyTaskHours: 15
   },
   { 
     name: 'Sales', 
@@ -40,42 +26,70 @@ const predefinedRoles = [
     weeklyTaskHours: 20
   },
   { 
-    name: 'Legal/Compliance', 
-    useCases: ['document_qa', 'productivity'],
+    name: 'Marketing', 
+    useCases: ['content_creation', 'productivity'],
     potential: 'High',
-    yearlyCost: 180000,
+    yearlyCost: 90000,
+    weeklyTaskHours: 25
+  },
+  { 
+    name: 'Product & Engineering', 
+    useCases: ['coding', 'productivity'],
+    potential: 'High',
+    yearlyCost: 150000,
     weeklyTaskHours: 30
   },
   { 
-    name: 'Research/Data Analysis', 
-    useCases: ['research_analysis', 'productivity'],
-    potential: 'High',
-    yearlyCost: 130000,
-    weeklyTaskHours: 32
-  },
-  { 
-    name: 'Operations/Administration', 
+    name: 'Operations', 
     useCases: ['productivity'],
     potential: 'Medium',
     yearlyCost: 70000,
     weeklyTaskHours: 25
   },
   { 
-    name: 'Executive/Management', 
+    name: 'Finance & Accounting', 
+    useCases: ['document_qa', 'productivity'],
+    potential: 'Medium',
+    yearlyCost: 110000,
+    weeklyTaskHours: 25
+  },
+  { 
+    name: 'Human Resources', 
     useCases: ['productivity'],
     potential: 'Medium',
-    yearlyCost: 200000,
-    weeklyTaskHours: 15
+    yearlyCost: 80000,
+    weeklyTaskHours: 20
+  },
+  { 
+    name: 'Legal & Compliance', 
+    useCases: ['document_qa', 'productivity'],
+    potential: 'High',
+    yearlyCost: 180000,
+    weeklyTaskHours: 30
+  },
+  { 
+    name: 'Customer Support', 
+    useCases: ['customer_service', 'productivity'],
+    potential: 'High',
+    yearlyCost: 60000,
+    weeklyTaskHours: 35
   }
 ];
 
 // Function to get default cost and time values based on role name
 const getDefaultValuesForRole = (roleName) => {
-  const matchingRole = predefinedRoles.find(r => 
-    r.name.toLowerCase() === roleName.toLowerCase() || 
-    r.name.toLowerCase().includes(roleName.toLowerCase()) || 
-    roleName.toLowerCase().includes(r.name.toLowerCase())
+  // Direct match first
+  let matchingRole = predefinedRoles.find(r => 
+    r.name.toLowerCase() === roleName.toLowerCase()
   );
+  
+  // If no direct match, try partial matches
+  if (!matchingRole) {
+    matchingRole = predefinedRoles.find(r => 
+      r.name.toLowerCase().includes(roleName.toLowerCase()) || 
+      roleName.toLowerCase().includes(r.name.toLowerCase())
+    );
+  }
   
   return {
     yearlyCost: matchingRole?.yearlyCost || 100000,
