@@ -1,0 +1,665 @@
+{
+  "businessFunctions": [
+    {
+      "avgSalaryUSD": 24000,
+      "employeeCount": 290,
+      "id": "product_engineering",
+      "name": "Product & Engineering",
+      "relevanceScore": 95,
+      "useCases": [
+        {
+          "complexity": "Low",
+          "description": "Accelerate development with AI-powered code completion and generation",
+          "employeesUsing": 200,
+          "examples": [
+            {
+              "caseStudyId": "anthropic",
+              "company": "Anthropic",
+              "metric": "75% of engineers save 8-10+ hours weekly"
+            },
+            {
+              "caseStudyId": "sourcegraph",
+              "company": "Sourcegraph",
+              "metric": "40% faster task completion"
+            }
+          ],
+          "hoursPerWeek": 15,
+          "id": "code_generation",
+          "name": "AI-Assisted Code Generation",
+          "timeSavingsPercent": 40
+        },
+        {
+          "complexity": "Low",
+          "description": "Generate and maintain technical documentation automatically",
+          "employeesUsing": 150,
+          "examples": [
+            {
+              "caseStudyId": "codeium",
+              "company": "Codeium",
+              "metric": "Automated documentation generation"
+            },
+            {
+              "caseStudyId": "sentry",
+              "company": "Sentry",
+              "metric": "AutoFix automated debugging"
+            }
+          ],
+          "hoursPerWeek": 8,
+          "id": "documentation_automation",
+          "name": "Automated Documentation Generation",
+          "timeSavingsPercent": 60
+        },
+        {
+          "complexity": "Medium",
+          "description": "AI-powered code review and quality assurance",
+          "employeesUsing": 120,
+          "examples": [
+            {
+              "caseStudyId": "graphite",
+              "company": "Graphite",
+              "metric": "AI agents transform code review"
+            },
+            {
+              "caseStudyId": "socket",
+              "company": "Socket",
+              "metric": "Automated security scanning"
+            }
+          ],
+          "hoursPerWeek": 6,
+          "id": "code_review",
+          "name": "Intelligent Code Review",
+          "timeSavingsPercent": 35
+        }
+      ]
+    },
+    {
+      "avgSalaryUSD": 12000,
+      "employeeCount": 180,
+      "id": "customer_support",
+      "name": "Customer Support",
+      "relevanceScore": 90,
+      "useCases": [
+        {
+          "complexity": "Medium",
+          "description": "AI-powered customer query resolution and ticket triage",
+          "employeesUsing": 150,
+          "examples": [
+            {
+              "caseStudyId": "hailo",
+              "company": "Hailo",
+              "metric": "24/7 support automation"
+            },
+            {
+              "caseStudyId": "studyfetch",
+              "company": "StudyFetch",
+              "metric": "Round-the-clock personalized support"
+            }
+          ],
+          "hoursPerWeek": 20,
+          "id": "ticket_automation",
+          "name": "Automated Ticket Handling",
+          "timeSavingsPercent": 45
+        },
+        {
+          "complexity": "Low",
+          "description": "AI-enhanced knowledge management and response suggestions",
+          "employeesUsing": 120,
+          "examples": [
+            {
+              "caseStudyId": "khanmigo",
+              "company": "Khanmigo",
+              "metric": "24/7 curriculum support"
+            },
+            {
+              "caseStudyId": "sparke",
+              "company": "Spark.E",
+              "metric": "Millions of students supported"
+            }
+          ],
+          "hoursPerWeek": 15,
+          "id": "knowledge_base",
+          "name": "Intelligent Knowledge Base",
+          "timeSavingsPercent": 50
+        },
+        {
+          "complexity": "Medium",
+          "description": "Real-time translation and multilingual query handling",
+          "employeesUsing": 80,
+          "examples": [
+            {
+              "caseStudyId": "typeface",
+              "company": "Typeface",
+              "metric": "Global content production"
+            },
+            {
+              "caseStudyId": "translated",
+              "company": "Translated",
+              "metric": "AI-driven translation platform"
+            }
+          ],
+          "hoursPerWeek": 12,
+          "id": "multilingual_support",
+          "name": "Multilingual Customer Support",
+          "timeSavingsPercent": 40
+        }
+      ]
+    },
+    {
+      "avgSalaryUSD": 18000,
+      "employeeCount": 120,
+      "id": "sales",
+      "name": "Sales",
+      "relevanceScore": 85,
+      "useCases": [
+        {
+          "complexity": "Low",
+          "description": "AI-powered lead qualification and research automation",
+          "employeesUsing": 100,
+          "examples": [
+            {
+              "caseStudyId": "honeypot",
+              "company": "Honeypot",
+              "metric": "Automated research projects"
+            },
+            {
+              "caseStudyId": "vantage",
+              "company": "Vantage",
+              "metric": "Customer acquisition analytics"
+            }
+          ],
+          "hoursPerWeek": 10,
+          "id": "prospect_research",
+          "name": "Automated Prospect Research",
+          "timeSavingsPercent": 55
+        },
+        {
+          "complexity": "Medium",
+          "description": "Automated creation of sales proposals and RFP responses",
+          "employeesUsing": 80,
+          "examples": [
+            {
+              "caseStudyId": "clayhr",
+              "company": "ClayHR",
+              "metric": "Content creation and translation"
+            },
+            {
+              "caseStudyId": "vanta",
+              "company": "Vanta",
+              "metric": "Proposal development"
+            }
+          ],
+          "hoursPerWeek": 8,
+          "id": "proposal_generation",
+          "name": "Proposal and RFP Generation",
+          "timeSavingsPercent": 50
+        },
+        {
+          "complexity": "Low",
+          "description": "AI-powered CRM data cleaning and enrichment",
+          "employeesUsing": 60,
+          "examples": [
+            {
+              "caseStudyId": "datadog",
+              "company": "Datadog",
+              "metric": "Natural language data queries"
+            },
+            {
+              "caseStudyId": "emotive",
+              "company": "Emotive",
+              "metric": "Marketing spend optimization"
+            }
+          ],
+          "hoursPerWeek": 5,
+          "id": "crm_optimization",
+          "name": "CRM Data Enhancement",
+          "timeSavingsPercent": 40
+        }
+      ]
+    },
+    {
+      "avgSalaryUSD": 15000,
+      "employeeCount": 80,
+      "id": "marketing",
+      "name": "Marketing",
+      "relevanceScore": 88,
+      "useCases": [
+        {
+          "complexity": "Low",
+          "description": "Automated blog posts, social media, and marketing copy generation",
+          "employeesUsing": 70,
+          "examples": [
+            {
+              "caseStudyId": "clayhr",
+              "company": "ClayHR",
+              "metric": "Global content production"
+            },
+            {
+              "caseStudyId": "vanta",
+              "company": "Vanta",
+              "metric": "Content strategy and multichannel adaptation"
+            }
+          ],
+          "hoursPerWeek": 20,
+          "id": "content_creation",
+          "name": "AI-Powered Content Creation",
+          "timeSavingsPercent": 60
+        },
+        {
+          "complexity": "Medium",
+          "description": "AI-driven analysis of marketing performance and optimization",
+          "employeesUsing": 40,
+          "examples": [
+            {
+              "caseStudyId": "emotive",
+              "company": "Emotive",
+              "metric": "Marketing asset analysis"
+            },
+            {
+              "caseStudyId": "vantage",
+              "company": "Vantage",
+              "metric": "Customer acquisition analytics"
+            }
+          ],
+          "hoursPerWeek": 12,
+          "id": "campaign_analysis",
+          "name": "Marketing Campaign Analytics",
+          "timeSavingsPercent": 45
+        },
+        {
+          "complexity": "Medium",
+          "description": "AI-driven personalization of marketing messages and campaigns",
+          "employeesUsing": 50,
+          "examples": [
+            {
+              "caseStudyId": "primer",
+              "company": "Primer",
+              "metric": "Personalized reports and insights"
+            },
+            {
+              "caseStudyId": "sparke",
+              "company": "Spark.E",
+              "metric": "Personalized learning support"
+            }
+          ],
+          "hoursPerWeek": 8,
+          "id": "personalization",
+          "name": "Personalized Marketing Automation",
+          "timeSavingsPercent": 40
+        }
+      ]
+    },
+    {
+      "avgSalaryUSD": 14000,
+      "employeeCount": 90,
+      "id": "operations",
+      "name": "Operations",
+      "relevanceScore": 80,
+      "useCases": [
+        {
+          "complexity": "Medium",
+          "description": "Automate routine operational workflows and approvals",
+          "employeesUsing": 70,
+          "examples": [
+            {
+              "caseStudyId": "anthropic",
+              "company": "Anthropic",
+              "metric": "Operations team uses AI to close case tickets"
+            },
+            {
+              "caseStudyId": "primer",
+              "company": "Primer",
+              "metric": "Processes 200+ million titles"
+            }
+          ],
+          "hoursPerWeek": 15,
+          "id": "process_automation",
+          "name": "Business Process Automation",
+          "timeSavingsPercent": 50
+        },
+        {
+          "complexity": "Medium",
+          "description": "Automated data transformation and operational reporting",
+          "employeesUsing": 50,
+          "examples": [
+            {
+              "caseStudyId": "emotive",
+              "company": "Emotive",
+              "metric": "Business intelligence and performance analytics"
+            },
+            {
+              "caseStudyId": "datadog",
+              "company": "Datadog",
+              "metric": "Data extraction and analysis"
+            }
+          ],
+          "hoursPerWeek": 12,
+          "id": "data_processing",
+          "name": "Data Processing and Analytics",
+          "timeSavingsPercent": 45
+        },
+        {
+          "complexity": "Low",
+          "description": "AI-powered quality checks and process standardization",
+          "employeesUsing": 40,
+          "examples": [
+            {
+              "caseStudyId": "mercari",
+              "company": "Mercari",
+              "metric": "Quality assurance processes and partner communication"
+            },
+            {
+              "caseStudyId": "clayhr",
+              "company": "ClayHR",
+              "metric": "Expedite QA processes"
+            }
+          ],
+          "hoursPerWeek": 8,
+          "id": "quality_assurance",
+          "name": "Quality Assurance Automation",
+          "timeSavingsPercent": 40
+        }
+      ]
+    },
+    {
+      "avgSalaryUSD": 45000,
+      "employeeCount": 15,
+      "id": "executive_leadership",
+      "name": "Executive/Leadership",
+      "relevanceScore": 75,
+      "useCases": [
+        {
+          "complexity": "High",
+          "description": "AI-powered market analysis and strategic insights",
+          "employeesUsing": 12,
+          "examples": [
+            {
+              "caseStudyId": "emotive",
+              "company": "Emotive",
+              "metric": "Strategic decision support and KPI monitoring"
+            },
+            {
+              "caseStudyId": "televisaunivision",
+              "company": "TelevisaUnivision",
+              "metric": "Generation of tailored investment insights"
+            }
+          ],
+          "hoursPerWeek": 8,
+          "id": "strategic_analysis",
+          "name": "Strategic Decision Support",
+          "timeSavingsPercent": 40
+        },
+        {
+          "complexity": "Medium",
+          "description": "AI assistance for strategic communications and presentations",
+          "employeesUsing": 10,
+          "examples": [
+            {
+              "caseStudyId": "clayhr",
+              "company": "ClayHR",
+              "metric": "Strategic advisor for executive communications"
+            },
+            {
+              "caseStudyId": "televisaunivision",
+              "company": "TelevisaUnivision",
+              "metric": "Strategic analysis for investment decisions"
+            }
+          ],
+          "hoursPerWeek": 5,
+          "id": "executive_communications",
+          "name": "Executive Communications",
+          "timeSavingsPercent": 35
+        },
+        {
+          "complexity": "Medium",
+          "description": "AI-powered executive dashboards and KPI tracking",
+          "employeesUsing": 8,
+          "examples": [
+            {
+              "caseStudyId": "vantage",
+              "company": "Vantage",
+              "metric": "Business performance analysis"
+            },
+            {
+              "caseStudyId": "emotive",
+              "company": "Emotive",
+              "metric": "Executive dashboards and strategic insights"
+            }
+          ],
+          "hoursPerWeek": 6,
+          "id": "performance_monitoring",
+          "name": "Performance Dashboard Analytics",
+          "timeSavingsPercent": 30
+        }
+      ]
+    },
+    {
+      "avgSalaryUSD": 16000,
+      "employeeCount": 25,
+      "id": "finance_accounting",
+      "name": "Finance & Accounting",
+      "relevanceScore": 78,
+      "useCases": [
+        {
+          "complexity": "Medium",
+          "description": "AI-powered financial reporting and analysis automation",
+          "employeesUsing": 20,
+          "examples": [
+            {
+              "caseStudyId": "televisaunivision",
+              "company": "TelevisaUnivision",
+              "metric": "Automated processing of deal room documents"
+            },
+            {
+              "caseStudyId": "datadog",
+              "company": "Datadog",
+              "metric": "Direct data extraction and analysis"
+            }
+          ],
+          "hoursPerWeek": 12,
+          "id": "financial_analysis",
+          "name": "Automated Financial Analysis",
+          "timeSavingsPercent": 50
+        },
+        {
+          "complexity": "Low",
+          "description": "Automated invoice processing and financial document analysis",
+          "employeesUsing": 15,
+          "examples": [
+            {
+              "caseStudyId": "televisaunivision",
+              "company": "TelevisaUnivision",
+              "metric": "Document analysis and KPI extraction"
+            },
+            {
+              "caseStudyId": "token",
+              "company": "Token",
+              "metric": "Compliance analysis and specialized terminology processing"
+            }
+          ],
+          "hoursPerWeek": 10,
+          "id": "invoice_processing",
+          "name": "Invoice and Document Processing",
+          "timeSavingsPercent": 60
+        },
+        {
+          "complexity": "High",
+          "description": "AI-assisted budget planning and financial forecasting",
+          "employeesUsing": 12,
+          "examples": [
+            {
+              "caseStudyId": "emotive",
+              "company": "Emotive",
+              "metric": "Financial reporting and analytics"
+            },
+            {
+              "caseStudyId": "televisaunivision",
+              "company": "TelevisaUnivision",
+              "metric": "Portfolio-wide KPI extraction"
+            }
+          ],
+          "hoursPerWeek": 8,
+          "id": "budgeting_forecasting",
+          "name": "Budgeting and Forecasting",
+          "timeSavingsPercent": 40
+        }
+      ]
+    },
+    {
+      "avgSalaryUSD": 13000,
+      "employeeCount": 30,
+      "id": "human_resources",
+      "name": "Human Resources",
+      "relevanceScore": 70,
+      "useCases": [
+        {
+          "complexity": "Medium",
+          "description": "AI-powered candidate screening and recruitment workflows",
+          "employeesUsing": 25,
+          "examples": [
+            {
+              "caseStudyId": "datadog",
+              "company": "Datadog",
+              "metric": "Recruiting analytics through natural language queries"
+            },
+            {
+              "caseStudyId": "clayhr",
+              "company": "ClayHR",
+              "metric": "Performance management and feedback generation"
+            }
+          ],
+          "hoursPerWeek": 15,
+          "id": "recruitment_automation",
+          "name": "Recruitment Process Automation",
+          "timeSavingsPercent": 45
+        },
+        {
+          "complexity": "Medium",
+          "description": "AI-assisted performance evaluations and feedback generation",
+          "employeesUsing": 20,
+          "examples": [
+            {
+              "caseStudyId": "clayhr",
+              "company": "ClayHR",
+              "metric": "Feedback templates and effective language suggestions"
+            },
+            {
+              "caseStudyId": "typeface",
+              "company": "Typeface",
+              "metric": "Performance management approaches"
+            }
+          ],
+          "hoursPerWeek": 8,
+          "id": "performance_management",
+          "name": "Performance Review Automation",
+          "timeSavingsPercent": 40
+        },
+        {
+          "complexity": "Low",
+          "description": "AI-driven workforce analytics and employee engagement insights",
+          "employeesUsing": 15,
+          "examples": [
+            {
+              "caseStudyId": "datadog",
+              "company": "Datadog",
+              "metric": "Data insights for recruiting processes"
+            },
+            {
+              "caseStudyId": "clayhr",
+              "company": "ClayHR",
+              "metric": "Manager alignment with performance approaches"
+            }
+          ],
+          "hoursPerWeek": 6,
+          "id": "employee_analytics",
+          "name": "Employee Analytics and Insights",
+          "timeSavingsPercent": 35
+        }
+      ]
+    },
+    {
+      "avgSalaryUSD": 22000,
+      "employeeCount": 20,
+      "id": "legal_compliance",
+      "name": "Legal & Compliance",
+      "relevanceScore": 82,
+      "useCases": [
+        {
+          "complexity": "High",
+          "description": "AI-powered contract review and compliance checking",
+          "employeesUsing": 15,
+          "examples": [
+            {
+              "caseStudyId": "token",
+              "company": "Token",
+              "metric": "Automated complex document analysis"
+            },
+            {
+              "caseStudyId": "televisaunivision",
+              "company": "TelevisaUnivision",
+              "metric": "Due diligence automation"
+            }
+          ],
+          "hoursPerWeek": 12,
+          "id": "contract_analysis",
+          "name": "Contract Review and Analysis",
+          "timeSavingsPercent": 55
+        },
+        {
+          "complexity": "High",
+          "description": "Automated monitoring of regulatory changes and compliance requirements",
+          "employeesUsing": 12,
+          "examples": [
+            {
+              "caseStudyId": "token",
+              "company": "Token",
+              "metric": "Compliance analysis for financial sectors"
+            },
+            {
+              "caseStudyId": "hailo",
+              "company": "Hailo",
+              "metric": "Security monitoring and compliance"
+            }
+          ],
+          "hoursPerWeek": 10,
+          "id": "regulatory_monitoring",
+          "name": "Regulatory Compliance Monitoring",
+          "timeSavingsPercent": 50
+        },
+        {
+          "complexity": "Medium",
+          "description": "Automated processing and analysis of legal documents",
+          "employeesUsing": 10,
+          "examples": [
+            {
+              "caseStudyId": "token",
+              "company": "Token",
+              "metric": "Specialized terminology processing"
+            },
+            {
+              "caseStudyId": "televisaunivision",
+              "company": "TelevisaUnivision",
+              "metric": "Document analysis and processing"
+            }
+          ],
+          "hoursPerWeek": 8,
+          "id": "document_processing",
+          "name": "Legal Document Processing",
+          "timeSavingsPercent": 45
+        }
+      ]
+    }
+  ],
+  "companyInfo": {
+    "headquarters": "India",
+    "industry": "Information Technology",
+    "keyChallenges": [
+      "Customer support ticket volume has doubled in the last year",
+      "Sales team spends too much time on manual prospect research",
+      "Engineering team has a growing documentation backlog",
+      "Marketing struggles to produce content at the pace needed",
+      "Data analysis requests are bottlenecked with our BI team"
+    ],
+    "name": "Not specified",
+    "totalEmployees": 850
+  }
+}

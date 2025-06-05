@@ -141,6 +141,30 @@ def match_use_cases():
         return jsonify({"error": str(e)}), 500
 
 
+@app.route('/api/analyze-and-match', methods=['POST'])
+def analyze_and_match():
+    """
+    ONE endpoint that analyzes company AND returns use cases - no more context loss!
+    """
+    if not company_analyzer:
+        return jsonify({"error": "Company analyzer not initialized"}), 500
+        
+    data = request.json
+    if not data or 'description' not in data:
+        return jsonify({"error": "Company description is required"}), 400
+        
+    description = data['description']
+    corrected_data = data.get('correctedData', None)  # Optional corrected data from user review
+    
+    try:
+        logger.info("Analyzing and matching company in ONE step")
+        result = company_analyzer.analyze_and_match_combined(description, corrected_data)
+        return jsonify(result)
+    except Exception as e:
+        logger.error(f"Error in combined analysis: {e}")
+        return jsonify({"error": str(e)}), 500
+
+
 @app.route('/api/benchmarks', methods=['GET'])
 def get_benchmarks():
     """

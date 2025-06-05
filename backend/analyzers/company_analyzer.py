@@ -350,7 +350,7 @@ Company Description:
         try:
             # Try the newer API format first
             response = self.client.messages.create(
-                model="claude-3-5-haiku-20241022",
+                model="claude-sonnet-4-20250514",
                 max_tokens=2000,
                 messages=[{"role": "user", "content": prompt}]
             )
@@ -418,7 +418,7 @@ Company Description:
         try:
             # Try the newer API format first
             response = self.client.messages.create(
-                model="claude-3-5-haiku-20241022",
+                model="claude-sonnet-4-20250514",
                 max_tokens=2000,
                 messages=[{"role": "user", "content": prompt}]
             )
@@ -545,7 +545,7 @@ Company Description:
         3. For each business function:
            - Calculate relevance score (0-100) based on how many employees would benefit
            - Explain why this function is relevant to their specific situation
-           - List EXACTLY 4 specific USE CASES within this function (no more, no less - exactly 4 use cases per function, sorted by impact)
+           - List 2-3 specific USE CASES within this function (aim for 3 use cases per function, sorted by impact)
            - For each use case, estimate hours/week spent on that specific task
            - Include implementation complexity and prerequisites
         
@@ -555,7 +555,7 @@ Company Description:
            - Expected time savings percentage
            - Implementation complexity (Low/Medium/High) and estimated weeks
            - Prerequisites required
-           - EXACTLY 3 real company examples with metrics (mandatory)
+           - 2 real company examples with metrics
         
         5. CRITICAL: Map roles correctly. For example:
            - "Customer Service Representatives" → Customer Support
@@ -770,8 +770,8 @@ Company Description:
         try:
             # Try the newer API format first
             response = self.client.messages.create(
-                model="claude-3-5-haiku-20241022",
-                max_tokens=16000,  # Increased even more for 9 functions × 4 use cases × 3 examples
+                model="claude-sonnet-4-20250514",
+                max_tokens=8192,  # Increased for Sonnet's richer output
                 system="You are a JSON-only response bot. You must ONLY output valid JSON with no additional text, markdown, or explanations.",
                 messages=[{"role": "user", "content": matching_prompt}]
             )
@@ -987,6 +987,299 @@ Company Description:
                             role_info["category"] = category or "productivity"
             
             return matches
+        
+        except json.JSONDecodeError as e:
+            print(f"Failed to parse matches as JSON: {e}")
+            print("Raw response (first 500 chars):", result[:500] if 'result' in locals() else "No result")
+            
+            # Return a basic error response
+            return {
+                "error": "Failed to parse Claude response",
+                "details": str(e)
+            }
+        except Exception as e:
+            print(f"Error in match_use_cases: {e}")
+            raise
+    
+    def analyze_and_match_combined(self, description: str, corrected_data: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
+        """
+        ONE METHOD that does EVERYTHING - Extract company info AND match use cases in a single Claude call
+        Can optionally accept corrected_data from user review
+        """
+        # Standardized industries (GICS-based)
+        STANDARDIZED_INDUSTRIES = [
+            "Information Technology",
+            "Health Care", 
+            "Financials",
+            "Consumer Discretionary",
+            "Communication Services",
+            "Industrials",
+            "Consumer Staples",
+            "Energy",
+            "Utilities",
+            "Real Estate",
+            "Materials"
+        ]
+        
+        # Explicit role mappings for compound roles
+        ROLE_MAPPINGS = {
+            "product managers and designers": "Product & Engineering",
+            "data analysts and business intelligence team": "Product & Engineering",
+            "customer success and support representatives": "Customer Support",
+            "hr and recruiting staff": "Human Resources",
+            "finance and accounting team": "Finance & Accounting",
+            "legal and compliance officers": "Legal & Compliance",
+            "executives and senior leadership": "Executive/Leadership",
+            "other operations and administrative staff": "Operations",
+        }
+        
+        # Load case studies for examples
+        enhanced_path = os.path.join(os.path.dirname(__file__), "..", "data", "case_studies", "enhanced_case_studies.json")
+        try:
+            with open(enhanced_path, "r") as f:
+                case_studies = json.load(f)
+            print(f"Loaded {len(case_studies)} case studies for examples")
+        except Exception as e:
+            print(f"Error loading case studies: {e}")
+            case_studies = []
+        
+        # Create the mega prompt
+        if corrected_data:
+            # User has reviewed and corrected the data
+            combined_prompt = f"""
+        Analyze this company and provide a complete AI implementation roadmap.
+        
+        IMPORTANT: The user has reviewed and corrected the company data. You MUST use the correctedData values provided below, NOT the original description.
+        The original description is provided for context only.
+        
+        ORIGINAL COMPANY DESCRIPTION (for context):
+        {description}
+        
+        USER-VERIFIED DATA (USE THIS):
+        {json.dumps(corrected_data, indent=2)}
+        
+        INSTRUCTIONS:
+        
+        1. USE THE CORRECTED DATA:
+        - Company name: {corrected_data.get('companyInfo', {}).get('name', 'Not specified')}
+        - Industry: {corrected_data.get('companyInfo', {}).get('industry', 'Not specified')} 
+        - Total employees: {corrected_data.get('companyInfo', {}).get('totalEmployees', 0)}
+        - Headquarters: {corrected_data.get('companyInfo', {}).get('headquarters', 'Not specified')}
+        - Employee counts per function: USE THE PROVIDED businessFunctions data
+        - Salaries: USE THE adjustedSalaryUSD values provided
+        
+        2. FOR EACH OF THE 9 BUSINESS FUNCTIONS:
+        Use the employee counts and salaries from correctedData.businessFunctions.
+        The user has already verified these numbers - DO NOT CHANGE THEM.
+        
+        3. FOR EACH FUNCTION, provide exactly 3 use cases with:
+        - Name and description  
+        - employeesUsing: realistic subset of that function's employees
+        - hoursPerWeek: realistic hours spent on this task
+        - timeSavingsPercent: 20-60% (be realistic)
+        - complexity: Low/Medium/High
+        - 2 real examples with metrics
+        
+        OUTPUT FORMAT (MUST be valid JSON):
+        {{
+          "companyInfo": {{
+            // Use values from correctedData.companyInfo
+          }},
+          "businessFunctions": [
+            // Use the 9 functions from correctedData.businessFunctions
+            // Add use cases to each function
+          ]
+        }}
+        """
+        else:
+            # First-time analysis
+            combined_prompt = f"""
+        Analyze this company and provide a complete AI implementation roadmap in ONE response.
+        
+        COMPANY DESCRIPTION:
+        {description}
+        
+        INSTRUCTIONS:
+        
+        1. EXTRACT COMPANY INFO:
+        - Industry: MUST be one of these: {', '.join(STANDARDIZED_INDUSTRIES)}
+        - Total employees: Extract the exact number stated
+        - Headquarters: Location if mentioned (e.g., "India", "US", etc.)
+        - Key challenges: List the main pain points mentioned
+        
+        2. MAP ALL EMPLOYEES TO EXACTLY THESE 9 FUNCTIONS:
+        - Executive/Leadership
+        - Sales
+        - Marketing
+        - Product & Engineering
+        - Operations
+        - Finance & Accounting
+        - Human Resources
+        - Legal & Compliance
+        - Customer Support
+        
+        CRITICAL MAPPING RULES:
+        - "software engineers" (200) → Product & Engineering
+        - "product managers and designers" (50) → Product & Engineering
+        - "data analysts and business intelligence team" (40) → Product & Engineering
+        - "customer success and support representatives" (180) → Customer Support
+        - "sales representatives" (120) → Sales
+        - "marketing professionals" (80) → Marketing
+        - "HR and recruiting staff" (30) → Human Resources
+        - "finance and accounting team" (25) → Finance & Accounting
+        - "legal and compliance officers" (20) → Legal & Compliance
+        - "executives and senior leadership" (15) → Executive/Leadership
+        - "other operations and administrative staff" (90) → Operations
+        - ALL employees must be mapped, sum MUST equal total
+        
+        3. CALCULATE SALARY ADJUSTMENTS:
+        Based on the headquarters location and industry, intelligently determine appropriate salary levels.
+        Consider:
+        - Cost of living in that specific region
+        - Average salary levels for THIS SPECIFIC INDUSTRY in that region
+        - Local purchasing power parity
+        - Economic development level
+        
+        For example:
+        - Software engineers in Bangalore, India (IT industry) might earn $24,000/year (0.2x US)
+        - But doctors in Bangalore (Healthcare) might earn $40,000/year (0.3x US)
+        - Manufacturing workers in Poland earn differently than tech workers in Poland
+        
+        BE SPECIFIC to both location AND industry when setting avgSalaryUSD.
+        
+        4. FOR EACH OF THE 9 FUNCTIONS (even if 0 employees):
+        Provide exactly 3 use cases with:
+        - Name and description
+        - employeesUsing: ACTUAL NUMBER (not percentage!) of employees who would use this
+        - hoursPerWeek: realistic hours spent on this task
+        - timeSavingsPercent: 20-60% (be realistic)
+        - complexity: Low/Medium/High
+        - 2 real examples with company name and metric
+        
+        OUTPUT FORMAT (MUST be valid JSON):
+        {{
+          "companyInfo": {{
+            "name": "Company Name or 'Not specified'",
+            "industry": "Information Technology",
+            "totalEmployees": 850,
+            "headquarters": "India",
+            "keyChallenges": [
+              "Customer support ticket volume has doubled",
+              "Sales team needs better prospect research tools",
+              "Engineering documentation backlog",
+              "Marketing content creation bottleneck"
+            ]
+          }},
+          "businessFunctions": [
+            {{
+              "id": "product_engineering",
+              "name": "Product & Engineering",
+              "employeeCount": 290,
+              "avgSalaryUSD": 120000,
+              "relevanceScore": 95,
+              "useCases": [
+                {{
+                  "id": "code_generation",
+                  "name": "Code Generation & Assistance",
+                  "description": "AI-powered code completion and generation",
+                  "employeesUsing": 200,
+                  "hoursPerWeek": 15,
+                  "timeSavingsPercent": 40,
+                  "complexity": "Low",
+                  "examples": [
+                    {{"company": "GitHub", "metric": "55% faster task completion", "caseStudyId": "github"}},
+                    {{"company": "Replit", "metric": "30% reduction in debugging time", "caseStudyId": "replit"}}
+                  ]
+                }},
+                {{
+                  "id": "documentation",
+                  "name": "Automated Documentation",
+                  "description": "Generate and maintain technical documentation",
+                  "employeesUsing": 100,
+                  "hoursPerWeek": 5,
+                  "timeSavingsPercent": 60,
+                  "complexity": "Low",
+                  "examples": [
+                    {{"company": "GitLab", "metric": "70% faster documentation", "caseStudyId": "gitlab"}},
+                    {{"company": "Sourcegraph", "metric": "50% reduction in doc debt", "caseStudyId": "sourcegraph"}}
+                  ]
+                }},
+                {{
+                  "id": "code_review",
+                  "name": "Code Review Automation",
+                  "description": "AI-assisted code reviews and PR feedback",
+                  "employeesUsing": 150,
+                  "hoursPerWeek": 8,
+                  "timeSavingsPercent": 35,
+                  "complexity": "Medium",
+                  "examples": [
+                    {{"company": "Graphite", "metric": "40% faster PR reviews", "caseStudyId": "graphite"}},
+                    {{"company": "Semgrep", "metric": "30% fewer review cycles", "caseStudyId": "semgrep"}}
+                  ]
+                }}
+              ]
+            }},
+            // ... ALL 9 functions MUST be included
+          ]
+        }}
+        
+        Available case studies (use these for examples):
+        {json.dumps([{
+            "company": cs.get("company", ""),
+            "businessFunctions": cs.get("businessFunctions", []),
+            "metrics": cs.get("quantitativeMetrics", {})
+        } for cs in case_studies[:30]], indent=2)}
+        
+        RETURN ONLY VALID JSON. Include ALL 9 business functions.
+        """
+        
+        # Make the API call
+        print("Making combined analysis request...")
+        try:
+            response = self.client.messages.create(
+                model="claude-sonnet-4-20250514",
+                max_tokens=8192,  # Sonnet 4 can handle more complex output
+                system="You are a JSON-only response bot. Return ONLY valid JSON with no explanation.",
+                messages=[{"role": "user", "content": combined_prompt}]
+            )
+            
+            result = response.content[0].text
+            
+            # Clean the result in case it has markdown code blocks
+            cleaned_result = result.strip()
+            
+            # Find JSON block in the response
+            if "```json" in cleaned_result:
+                start_idx = cleaned_result.find("```json") + 7
+                end_idx = cleaned_result.find("```", start_idx)
+                if end_idx != -1:
+                    cleaned_result = cleaned_result[start_idx:end_idx].strip()
+            elif cleaned_result.startswith("```"):
+                cleaned_result = cleaned_result[3:]
+                if cleaned_result.endswith("```"):
+                    cleaned_result = cleaned_result[:-3]
+            
+            # Parse JSON
+            parsed = json.loads(cleaned_result)
+            
+            # Validate employee count
+            total_mapped = sum(f['employeeCount'] for f in parsed.get('businessFunctions', []))
+            total_stated = parsed.get('companyInfo', {}).get('totalEmployees', 0)
+            
+            if total_mapped != total_stated:
+                print(f"⚠️ WARNING: Mapped {total_mapped} employees but company states {total_stated}")
+            
+            # Validate we have all 9 functions
+            if len(parsed.get('businessFunctions', [])) != 9:
+                print(f"⚠️ WARNING: Expected 9 functions, got {len(parsed.get('businessFunctions', []))}")
+            
+            print(f"✅ Successfully analyzed company: {parsed.get('companyInfo', {}).get('name', 'Unknown')}")
+            print(f"   Industry: {parsed.get('companyInfo', {}).get('industry')}")
+            print(f"   Total Employees: {total_stated}")
+            print(f"   Headquarters: {parsed.get('companyInfo', {}).get('headquarters')}")
+            
+            return parsed
+            
         except json.JSONDecodeError as e:
             print(f"Failed to parse matches as JSON: {e}")
             print("Raw response (first 500 chars):", result[:500])
@@ -995,7 +1288,7 @@ Company Description:
             # Try to fix common JSON errors
             try:
                 # Remove any trailing commas before closing brackets/braces
-                fixed_json = cleaned_result
+                fixed_json = result.strip()
                 fixed_json = re.sub(r',\s*}', '}', fixed_json)
                 fixed_json = re.sub(r',\s*]', ']', fixed_json)
                 
@@ -1047,6 +1340,12 @@ Company Description:
             except Exception as e2:
                 print(f"Even fallback JSON creation failed: {e2}")
                 raise
+                
+        except Exception as e:
+            print(f"❌ Error in combined analysis: {e}")
+            if hasattr(e, 'response'):
+                print(f"   Response: {e.response}")
+            raise
     
     def _scrape_website(self, url: str) -> str:
         """

@@ -1,0 +1,665 @@
+{
+  "companyInfo": {
+    "name": "B2B SaaS ERP Company",
+    "industry": "Information Technology",
+    "totalEmployees": 850,
+    "headquarters": "India",
+    "keyChallenges": [
+      "Customer support ticket volume has doubled in the last year",
+      "Sales team spends too much time on manual prospect research",
+      "Engineering team has a growing documentation backlog",
+      "Marketing struggles to produce content at the pace needed",
+      "Data analysis requests are bottlenecked with our BI team"
+    ]
+  },
+  "businessFunctions": [
+    {
+      "id": "executive_leadership",
+      "name": "Executive/Leadership",
+      "employeeCount": 15,
+      "avgSalaryUSD": 80000,
+      "relevanceScore": 85,
+      "useCases": [
+        {
+          "id": "strategic_decision_support",
+          "name": "Strategic Decision Support",
+          "description": "AI-powered insights for strategic planning and decision making",
+          "employeesUsing": 15,
+          "hoursPerWeek": 8,
+          "timeSavingsPercent": 40,
+          "complexity": "High",
+          "examples": [
+            {
+              "company": "Tribal Credit",
+              "metric": "Enhanced strategic communications",
+              "caseStudyId": "tribal_credit"
+            },
+            {
+              "company": "Triple Whale",
+              "metric": "Data-driven KPI monitoring",
+              "caseStudyId": "triple_whale"
+            }
+          ]
+        },
+        {
+          "id": "executive_reporting",
+          "name": "Executive Reporting",
+          "description": "Automated generation of executive dashboards and reports",
+          "employeesUsing": 10,
+          "hoursPerWeek": 6,
+          "timeSavingsPercent": 50,
+          "complexity": "Medium",
+          "examples": [
+            {
+              "company": "Patreon",
+              "metric": "Streamlined executive communications",
+              "caseStudyId": "patreon"
+            },
+            {
+              "company": "Triple Whale",
+              "metric": "Business performance analysis",
+              "caseStudyId": "triple_whale"
+            }
+          ]
+        },
+        {
+          "id": "competitive_analysis",
+          "name": "Competitive Intelligence",
+          "description": "AI-driven market and competitive analysis",
+          "employeesUsing": 8,
+          "hoursPerWeek": 4,
+          "timeSavingsPercent": 45,
+          "complexity": "Medium",
+          "examples": [
+            {
+              "company": "Baseten",
+              "metric": "Market research automation",
+              "caseStudyId": "baseten"
+            },
+            {
+              "company": "GitLab",
+              "metric": "Competitive positioning insights",
+              "caseStudyId": "gitlab"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sales",
+      "name": "Sales",
+      "employeeCount": 120,
+      "avgSalaryUSD": 28000,
+      "relevanceScore": 90,
+      "useCases": [
+        {
+          "id": "prospect_research",
+          "name": "Automated Prospect Research",
+          "description": "AI-powered lead qualification and prospect intelligence",
+          "employeesUsing": 100,
+          "hoursPerWeek": 12,
+          "timeSavingsPercent": 55,
+          "complexity": "Medium",
+          "examples": [
+            {
+              "company": "Patreon",
+              "metric": "Reduced manual research time",
+              "caseStudyId": "patreon"
+            },
+            {
+              "company": "Baseten",
+              "metric": "Enhanced lead qualification",
+              "caseStudyId": "baseten"
+            }
+          ]
+        },
+        {
+          "id": "proposal_generation",
+          "name": "Proposal & RFP Generation",
+          "description": "Automated creation of sales proposals and RFP responses",
+          "employeesUsing": 80,
+          "hoursPerWeek": 8,
+          "timeSavingsPercent": 45,
+          "complexity": "Medium",
+          "examples": [
+            {
+              "company": "Anthropic Creative",
+              "metric": "Faster proposal development",
+              "caseStudyId": "anthropic_creative"
+            },
+            {
+              "company": "Patreon",
+              "metric": "Competitive analysis integration",
+              "caseStudyId": "patreon"
+            }
+          ]
+        },
+        {
+          "id": "crm_data_analysis",
+          "name": "CRM Data Analysis",
+          "description": "AI-driven sales pipeline and performance analysis",
+          "employeesUsing": 60,
+          "hoursPerWeek": 6,
+          "timeSavingsPercent": 40,
+          "complexity": "Low",
+          "examples": [
+            {
+              "company": "Patreon",
+              "metric": "Natural language data queries",
+              "caseStudyId": "patreon"
+            },
+            {
+              "company": "Triple Whale",
+              "metric": "Customer acquisition analytics",
+              "caseStudyId": "triple_whale"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "marketing",
+      "name": "Marketing",
+      "employeeCount": 80,
+      "avgSalaryUSD": 26000,
+      "relevanceScore": 95,
+      "useCases": [
+        {
+          "id": "content_creation",
+          "name": "Content Creation & Strategy",
+          "description": "AI-powered content generation and multichannel adaptation",
+          "employeesUsing": 70,
+          "hoursPerWeek": 15,
+          "timeSavingsPercent": 60,
+          "complexity": "Low",
+          "examples": [
+            {
+              "company": "Anthropic Creative",
+              "metric": "Consistent brand voice generation",
+              "caseStudyId": "anthropic_creative"
+            },
+            {
+              "company": "Patreon",
+              "metric": "Global content production scaling",
+              "caseStudyId": "patreon"
+            }
+          ]
+        },
+        {
+          "id": "campaign_analysis",
+          "name": "Campaign Performance Analysis",
+          "description": "Automated marketing campaign analysis and optimization",
+          "employeesUsing": 50,
+          "hoursPerWeek": 10,
+          "timeSavingsPercent": 50,
+          "complexity": "Medium",
+          "examples": [
+            {
+              "company": "Triple Whale",
+              "metric": "Marketing asset analysis",
+              "caseStudyId": "triple_whale"
+            },
+            {
+              "company": "Baseten",
+              "metric": "Data-driven insights",
+              "caseStudyId": "baseten"
+            }
+          ]
+        },
+        {
+          "id": "market_research",
+          "name": "Market Research & Insights",
+          "description": "AI-driven market analysis and competitive intelligence",
+          "employeesUsing": 40,
+          "hoursPerWeek": 8,
+          "timeSavingsPercent": 45,
+          "complexity": "Medium",
+          "examples": [
+            {
+              "company": "Baseten",
+              "metric": "Automated market research",
+              "caseStudyId": "baseten"
+            },
+            {
+              "company": "Triple Whale",
+              "metric": "Customer acquisition insights",
+              "caseStudyId": "triple_whale"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "product_engineering",
+      "name": "Product & Engineering",
+      "employeeCount": 290,
+      "avgSalaryUSD": 24000,
+      "relevanceScore": 95,
+      "useCases": [
+        {
+          "id": "code_generation",
+          "name": "Code Generation & Assistance",
+          "description": "AI-powered code completion, generation, and debugging",
+          "employeesUsing": 200,
+          "hoursPerWeek": 15,
+          "timeSavingsPercent": 40,
+          "complexity": "Low",
+          "examples": [
+            {
+              "company": "Baseten",
+              "metric": "75% of engineers save 8-10+ hours weekly",
+              "caseStudyId": "baseten"
+            },
+            {
+              "company": "Patreon",
+              "metric": "AI-assisted development acceleration",
+              "caseStudyId": "patreon"
+            }
+          ]
+        },
+        {
+          "id": "documentation_automation",
+          "name": "Documentation Automation",
+          "description": "Automated generation and maintenance of technical documentation",
+          "employeesUsing": 150,
+          "hoursPerWeek": 8,
+          "timeSavingsPercent": 60,
+          "complexity": "Low",
+          "examples": [
+            {
+              "company": "Cursor",
+              "metric": "Documentation generation acceleration",
+              "caseStudyId": "cursor"
+            },
+            {
+              "company": "Sourcegraph",
+              "metric": "Code understanding enhancement",
+              "caseStudyId": "sourcegraph"
+            }
+          ]
+        },
+        {
+          "id": "code_review",
+          "name": "Automated Code Review",
+          "description": "AI-powered code review and quality analysis",
+          "employeesUsing": 180,
+          "hoursPerWeek": 6,
+          "timeSavingsPercent": 35,
+          "complexity": "Medium",
+          "examples": [
+            {
+              "company": "Graphite",
+              "metric": "Real-time contextual code support",
+              "caseStudyId": "graphite"
+            },
+            {
+              "company": "Sentry",
+              "metric": "Automated bug detection and fixes",
+              "caseStudyId": "sentry"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "operations",
+      "name": "Operations",
+      "employeeCount": 90,
+      "avgSalaryUSD": 22000,
+      "relevanceScore": 80,
+      "useCases": [
+        {
+          "id": "process_automation",
+          "name": "Business Process Automation",
+          "description": "Automated workflow management and process optimization",
+          "employeesUsing": 70,
+          "hoursPerWeek": 12,
+          "timeSavingsPercent": 50,
+          "complexity": "Medium",
+          "examples": [
+            {
+              "company": "Baseten",
+              "metric": "Case ticket management automation",
+              "caseStudyId": "baseten"
+            },
+            {
+              "company": "MoneyLion",
+              "metric": "Quality assurance streamlining",
+              "caseStudyId": "moneylion"
+            }
+          ]
+        },
+        {
+          "id": "data_processing",
+          "name": "Data Processing & Analytics",
+          "description": "Automated data transformation and reporting",
+          "employeesUsing": 50,
+          "hoursPerWeek": 10,
+          "timeSavingsPercent": 45,
+          "complexity": "Medium",
+          "examples": [
+            {
+              "company": "Brightwave",
+              "metric": "200+ million data point processing",
+              "caseStudyId": "brightwave"
+            },
+            {
+              "company": "Triple Whale",
+              "metric": "Business intelligence automation",
+              "caseStudyId": "triple_whale"
+            }
+          ]
+        },
+        {
+          "id": "inventory_management",
+          "name": "Inventory & Resource Management",
+          "description": "AI-driven inventory optimization and resource allocation",
+          "employeesUsing": 40,
+          "hoursPerWeek": 8,
+          "timeSavingsPercent": 40,
+          "complexity": "Medium",
+          "examples": [
+            {
+              "company": "Triple Whale",
+              "metric": "Inventory management analytics",
+              "caseStudyId": "triple_whale"
+            },
+            {
+              "company": "MoneyLion",
+              "metric": "Resource optimization",
+              "caseStudyId": "moneylion"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "finance_accounting",
+      "name": "Finance & Accounting",
+      "employeeCount": 25,
+      "avgSalaryUSD": 20000,
+      "relevanceScore": 75,
+      "useCases": [
+        {
+          "id": "financial_analysis",
+          "name": "Financial Analysis & Reporting",
+          "description": "Automated financial report generation and analysis",
+          "employeesUsing": 20,
+          "hoursPerWeek": 10,
+          "timeSavingsPercent": 50,
+          "complexity": "Medium",
+          "examples": [
+            {
+              "company": "Patreon",
+              "metric": "Direct data extraction without coding",
+              "caseStudyId": "patreon"
+            },
+            {
+              "company": "Foundry",
+              "metric": "KPI extraction automation",
+              "caseStudyId": "foundry"
+            }
+          ]
+        },
+        {
+          "id": "invoice_processing",
+          "name": "Invoice & Document Processing",
+          "description": "Automated processing of financial documents and invoices",
+          "employeesUsing": 15,
+          "hoursPerWeek": 8,
+          "timeSavingsPercent": 45,
+          "complexity": "Low",
+          "examples": [
+            {
+              "company": "Foundry",
+              "metric": "Document analysis automation",
+              "caseStudyId": "foundry"
+            },
+            {
+              "company": "Patreon",
+              "metric": "Financial reporting efficiency",
+              "caseStudyId": "patreon"
+            }
+          ]
+        },
+        {
+          "id": "budget_forecasting",
+          "name": "Budget Planning & Forecasting",
+          "description": "AI-driven budget analysis and financial forecasting",
+          "employeesUsing": 12,
+          "hoursPerWeek": 6,
+          "timeSavingsPercent": 40,
+          "complexity": "High",
+          "examples": [
+            {
+              "company": "Triple Whale",
+              "metric": "Performance analytics integration",
+              "caseStudyId": "triple_whale"
+            },
+            {
+              "company": "Foundry",
+              "metric": "Investment analysis automation",
+              "caseStudyId": "foundry"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "human_resources",
+      "name": "Human Resources",
+      "employeeCount": 30,
+      "avgSalaryUSD": 18000,
+      "relevanceScore": 70,
+      "useCases": [
+        {
+          "id": "recruitment_screening",
+          "name": "Recruitment & Candidate Screening",
+          "description": "AI-powered resume screening and candidate evaluation",
+          "employeesUsing": 25,
+          "hoursPerWeek": 12,
+          "timeSavingsPercent": 50,
+          "complexity": "Medium",
+          "examples": [
+            {
+              "company": "Patreon",
+              "metric": "Recruiting analytics insights",
+              "caseStudyId": "patreon"
+            },
+            {
+              "company": "Tribal Credit",
+              "metric": "Performance management alignment",
+              "caseStudyId": "tribal_credit"
+            }
+          ]
+        },
+        {
+          "id": "performance_management",
+          "name": "Performance Management",
+          "description": "Automated performance review and feedback generation",
+          "employeesUsing": 20,
+          "hoursPerWeek": 8,
+          "timeSavingsPercent": 45,
+          "complexity": "Medium",
+          "examples": [
+            {
+              "company": "Tribal Credit",
+              "metric": "Feedback template generation",
+              "caseStudyId": "tribal_credit"
+            },
+            {
+              "company": "Patreon",
+              "metric": "Manager effectiveness enhancement",
+              "caseStudyId": "patreon"
+            }
+          ]
+        },
+        {
+          "id": "employee_analytics",
+          "name": "Employee Analytics & Insights",
+          "description": "AI-driven workforce analytics and retention insights",
+          "employeesUsing": 15,
+          "hoursPerWeek": 6,
+          "timeSavingsPercent": 40,
+          "complexity": "High",
+          "examples": [
+            {
+              "company": "Brightwave",
+              "metric": "Workforce analytics automation",
+              "caseStudyId": "brightwave"
+            },
+            {
+              "company": "Patreon",
+              "metric": "Data-driven HR decisions",
+              "caseStudyId": "patreon"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "legal_compliance",
+      "name": "Legal & Compliance",
+      "employeeCount": 20,
+      "avgSalaryUSD": 25000,
+      "relevanceScore": 85,
+      "useCases": [
+        {
+          "id": "contract_analysis",
+          "name": "Contract Analysis & Review",
+          "description": "Automated contract review and compliance checking",
+          "employeesUsing": 15,
+          "hoursPerWeek": 10,
+          "timeSavingsPercent": 55,
+          "complexity": "High",
+          "examples": [
+            {
+              "company": "MUFG",
+              "metric": "Complex document analysis automation",
+              "caseStudyId": "mufg"
+            },
+            {
+              "company": "Foundry",
+              "metric": "Due diligence automation",
+              "caseStudyId": "foundry"
+            }
+          ]
+        },
+        {
+          "id": "regulatory_compliance",
+          "name": "Regulatory Compliance Monitoring",
+          "description": "Automated compliance tracking and reporting",
+          "employeesUsing": 12,
+          "hoursPerWeek": 8,
+          "timeSavingsPercent": 50,
+          "complexity": "High",
+          "examples": [
+            {
+              "company": "MUFG",
+              "metric": "Compliance analysis efficiency",
+              "caseStudyId": "mufg"
+            },
+            {
+              "company": "Foundry",
+              "metric": "Regulatory requirement tracking",
+              "caseStudyId": "foundry"
+            }
+          ]
+        },
+        {
+          "id": "legal_research",
+          "name": "Legal Research & Documentation",
+          "description": "AI-powered legal research and document preparation",
+          "employeesUsing": 10,
+          "hoursPerWeek": 6,
+          "timeSavingsPercent": 45,
+          "complexity": "Medium",
+          "examples": [
+            {
+              "company": "MUFG",
+              "metric": "Specialized terminology processing",
+              "caseStudyId": "mufg"
+            },
+            {
+              "company": "Foundry",
+              "metric": "Legal document analysis",
+              "caseStudyId": "foundry"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "customer_support",
+      "name": "Customer Support",
+      "employeeCount": 180,
+      "avgSalaryUSD": 16000,
+      "relevanceScore": 95,
+      "useCases": [
+        {
+          "id": "automated_ticket_handling",
+          "name": "Automated Ticket Handling",
+          "description": "AI-powered customer query resolution and ticket routing",
+          "employeesUsing": 150,
+          "hoursPerWeek": 20,
+          "timeSavingsPercent": 50,
+          "complexity": "Medium",
+          "examples": [
+            {
+              "company": "StudyFetch",
+              "metric": "24/7 personalized support delivery",
+              "caseStudyId": "studyfetch"
+            },
+            {
+              "company": "MoneyLion",
+              "metric": "Partner communication automation",
+              "caseStudyId": "moneylion"
+            }
+          ]
+        },
+        {
+          "id": "knowledge_base_management",
+          "name": "Knowledge Base Management",
+          "description": "Automated knowledge base updates and FAQ generation",
+          "employeesUsing": 100,
+          "hoursPerWeek": 8,
+          "timeSavingsPercent": 60,
+          "complexity": "Low",
+          "examples": [
+            {
+              "company": "StudyFetch",
+              "metric": "Instant query response capability",
+              "caseStudyId": "studyfetch"
+            },
+            {
+              "company": "MoneyLion",
+              "metric": "Documentation analysis efficiency",
+              "caseStudyId": "moneylion"
+            }
+          ]
+        },
+        {
+          "id": "customer_sentiment_analysis",
+          "name": "Customer Sentiment Analysis",
+          "description": "AI-driven analysis of customer feedback and satisfaction",
+          "employeesUsing": 80,
+          "hoursPerWeek": 6,
+          "timeSavingsPercent": 45,
+          "complexity": "Medium",
+          "examples": [
+            {
+              "company": "Linear",
+              "metric": "Community feedback transformation",
+              "caseStudyId": "linear"
+            },
+            {
+              "company": "Baseten",
+              "metric": "Customer success analytics",
+              "caseStudyId": "baseten"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
