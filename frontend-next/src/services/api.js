@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-// Base URL for API calls
-const API_BASE_URL = '/api';
+// Base URL for API calls - using Flask backend directly
+const API_BASE_URL = 'http://localhost:5001/api';
 
 // Backend URL (used for direct API calls if needed)
 const BACKEND_URL = 'http://localhost:5001';
@@ -37,6 +37,21 @@ export const companyAnalysisApi = {
       return response.data;
     } catch (error) {
       console.error('Error matching use cases:', error);
+      throw error;
+    }
+  },
+  
+  // Analyze and match in one call (new combined endpoint)
+  analyzeAndMatch: async (description, correctedData = null) => {
+    try {
+      const payload = { description };
+      if (correctedData) {
+        payload.correctedData = correctedData;
+      }
+      const response = await axios.post(`${API_BASE_URL}/analyze-and-match`, payload);
+      return response.data;
+    } catch (error) {
+      console.error('Error in combined analysis:', error);
       throw error;
     }
   }

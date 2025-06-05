@@ -527,6 +527,11 @@ Company Description:
         ## Your Task
         Based on the company analysis, recommend ALL relevant business functions and provide evidence-based examples from real companies.
         
+        IMPORTANT: Each example MUST be specific and metric-focused:
+        - Include SPECIFIC percentages or time savings (e.g. "40% reduction in ticket response time")
+        - Mention the SPECIFIC task or process improved (e.g. "automated tier-1 support tickets")
+        - Use action verbs (reduced, saved, automated, accelerated, etc.)
+        
         CRITICAL INFORMATION FROM COMPANY ANALYSIS:
         Company location: """ + str(company_analysis.get('companyInfo', {}).get('geography', {}).get('headquarters', 'Unknown')) + """
         Total employees: """ + str(company_analysis.get('employeeRoles', {}).get('totalEmployees', {}).get('count', 0)) + """
@@ -605,18 +610,17 @@ Company Description:
                     {{
                       "company": "Asana",
                       "caseStudyId": "asana",
-                      "industry": "Software",
-                      "size": "Enterprise",
-                      "implementation": "Built Claude-powered agent for tier-1 support tickets",
-                      "metric": "40% reduction in agent workload"
+                      "metric": "40% reduction in agent workload for tier-1 support tickets"
                     }},
                     {{
                       "company": "Intercom",
                       "caseStudyId": "intercom", 
-                      "industry": "Software",
-                      "size": "Mid-Market",
-                      "implementation": "Deployed AI assistant for customer queries",
-                      "metric": "50% faster response times"
+                      "metric": "50% faster response times for customer queries"
+                    }},
+                    {{
+                      "company": "Zendesk",
+                      "caseStudyId": "zendesk",
+                      "metric": "35% decrease in average ticket resolution time"
                     }}
                   ]
                 }},
@@ -635,10 +639,17 @@ Company Description:
                     {{
                       "company": "Copy.ai",
                       "caseStudyId": "copy-ai",
-                      "industry": "Marketing",
-                      "size": "SMB",
-                      "implementation": "Used Claude for customer communication drafts",
-                      "metric": "60% faster response creation"
+                      "metric": "60% faster response creation for customer emails"
+                    }},
+                    {{
+                      "company": "HubSpot",
+                      "caseStudyId": "hubspot",
+                      "metric": "45% reduction in email drafting time"
+                    }},
+                    {{
+                      "company": "Freshdesk",
+                      "caseStudyId": "freshdesk",
+                      "metric": "2x faster chat response composition"
                     }}
                   ]
                 }},
@@ -657,10 +668,17 @@ Company Description:
                     {{
                       "company": "Notion",
                       "caseStudyId": "notion",
-                      "industry": "Software", 
-                      "size": "Mid-Market",
-                      "implementation": "Automated FAQ and help article generation",
-                      "metric": "70% reduction in documentation time"
+                      "metric": "70% reduction in documentation time for FAQs"
+                    }},
+                    {{
+                      "company": "Confluence",
+                      "caseStudyId": "confluence",
+                      "metric": "Automated generation of 500+ help articles"
+                    }},
+                    {{
+                      "company": "GitBook",
+                      "caseStudyId": "gitbook",
+                      "metric": "80% faster knowledge base updates"
                     }}
                   ]
                 }}
@@ -1078,7 +1096,7 @@ Company Description:
         - hoursPerWeek: realistic hours spent on this task
         - timeSavingsPercent: 20-60% (be realistic)
         - complexity: Low/Medium/High
-        - 2 real examples with metrics
+        - 3 real examples with metrics (MUST have exactly 3 examples per use case)
         
         OUTPUT FORMAT (MUST be valid JSON):
         {{
@@ -1154,7 +1172,7 @@ Company Description:
         - hoursPerWeek: realistic hours spent on this task
         - timeSavingsPercent: 20-60% (be realistic)
         - complexity: Low/Medium/High
-        - 2 real examples with company name and metric
+        - 3 real examples with company name and specific metric (e.g. "40% reduction in X time")
         
         OUTPUT FORMAT (MUST be valid JSON):
         {{
@@ -1187,8 +1205,9 @@ Company Description:
                   "timeSavingsPercent": 40,
                   "complexity": "Low",
                   "examples": [
-                    {{"company": "GitHub", "metric": "55% faster task completion", "caseStudyId": "github"}},
-                    {{"company": "Replit", "metric": "30% reduction in debugging time", "caseStudyId": "replit"}}
+                    {{"company": "GitHub", "metric": "55% faster task completion on coding tasks", "caseStudyId": "github"}},
+                    {{"company": "Replit", "metric": "30% reduction in debugging time", "caseStudyId": "replit"}},
+                    {{"company": "Cursor", "metric": "Tab completion used 75% of coding time", "caseStudyId": "cursor"}}
                   ]
                 }},
                 {{
@@ -1200,8 +1219,9 @@ Company Description:
                   "timeSavingsPercent": 60,
                   "complexity": "Low",
                   "examples": [
-                    {{"company": "GitLab", "metric": "70% faster documentation", "caseStudyId": "gitlab"}},
-                    {{"company": "Sourcegraph", "metric": "50% reduction in doc debt", "caseStudyId": "sourcegraph"}}
+                    {{"company": "GitLab", "metric": "70% faster documentation creation", "caseStudyId": "gitlab"}},
+                    {{"company": "Sourcegraph", "metric": "50% reduction in documentation debt", "caseStudyId": "sourcegraph"}},
+                    {{"company": "Notion", "metric": "Automated help docs generation", "caseStudyId": "notion"}}
                   ]
                 }},
                 {{
@@ -1213,8 +1233,9 @@ Company Description:
                   "timeSavingsPercent": 35,
                   "complexity": "Medium",
                   "examples": [
-                    {{"company": "Graphite", "metric": "40% faster PR reviews", "caseStudyId": "graphite"}},
-                    {{"company": "Semgrep", "metric": "30% fewer review cycles", "caseStudyId": "semgrep"}}
+                    {{"company": "Graphite", "metric": "40% faster pull request reviews", "caseStudyId": "graphite"}},
+                    {{"company": "Semgrep", "metric": "30% fewer review cycles needed", "caseStudyId": "semgrep"}},
+                    {{"company": "Sentry", "metric": "Automated bug detection in PRs", "caseStudyId": "sentry"}}
                   ]
                 }}
               ]

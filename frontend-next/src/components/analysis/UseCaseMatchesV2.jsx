@@ -66,14 +66,16 @@ const getReadinessIcon = (status) => {
 // Component for individual use case
 const UseCaseCard = ({ useCase, functionData, onHoursChange, onEmployeeCountChange, enabled }) => {
   const [hours, setHours] = useState(useCase.hoursPerWeek || 10);
-  const [employeeCount, setEmployeeCount] = useState(functionData.totalEmployees || 0);
+  const [employeeCount, setEmployeeCount] = useState(useCase.employeesUsing || 0);
   
   // Calculate ROI for this specific use case
   const roi = useMemo(() => {
     if (!enabled) return { annual: 0, perEmployee: 0 };
     
     const timeSavings = (useCase.timeSavingsPercent || 30) / 100;
-    const hourlyRate = useCase.adjustedHourlyRate || DEFAULT_HOURLY_RATES[functionData.name] || 40;
+    // Convert annual salary to hourly rate (assuming 2000 hours/year)
+    const annualSalary = functionData.adjustedSalaryUSD || functionData.avgSalaryUSD || DEFAULT_HOURLY_RATES[functionData.name] * 2000 || 80000;
+    const hourlyRate = annualSalary / 2000;
     
     // Annual savings = employees × hours/week × 52 weeks × time savings × hourly rate
     const annualSavings = employeeCount * hours * 52 * timeSavings * hourlyRate;
@@ -236,7 +238,7 @@ const UseCaseMatchesV2 = ({ matches }) => {
     sortedFunctions.reduce((acc, func) => {
       if (func.useCases) {
         func.useCases.forEach(uc => {
-          acc[uc.id] = func.totalEmployees || 0;
+          acc[uc.id] = uc.employeesUsing || 0;
         });
       }
       return acc;
@@ -256,14 +258,16 @@ const UseCaseMatchesV2 = ({ matches }) => {
     sortedFunctions.forEach(func => {
       if (!enabledFunctions[func.id] || !func.useCases) return;
       
-      totalEmployees += func.totalEmployees || 0;
+      totalEmployees += func.employeeCount || 0;
       
       func.useCases.forEach(uc => {
         if (!enabledUseCases[uc.id]) return;
         
         const hours = useCaseHours[uc.id] || uc.hoursPerWeek || 10;
         const timeSavings = (uc.timeSavingsPercent || 30) / 100;
-        const hourlyRate = uc.adjustedHourlyRate || DEFAULT_HOURLY_RATES[func.name] || 40;
+        // Convert annual salary to hourly rate (assuming 2000 hours/year)
+        const annualSalary = func.adjustedSalaryUSD || func.avgSalaryUSD || DEFAULT_HOURLY_RATES[func.name] * 2000 || 80000;
+        const hourlyRate = annualSalary / 2000;
         const employees = useCaseEmployees[uc.id] || 0;
         
         totalAnnualSavings += employees * hours * 52 * timeSavings * hourlyRate;
@@ -291,7 +295,7 @@ const UseCaseMatchesV2 = ({ matches }) => {
       totalEmployees,
       totalImplementationWeeks
     };
-  }, [sortedFunctions, enabledFunctions, enabledUseCases, useCaseHours]);
+  }, [sortedFunctions, enabledFunctions, enabledUseCases, useCaseHours, useCaseEmployees]);
 
   return (
     <div className="space-y-6">
@@ -340,7 +344,9 @@ const UseCaseMatchesV2 = ({ matches }) => {
             
             const hours = useCaseHours[uc.id] || uc.hoursPerWeek || 10;
             const timeSavings = (uc.timeSavingsPercent || 30) / 100;
-            const hourlyRate = uc.adjustedHourlyRate || DEFAULT_HOURLY_RATES[func.name] || 40;
+            // Convert annual salary to hourly rate (assuming 2000 hours/year)
+            const annualSalary = func.adjustedSalaryUSD || func.avgSalaryUSD || DEFAULT_HOURLY_RATES[func.name] * 2000 || 80000;
+            const hourlyRate = annualSalary / 2000;
             const employees = useCaseEmployees[uc.id] || 0;
             
             total += employees * hours * 52 * timeSavings * hourlyRate;
@@ -378,7 +384,7 @@ const UseCaseMatchesV2 = ({ matches }) => {
                       </span>
                     </h3>
                     <p className="text-sm text-gray-600">
-                      {func.totalEmployees} employees
+                      {func.employeeCount} employees
                     </p>
                   </div>
                 </div>
