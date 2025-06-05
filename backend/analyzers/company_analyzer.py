@@ -475,7 +475,7 @@ Company Description:
         and provide role-specific recommendations based on case studies.
         """
         # Load enhanced case studies with business functions
-        enhanced_path = os.path.join(os.path.dirname(__file__), "..", "data", "case_studies", "enhanced_case_studies.json")
+        enhanced_path = os.path.join(os.path.dirname(__file__), "..", "data", "case_studies", "all_120_case_studies.json")
         try:
             with open(enhanced_path, "r") as f:
                 case_studies_with_functions = json.load(f)
@@ -1052,7 +1052,7 @@ Company Description:
         }
         
         # Load case studies for examples
-        enhanced_path = os.path.join(os.path.dirname(__file__), "..", "data", "case_studies", "enhanced_case_studies.json")
+        enhanced_path = os.path.join(os.path.dirname(__file__), "..", "data", "case_studies", "all_120_case_studies.json")
         try:
             with open(enhanced_path, "r") as f:
                 case_studies = json.load(f)
@@ -1249,7 +1249,7 @@ Company Description:
             "company": cs.get("company", ""),
             "businessFunctions": cs.get("businessFunctions", []),
             "metrics": cs.get("quantitativeMetrics", {})
-        } for cs in case_studies[:30]], indent=2)}
+        } for cs in case_studies], indent=2)}
         
         RETURN ONLY VALID JSON. Include ALL 9 business functions.
         """

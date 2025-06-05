@@ -102,9 +102,9 @@ Key challenges we face:
   
   // Show analysis info guidance
   const AnalysisGuidance = () => (
-    <div className="bg-blue-50 p-4 rounded-md mb-6">
-      <h3 className="text-lg font-medium text-blue-800 mb-2">Tips for better analysis</h3>
-      <div className="text-sm text-blue-700">
+    <div className="bg-gradient-to-r from-coral-50 to-orange-50 p-4 rounded-lg mb-6 border border-coral-100">
+      <h3 className="text-lg font-medium text-coral-700 mb-2">Tips for better analysis</h3>
+      <div className="text-sm text-coral-600">
         <p className="mb-2">For the most accurate results, include information about:</p>
         <ul className="list-disc pl-6 space-y-1">
           <li>Company industry and size</li>
@@ -132,10 +132,10 @@ Key challenges we face:
             <div className="flex space-x-4">
               <button
                 type="button"
-                className={`px-4 py-2 rounded-md ${
+                className={`px-4 py-2 rounded-md transition-all duration-200 ${
                   analysisType === 'website' 
-                    ? 'bg-blue-600 text-white' 
-                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                    ? 'bg-coral-500 text-white shadow-sm' 
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
                 onClick={() => setAnalysisType('website')}
                 disabled={isLoading}
@@ -144,10 +144,10 @@ Key challenges we face:
               </button>
               <button
                 type="button"
-                className={`px-4 py-2 rounded-md ${
+                className={`px-4 py-2 rounded-md transition-all duration-200 ${
                   analysisType === 'description' 
-                    ? 'bg-blue-600 text-white' 
-                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                    ? 'bg-coral-500 text-white shadow-sm' 
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
                 onClick={() => {
                   setAnalysisType('description');
@@ -213,7 +213,7 @@ Key challenges we face:
             <div className="flex justify-end">
               <button
                 type="submit"
-                className={`bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline ${
+                className={`bg-gradient-to-r from-coral-500 to-coral-600 hover:from-coral-600 hover:to-coral-700 text-white font-bold py-2 px-6 rounded-lg shadow-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-coral-500 focus:ring-offset-2 ${
                   isLoading ? 'opacity-50 cursor-not-allowed' : ''
                 }`}
                 disabled={isLoading}

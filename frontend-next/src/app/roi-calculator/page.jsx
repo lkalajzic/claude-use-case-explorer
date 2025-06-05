@@ -321,7 +321,7 @@ const ROICalculator = () => {
                   Industry
                 </label>
                 <select
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-coral-500 focus:ring-coral-500 sm:text-sm"
                   value={industry}
                   onChange={(e) => setIndustry(e.target.value)}
                   disabled={isLoadingBenchmarks}
@@ -344,7 +344,7 @@ const ROICalculator = () => {
                   Use Case
                 </label>
                 <select
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-coral-500 focus:ring-coral-500 sm:text-sm"
                   value={useCase}
                   onChange={(e) => setUseCase(e.target.value)}
                   disabled={isLoadingBenchmarks || isLoadingUseCases}
@@ -365,7 +365,7 @@ const ROICalculator = () => {
                 <input
                   type="number"
                   min="1"
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-coral-500 focus:ring-coral-500 sm:text-sm"
                   value={employeeCount}
                   onChange={(e) => setEmployeeCount(parseInt(e.target.value) || 0)}
                 />
@@ -381,7 +381,7 @@ const ROICalculator = () => {
                 <input
                   type="number"
                   min="1"
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-coral-500 focus:ring-coral-500 sm:text-sm"
                   value={hourlyRate}
                   onChange={(e) => setHourlyRate(parseInt(e.target.value) || 0)}
                 />
@@ -399,7 +399,7 @@ const ROICalculator = () => {
                   min="0.1"
                   max="40"
                   step="0.1"
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-coral-500 focus:ring-coral-500 sm:text-sm"
                   value={timeSpentPerWeek}
                   onChange={(e) => setTimeSpentPerWeek(parseFloat(e.target.value) || 0)}
                 />

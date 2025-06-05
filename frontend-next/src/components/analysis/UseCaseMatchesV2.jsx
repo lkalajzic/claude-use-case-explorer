@@ -137,7 +137,7 @@ const UseCaseCard = ({ useCase, functionData, onHoursChange, onEmployeeCountChan
                 setEmployeeCount(newCount);
                 onEmployeeCountChange(useCase.id, newCount);
               }}
-              className="w-16 px-2 py-1 text-sm border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-16 px-2 py-1 text-sm border rounded focus:outline-none focus:ring-2 focus:ring-coral-500"
               disabled={!enabled}
             />
           </div>
@@ -153,7 +153,7 @@ const UseCaseCard = ({ useCase, functionData, onHoursChange, onEmployeeCountChan
                 setHours(newHours);
                 onHoursChange(useCase.id, newHours);
               }}
-              className="w-16 px-2 py-1 text-sm border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-16 px-2 py-1 text-sm border rounded focus:outline-none focus:ring-2 focus:ring-coral-500"
               disabled={!enabled}
             />
           </div>
@@ -168,7 +168,7 @@ const UseCaseCard = ({ useCase, functionData, onHoursChange, onEmployeeCountChan
           <div className="space-y-2">
             {useCase.examples.map((example, idx) => (
               <div key={idx} className="text-sm bg-gray-50 p-2 rounded">
-                <Link href={`/use-cases/${example.caseStudyId}`} className="font-medium text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
+                <Link href={`/use-cases/${example.caseStudyId}`} className="font-medium text-coral-600 hover:text-coral-700 hover:underline" target="_blank" rel="noopener noreferrer">
                   {example.company}
                 </Link>
                 <span className="text-gray-600">: {example.metric}</span>
@@ -312,7 +312,7 @@ const UseCaseMatchesV2 = ({ matches }) => {
         </div>
         <div className="bg-white p-4 rounded-lg shadow-sm border">
           <h3 className="text-sm text-gray-600">Net Annual Savings</h3>
-          <p className="text-2xl font-bold text-blue-600">{formatCurrency(totalMetrics.netAnnual)}</p>
+          <p className="text-2xl font-bold text-coral-600">{formatCurrency(totalMetrics.netAnnual)}</p>
         </div>
         <div className="bg-white p-4 rounded-lg shadow-sm border">
           <h3 className="text-sm text-gray-600">ROI (Year 1)</h3>
@@ -321,9 +321,9 @@ const UseCaseMatchesV2 = ({ matches }) => {
         </div>
       </div>
 
-      <div className="text-sm text-gray-600 bg-blue-50 p-3 rounded-md">
+      <div className="text-sm text-gray-700 bg-gradient-to-r from-coral-50 to-orange-50 p-3 rounded-lg border border-coral-100">
         💡 Pricing shown is an estimate (~$100/seat/month). 
-        <Link href="https://anthropic.com/enterprise" className="text-blue-600 hover:underline ml-1" target="_blank" rel="noopener noreferrer">
+        <Link href="https://anthropic.com/enterprise" className="text-coral-600 hover:text-coral-700 font-medium ml-1" target="_blank" rel="noopener noreferrer">
           Contact Anthropic for accurate pricing
         </Link>
       </div>
@@ -356,7 +356,7 @@ const UseCaseMatchesV2 = ({ matches }) => {
         }, [func, functionEnabled, enabledUseCases, useCaseHours, useCaseEmployees]);
         
         return (
-          <div key={func.id} className={`border rounded-lg ${functionEnabled ? 'border-blue-200 shadow-sm' : 'border-gray-200'}`}>
+          <div key={func.id} className={`border rounded-lg transition-all duration-200 ${functionEnabled ? 'border-coral-200 shadow-sm' : 'border-gray-200'}`}>
             <div className="p-4 bg-gray-50">
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-3">
@@ -374,7 +374,7 @@ const UseCaseMatchesV2 = ({ matches }) => {
                         setEnabledUseCases(newUseCases);
                       }
                     }}
-                    className="h-5 w-5 text-blue-600 rounded focus:ring-blue-500"
+                    className="h-5 w-5 text-coral-600 rounded focus:ring-coral-500"
                   />
                   <div>
                     <h3 className="text-lg font-semibold flex items-center">
@@ -434,7 +434,7 @@ const UseCaseMatchesV2 = ({ matches }) => {
                         setEnabledUseCases(prev => ({ ...prev, [useCase.id]: e.target.checked }));
                       }}
                       disabled={!functionEnabled}
-                      className="mt-1 h-4 w-4 text-blue-600 rounded focus:ring-blue-500"
+                      className="mt-1 h-4 w-4 text-coral-600 rounded focus:ring-coral-500"
                     />
                     <div className="flex-1">
                       <UseCaseCard
@@ -455,7 +455,7 @@ const UseCaseMatchesV2 = ({ matches }) => {
                 {func.useCases.length > 3 && !showAllUseCases[func.id] && (
                   <button 
                     onClick={() => setShowAllUseCases(prev => ({ ...prev, [func.id]: true }))}
-                    className="text-sm text-blue-600 hover:text-blue-800 mt-2"
+                    className="text-sm text-coral-600 hover:text-coral-700 mt-2 font-medium"
                   >
                     Show {func.useCases.length - 3} more use cases
                   </button>
