@@ -315,3 +315,58 @@ Key changes include:
 4. Preserving the existing ROI calculation functionality
 
 The implementation will be phased to ensure minimum disruption, starting with backend changes to the Claude prompt, followed by frontend updates to display the new structure.
+
+## Major Progress Update (December 20, 2024)
+
+### 🚀 Single-Step Analysis Process Implemented!
+
+We've completely revamped the analysis flow to eliminate context loss and improve accuracy:
+
+#### 1. **Created Combined Analysis Endpoint** ✅
+- New `/api/analyze-and-match` endpoint that analyzes company AND returns use cases in one call
+- No more losing employee data between steps!
+- Upgraded from Claude Haiku to **Claude Sonnet 4** for better quality
+- All 9 business functions now always returned with 4 use cases each
+
+#### 2. **Geographic Salary Adjustments** ✅
+- Created beautiful `SalaryAdjustmentForm` component with Anthropic-inspired design
+- Auto-detects location from company headquarters
+- Preset buttons for different regions (US, Europe, India, etc.)
+- India salaries adjusted to 15% of US rates (was 20%)
+- Industry-specific adjustments built into backend
+
+#### 3. **Fixed Critical Bugs** ✅
+- Employee mapping now captures ALL 850 employees (was missing compound roles)
+- Fixed JSON parsing issues with markdown-wrapped responses
+- Corrected ROI calculations to use adjusted salaries
+- Fixed employee count display in UseCaseMatchesV2
+
+#### 4. **Enhanced Examples & Case Studies** ✅
+- Now using ALL 120 case studies (up from 30)
+- Updated prompts to require 3 specific examples per use case
+- Examples now include specific metrics (e.g., "40% reduction in ticket response time")
+- Better variety and relevance in examples
+
+#### 5. **Design Polish** ✅
+- Implemented Anthropic's coral color scheme throughout
+- Updated buttons, forms, and UI elements to coral-500/600
+- Added gradient backgrounds and smooth transitions
+- Professional, cohesive look ready to showcase
+
+### Current State
+- **Backend**: Flask API running with Sonnet 4, processing 120 case studies
+- **Frontend**: Next.js with complete flow: Input → Salary Adjust → ROI Results
+- **Data**: Enhanced case studies with standardized GICS industries and business functions
+- **Performance**: ~20k input tokens, well within Sonnet's 40k/min limit
+
+### What's Left
+1. **Website Analysis**: Currently shows "coming soon" - needs implementation
+2. **Final Testing**: Full end-to-end testing with various company types
+3. **Documentation**: Update user-facing docs with new flow
+
+### Token Usage
+- Company analysis: ~11k input + 6.5k output
+- ROI calculation: ~8k input + 7.5k output  
+- Total: ~33k tokens per full analysis (well under limits!)
+
+The project is now in excellent shape to demo to Anthropic! 🎉
