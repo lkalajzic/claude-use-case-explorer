@@ -7,6 +7,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'sans': ['var(--font-dm-sans)', 'system-ui', 'sans-serif'],
+        'serif': ['var(--font-dm-serif)', 'Georgia', 'serif'],
+        'cinzel': ['var(--font-cinzel)', 'Trajan Pro', 'Georgia', 'serif'],
+        'mono': ['var(--font-geist-mono)', 'monospace'],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

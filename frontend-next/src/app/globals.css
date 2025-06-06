@@ -17,6 +17,16 @@
   --font-sans: var(--font-dm-sans);
   --font-serif: var(--font-dm-serif);
   --font-mono: var(--font-geist-mono);
+  
+  /* Renaissance-inspired pastel palette */
+  --renaissance-cream: #FFF8F3;
+  --renaissance-blush: #F5D5D8;
+  --renaissance-sage: #D4E4D1;
+  --renaissance-sky: #D6E3F0;
+  --renaissance-mauve: #E8D5E8;
+  --renaissance-gold: #F0E4C8;
+  --renaissance-charcoal: #3A3A3A;
+  --renaissance-ink: #2B2B2B;
 }
 
 body {
